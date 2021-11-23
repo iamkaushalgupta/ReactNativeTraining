@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { Alert } from "react-native";
 import SignUpScreen from '../views/signupscreen/signupscreen'
 import { Email, Name, Contact, Password } from "../config/validation";
 

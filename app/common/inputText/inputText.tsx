@@ -9,6 +9,7 @@ interface InputProps {
     onChangeText: (t: string) => void
     Switch: boolean
     setSwitch: (t: boolean) => void
+    secureTextEntry: boolean
 
 
 }
@@ -19,8 +20,10 @@ const InputText = (props: InputProps) => {
             <View style={styles.textinput}>
                 <TextInput
                     placeholder={props.placeholder}
-                    onChangeText={(text) =>{ props.onChangeText(text),
-                    props.setSwitch(false)
+                    secureTextEntry={props.secureTextEntry}
+                    onChangeText={(text) => {
+                        props.onChangeText(text),
+                            props.setSwitch(false)
                     }} />
             </View>
             {props.Switch && <Text style={styles.errorText}>{props.value} is invalid</Text>}

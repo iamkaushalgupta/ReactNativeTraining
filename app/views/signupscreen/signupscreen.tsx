@@ -60,6 +60,7 @@ const SignUpScreen = (props: SignIprops) => {
                             placeholder="Your Name"
                             value={name}
                             onChangeText={(name) => setName(name)}
+                            secureTextEntry={false}
                             Switch={wrongName}
                             setSwitch={(wrongName) => setNameResult(wrongName)} />
 
@@ -68,17 +69,20 @@ const SignUpScreen = (props: SignIprops) => {
                             placeholder="Your Email"
                             value={email}
                             onChangeText={(email) => setEmail(email)}
+                            secureTextEntry={false}
                             Switch={wrongEmail}
                             setSwitch={(wrongEmail) => setEmailResult(wrongEmail)} />
 
                         <Label text="Contact" />
                         <InputText placeholder="Your Contact" value={contact}
                             onChangeText={(contact) => setContact(contact)} Switch={wrongContact}
+                            secureTextEntry={false}
                             setSwitch={(wrongContact) => setContactResult(wrongContact)} />
 
                         <Label text="Password" />
                         <InputText placeholder="Your Password" value={password}
                             onChangeText={(password) => setPassword(password)} Switch={wrongPassword}
+                            secureTextEntry={true}
                             setSwitch={(wrongPassword) => setPasswordResult(wrongPassword)} />
 
                         <ButtonC text="Sign Up"
