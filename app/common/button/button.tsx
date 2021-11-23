@@ -1,20 +1,30 @@
-import React from "react";
-import { TouchableOpacity,View, Text } from "react-native";
+import React,{memo} from "react";
+import { TouchableOpacity,View, Text, NativeModules } from "react-native";
 import LinearGradient from "react-native-linear-gradient";
 import styles from "./style";
 
 interface InputProps
 {
-    text: string
+     text: string;
+     clickHandler: () => void;
+    
 }
 
 const ButtonC=(props: InputProps)=>
 {
+
+    const  { 
+        clickHandler,
+        text
+
+    } = props;
+
+ 
     return(
         <View>        
             <TouchableOpacity
                         style={styles.signIn}
-                        onPress={() => { }}
+                       onPress={()=>clickHandler()}
                     >
 
                         <LinearGradient
@@ -23,7 +33,7 @@ const ButtonC=(props: InputProps)=>
                         >
                             <Text style={[styles.textSign, {
                                 color: '#fff'
-                            }]}>{props.text}</Text>
+                            }]}>{text}</Text>
                         </LinearGradient>
                     </TouchableOpacity>
                     </View>
@@ -31,4 +41,4 @@ const ButtonC=(props: InputProps)=>
     );
 }
 
-export default ButtonC;
+export default memo(ButtonC);

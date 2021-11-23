@@ -5,52 +5,53 @@ const styles = StyleSheet.create(
     {
         container:
         {
-            flex:1,
-            backgroundColor :'#009387'  
+            flex: 1,
+            backgroundColor: '#009387'
         },
 
         header:
         {
-            flex:1
+            flex: 1
         },
-        
+
         footer:
         {
-            flex:3,
-            backgroundColor:'white',
-            borderTopLeftRadius:30,
-            borderTopRightRadius:30,
+            flex: 3,
+            backgroundColor: 'white',
+            borderTopLeftRadius: 30,
+            borderTopRightRadius: 30,
         },
 
         text:
         {
-            fontSize:40,
-            color:'white',
+            fontSize: 40,
+            color: 'white',
             fontWeight: 'bold',
             paddingTop: 50,
-            paddingLeft:15,
+            paddingLeft: 15,
         },
 
-       
+
         innerContainer:
         {
             padding: 30,
         },
         secondText:
         {
-            fontSize:20,
-            color:'white',
+            fontSize: 20,
+            color: 'white',
             fontWeight: 'bold',
             paddingTop: 30,
-            paddingLeft:30,
+            paddingLeft: 30,
         },
 
         text_footer: {
             color: '#05375a',
             fontSize: 17,
-            paddingTop:10
+            paddingTop: 10
         },
-      
+
+
 
     }
 )

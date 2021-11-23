@@ -1,4 +1,4 @@
-import {StyleSheet} from 'react-native'
+import { StyleSheet } from 'react-native'
 
 const styles = StyleSheet.create({
     signIn: {
@@ -7,9 +7,9 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
         borderRadius: 10,
-        paddingTop:10
+        paddingTop: 10
     },
-    
+
     textSign: {
         fontSize: 18,
         fontWeight: 'bold'
