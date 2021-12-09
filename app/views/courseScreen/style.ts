@@ -7,13 +7,13 @@ const styles =(o:any)=> StyleSheet.create({
     text:{
         color:"#000020",
         fontSize:25,
-       paddingVertical:o.height*0.01, 
+       marginVertical:o.height*0.01, 
        fontWeight:"600",
        paddingLeft: o.isLandscape? o.width*0.02:o.width*0.02
      },
 
      itemPhoto:{
-        width: o.isLandscape? o.width*0.88:o.width*0.96,
+        width: o.isLandscape? o.width*0.91:o.width*0.93,
         height:o.isLandscape? o.height*0.4:o.height*0.25,
     
      },
@@ -42,20 +42,24 @@ const styles =(o:any)=> StyleSheet.create({
          color: 'white', 
          textAlign: 'center', 
          padding: 10, 
-         fontSize: 15
+         fontSize: 18
          },
 
          listContainer:{
-            // paddingRight:o.width*0.02
+            padding:10,
+            margin:4,
 
          },
 
          innerContainer:{
-             marginHorizontal:o.width*0.022,
+             flex:1,
+             alignItems:'center'
+            //  marginHorizontal:o.width*0.022,
             
          },
 
          progressBar:{
+             height:o.isLandscape?o.height*0.015:o.height*0.005,
             width:o.isLandscape? o.width*0.91:o.width*0.93
          }
 
