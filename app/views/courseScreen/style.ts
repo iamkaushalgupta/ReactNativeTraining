@@ -9,7 +9,7 @@ const styles =(o:any)=> StyleSheet.create({
         fontSize:25,
        marginVertical:o.height*0.01, 
        fontWeight:"600",
-       paddingLeft: o.isLandscape? o.width*0.02:o.width*0.02
+    //    paddingLeft: o.isLandscape? o.width*0.02:o.width*0.02
      },
 
      itemPhoto:{
@@ -53,9 +53,9 @@ const styles =(o:any)=> StyleSheet.create({
 
          innerContainer:{
              flex:1,
-             alignItems:'center'
+             alignItems:'center',
             //  marginHorizontal:o.width*0.022,
-            
+            // marginHorizontal: o.isLandscape? o.width*0.022:0
          },
 
          progressBar:{

@@ -4,5 +4,6 @@ import ContactModel from "./contactscreen";
 import ProfileModel from "./profilescreen";
 import TestModel from './testModel';
 import CourseModal from "./courseModal";
+import ProgressModel from "./progressModel";
 
-export {HomeModel,ContactModel, ProfileModel, TestModel,CourseModal};
+export {HomeModel,ContactModel, ProfileModel, TestModel,CourseModal,ProgressModel};

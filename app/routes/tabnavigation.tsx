@@ -1,7 +1,7 @@
 import React from "react";
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { HomeModel, ContactModel, ProfileModel, TestModel, CourseModal } from '../viewModels'
+import { HomeModel, ContactModel, ProfileModel, TestModel, CourseModal,ProgressModel } from '../viewModels'
 import { Image } from "react-native";
 import Logo from "../common/logo/logo";
 import { Help } from "../common";
@@ -18,6 +18,7 @@ const MainTab = () => {
         options={{
           headerTitle: () => (<Logo />),
           headerStyle: { backgroundColor: '#000020' },
+          tabBarLabelPosition:'below-icon',
           headerRight: () => (<Help />),
           tabBarIcon: () => {
             return (
@@ -30,8 +31,12 @@ const MainTab = () => {
 
       <Tab.Screen
         name="Progress"
-        component={HomeModel}
+        component={ProgressModel}
         options={{
+          headerTitle: () => (<Logo />),
+          headerStyle: { backgroundColor: '#000020' },
+          tabBarLabelPosition:'below-icon',
+          headerRight: () => (<Help />),
           tabBarIcon: () => {
             return (
               <Image source={require('../assets/progress.png')}
