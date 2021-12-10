@@ -1,7 +1,7 @@
 import React from "react";
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { HomeModel, ContactModel, ProfileModel, TestModel, CourseModal,ProgressModel } from '../viewModels'
+import { HomeModel, ContactModel, ProfileModel, TestModel, CourseModal,ProgressModel,SettingModal } from '../viewModels'
 import { Image } from "react-native";
 import Logo from "../common/logo/logo";
 import { Help } from "../common";
@@ -50,6 +50,10 @@ const MainTab = () => {
         name="Inbox"
         component={ContactModel}
         options={{
+          headerTitle: () => (<Logo />),
+          headerStyle: { backgroundColor: '#000020' },
+          tabBarLabelPosition:'below-icon',
+          headerRight: () => (<Help />),
           tabBarIcon: () => {
             return (
               <Image source={require('../assets/inbox.png')} style={{ width: 25, height: 25 }} />
@@ -59,8 +63,12 @@ const MainTab = () => {
       />
       <Tab.Screen
         name="Settings"
-        component={ProfileModel}
+        component={SettingModal}
         options={{
+          headerTitle: () => (<Logo />),
+          headerStyle: { backgroundColor: '#000020' },
+          tabBarLabelPosition:'below-icon',
+          headerRight: () => (<Help />),
           tabBarIcon: () => {
             return (
               <Image source={require('../assets/settings.png')} style={{ width: 25, height: 25 }} />
