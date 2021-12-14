@@ -12,16 +12,18 @@ type InputProps={
         isLandscape:boolean,
         scale:number,
 
-    }
+    },
+    navigation:any
 }
 
 const RenderItem=(props:InputProps)=>{
-    // console.log(props.o)
+    const{navigation}=props
+  
     return(
         <ScrollView>
             <View style={{flexDirection:'row',justifyContent:'space-between'}}>
             <Text style={styles(props.o).taskText}>{props.data.item.text}</Text>
-            <TouchableOpacity style={styles(props.o).detailsButton} onPress={()=>(props.data.item.url)}>
+            <TouchableOpacity style={styles(props.o).detailsButton} onPress={()=>(navigation.navigate('Test2by4'))}>
                 <Text style={styles(props.o).detailsButtonText}>View Details</Text></TouchableOpacity>
                 </View>
             <View style={styles(props.o).HorizontalLine}>

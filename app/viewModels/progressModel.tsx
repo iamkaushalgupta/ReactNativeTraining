@@ -1,7 +1,7 @@
 import ProgressScreen from "../views/progressScreen/progressScreen";
 import React from "react";
 
-const ProgressModel=()=>{
+const ProgressModel=({navigation}:any)=>{
 
     const data = [
         {
@@ -19,6 +19,6 @@ const ProgressModel=()=>{
 
     ]
 
-    return(<ProgressScreen data={data}/>)
+    return(<ProgressScreen data={data} navigation={navigation}/>)
 }
 export default ProgressModel;

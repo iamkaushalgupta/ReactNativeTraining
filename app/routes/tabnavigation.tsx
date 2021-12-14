@@ -5,7 +5,6 @@ import { HomeModel, ContactModel, ProfileModel, TestModel, CourseModal,ProgressM
 import { Image } from "react-native";
 import Logo from "../common/logo/logo";
 import { Help } from "../common";
-// import Ionicons from 'react-native-vector-icons/Ionicons'
 
 const Tab = createBottomTabNavigator();
 
@@ -19,7 +18,10 @@ const MainTab = () => {
           headerTitle: () => (<Logo />),
           headerStyle: { backgroundColor: '#000020' },
           tabBarLabelPosition:'below-icon',
+          tabBarActiveTintColor: 'black',
+          tabBarInactiveTintColor: 'gray',
           headerRight: () => (<Help />),
+          
           tabBarIcon: () => {
             return (
               <Image style={{ width: 25, height: 25, tintColor: 'red' }}
@@ -27,6 +29,7 @@ const MainTab = () => {
             )
           }
         }}
+
       />
 
       <Tab.Screen
@@ -39,8 +42,8 @@ const MainTab = () => {
           headerRight: () => (<Help />),
           tabBarIcon: () => {
             return (
-              <Image source={require('../assets/progress.png')}
-                style={{ width: 25, height: 25 }} />
+              <Image style={{ width: 25, height: 25 }} source={require('../assets/progress.png') }
+                />
             )
           }
         }}

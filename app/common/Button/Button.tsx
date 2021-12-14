@@ -4,10 +4,9 @@ import styles from "./style";
 
 
 const Button = (props:any) => {
-    
-    return (
+        return (
             <View style={styles(props.o).container}>
-                <TouchableOpacity style={styles(props.o).Button}>
+                <TouchableOpacity style={styles(props.o).Button} onPress={()=>(props.navigation.navigate(props.name))}>
                 <View style={styles(props.o).block} >                    
                     <Image source={props.image} style={styles(props.o).icon}/>
                     <Text style={styles(props.o).iconName}>{props.text}</Text>

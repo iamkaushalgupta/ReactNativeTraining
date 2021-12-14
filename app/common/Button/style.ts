@@ -24,7 +24,7 @@ const styles =(o:any)=> StyleSheet.create({
     },
     iconName:{
         marginHorizontal:17,
-        fontSize:20,
+        fontSize:o.isLandscape?o.width*0.025:o.width*0.035,
         alignSelf:'flex-start',
         fontWeight:'400',
         color:"#000020"        
