@@ -2,7 +2,7 @@ import React,{useEffect,useState} from "react";
 import CourseScreen from "../views/courseScreen/courseScreen";
 import { sendGetRequest } from "../network/network";
 
-const CourseModal =()=>{
+const CourseModal =({navigation}:any)=>{
     const [isLoading, setLoading] = useState(true);
     const [data, setData] = useState([]);
 
@@ -23,7 +23,7 @@ const CourseModal =()=>{
         getData();
         
     }, []);
-    return(<CourseScreen isLoading={isLoading}  data={data}/>);
+    return(<CourseScreen isLoading={isLoading}  data={data}  navigation={navigation}/>);
 }
 
 export default CourseModal;

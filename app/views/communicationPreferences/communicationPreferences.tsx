@@ -15,12 +15,12 @@ const CommunicationPrefernces=(props:any)=>{
                     <View >
                           <Text style={styles(o).text}>{Input.text}</Text>
                     </View>
-                    <View style={{flexDirection:'row'}}>
+                    <View style={styles(o).innerContainer}>
                     <Text style={styles(o).activeInactiveText}>{!Input.isEnabled?"Inactive":"Active"}</Text>
                     <Switch style={styles(o).button}
-        trackColor={{ false: "#767577", true: "#81b0ff" }}
-        thumbColor='white'
-        onValueChange={(item)=>Input.setState(item)}
+            trackColor={{ false: "#767577", true: "#81b0ff" }}
+            thumbColor='white'
+         onValueChange={(item)=>Input.setState(item)}
         value={Input.isEnabled}
       />
       </View>

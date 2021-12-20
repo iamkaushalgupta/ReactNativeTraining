@@ -7,7 +7,7 @@ const styles =(o:any)=> StyleSheet.create({
     },
 
     firstHeading:{
-        fontSize:o.isLandscape? o.width*.04:o.width*.07,
+        fontSize:o.isLandscape? o.height*.06:o.width*.07,
        
         fontWeight: "600",  
         color:"#000020",
@@ -15,7 +15,7 @@ const styles =(o:any)=> StyleSheet.create({
     },
 
     secondHeading:{
-        fontSize:o.isLandscape? o.width*.03 :o.width*.055,
+        fontSize:o.isLandscape? o.height*.05:o.width*.055,
        
         fontWeight: "500",
         color:"#000020",
@@ -43,6 +43,7 @@ const styles =(o:any)=> StyleSheet.create({
         width:o.isLandscape?o.width*.2:o.width*.3,
         height: o.isLandscape? o.height*.06:o.height*.033,
         textAlign:'center',
+        justifyContent:'center'
 
     },
 
@@ -51,6 +52,10 @@ const styles =(o:any)=> StyleSheet.create({
         textAlign:'center',
         fontWeight:'600'
     },
+
+    renderContainer:{
+        flexDirection:'row',justifyContent:'space-between'
+    }
 
 
 })

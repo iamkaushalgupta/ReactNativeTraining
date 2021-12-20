@@ -11,7 +11,9 @@ const ChangePassword=(props:any)=>{
     const[switchConfirmPassword,setSwitchConfirmPassword]=useState(true)
 
     return(
-        <ScrollView style={styles(o).container}>
+        <ScrollView 
+        showsVerticalScrollIndicator={false}
+        style={styles(o).container}>
             <Image style={styles(o).logo} source={require('../../assets/logo.png')}></Image>
             <Text style={styles(o).text}>Welcome!</Text>
             <TextInput secureTextEntry={switchCurrentPassword} style={styles(o).textinput}placeholder="Current Password"></TextInput>

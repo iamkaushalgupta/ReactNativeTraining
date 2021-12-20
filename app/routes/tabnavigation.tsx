@@ -1,30 +1,27 @@
 import React from "react";
-import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { HomeModel, ContactModel, ProfileModel, TestModel, CourseModal,ProgressModel,SettingModal } from '../viewModels'
+import { ContactModel, CourseModal,ProgressModel,SettingModal } from '../viewModels'
 import { Image } from "react-native";
 import Logo from "../common/logo/logo";
 import { Help } from "../common";
+import styles from "./tabbarstyle";
 
 const Tab = createBottomTabNavigator();
 
 const MainTab = () => {
   return (
-    <Tab.Navigator>
+    <Tab.Navigator screenOptions={{tabBarActiveTintColor: 'black',
+    tabBarInactiveTintColor: 'gray',tabBarLabelPosition:'below-icon',tabBarLabelStyle:{paddingVertical:2}, headerTitle: () => (<Logo />), headerRight: () => (<Help />), headerStyle: { backgroundColor: '#000020', },tabBarStyle:{paddingVertical:2}}}>
+      
       <Tab.Screen
         name="Home"
         component={CourseModal}
         options={{
-          headerTitle: () => (<Logo />),
-          headerStyle: { backgroundColor: '#000020' },
-          tabBarLabelPosition:'below-icon',
-          tabBarActiveTintColor: 'black',
-          tabBarInactiveTintColor: 'gray',
-          headerRight: () => (<Help />),
+         
           
-          tabBarIcon: () => {
+          tabBarIcon: ({focused}) => {
             return (
-              <Image style={{ width: 25, height: 25, tintColor: 'red' }}
+              <Image style={styles(focused).headerImage}
                 source={require('../assets/home.png')} />
             )
           }
@@ -36,13 +33,10 @@ const MainTab = () => {
         name="Progress"
         component={ProgressModel}
         options={{
-          headerTitle: () => (<Logo />),
-          headerStyle: { backgroundColor: '#000020' },
-          tabBarLabelPosition:'below-icon',
-          headerRight: () => (<Help />),
-          tabBarIcon: () => {
+          
+          tabBarIcon: ({focused}) => {
             return (
-              <Image style={{ width: 25, height: 25 }} source={require('../assets/progress.png') }
+              <Image style={styles(focused).headerImage} source={require('../assets/progress.png') }
                 />
             )
           }
@@ -53,13 +47,10 @@ const MainTab = () => {
         name="Inbox"
         component={ContactModel}
         options={{
-          headerTitle: () => (<Logo />),
-          headerStyle: { backgroundColor: '#000020' },
-          tabBarLabelPosition:'below-icon',
-          headerRight: () => (<Help />),
-          tabBarIcon: () => {
+         
+          tabBarIcon: ({focused}) => {
             return (
-              <Image source={require('../assets/inbox.png')} style={{ width: 25, height: 25 }} />
+              <Image source={require('../assets/inbox.png')} style={styles(focused).headerImage} />
             )
           }
         }}
@@ -68,13 +59,9 @@ const MainTab = () => {
         name="Settings"
         component={SettingModal}
         options={{
-          headerTitle: () => (<Logo />),
-          headerStyle: { backgroundColor: '#000020' },
-          tabBarLabelPosition:'below-icon',
-          headerRight: () => (<Help />),
-          tabBarIcon: () => {
+          tabBarIcon: ({focused}) => {
             return (
-              <Image source={require('../assets/settings.png')} style={{ width: 25, height: 25 }} />
+              <Image source={require('../assets/settings.png')} style={styles(focused).headerImage} />
             )
           }
         }}

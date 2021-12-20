@@ -36,8 +36,8 @@ commonContainer:{
 
 text:{
     color:'black',
-    fontWeight:'700',
-    fontSize:o.isLandscape?o.width*0.034:o.width*0.055
+    
+    fontSize:o.isLandscape?o.width*0.03:o.width*0.052
 },
 
 button:{
@@ -45,7 +45,12 @@ button:{
     
 },
 activeInactiveText:{
-    fontSize:o.isLandscape?o.width*0.03:o.width*0.05,
+    fontSize:o.isLandscape?o.width*0.02:o.width*0.04,
+    paddingRight:o.isLandscape?o.width*0.02:o.width*0.02
+
+},
+innerContainer:{
+    flexDirection:'row'
 }
     
 })

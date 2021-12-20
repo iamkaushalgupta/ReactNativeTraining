@@ -3,6 +3,7 @@ import { View, Text, FlatList, Image, ScrollView, TouchableOpacity } from "react
 import styles from "./style";
 import { UseOrientation } from "../../config";
 
+
 const Test2by4 = (props: any) => {
 
     const o = UseOrientation()
@@ -23,22 +24,26 @@ const Test2by4 = (props: any) => {
     return (
         <View style={styles(o).container}>
             <FlatList
-
+                showsVerticalScrollIndicator={false}
                 ListHeaderComponent={
                     <>
                         <View style={styles(o).header}>
                             <TouchableOpacity onPress={() => props.navigation.goBack()}>
+                                <View style={styles(o).iconBorder}>
                                 <Image
                                     style={styles(o).icon}
                                     source={require('../../assets/left_arrow.png')}
                                 />
+                                </View>
                             </TouchableOpacity>
 
                             <TouchableOpacity>
+                            <View style={styles(o).iconBorder}>
                                 <Image
                                     style={styles(o).icon}
                                     source={require('../../assets/help.png')}
                                 />
+                                </View>
                             </TouchableOpacity>
                         </View>
 
@@ -47,12 +52,12 @@ const Test2by4 = (props: any) => {
                         <View style={styles(o).innerContainer}>
                             <Text style={styles(o).subHeading}>Test Results</Text>
 
-                            <Text>2/4-Required to graduate</Text>
+                            <Text style={styles(o).colorText}>2/4-Required to graduate</Text>
                         </View>
                         <Text style={styles(o).subHeading}>Course</Text>
-                        <Text>Health Coach Training Program</Text>
+                        <Text style={styles(o).colorText}>Health Coach Training Program</Text>
                         <Text style={styles(o).subHeading}>Student</Text>
-                        <Text>Kaushal Gupta</Text>
+                        <Text style={styles(o).colorText}>Kaushal Gupta</Text>
 
                     </>
 

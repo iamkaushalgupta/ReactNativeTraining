@@ -6,11 +6,11 @@ import {
 
 } from "react-native";
 
-import { Header } from "../../common";
-import { ProgressBar, Colors } from 'react-native-paper';
 import styles from './style';
 import ListItem from "./listItem";
 import { UseOrientation } from "../../config";
+
+
 
 interface InputProps {
     isLoading: boolean,
@@ -27,16 +27,17 @@ const CourseScreen = (props: any) => {
                 <View style={styles(o).innerContainer}>
                 {isLoading ? <ActivityIndicator /> :
                     (<FlatList
+                        // pagingEnabled={true}
                         horizontal
                         //for giving space after each item of flat list
-                        // ItemSeparatorComponent={()=>
-                        // <View style={{width:10}}>
+                        ItemSeparatorComponent={()=>
+                        <View style={styles(o).itemSeprate}>
                             
-                        // </View>}
+                        </View>}
                         showsVerticalScrollIndicator={false}
                         showsHorizontalScrollIndicator={false}
                         data={data}
-                        renderItem={({ item }) => <ListItem item = {item} o={o}/>}
+                        renderItem={({ item }) => <ListItem item = {item} o={o} navigation={props.navigation}/>}
                     />)}
                     </View>
             </ScrollView>

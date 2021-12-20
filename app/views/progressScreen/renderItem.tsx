@@ -21,7 +21,7 @@ const RenderItem=(props:InputProps)=>{
   
     return(
         <ScrollView>
-            <View style={{flexDirection:'row',justifyContent:'space-between'}}>
+            <View style={styles(props.o).renderContainer}>
             <Text style={styles(props.o).taskText}>{props.data.item.text}</Text>
             <TouchableOpacity style={styles(props.o).detailsButton} onPress={()=>(navigation.navigate('Test2by4'))}>
                 <Text style={styles(props.o).detailsButtonText}>View Details</Text></TouchableOpacity>

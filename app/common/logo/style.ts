@@ -1,11 +1,10 @@
 import { StyleSheet, Dimensions } from "react-native";
 
-const windowWidth = Dimensions.get('window').width;
-const windowHeight = Dimensions.get('window').height;
 
 
-const styles = StyleSheet.create({
+const styles =(o:any)=> StyleSheet.create({
     logo: {
+        
         resizeMode:'contain'
         
     },
@@ -13,7 +12,8 @@ const styles = StyleSheet.create({
     container:{
         scaleY:0.55,
         scaleX:0.5,
-        marginLeft:-windowWidth*0.06
+        marginLeft:o.isLandscape?-o.width*0.02: -o.width*0.06,
+        
     }
     
 })

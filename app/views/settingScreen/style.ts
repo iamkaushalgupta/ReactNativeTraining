@@ -11,20 +11,21 @@ const styles =(o:any)=> StyleSheet.create({
         flexDirection:'row',  
     },
     profileImage:{
-        
-        height:o.isLandscape?o.height*0.15:o.height*0.09,
-        width:o.isLandscape?o.width*0.08:o.width*0.15,
-        
+
+        height:o.isLandscape?o.height*0.18:o.width*0.18,
+        width:o.isLandscape?o.height*0.18:o.width*0.18,
+        resizeMode:'contain',
+        borderRadius:180    
     },
 
     detailText:{
-        marginTop:o.isLandscape?o.height*0.02:o.height*0.02,
+        marginTop:o.isLandscape?o.height*0.02:o.height*0.01,
         marginHorizontal: o.isLandscape?o.width*0.02:o.width*0.03,
     },
     longLine:{
         width:o.width,
-        backgroundColor:'black',
-        height:o.isLandscape?o.height*0.002:o.height*0.001,
+        backgroundColor:'grey',
+        height:1,
         marginVertical:o.isLandscape?o.height*0.04:o.height*0.02
     },
    
@@ -37,11 +38,12 @@ const styles =(o:any)=> StyleSheet.create({
     text:{
         marginHorizontal: o.isLandscape?o.width*0.009:o.width*0.03,
         fontWeight:'500',
-        fontSize:o.isLandscape?o.width*0.024:o.width*0.04
+        fontSize:o.isLandscape?o.width*0.02:o.width*0.04,
+        color:'grey'
     },
-    
-    
-   
+    colorText:{
+        color:'grey'
+    }
 })
 
 export default styles;

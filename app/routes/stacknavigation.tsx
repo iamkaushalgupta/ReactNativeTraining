@@ -1,9 +1,8 @@
 import React from "react";
-import { Test2by4Model,ChangePasswordModel,CommunicationPreferncesModel } from '../viewModels'
+import { Test2by4Model,ChangePasswordModel,CommunicationPreferncesModel, ProfileModel} from '../viewModels'
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
 import { NavigationContainer } from '@react-navigation/native';
 import MainTab from './tabnavigation'
-import Test2by4 from '../views/test2by4/test2by4'
 
 type RootStackParamList = {
    
@@ -11,6 +10,8 @@ type RootStackParamList = {
     Test2by4:undefined;
     ChangePassword:undefined;
     CommunicationPrefernces:undefined;
+    Profile:undefined;
+    TrainingProgram: undefined;
 }
 
 const Stack = createNativeStackNavigator<RootStackParamList>()
@@ -24,7 +25,8 @@ const MainStack = () => {
                 <Stack.Screen name="Test2by4" component={Test2by4Model}></Stack.Screen>
                 <Stack.Screen name="ChangePassword" component={ChangePasswordModel}></Stack.Screen>
                 <Stack.Screen name="CommunicationPrefernces"component={CommunicationPreferncesModel}></Stack.Screen>
-
+                <Stack.Screen name="Profile"component={ProfileModel}></Stack.Screen>
+               
             </Stack.Navigator>
         </NavigationContainer>
 

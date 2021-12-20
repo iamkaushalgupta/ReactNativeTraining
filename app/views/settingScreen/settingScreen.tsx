@@ -1,18 +1,25 @@
-import React from 'react';
-import {Text , View , Image, ScrollView} from 'react-native';
+import React,{useState} from 'react';
+import {Text , View , Image, ScrollView,Modal,Alert} from 'react-native';
 import { Button } from '../../common/index';
 import { UseOrientation } from '../../config';
 import styles from "./style"
 
 const SettingScreen = (props:any) => {
     const o= UseOrientation()
-    return (
+       return (
+        
+
+
+
         <ScrollView style={styles(o).container}>
+        
+
+        
             <View style={styles(o).header}>
-                <Image source={require('../../assets/user_avatar.png')} style={styles(o).profileImage} />
+                <Image source={{uri:'https://kaushalgupta.netlify.app/img/kaushal-quote2.jpg'}} style={styles(o).profileImage} />
                 <View style={styles(o).detailText}>
                 <Text style={styles(o).name}>Kaushal Gupta</Text>
-                <Text>kaushalgupta198@gmail.com</Text>
+                <Text style={styles(o).colorText}>kaushalgupta198@gmail.com</Text>
                 
                 </View>
                 
@@ -25,7 +32,7 @@ const SettingScreen = (props:any) => {
                  text="Profile"
                 image={require('../../assets/profile.png')}
                 navigation={props.navigation}
-                name = ""
+                name = "Profile"
 
                 />
                 <Button 
