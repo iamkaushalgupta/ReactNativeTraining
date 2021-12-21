@@ -1,9 +1,8 @@
 import React,{useState,useEffect} from "react";
 import { Text, View, TouchableOpacity, Image, TextInput, ScrollView, ImageBackground ,Modal,Alert, TouchableWithoutFeedback} from 'react-native';
-import { UseOrientation } from "../../config";
+import { icon, string, UseOrientation } from "../../config";
 import styles from "./style";
 import ImagePicker, { launchCamera, launchImageLibrary } from 'react-native-image-picker';
-import { GooglePlacesAutocomplete } from 'react-native-google-places-autocomplete';
 
 
 const ProfileScreen = (props) => {
@@ -22,7 +21,7 @@ const ProfileScreen = (props) => {
        data
     )
 
-    const [image,setImage]=useState('https://kaushalgupta.netlify.app/img/kaushal-quote2.jpg')
+    const [image,setImage]=useState(icon.profileImage)
 
     const openCamara = () => {
         const options = {
@@ -109,20 +108,20 @@ const ProfileScreen = (props) => {
                         
                         <TouchableOpacity onPress={()=>openCamara()}>
                         <View style={styles(o).modalIconText}>
-                            <Image source={require('../../assets/camera.png')} style={styles(o).modalIcon}/>
-                            <Text style={styles(o).modalText}>Camera</Text>
+                            <Image source={icon.camera} style={styles(o).modalIcon}/>
+                            <Text style={styles(o).modalText}>{string.camera}</Text>
                         </View>
                         </TouchableOpacity>
                         <TouchableOpacity onPress={()=>launchLibrary()}>
                         <View style={styles(o).modalIconText}>
-                            <Image source={require('../../assets/gallery.png')} style={styles(o).modalIcon}/>
-                            <Text style={styles(o).modalText}>Gallary</Text>
+                            <Image source={icon.gallery} style={styles(o).modalIcon}/>
+                            <Text style={styles(o).modalText}>{string.gallery}</Text>
                         </View>
                         </TouchableOpacity>
                         <TouchableOpacity onPress={()=>setModalVisible(!modalVisible)}>
                         <View style={styles(o).modalIconText}>
-                            <Image source={require('../../assets/cancel.png')} style={styles(o).modalIcon}/>
-                            <Text style={styles(o).modalText}>Cancel</Text>
+                            <Image source={icon.cancel} style={styles(o).modalIcon}/>
+                            <Text style={styles(o).modalText}>{string.cancel}</Text>
                         </View>
                         </TouchableOpacity>
                 </View>
@@ -133,7 +132,7 @@ const ProfileScreen = (props) => {
                     <View style={styles(o).iconBorder}>
                     <Image
                         style={styles(o).icon}
-                        source={require('../../assets/left_arrow.png')}
+                        source={icon.left_arrow}
                     />
                     </View>
                 </TouchableOpacity>
@@ -142,7 +141,7 @@ const ProfileScreen = (props) => {
                 <View style={styles(o).iconBorder}>
                     <Image
                         style={styles(o).icon}
-                        source={require('../../assets/help.png')}
+                        source={icon.help}
                     />
                     </View>
                 </TouchableOpacity>
@@ -153,7 +152,7 @@ const ProfileScreen = (props) => {
                 <ImageBackground source={{uri:image}}
                  imageStyle={{ borderRadius:90}}
                 style={styles(o).profileImage} >
-                    <Image source={require('../../assets/camera.png')} resizeMode="contain" style={styles(o).cameraImage} />
+                    <Image source={icon.image} resizeMode="contain" style={styles(o).cameraImage} />
                 </ImageBackground>
                 </TouchableOpacity>
                 <View style={styles(o).detailText}>
@@ -169,13 +168,13 @@ const ProfileScreen = (props) => {
                 
                 <View style={styles(o).InformationContainer}>
                     <View style={styles(o).commonFirstLine}>
-                        <Text style={styles(o).text}>Personal Information</Text>
+                        <Text style={styles(o).text}>{string.personalInformation}</Text>
                         <TouchableOpacity style={styles(o).editButton} onPress={()=>(setFirstEdit(!firstEdit))}>
                             <Text style={styles(o).editText}>{(firstEdit?"Save":"Edit")}</Text>
                         </TouchableOpacity>
                     </View>
-                    <Text style={styles(o).labelText}>First Name</Text>
-                    <TextInput style={styles(o).inputText} placeholder="First Name"
+                    <Text style={styles(o).labelText}>{string.firstName}</Text>
+                    <TextInput style={styles(o).inputText} placeholder={string.firstName}
                      value={dataState.firstName}
                      editable={firstEdit}
                         onChangeText={(item)=>setDataState({firstName:item,secondName:data.secondName, 
@@ -185,7 +184,7 @@ const ProfileScreen = (props) => {
 
                      ></TextInput>
 
-                    <Text style={styles(o).labelText}>Last Name</Text>
+                    <Text style={styles(o).labelText}>{string.lastName}</Text>
                     <TextInput 
                     onChangeText={(item)=>setDataState({firstName:data.firstName,secondName:item, 
                         Gender:data.Gender, Email:data.Email,
@@ -194,7 +193,7 @@ const ProfileScreen = (props) => {
 
                     editable={firstEdit} placeholder="Last Name" style={styles(o).inputText} value={dataState.secondName}></TextInput>
 
-                    <Text style={styles(o).labelText}>Gender</Text>
+                    <Text style={styles(o).labelText}>{string.gender}</Text>
                     <TextInput editable={firstEdit} placeholder="Gender" style={styles(o).inputText}
                     onChangeText={(item)=>setDataState({firstName:data.firstName,secondName:data.secondName, 
                         Gender:item, Email:data.Email,
@@ -207,14 +206,14 @@ const ProfileScreen = (props) => {
   
                 <View style={styles(o).InformationContainer}>
                     <View style={styles(o).commonFirstLine}>
-                        <Text style={styles(o).text}>Contact</Text>
+                        <Text style={styles(o).text}>{string.contact}</Text>
 
                         <TouchableOpacity style={styles(o).editButton} onPress={()=>(setSecondEdit(!secondEdit))}>
                             <Text style={styles(o).editText}>{(secondEdit?"Save":"Edit")}</Text>
                         </TouchableOpacity>
                     </View>
 
-                    <Text style={styles(o).labelText}>Email</Text>
+                    <Text style={styles(o).labelText}>{string.email}</Text>
                     <TextInput editable={secondEdit} 
                     placeholder="Email" style={styles(o).inputText} value={dataState.Email}
                     onChangeText={(item)=>setDataState({firstName:data.firstName,secondName:data.secondName, 
@@ -223,7 +222,7 @@ const ProfileScreen = (props) => {
                         Address:data.Address})}
                     ></TextInput>
 
-                    <Text style={styles(o).labelText}>Home Phone</Text>
+                    <Text style={styles(o).labelText}>{string.homePhone}</Text>
                     <TextInput editable={secondEdit} 
                     placeholder="Home Phone" style={styles(o).inputText}
                      value={dataState.homePhone
@@ -236,7 +235,7 @@ const ProfileScreen = (props) => {
                     
                     ></TextInput>
 
-                    <Text style={styles(o).labelText}>Work Phone</Text>
+                    <Text style={styles(o).labelText}>{string.workPhone}</Text>
                     <TextInput editable={secondEdit} placeholder="Work Phone" style={styles(o).inputText} value={dataState.WorkPhone}
                        onChangeText={(item)=>setDataState({firstName:data.firstName,secondName:data.secondName, 
                         Gender:data.Gender, Email:data.Email,
@@ -245,7 +244,7 @@ const ProfileScreen = (props) => {
 
                     ></TextInput>
 
-                    <Text style={styles(o).labelText}>Mobile Phone</Text>
+                    <Text style={styles(o).labelText}>{string.mobilePhone}</Text>
                     <TextInput editable={secondEdit} placeholder="Mobile Phone" style={styles(o).inputText} value={dataState.MobilePhone}
                        onChangeText={(item)=>setDataState({firstName:data.firstName,secondName:data.secondName, 
                         Gender:data.Gender, Email:data.Email,
@@ -257,14 +256,14 @@ const ProfileScreen = (props) => {
 
                 <View style={styles(o).InformationContainer}>
                     <View style={styles(o).commonFirstLine}>
-                        <Text style={styles(o).text} >Mailing Address</Text>
+                        <Text style={styles(o).text} >{string.mailingAddress}</Text>
 
                         <TouchableOpacity style={styles(o).editButton} onPress={()=>(setThirdEdit(!thirdEdit))}>
                             <Text style={styles(o).editText}>{(thirdEdit?"Save":"Edit")}</Text>
                         </TouchableOpacity>
                     </View>
 
-                    <Text style={styles(o).labelText}>Address</Text>
+                    <Text style={styles(o).labelText}>{string.address}</Text>
                     <TextInput
                 
                     editable={thirdEdit} placeholder="Address" style={styles(o).inputText} value={dataState.Address}
@@ -273,17 +272,7 @@ const ProfileScreen = (props) => {
                         homePhone:data.homePhone, WorkPhone:data.WorkPhone,MobilePhone:data.MobilePhone, 
                         Address:item})}
                     ></TextInput>
-                    <GooglePlacesAutocomplete
-      placeholder='Search'
-      onPress={(data, details = null) => {
-        // 'details' is provided when fetchDetails = true
-        console.log(data, details);
-      }}
-      query={{
-        key: 'AIzaSyBbBFqZvgBuy_fmT-0ufF_KlayYqHqrivA',
-        language: 'en',
-      }}
-    />
+                    
 
 
                 </View>

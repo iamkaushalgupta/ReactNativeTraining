@@ -1,7 +1,7 @@
 import React from "react";
 import { View, Text, FlatList, Image, ScrollView, TouchableOpacity } from "react-native";
 import styles from "./style";
-import { UseOrientation } from "../../config";
+import { icon, UseOrientation } from "../../config";
 
 
 const Test2by4 = (props: any) => {
@@ -14,7 +14,7 @@ const Test2by4 = (props: any) => {
             <View style={styles(o).listContainer}>
                 <Text style={styles(o).testNumber}>{props.data.item.testNumber}</Text>
                 <View style={styles(o).listInnerContainer}>
-                    <Image style={styles(o).icon} source={require('../../assets/lock.png')} />
+                    <Image style={styles(o).icon} source={icon.lock} />
                     <Text style={styles(o).text}>{props.data.item.text}</Text>
                 </View>
             </View>
@@ -32,7 +32,7 @@ const Test2by4 = (props: any) => {
                                 <View style={styles(o).iconBorder}>
                                 <Image
                                     style={styles(o).icon}
-                                    source={require('../../assets/left_arrow.png')}
+                                    source={icon.left_arrow}
                                 />
                                 </View>
                             </TouchableOpacity>
@@ -41,7 +41,7 @@ const Test2by4 = (props: any) => {
                             <View style={styles(o).iconBorder}>
                                 <Image
                                     style={styles(o).icon}
-                                    source={require('../../assets/help.png')}
+                                    source={icon.help}
                                 />
                                 </View>
                             </TouchableOpacity>

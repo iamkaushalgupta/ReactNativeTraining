@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import {Image, Text, TextInput, TouchableOpacity, View,ScrollView} from 'react-native';
 import styles from "./style";
-import { UseOrientation } from "../../config";
+import { icon, UseOrientation } from "../../config";
 
 
 const ChangePassword=(props:any)=>{
@@ -14,7 +14,7 @@ const ChangePassword=(props:any)=>{
         <ScrollView 
         showsVerticalScrollIndicator={false}
         style={styles(o).container}>
-            <Image style={styles(o).logo} source={require('../../assets/logo.png')}></Image>
+            <Image style={styles(o).logo} source={icon.logo}></Image>
             <Text style={styles(o).text}>Welcome!</Text>
             <TextInput secureTextEntry={switchCurrentPassword} style={styles(o).textinput}placeholder="Current Password"></TextInput>
             <TextInput secureTextEntry={switchPassword} style={styles(o).textinput} placeholder="Password"></TextInput>

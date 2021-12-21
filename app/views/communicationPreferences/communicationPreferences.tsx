@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import {Text,View,TouchableOpacity,Image,Switch} from 'react-native';
-import { UseOrientation } from "../../config";
+import { icon, UseOrientation } from "../../config";
 import styles from "./styles";
 
 const CommunicationPrefernces=(props:any)=>{
@@ -37,14 +37,14 @@ const CommunicationPrefernces=(props:any)=>{
                             <TouchableOpacity onPress={() => props.navigation.goBack()}>
                                 <Image
                                     style={styles(o).icon}
-                                    source={require('../../assets/left_arrow.png')}
+                                    source={icon.left_arrow}
                                 />
                             </TouchableOpacity>
 
                             <TouchableOpacity>
                                 <Image
                                     style={styles(o).icon}
-                                    source={require('../../assets/help.png')}
+                                    source={icon.help}
                                 />
                             </TouchableOpacity>
                         </View>

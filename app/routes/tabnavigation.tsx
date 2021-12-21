@@ -5,14 +5,15 @@ import { Image } from "react-native";
 import Logo from "../common/logo/logo";
 import { Help } from "../common";
 import styles from "./tabbarstyle";
+import { icon } from "../config";
+
 
 const Tab = createBottomTabNavigator();
 
 const MainTab = () => {
   return (
     <Tab.Navigator screenOptions={{tabBarActiveTintColor: 'black',
-    tabBarInactiveTintColor: 'gray',tabBarLabelPosition:'below-icon',tabBarLabelStyle:{paddingVertical:2}, headerTitle: () => (<Logo />), headerRight: () => (<Help />), headerStyle: { backgroundColor: '#000020', },tabBarStyle:{paddingVertical:2}}}>
-      
+        tabBarInactiveTintColor: 'gray',tabBarLabelPosition:'below-icon',tabBarLabelStyle:{paddingVertical:2}, headerTitle: () => (<Logo />), headerRight: () => (<Help />), headerStyle: { backgroundColor: '#000020', },tabBarStyle:{paddingVertical:2}}}>
       <Tab.Screen
         name="Home"
         component={CourseModal}
@@ -22,7 +23,7 @@ const MainTab = () => {
           tabBarIcon: ({focused}) => {
             return (
               <Image style={styles(focused).headerImage}
-                source={require('../assets/home.png')} />
+                source={icon.home} />
             )
           }
         }}
@@ -36,7 +37,7 @@ const MainTab = () => {
           
           tabBarIcon: ({focused}) => {
             return (
-              <Image style={styles(focused).headerImage} source={require('../assets/progress.png') }
+              <Image style={styles(focused).headerImage} source={icon.progress }
                 />
             )
           }
@@ -50,7 +51,7 @@ const MainTab = () => {
          
           tabBarIcon: ({focused}) => {
             return (
-              <Image source={require('../assets/inbox.png')} style={styles(focused).headerImage} />
+              <Image source={icon.inbox} style={styles(focused).headerImage} />
             )
           }
         }}
@@ -61,7 +62,7 @@ const MainTab = () => {
         options={{
           tabBarIcon: ({focused}) => {
             return (
-              <Image source={require('../assets/settings.png')} style={styles(focused).headerImage} />
+              <Image source={icon.setting} style={styles(focused).headerImage} />
             )
           }
         }}

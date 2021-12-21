@@ -1,5 +1,6 @@
 import React from "react";
 import { TouchableOpacity,Image } from "react-native";
+import { icon } from "../../config";
 import styles from "./style";
  
 const Help = () => {
@@ -7,7 +8,7 @@ const Help = () => {
         <TouchableOpacity>
             <Image
                 style={styles.rightlogo}
-                source={require('../../assets/help.png')}
+                source={icon.help}
             />
         </TouchableOpacity>
     )

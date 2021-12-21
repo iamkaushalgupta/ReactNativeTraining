@@ -1,6 +1,6 @@
 import React from "react";
 import { Image, TouchableOpacity, View } from "react-native";
-import { UseOrientation } from "../../config";
+import { icon, UseOrientation } from "../../config";
 import styles from "./style";
 
 export const Logo = () => {
@@ -9,7 +9,7 @@ export const Logo = () => {
         <View style={styles(o).container}>
         <Image
             style={styles(o).logo}
-            source={require('../../assets/header.png')}
+            source={icon.header}
 
         />
         </View>

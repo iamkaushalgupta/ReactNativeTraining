@@ -1,5 +1,6 @@
 import React from "react";
 import { View,Image, TouchableOpacity } from "react-native";
+import { icon } from "../../config";
 import styles from "./style";
 
 const Header=()=>{
@@ -7,7 +8,7 @@ const Header=()=>{
     return(
         <View style={styles.container}>
             <Image style={styles.logoImage}
-            source={require('../../assets/header.png')
+            source={icon.header
             }
             />
 
@@ -15,7 +16,7 @@ const Header=()=>{
             
                 <Image
                     style={styles.helpImage}
-                    source={require('../../assets/help.png')}
+                    source={icon.help}
                 />
         </TouchableOpacity>
         </View>

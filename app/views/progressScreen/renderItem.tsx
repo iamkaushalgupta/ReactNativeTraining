@@ -27,7 +27,6 @@ const RenderItem=(props:InputProps)=>{
                 <Text style={styles(props.o).detailsButtonText}>View Details</Text></TouchableOpacity>
                 </View>
             <View style={styles(props.o).HorizontalLine}>
-
             </View>
        
         </ScrollView>
