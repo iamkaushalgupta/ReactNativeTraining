@@ -9,7 +9,7 @@ import SettingModal from "./settingModal";
 import Test2by4Model from "./test2by4Model";
 import ChangePasswordModel from "./changePassword";
 import CommunicationPreferncesModel from "./communicationPreferncesModel";
+import TrainingProgramModel from "./trainingProgram";
 
 
-
-export {HomeModel,ContactModel, ProfileModel, TestModel,CourseModal,ProgressModel,SettingModal,Test2by4Model, ChangePasswordModel,CommunicationPreferncesModel};
+export {HomeModel,ContactModel, ProfileModel, TestModel,CourseModal,ProgressModel,SettingModal,Test2by4Model, ChangePasswordModel,CommunicationPreferncesModel,TrainingProgramModel};

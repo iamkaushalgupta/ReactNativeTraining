@@ -23,7 +23,7 @@ const ListItem = ( props :any) => {
             />
             <Text style={[styles(props.o).courseText]}>{props.item.title}</Text>
             <ProgressBar progress={0.5} color={Colors.green800} style={styles(props.o).progressBar}  />
-            <TouchableOpacity style={styles(props.o).button}>
+            <TouchableOpacity style={styles(props.o).button} onPress={()=>(props.navigation.navigate("TrainingProgram"))}>
                 <Text style={styles(props.o).buttonText}>{string.continueLearning}</Text>
             </TouchableOpacity>
         </View>

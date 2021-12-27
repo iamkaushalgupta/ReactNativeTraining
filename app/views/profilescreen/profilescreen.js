@@ -13,7 +13,7 @@ const ProfileScreen = (props) => {
     const [modalVisible, setModalVisible] = useState(false);
 
     const data={firstName:'kaushal',secondName:"Gupta", 
-    Gender:"Male", Email:"kaushalgupta198@gmail.com",
+        Gender:"Male", Email:"kaushalgupta198@gmail.com",
     homePhone:"8860393547", WorkPhone:"8851798050",MobilePhone:"8860393547", 
     Address:'A-532, Shastri Nagar, Delhi-110052'}
 
@@ -130,7 +130,7 @@ const ProfileScreen = (props) => {
             <View style={styles(o).header}>
                 <TouchableOpacity onPress={() => props.navigation.goBack()}>
                     <View style={styles(o).iconBorder}>
-                    <Image
+                        <Image
                         style={styles(o).icon}
                         source={icon.left_arrow}
                     />
@@ -152,7 +152,7 @@ const ProfileScreen = (props) => {
                 <ImageBackground source={{uri:image}}
                  imageStyle={{ borderRadius:90}}
                 style={styles(o).profileImage} >
-                    <Image source={icon.image} resizeMode="contain" style={styles(o).cameraImage} />
+                    <Image source={icon.camera} resizeMode="contain" style={styles(o).cameraImage} />
                 </ImageBackground>
                 </TouchableOpacity>
                 <View style={styles(o).detailText}>

@@ -1,6 +1,5 @@
 
 const string ={
-
     profile:"Profile",
     changePassword:"Change Password",
     communicationPreference:"Communication Preferences",
@@ -25,6 +24,16 @@ const string ={
     address:'Address',
     save:'Save',
     edit:'Edit',
+    lastViewedModules:'LAST VIEWED MODULE',
+    detoxYourLife:"Detox Your Life",
+    resume:'Resume',
+    moduleText:"This first module is all about setting you up...",
+    modules:'Modules',
+    filter:'Filters',
+    title:'Title',
+    bookmarks:'Bookmarks',
+    unbookmarks:'Unbookmarks',
+    or:'or',
 }
 
 export default string;

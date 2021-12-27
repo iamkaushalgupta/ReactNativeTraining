@@ -1,5 +1,5 @@
 import React from "react";
-import { Test2by4Model,ChangePasswordModel,CommunicationPreferncesModel, ProfileModel} from '../viewModels'
+import { Test2by4Model,ChangePasswordModel,CommunicationPreferncesModel, ProfileModel,TrainingProgramModel} from '../viewModels'
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
 import { NavigationContainer } from '@react-navigation/native';
 import MainTab from './tabnavigation'
@@ -26,6 +26,8 @@ const MainStack = () => {
                 <Stack.Screen name="ChangePassword" component={ChangePasswordModel}></Stack.Screen>
                 <Stack.Screen name="CommunicationPrefernces"component={CommunicationPreferncesModel}></Stack.Screen>
                 <Stack.Screen name="Profile"component={ProfileModel}></Stack.Screen>
+                <Stack.Screen name="TrainingProgram"component={TrainingProgramModel}></Stack.Screen>
+
                
             </Stack.Navigator>
         </NavigationContainer>
