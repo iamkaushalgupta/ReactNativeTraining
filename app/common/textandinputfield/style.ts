@@ -3,8 +3,7 @@ import { COLORS } from "../../constants";
 
 const styles=()=>StyleSheet.create({
     inputText:{
-        width:'95%'
-        
+        width:'95%'        
     },
     labelText:{
         color:COLORS.gray,

@@ -20,7 +20,7 @@ import { HeaderLogo } from "../../common";
 
 
 
-const OnboardingScreen = () => {
+const OnboardingScreen = (props:any) => {
     const o = UseOrientation()
     
     const RenderItem = (input: any) => {
@@ -62,7 +62,7 @@ const OnboardingScreen = () => {
                         
                         <View style={styles(o).buttonContainer}>
                     
-                    <TouchableOpacity style={styles(o).nextButton}>
+                    <TouchableOpacity style={styles(o).nextButton} onPress={()=>props.navigation.navigate('Signin')}>
                         <Text style={styles(o).nextButtonText}>{string.keywords.letgetstarted}</Text>
                     </TouchableOpacity>
                     </View>}

@@ -1,9 +1,9 @@
 import React from "react";
 import OnboardingScreen from "../views/onboardingScreen/onboardingScreen";
 
-const OnboardingModel=()=>{
+const OnboardingModel=({navigation}:any)=>{
     return(
-        <OnboardingScreen/>
+        <OnboardingScreen navigation={navigation}/>
     )
 }
 export default OnboardingModel
