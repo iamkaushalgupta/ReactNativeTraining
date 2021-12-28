@@ -49,8 +49,8 @@ const styles=(o:any)=>StyleSheet.create({
         justifyContent:'flex-end'
     },
     textContainer:{
-        flexDirection:'row',
-        justifyContent:'center'
-    }
+    flexDirection:'row',
+    justifyContent:'center'
+}
 })
 export default styles

@@ -47,9 +47,11 @@ const keywords={
     signin:'Sign In',
     signup:'Sign Up',
     donthaveanaccount:"Don't have an account?",
+    alreadyhaveanaccount:"Already have an account",
     forgetpassword:'Forget Password?',
     email:'Email',
-    password:'Password'
+    password:'Password',
+    
 }
 
 const bottom_tabs = [

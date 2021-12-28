@@ -7,7 +7,7 @@ import { HeaderLogo,TextAndInputField,
 } from "../../common";
 import { string } from "../../constants";
 
-const SignInScreen=()=>{
+const SignInScreen=(props:any)=>{
     const o=UseOrientation()
     return(
         <View style={styles(o).container}>
@@ -25,9 +25,9 @@ const SignInScreen=()=>{
                         <Text style={styles(o).signinButtonText}>{string.keywords.signin}</Text>
                     </TouchableOpacity>
 
-            <View style={{flexDirection:'row',justifyContent:'center'}}>
+            <View style={styles(o).textContainer}>
                 <Text style={styles(o).labelText}>{string.keywords.donthaveanaccount} </Text>
-                    <TouchableOpacity >
+                    <TouchableOpacity onPress={()=>props.navigation.navigate('Signup')}>
                         <Text style={styles(o).colorText}>{string.keywords.signup}</Text>
                     </TouchableOpacity>
              

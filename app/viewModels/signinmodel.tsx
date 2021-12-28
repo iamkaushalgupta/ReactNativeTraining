@@ -1,8 +1,8 @@
 import React from "react";
 import SignInScreen from "../views/signInScreen/signInScreen";
-const SignInModel=()=>{
+const SignInModel=({navigation}:any)=>{
     return(
-        <SignInScreen/>
+        <SignInScreen navigation={navigation}/>
     )
 }
 
