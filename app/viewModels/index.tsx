@@ -4,5 +4,6 @@ import ContactModel from "./contactscreen";
 import ProfileModel from "./profilescreen";
 import TestModel from './testModel';
 import OnboardingModel from "./onboardingModel";
+import SignInModel from "./signinmodel";
 
-export {HomeModel,ContactModel, ProfileModel, TestModel,OnboardingModel};
+export {HomeModel,ContactModel, ProfileModel, TestModel,OnboardingModel,SignInModel};

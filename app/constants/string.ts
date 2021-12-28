@@ -39,7 +39,17 @@ const screens = {
 const keywords={
     skip:"Skip",
     next:"Next",
-    letgetstarted:"Let's Get Started"
+    letgetstarted:"Let's Get Started",
+    letssignyouin:"Let's Sign You in",
+    welcomebackyouvebeenmissed:"Welcome back, you've been missed",
+    gettingstarted:"Getting Started",
+    createanaccounttocontinue:'Create an account to continue!',
+    signin:'Sign In',
+    signup:'Sign Up',
+    donthaveanaccount:"Don't have an account?",
+    forgetpassword:'Forget Password?',
+    email:'Email',
+    password:'Password'
 }
 
 const bottom_tabs = [

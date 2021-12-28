@@ -8,6 +8,8 @@ const down_arrow = require("../assets/icons/down_arrow.png")
 // const eye = require("../assets/icons/eye.png")
 // const eye_close = require("../assets/icons/eye_close.png")
 const favourite = require("../assets/icons/favourite.png")
+const check=require('../assets/icons/check.png')
+const close=require('../assets/icons/close.png')
 // const fb = require("../assets/icons/fb.png")
 // const google = require("../assets/icons/google.png")
 // const burger = require("../assets/icons/burger.png")
@@ -34,6 +36,8 @@ export default {
     search,
     filter,
     down_arrow,
+    check,
+    close
     // eye,
     // eye_close,
     // favourite,
