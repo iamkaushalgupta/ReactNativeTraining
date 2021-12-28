@@ -51,7 +51,9 @@ const keywords={
     forgetpassword:'Forget Password?',
     email:'Email',
     password:'Password',
-    
+    passwordrecovery:'Password Recovery',
+    pleaseenteryouremailaddresstorecoveryourpassword: "Please enter your email addressto recover your password",
+    sendemail:'Send Email'
 }
 
 const bottom_tabs = [

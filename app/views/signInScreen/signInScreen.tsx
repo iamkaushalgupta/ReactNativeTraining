@@ -16,7 +16,7 @@ const SignInScreen=(props:any)=>{
                 <Text style={styles(o).labelText}>{string.keywords.welcomebackyouvebeenmissed}</Text>
                 <TextAndInputField name="Email"/>
                 <TextAndInputField name="Password"/>
-                <TouchableOpacity>
+                <TouchableOpacity onPress={()=>props.navigation.navigate('PasswordRecovery')}>
               
                 <Text style={styles(o).labelForgetText}>{string.keywords.forgetpassword}</Text>
                 </TouchableOpacity>
