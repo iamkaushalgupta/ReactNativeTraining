@@ -21,7 +21,7 @@ const SignInScreen=(props:any)=>{
                 <Text style={styles(o).labelForgetText}>{string.keywords.forgetpassword}</Text>
                 </TouchableOpacity>
 
-                <TouchableOpacity style={styles(o).signinButton}>
+                <TouchableOpacity style={styles(o).signinButton} onPress={()=>props.navigation.navigate("Setting")}>
                         <Text style={styles(o).signinButtonText}>{string.keywords.signin}</Text>
                     </TouchableOpacity>
 

@@ -5,8 +5,7 @@ const menu = require("../assets/icons/menu.png")
 const search = require("../assets/icons/search.png")
 const filter = require("../assets/icons/filter.png")
 const down_arrow = require("../assets/icons/down_arrow.png")
-// const eye = require("../assets/icons/eye.png")
-// const eye_close = require("../assets/icons/eye_close.png")
+const left_arrow=require('../assets/icons/left_arrow.png')
 const favourite = require("../assets/icons/favourite.png")
 const check=require('../assets/icons/check.png')
 const close=require('../assets/icons/close.png')
@@ -37,7 +36,8 @@ export default {
     filter,
     down_arrow,
     check,
-    close
+    close,
+    left_arrow,
     // eye,
     // eye_close,
     // favourite,

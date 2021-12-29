@@ -24,7 +24,67 @@ const onboarding_screens = [
         description: "You’ll receive the great food within a hour. And get free delivery credits for every order.",
         finalButton:true
     }
+
 ]
+
+const settings=[
+    {
+        id:1,
+        name:'Change Password',
+        navigate:'Changepassword',
+        icon:require('../assets/icons/changepassword.png')
+    },
+    {
+        id:2,
+        name:'Preferences',
+        navigate:'Preferences',
+        icon:require('../assets/icons/filter.png')
+    },
+    {
+        id:3,
+        name:'Notification',
+        navigate:'Notification',
+        icon:require('../assets/icons/notification.png')
+    },    
+    {
+        id:4,
+        name:'Data use',
+        navigate:'Datause',
+        icon:require('../assets/icons/datauseage.png')
+    },
+    {
+        id:5,
+        name:'Check Update',
+        navigate:'Checkupdate',
+        icon:require('../assets/icons/checkupdate.png')
+    },
+    {
+        id:6,
+        name:'Contact Us',
+        navigate:'Contactus',
+        icon:require('../assets/icons/phone.png')
+    },
+    {
+        id:7,
+        name:'Privacy Policy',
+        navigate:'Privacypolicy',
+        icon:require('../assets/icons/privacy.png')
+    },
+    {
+        id:8,
+        name:'Terms & Conditions',
+        navigate:'TermsandConditons',
+        icon:require('../assets/icons/terms.png')
+    },
+    {
+        id:9,
+        name:'Logout',
+        navigate:'Logout',
+        icon:require('../assets/icons/logout.png')
+    },
+    
+]
+
 
 const screens = {
     main_layout: "MainLayout",
@@ -34,6 +94,7 @@ const screens = {
     favourite: "Favourite",
     notification: "Notification",
     my_wallet: "My Wallet",
+    settings:'Settings'
 }
 
 const keywords={
@@ -164,6 +225,7 @@ export default {
     delivery_time,
     ratings,
     tags,
-    keywords
+    keywords,
+    settings
 }
 
