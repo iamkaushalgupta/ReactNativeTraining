@@ -5,7 +5,7 @@ import { string } from "../../constants";
 import styles from "./style";
 import UseOrientation from "../../config/useOrientation";
 
-const PasswordRecoveryScreen=()=>{
+const PasswordRecoveryScreen=(props:any)=>{
     const o=UseOrientation()
     return(
     <View style={styles(o).container}>
@@ -15,7 +15,7 @@ const PasswordRecoveryScreen=()=>{
             <TextAndInputField name="Email"/>
 
             <View style={styles(o).sendButtonContainer}>
-            <TouchableOpacity style={styles(o).sendButton}>
+            <TouchableOpacity style={styles(o).sendButton}  onPress={()=>props.navigation.navigate('OTPAuthentication')}>
                         <Text style={styles(o).sendButtonText}>{string.keywords.sendemail}</Text>
                     </TouchableOpacity>
                     </View> 

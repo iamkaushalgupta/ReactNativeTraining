@@ -1,8 +1,8 @@
 import PasswordRecoveryScreen from "../views/passwordRecoveryScreen/passwordRecoveryScreen";
 import React from "react";
 
-const PasswordRecoveryModel=()=>{
-    return(<PasswordRecoveryScreen/>)
+const PasswordRecoveryModel=({navigation}:any)=>{
+    return(<PasswordRecoveryScreen navigation={navigation}/>)
 }
 
 export default PasswordRecoveryModel

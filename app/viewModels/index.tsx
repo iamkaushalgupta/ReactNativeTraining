@@ -7,5 +7,6 @@ import OnboardingModel from "./onboardingModel";
 import SignInModel from "./signinmodel";
 import SignUpModel from "./signupmodel";
 import PasswordRecoveryModel from "./passwordRecoveryModel";
+import OTPAuthenticationModel from "./otpauthenticationModel";
 
-export {HomeModel,ContactModel, ProfileModel, TestModel,OnboardingModel,SignInModel,SignUpModel,PasswordRecoveryModel};
+export {HomeModel,ContactModel, ProfileModel, TestModel,OnboardingModel,SignInModel,SignUpModel,PasswordRecoveryModel, OTPAuthenticationModel};

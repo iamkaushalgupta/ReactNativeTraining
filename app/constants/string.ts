@@ -53,7 +53,12 @@ const keywords={
     password:'Password',
     passwordrecovery:'Password Recovery',
     pleaseenteryouremailaddresstorecoveryourpassword: "Please enter your email addressto recover your password",
-    sendemail:'Send Email'
+    sendemail:'Send Email',
+    otpauthentication:'OTP Authentication',
+    anauthenticationcodehasbeensenttoregesiteredemailid:'An authentication code has been sent to registered Email ID',
+    continue:'Continue',
+    bysigningupyouagreetoour:'By signing up, you agree to our.',
+    termsandcondition:'Terms and Conditions'
 }
 
 const bottom_tabs = [

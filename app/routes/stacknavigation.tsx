@@ -1,5 +1,8 @@
 import React from "react";
-import {HomeModel, ContactModel, ProfileModel,TestModel,OnboardingModel,SignInModel, SignUpModel, PasswordRecoveryModel} from '../viewModels'
+import {HomeModel, ContactModel, ProfileModel,TestModel,OnboardingModel,SignInModel, SignUpModel, 
+    PasswordRecoveryModel,
+    OTPAuthenticationModel
+} from '../viewModels'
 import {createNativeStackNavigator} from '@react-navigation/native-stack'
 import { NavigationContainer } from '@react-navigation/native';
 
@@ -13,6 +16,7 @@ type RootStackParamList ={
     Signin:undefined;
     Signup:undefined;
     PasswordRecovery:undefined;
+    OTPAuthentication:undefined;
 }
 
 const Stack = createNativeStackNavigator<RootStackParamList>()
@@ -31,6 +35,7 @@ const MainStack =()=>
             <Stack.Screen name = "Signin" component ={SignInModel}></Stack.Screen>
             <Stack.Screen name = "Signup" component ={SignUpModel}></Stack.Screen>
             <Stack.Screen name = "PasswordRecovery" component ={PasswordRecoveryModel}></Stack.Screen>
+            <Stack.Screen name = "OTPAuthentication" component ={OTPAuthenticationModel}></Stack.Screen>
         </Stack.Navigator>
         </NavigationContainer>
 
