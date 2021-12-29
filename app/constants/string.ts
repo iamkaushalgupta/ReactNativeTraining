@@ -94,7 +94,8 @@ const screens = {
     favourite: "Favourite",
     notification: "Notification",
     my_wallet: "My Wallet",
-    settings:'Settings'
+    settings:'Settings',
+    changepassword:'Change Password'
 }
 
 const keywords={

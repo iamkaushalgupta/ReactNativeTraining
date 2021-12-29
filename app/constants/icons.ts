@@ -9,6 +9,8 @@ const left_arrow=require('../assets/icons/left_arrow.png')
 const favourite = require("../assets/icons/favourite.png")
 const check=require('../assets/icons/check.png')
 const close=require('../assets/icons/close.png')
+const eye_on=require('../assets/icons/eye_on.png')
+const eye_off=require('../assets/icons/eye_off.png')
 // const fb = require("../assets/icons/fb.png")
 // const google = require("../assets/icons/google.png")
 // const burger = require("../assets/icons/burger.png")
@@ -38,8 +40,8 @@ export default {
     check,
     close,
     left_arrow,
-    // eye,
-    // eye_close,
+    eye_on,
+    eye_off,
     // favourite,
     // // fb,
     // // google,

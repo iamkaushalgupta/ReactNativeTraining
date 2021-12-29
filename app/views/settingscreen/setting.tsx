@@ -9,7 +9,7 @@ const SettingScreen=(props:any)=>{
     const RenderItem=(data:any)=>{
         
         return(
-            <TouchableOpacity style={styles(o).renderContainer}>
+            <TouchableOpacity style={styles(o).renderContainer} onPress={()=>props.navigation.navigate("Changepassword")}>
                 
                 <Image style={styles(o).settingIcon} source={data.data.item.icon}/>
                 <Text style={styles(o).settingNameText}>{data.data.item.name}</Text>
@@ -45,4 +45,4 @@ const SettingScreen=(props:any)=>{
     );
 }
 
-export default SettingScreen
+export default SettingScreen;

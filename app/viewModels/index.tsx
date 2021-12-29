@@ -9,5 +9,9 @@ import SignUpModel from "./signupmodel";
 import PasswordRecoveryModel from "./passwordRecoveryModel";
 import OTPAuthenticationModel from "./otpauthenticationModel";
 import SettingModel from "./settingmodel";
+import ChangePasswordModel from "./changePasswordModel";
 
-export {HomeModel,ContactModel, ProfileModel, TestModel,OnboardingModel,SignInModel,SignUpModel,PasswordRecoveryModel, OTPAuthenticationModel, SettingModel};
+export {HomeModel,ContactModel,
+     ProfileModel, TestModel,OnboardingModel,SignInModel,SignUpModel,
+     PasswordRecoveryModel, OTPAuthenticationModel, SettingModel,ChangePasswordModel
+    };
