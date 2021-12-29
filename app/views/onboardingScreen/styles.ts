@@ -52,7 +52,8 @@ const styles = (o: any) => StyleSheet.create({
     },
     descriptionText:{
         width:o.width*0.8,
-        textAlign:'center'
+        textAlign:'center',
+        color:COLORS.gray
     },
 
     buttonContainer:{
