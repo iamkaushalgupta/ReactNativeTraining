@@ -43,7 +43,7 @@ const settings=[
     {
         id:3,
         name:'Notification',
-        navigate:'Notification',
+        navigate:'NotificationSetting',
         icon:require('../assets/icons/notification.png')
     },    
     {
@@ -95,7 +95,8 @@ const screens = {
     notification: "Notification",
     my_wallet: "My Wallet",
     settings:'Settings',
-    changepassword:'Change Password'
+    changepassword:'Change Password',
+
 }
 
 const keywords={
@@ -219,6 +220,21 @@ const tags = [
     }
 ]
 
+const notification_setting=[
+    {
+        id:1,
+        name:'Notification',
+        text:'You will receive daily updates',
+        icon:require('../assets/icons/notification.png')
+    },
+    {
+        id:2,
+        name:'Promotional Notifications',
+        text:'You will receive daily updates',
+        icon:require('../assets/icons/notification.png')
+    }
+]
+
 export default {
     onboarding_screens,
     screens,
@@ -227,6 +243,7 @@ export default {
     ratings,
     tags,
     keywords,
-    settings
+    settings,
+    notification_setting
 }
 

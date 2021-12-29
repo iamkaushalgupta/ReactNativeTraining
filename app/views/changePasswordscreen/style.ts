@@ -13,13 +13,13 @@ const styles=(o:any)=>StyleSheet.create({
     },
     
     icon:{
-        tintColor:COLORS.gray,
+        tintColor:COLORS.gray2,
         resizeMode:'contain',
-            width:o.width*0.1,
-            height:o.height*0.05,
+            width:40,
+            height:40,
     },
     backButton:{
-        borderColor:COLORS.gray,
+        borderColor:COLORS.gray2,
         borderWidth:2,
         borderRadius:10,
     },
@@ -31,8 +31,6 @@ const styles=(o:any)=>StyleSheet.create({
     sendButton:{
         backgroundColor:COLORS.primary,
         width:'100%',
-        // height:'100%',
-        // flex:1,
         justifyContent:'center',
         alignSelf:'flex-end',
         borderRadius:10,
