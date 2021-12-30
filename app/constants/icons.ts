@@ -25,7 +25,7 @@ const calories = require("../assets/icons/calories.png")
 // const notification = require("../assets/icons/notification.png")
 // const profile = require("../assets/icons/profile.png")
 // const setting = require("../assets/icons/setting.png")
-// const star = require("../assets/icons/star.png")
+const star = require("../assets/icons/star.png")
 // const wallet = require("../assets/icons/wallet.png")
 // const help = require("../assets/icons/help.png")
 
@@ -57,7 +57,7 @@ export default {
     // notification,
     // profile,
     // setting,
-    // star,
+    star,
     // wallet,
     // help,
 }

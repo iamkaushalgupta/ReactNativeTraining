@@ -2,6 +2,7 @@ import React from "react";
 import { StyleSheet } from "react-native";
 import { COLORS } from "../../constants";
 
+
 const styles=(o:any)=>StyleSheet.create(
     {
         container:{
@@ -171,9 +172,126 @@ const styles=(o:any)=>StyleSheet.create(
             alignItems:'center'
         },
         modalContainer:{
-            flex:1
-        }
-    }
-)
+            flex:1,
+            backgroundColor:COLORS.transparentBlack7
+        },
+         modalUpper:{
+            flex:0.1,
+            
+         },
+         modalLower:{
+            flex:0.9,
+            backgroundColor:COLORS.white,
+            borderTopLeftRadius:20,
+            borderTopRightRadius:20,
+            paddingHorizontal:20,
+            paddingTop:20,
+           
+        },
+        closeIcon:{
+            resizeMode:'contain',
+                width:20,
+                height:20,
+                tintColor:COLORS.gray2
+               
+        },
+        closeButton:{
+            borderColor:COLORS.gray2,
+            borderWidth:2,
+            padding: 8,
+            borderRadius:10,
+        },
+        modalLowerUpperContainer:{
+            flexDirection:'row',
+            justifyContent:'space-between'
+        },
+        modalheadText:{
+            color:COLORS.black,
+            fontWeight:'800',
+            fontSize:20,
+        },
+        modalText:{
+            color:COLORS.black,
+            fontWeight:'800',
+            fontSize:18,
+            paddingTop:20,
+        },
+        customMarkerContainer:{
+            height:60,
+            alignItems:'center',
+            justifyContent:'center'
+        },
+        customMarkerCircle:{
+                height:30,
+                width:30,
+                borderRadius:15,
+                borderWidth:4,
+                borderColor:COLORS.white,
+                backgroundColor:COLORS.primary
+        
+    
+            },
+            customMarkerText:{
+                marginTop:5,
+            },
+            iconText:{
+                color:COLORS.gray,
+                fontSize:16,
+                fontWeight:'800'
+            },
+            iconStar:{
+                tintColor:COLORS.gray2,
+                resizeMode:'contain',
+                    width:20,
+                    height:20,
+                    marginHorizontal:5,
+            },
+            nextButton:{
+                backgroundColor:COLORS.primary,
+                width:'100%',
+               
+                flex:1,
+                alignItems:'center',
+                justifyContent:'center',
+                paddingVertical:10,
+                borderRadius:10,
+                margin:10,
+            
+            },
+            nextButtonText:{
+                color:COLORS.white,
+                fontSize:20,
+                
+            },
+            deliveryFlatList:{
+                backgroundColor:COLORS.lightGray1,
+                justifyContent:'center',
+                alignItems:'center',
+                paddingHorizontal: 30,
+                paddingVertical:10,
+                marginRight:10,
+                marginTop:10,
+            },
+            ratingFlatList:{
+                backgroundColor:COLORS.lightGray1,
+                justifyContent:'center',
+                alignItems:'center',
+                paddingHorizontal: 10,
+                paddingVertical:10,
+                marginRight:10,
+                marginTop:10,
+                flexDirection:'row'
+            },
+            tagsFlatList:{
+                backgroundColor:COLORS.lightGray1,
+                justifyContent:'center',
+                alignItems:'center',
+                paddingHorizontal: 30,
+                paddingVertical:10,
+                marginRight:10,
+                marginTop:10,
+            }
+
+})
 
 export default styles;

@@ -10,6 +10,7 @@
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx"
   },
   "dependencies": {
+    "@ptomasroos/react-native-multi-slider": "^2.2.2",
     "@react-navigation/native": "^6.0.6",
     "@react-navigation/native-stack": "^6.2.5",
     "react": "17.0.2",
@@ -18,6 +19,7 @@
     "react-native-axios": "^0.17.1",
     "react-native-clipboard": "0.0.5",
     "react-native-image-picker": "^4.3.0",
+    "react-native-multi-slider": "^0.3.6",
     "react-native-otp-inputs": "^7.1.1",
     "react-native-otp-textinput": "0.0.8",
     "react-native-safe-area-context": "^3.3.2",

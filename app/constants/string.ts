@@ -126,7 +126,14 @@ const keywords={
     address:'No. 88, JIn Padungan, Kuching',
     populatnearyou:'Popular Near You',
     showall:'Show All',
-    calories:'Calories'
+    calories:'Calories',
+    filteryoursearch:'Filter Your Search',
+    distance:'Distance',
+    deliverytime:'Delivery Time',
+    pricerange:'Price Range',
+    tags:'Tags',
+    ratings:'Ratings',
+    applyfilter:'Apply Filter'
 }
 
 const bottom_tabs = [
