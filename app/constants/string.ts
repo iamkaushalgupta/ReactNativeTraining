@@ -121,7 +121,12 @@ const keywords={
     anauthenticationcodehasbeensenttoregesiteredemailid:'An authentication code has been sent to registered Email ID',
     continue:'Continue',
     bysigningupyouagreetoour:'By signing up, you agree to our.',
-    termsandcondition:'Terms and Conditions'
+    termsandcondition:'Terms and Conditions',
+    deliveryto:'DELIVERY TO',
+    address:'No. 88, JIn Padungan, Kuching',
+    populatnearyou:'Popular Near You',
+    showall:'Show All',
+    calories:'Calories'
 }
 
 const bottom_tabs = [
@@ -188,35 +193,69 @@ const ratings = [
 const tags = [
     {
         id: 1,
-        label: "Burger"
+        label: "Burger",
+        icon: require('../assets/dummyData/hamburger.png'),
+        text:'Chicken Party Hamburger',
+        cost:'$15.11',
+        calories:'78'
     },
     {
         id: 2,
-        label: "Fast Food"
+        label: "Fast Food",
+        icon: require('../assets/dummyData/hot_tacos.png'),
+        text:'Mexican Party Hot Tacos',
+        cost:'$11.13',
+        calories:'66'
     },
     {
         id: 3,
-        label: "Pizza"
+        label: "Pizza",
+        icon: require('../assets/dummyData/veg_biryani.png'),
+        text:'Mexican Party Hot Tacos',
+        cost:'$11.13',
+        calories:'86'
     },
     {
         id: 4,
-        label: "Asian"
+        label: "Asian",
+        icon: require('../assets/dummyData/wrap_sandwich.png'),
+        text:'Chicken Party Hamburger',
+        cost:'$15.11',
+        calories:'88'
     },
     {
         id: 5,
-        label: "Dessert"
+        label: "Dessert",
+        icon: require('../assets/dummyData/hamburger.png'),
+        text:'Mexican Party Hot Tacos',
+        cost:'$11.13',
+        calories:'98'
+
     },
     {
         id: 6,
-        label: "Breakfast"
+        label: "Breakfast",
+        icon: require('../assets/dummyData/hot_tacos.png'),
+        text:'Chicken Party Hamburger',
+        cost:'$15.11',
+        calories:'78'
     },
     {
         id: 7,
-        label: "Vegetable"
+        label: "Vegetable",
+        icon: require('../assets/dummyData/veg_biryani.png'),
+        text:'Mexican Party Hot Tacos',
+        cost:'$11.13',
+        calories:'76'
+   
     },
     {
         id: 8,
-        label: "Taccos"
+        label: "Taccos",
+        icon: require('../assets/dummyData/wrap_sandwich.png'),
+        text:'Chicken Party Hamburger',
+        cost:'$15.11',
+        calories:'78'
     }
 ]
 

@@ -1,5 +1,5 @@
 import React from "react";
-import HomeModel from "./homescreen";
+import HomeModel from "./homeModel";
 import ContactModel from "./contactscreen";
 import ProfileModel from "./profilescreen";
 import TestModel from './testModel';

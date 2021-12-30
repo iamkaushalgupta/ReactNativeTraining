@@ -17,8 +17,8 @@ const eye_off=require('../assets/icons/eye_off.png')
 // const cherry = require("../assets/icons/cherry.png")
 // const correct = require("../assets/icons/correct.png")
 // const rice = require("../assets/icons/rice.png")
-// const love = require("../assets/icons/love.png")
-// const calories = require("../assets/icons/calories.png")
+const love = require("../assets/icons/love.png")
+const calories = require("../assets/icons/calories.png")
 // const home = require("../assets/icons/home.png")
 // const location = require("../assets/icons/location.png")
 // const logout = require("../assets/icons/logout.png")
@@ -49,8 +49,8 @@ export default {
     // cherry,
     // correct,
     // rice,
-    // love,
-    // calories,
+    love,
+    calories,
     // home,
     // location,
     // logout,
