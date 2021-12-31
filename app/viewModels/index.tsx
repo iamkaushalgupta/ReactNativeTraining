@@ -11,10 +11,12 @@ import OTPAuthenticationModel from "./otpauthenticationModel";
 import SettingModel from "./settingmodel";
 import ChangePasswordModel from "./changePasswordModel";
 import NotificationSettingModel from "./notificationSettingModel";
+import DetailModel from "./detailModel";
 
 export {HomeModel,ContactModel,
      ProfileModel, TestModel,OnboardingModel,SignInModel,SignUpModel,
      PasswordRecoveryModel, OTPAuthenticationModel, SettingModel,ChangePasswordModel,
-     NotificationSettingModel
+     NotificationSettingModel,
+     DetailModel
     
     };

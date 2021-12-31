@@ -4,7 +4,8 @@ import {HomeModel, ContactModel, ProfileModel,TestModel,OnboardingModel,SignInMo
     OTPAuthenticationModel,
     SettingModel,
     ChangePasswordModel,
-    NotificationSettingModel
+    NotificationSettingModel,
+    DetailModel
 } from '../viewModels'
 import {createNativeStackNavigator} from '@react-navigation/native-stack'
 import { NavigationContainer } from '@react-navigation/native';
@@ -23,6 +24,7 @@ type RootStackParamList ={
     Setting:undefined;
     Changepassword:undefined;
     NotificationSetting:undefined;
+    Detail:undefined;
 }
 
 const Stack = createNativeStackNavigator<RootStackParamList>()
@@ -45,6 +47,7 @@ const MainStack =()=>
             <Stack.Screen name = "Setting" component ={SettingModel}></Stack.Screen>
             <Stack.Screen name = "Changepassword" component ={ChangePasswordModel}></Stack.Screen>
             <Stack.Screen name = "NotificationSetting" component ={NotificationSettingModel}></Stack.Screen>
+            <Stack.Screen name = "Detail" component ={DetailModel}></Stack.Screen>
         </Stack.Navigator>
         </NavigationContainer>
 

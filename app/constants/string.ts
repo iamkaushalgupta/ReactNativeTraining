@@ -27,6 +27,21 @@ const onboarding_screens = [
 
 ]
 
+const Detailhamburger = {
+    id: 1,
+    name: "Hamburger",
+    description: "A popular spice and vegetables mixed favoured rice dish which is typically prepared by layering the briyani gravy and basmati rice flat bottom vessel. ",
+    price: "$15.99",
+    calories: 78,
+    isFavourite: true,
+    image: require("../assets/dummyData/hamburger.png"),
+    rating:'4.5',
+    time:'30 Mins',
+    shipping:'Free shipping',
+    sizes:['12"','14"','16"','18"'],
+    
+}
+
 const settings=[
     {
         id:1,
@@ -96,6 +111,7 @@ const screens = {
     my_wallet: "My Wallet",
     settings:'Settings',
     changepassword:'Change Password',
+    details:'Details'
 
 }
 
@@ -133,7 +149,11 @@ const keywords={
     pricerange:'Price Range',
     tags:'Tags',
     ratings:'Ratings',
-    applyfilter:'Apply Filter'
+    applyfilter:'Apply Filter',
+    sizes:'Sizes',
+    companyName:'By Successive Technologies',
+    distanceApart:'1.2 KM away from you',
+    buyNow:'Buy Now'
 }
 
 const bottom_tabs = [
@@ -290,6 +310,7 @@ export default {
     tags,
     keywords,
     settings,
-    notification_setting
+    notification_setting,
+    Detailhamburger
 }
 

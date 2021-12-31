@@ -29,7 +29,7 @@ const HomeScreen = (props: homeProp) => {
     }
     const FoodRenderItem = ({ item, index }: any) => {
         return (
-            <TouchableOpacity style={styles(o).FoodContainer}>
+            <TouchableOpacity style={styles(o).FoodContainer} onPress={()=>props.navigation.navigate("Detail")}>
                 <View style={styles(o).foodRenderUpperContainer}>
                     <View style={styles(o).caloriesContainer}>
                         <Image source={icons.calories} style={styles(o).caloriesIcon} />

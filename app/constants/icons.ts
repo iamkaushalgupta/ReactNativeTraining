@@ -28,8 +28,13 @@ const calories = require("../assets/icons/calories.png")
 const star = require("../assets/icons/star.png")
 // const wallet = require("../assets/icons/wallet.png")
 // const help = require("../assets/icons/help.png")
-
+const clock=require('../assets/icons/clock.png')
+const dollar=require('../assets/icons/dollar-symbol.png')
+const plus=require('../assets/icons/plus.png')
+const minus=require('../assets/icons/minus.png')
 export default {
+    plus,
+    minus,
     coupon,
     cross,
     cart,
@@ -58,6 +63,8 @@ export default {
     // profile,
     // setting,
     star,
+    clock,
+    dollar,
     // wallet,
     // help,
 }
