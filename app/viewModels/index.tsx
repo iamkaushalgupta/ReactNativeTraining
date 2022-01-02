@@ -12,11 +12,13 @@ import SettingModel from "./settingmodel";
 import ChangePasswordModel from "./changePasswordModel";
 import NotificationSettingModel from "./notificationSettingModel";
 import DetailModel from "./detailModel";
+import MyCartModel from "./mycartModel";
 
 export {HomeModel,ContactModel,
      ProfileModel, TestModel,OnboardingModel,SignInModel,SignUpModel,
      PasswordRecoveryModel, OTPAuthenticationModel, SettingModel,ChangePasswordModel,
      NotificationSettingModel,
-     DetailModel
+     DetailModel,
+     MyCartModel
     
     };

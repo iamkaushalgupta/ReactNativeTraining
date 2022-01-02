@@ -153,7 +153,13 @@ const keywords={
     sizes:'Sizes',
     companyName:'By Successive Technologies',
     distanceApart:'1.2 KM away from you',
-    buyNow:'Buy Now'
+    buyNow:'Buy Now',
+    shippingFee:'Shipping Fee',
+    subtotal:'Sub Total',
+    total:'Total:',
+    shippingfeevalue:'$0.00',
+    subtotalvalue:'$37.97',
+    placeyourorder:'Place your Order'
 }
 
 const bottom_tabs = [
@@ -301,6 +307,30 @@ const notification_setting=[
     }
 ]
 
+const mycart_data =[
+    {
+        id:1,
+        name:'Hamburger',
+        quanity:3,
+        price:'$15.99',
+        icon:require('../assets/dummyData/hamburger.png')
+    },
+    {
+        id:2,
+        name:'Hot Tacos',
+        quanity:2,
+        price:'$10.99',
+        icon:require('../assets/dummyData/hot_tacos.png')
+    },
+    {
+        id:3,
+        name:'Veg Biryani',
+        quanity:1,
+        price:'$10.99',
+        icon:require('../assets/dummyData/veg_biryani.png')
+    }
+]
+
 export default {
     onboarding_screens,
     screens,
@@ -311,6 +341,7 @@ export default {
     keywords,
     settings,
     notification_setting,
-    Detailhamburger
+    Detailhamburger,
+    mycart_data
 }
 

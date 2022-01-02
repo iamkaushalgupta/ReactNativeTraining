@@ -95,7 +95,7 @@ const DetailScreen=({navigation}:any)=>{
                             </TouchableOpacity>
                         </View>
 
-                        <TouchableOpacity style={styles.buyButton}>
+                        <TouchableOpacity style={styles.buyButton} onPress={()=>navigation.navigate("Cart")}>
                             <Text style={styles.buyNowText}>{string.keywords.buyNow}</Text>
                             <Text style={styles.buyNowText}>{string.Detailhamburger.price}</Text>
                         </TouchableOpacity>
