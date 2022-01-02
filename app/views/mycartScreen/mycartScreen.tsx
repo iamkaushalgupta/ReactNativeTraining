@@ -60,7 +60,7 @@ const MyCartScreen=({navigation}:any)=>{
                         <Text style={styles.totalValueText}>{string.keywords.subtotalvalue}</Text>
                         </View>
                         <View style={styles.ButtonContainer}>
-            <TouchableOpacity style={styles.Button}>
+            <TouchableOpacity style={styles.Button} onPress={()=>navigation.navigate("Paymentsuccess")}>
                         <Text style={styles.ButtonText}>{string.keywords.placeyourorder}</Text>
                     </TouchableOpacity>
                     </View> 

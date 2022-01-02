@@ -3,7 +3,7 @@ import {
     View, Text, TouchableOpacity, Image
 } from "react-native";
 import styles from './style'
-import { icons, string } from '../../constants'
+import { icons, string,images } from '../../constants'
 import UseOrientation from "../../config/useOrientation";
 import { TextAndPasswordInput } from "../../common";
 
@@ -17,9 +17,9 @@ const ChangePassword = (props: any) => {
                 </TouchableOpacity>
 
                 <Text style={styles(o).heading}> {string.screens.changepassword}</Text>
-                {<TouchableOpacity style={styles(o).backButton}>
-                    <Image source={icons.left_arrow} style={styles(o).icon} />
-                </TouchableOpacity>}
+                <TouchableOpacity>
+                        <Image source={images.transparent} style={styles(o).icon}/>
+                        </TouchableOpacity>
             </View>
 
             

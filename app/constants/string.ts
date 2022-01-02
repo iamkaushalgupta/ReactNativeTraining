@@ -116,6 +116,9 @@ const screens = {
 }
 
 const keywords={
+    congratulations:'Congratulations',
+    paymentSuccesfullyMade:'Payment was Successfully Made!', 
+    done:'Done',
     skip:"Skip",
     next:"Next",
     letgetstarted:"Let's Get Started",

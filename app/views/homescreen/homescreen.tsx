@@ -174,7 +174,9 @@ const HomeScreen = (props: homeProp) => {
                 </TouchableOpacity>
 
                 <Text style={styles(o).heading}> {string.screens.home}</Text>
+                <TouchableOpacity onPress={()=>props.navigation.navigate("Setting")}>
                 <Image source={images.profile} style={styles(o).iconProfile} />
+                </TouchableOpacity>
             </View>
 
 

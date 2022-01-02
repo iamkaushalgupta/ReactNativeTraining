@@ -6,7 +6,8 @@ import {HomeModel, ContactModel, ProfileModel,TestModel,OnboardingModel,SignInMo
     ChangePasswordModel,
     NotificationSettingModel,
     DetailModel,
-    MyCartModel
+    MyCartModel,
+    PaymentSuccessModel
 } from '../viewModels'
 import {createNativeStackNavigator} from '@react-navigation/native-stack'
 import { NavigationContainer } from '@react-navigation/native';
@@ -27,6 +28,7 @@ type RootStackParamList ={
     NotificationSetting:undefined;
     Detail:undefined;
     Cart:undefined;
+    Paymentsuccess:undefined;
 }
 
 const Stack = createNativeStackNavigator<RootStackParamList>()
@@ -51,6 +53,7 @@ const MainStack =()=>
             <Stack.Screen name = "NotificationSetting" component ={NotificationSettingModel}></Stack.Screen>
             <Stack.Screen name = "Detail" component ={DetailModel}></Stack.Screen>
             <Stack.Screen name = "Cart" component ={MyCartModel}></Stack.Screen>
+            <Stack.Screen name = "Paymentsuccess" component ={PaymentSuccessModel}></Stack.Screen>
         </Stack.Navigator>
         </NavigationContainer>
 

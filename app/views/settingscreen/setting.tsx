@@ -2,7 +2,7 @@ import React from "react";
 import styles from './style';
 import { View,Text, Image, TouchableOpacity, FlatList } from "react-native";
 import UseOrientation from "../../config/useOrientation";
-import { icons, string } from "../../constants";
+import { icons, images, string } from "../../constants";
 
 const SettingScreen=(props:any)=>{
     const o =UseOrientation()
@@ -25,9 +25,9 @@ const SettingScreen=(props:any)=>{
                         </TouchableOpacity>
                       
                     <Text style={styles(o).heading}> {string.screens.settings}</Text>
-                    {<TouchableOpacity style={styles(o).backButton}>
-                        <Image source={icons.left_arrow} style={styles(o).icon}/>
-                        </TouchableOpacity>}
+                    <TouchableOpacity>
+                        <Image source={images.transparent} style={styles(o).icon}/>
+                        </TouchableOpacity>
           
 
             </View>

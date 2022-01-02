@@ -1,7 +1,7 @@
 import React,{useState} from "react";
 import {View, Text, TouchableOpacity,Image, FlatList,Switch} from 'react-native';
 import styles from "./style";
-import { COLORS, icons,string } from "../../constants";
+import { COLORS, icons,string,images } from "../../constants";
 import UseOrientation from "../../config/useOrientation";
 
 const NotificationSettingScreen=(props:any)=>{
@@ -41,9 +41,9 @@ const NotificationSettingScreen=(props:any)=>{
                         </TouchableOpacity>
                       
                     <Text style={styles(o).heading}> {string.screens.notification}</Text>
-                    {<TouchableOpacity style={styles(o).backButton}>
-                        <Image source={icons.left_arrow} style={styles(o).icon}/>
-                        </TouchableOpacity>}
+                    <TouchableOpacity>
+                        <Image source={images.transparent} style={styles(o).icon}/>
+                        </TouchableOpacity>
          </View>
         
         <FlatList

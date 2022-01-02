@@ -155,7 +155,8 @@ const styles = StyleSheet.create({
     ButtonContainer:{
         justifyContent:'flex-end',
         flex:1
-    }
+    },
+
 
 
 })
