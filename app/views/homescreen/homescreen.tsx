@@ -1,5 +1,8 @@
 import React, { useState } from "react";
-import { Text, View, TouchableOpacity, Image, TextInput, FlatList, ScrollView, Modal, TouchableWithoutFeedback } from 'react-native';
+import { Text, View, 
+    TouchableOpacity, Image,
+     TextInput, FlatList, ScrollView, Modal, 
+     TouchableWithoutFeedback } from 'react-native';
 import styles from './style'
 import { COLORS, icons, images, string } from '../../constants'
 import UseOrientation from "../../config/useOrientation";

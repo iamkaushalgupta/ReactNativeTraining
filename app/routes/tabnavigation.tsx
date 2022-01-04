@@ -12,7 +12,8 @@ import {HomeModel, ContactModel, ProfileModel,TestModel,OnboardingModel,SignInMo
     NotificationSettingModel,
     DetailModel,
     MyCartModel,
-    PaymentSuccessModel
+    PaymentSuccessModel,
+    NotificationTabModel
 } from '../viewModels'
 
 const Tab = createBottomTabNavigator();
@@ -23,7 +24,7 @@ const MyTabs=()=> {
         <Tab.Screen name="Home" component={HomeModel} options={{
             tabBarIcon: ({focused}) => {
                 return (
-                    <View style={[{backgroundColor:(focused)?COLORS.primary:COLORS.white,width:(focused)?"120%":'80%'},styles.tabBarContainer]}>
+                    <View style={[{backgroundColor:(focused)?COLORS.primary:COLORS.white,width:(focused)?"160%":'40%'},styles.tabBarContainer]}>
                    <Image style={[styles.tabBarIcon,{tintColor:(focused)?COLORS.white:COLORS.darkGray}]}
                     source={icons.home} />
                     {focused&&<Text style={[{color:(focused)?COLORS.white:COLORS.gray},styles.tabBarIconText]}>{string.keywords.home}</Text>}
@@ -37,7 +38,7 @@ const MyTabs=()=> {
         <Tab.Screen name="Search" component={HomeModel} options={{
             tabBarIcon: ({focused}) => {
                 return (
-                    <View style={[{backgroundColor:(focused)?COLORS.primary:COLORS.white,width:(focused)?"120%":'80%'},styles.tabBarContainer]}>
+                    <View style={[{backgroundColor:(focused)?COLORS.primary:COLORS.white,width:(focused)?"160%":'40%'},styles.tabBarContainer]}>
                     <Image style={[styles.tabBarIcon,{tintColor:(focused)?COLORS.white:COLORS.darkGray}]}
                      source={icons.search} />
                      {focused&&<Text style={[{color:(focused)?COLORS.white:COLORS.gray},styles.tabBarIconText]}>{string.keywords.search}</Text>}
@@ -49,7 +50,7 @@ const MyTabs=()=> {
         <Tab.Screen name="Cart" component={MyCartModel} options={{
             tabBarIcon: ({focused}) => {
                 return (
-                    <View style={[{backgroundColor:(focused)?COLORS.primary:COLORS.white,width:(focused)?"120%":'80%'},styles.tabBarContainer]}>
+                    <View style={[{backgroundColor:(focused)?COLORS.primary:COLORS.white,width:(focused)?"160%":'40%'},styles.tabBarContainer]}>
                    <Image style={[styles.tabBarIcon,{tintColor:(focused)?COLORS.white:COLORS.darkGray}]}
                     source={icons.cart} />
                     {focused&&<Text style={[{color:(focused)?COLORS.white:COLORS.gray},styles.tabBarIconText]}>{string.keywords.cart}</Text>}
@@ -61,7 +62,7 @@ const MyTabs=()=> {
         <Tab.Screen name="Favourite" component={HomeModel} options={{
             tabBarIcon: ({focused}) => {
                 return (
-                    <View style={[{backgroundColor:(focused)?COLORS.primary:COLORS.white,width:(focused)?"120%":'80%'},styles.tabBarContainer]}>
+                    <View style={[{backgroundColor:(focused)?COLORS.primary:COLORS.white,width:(focused)?"160%":'40%'},styles.tabBarContainer]}>
                    <Image style={[styles.tabBarIcon,{tintColor:(focused)?COLORS.white:COLORS.darkGray}]}
                     source={icons.favourite} />
                     {focused&&<Text style={[{color:(focused)?COLORS.white:COLORS.gray},styles.tabBarIconText]}>{string.keywords.favourite}</Text>}
@@ -70,10 +71,10 @@ const MyTabs=()=> {
               }
 
         }} />    
-        <Tab.Screen name="Notification" component={NotificationSettingModel} options={{
+        <Tab.Screen name="Notification" component={NotificationTabModel} options={{
             tabBarIcon: ({focused}) => {
                 return (
-                    <View style={[{backgroundColor:(focused)?COLORS.primary:COLORS.white,width:(focused)?"120%":'80%'},styles.tabBarContainer]}>
+                    <View style={[{backgroundColor:(focused)?COLORS.primary:COLORS.white,width:(focused)?"160%":'40%'},styles.tabBarContainer]}>
                    <Image style={[styles.tabBarIcon,{tintColor:(focused)?COLORS.white:COLORS.darkGray}]}
                     source={icons.notification} />
                     {focused&&<Text style={[{color:(focused)?COLORS.white:COLORS.gray},styles.tabBarIconText]}>{string.keywords.notification}</Text>}

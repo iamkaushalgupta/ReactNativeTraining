@@ -27,6 +27,47 @@ const onboarding_screens = [
 
 ]
 
+const notification_tab=[
+    {
+        title:'Today',
+        data:[
+            {
+                icon:require("../assets/dummyData/dominos.png"),
+                title:"Domino's -Buy 1 get 1 free",
+                text:"Buy 1 get 1 free for small sizes",
+                untilText:"until Nov 30, 2021",
+                timeago:'a few seconds ago'
+            },
+            {
+                icon:require('../assets/dummyData/veg_biryani.png'),
+                title:"Veg Biryani - 35% sale today",
+                text:"Buy 1 get 1 free for small sizes",
+                untilText:"until Nov 30, 2021",
+                timeago:'5 mins ago'
+            }
+        ],
+    },
+    {
+        title:'Yesterday',
+        data:[
+            {
+                icon:require("../assets/dummyData/dominos.png"),
+                title:"Domino's -Buy 1 get 1 free",
+                text:"Buy 1 get 1 free for small sizes",
+                untilText:"until Nov 30, 2021",
+                timeago:'1 day ago'
+            },
+            {
+                icon:require('../assets/dummyData/veg_biryani.png'),
+                title:"Veg Biryani - 35% sale today",
+                text:"Buy 1 get 1 free for small sizes",
+                untilText:"until Nov 30, 2021",
+                timeago:'1 day ago'
+            }
+        ],
+    }
+]
+
 const Detailhamburger = {
     id: 1,
     name: "Hamburger",
@@ -371,6 +412,7 @@ export default {
     settings,
     notification_setting,
     Detailhamburger,
-    mycart_data
+    mycart_data,
+    notification_tab,
 }
 

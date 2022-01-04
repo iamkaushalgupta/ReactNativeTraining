@@ -14,6 +14,7 @@ import NotificationSettingModel from "./notificationSettingModel";
 import DetailModel from "./detailModel";
 import MyCartModel from "./mycartModel";
 import PaymentSuccessModel from "./paymentSuccessModel";
+import NotificationTabModel from "./notificationTabModel";
 
 export {HomeModel,ContactModel,
      ProfileModel, TestModel,OnboardingModel,SignInModel,SignUpModel,
@@ -21,6 +22,7 @@ export {HomeModel,ContactModel,
      NotificationSettingModel,
      DetailModel,
      MyCartModel,
-     PaymentSuccessModel
+     PaymentSuccessModel,
+     NotificationTabModel,
     
     };

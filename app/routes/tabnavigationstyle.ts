@@ -2,7 +2,8 @@ import { StyleSheet } from "react-native";
 
 const styles=StyleSheet.create({
     tabBarstyle:{
-        paddingHorizontal:10,
+
+        paddingHorizontal:30,
         paddingTop:5,
         paddingBottom:5
     },

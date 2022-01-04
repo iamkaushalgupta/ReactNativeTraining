@@ -6,9 +6,10 @@ import { COLORS } from "../../constants";
 const styles=(o:any)=>StyleSheet.create(
     {
         container:{
-            marginHorizontal:o.width*0.03,
+            paddingHorizontal:10,
             flex:1,
-            marginVertical:o.height*0.007
+            marginVertical:o.height*0.007,
+            backgroundColor:COLORS.white
         },
         upperContainer:{
             flexDirection:'row',
