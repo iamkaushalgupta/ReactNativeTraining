@@ -11,6 +11,8 @@ const styles = StyleSheet.create({
         alignItems:'center',
         justifyContent: 'space-between',
         paddingVertical:10,
+        flex:0.07,
+        // backgroundColor:'red'
     },
     
     icon:{
@@ -91,7 +93,7 @@ const styles = StyleSheet.create({
         fontSize:18,
     },
     modalContainer:{
-        flex:0.3,
+        flex:1,
         backgroundColor:COLORS.white,
         borderTopLeftRadius:10,
         borderTopRightRadius:10,
@@ -100,9 +102,10 @@ const styles = StyleSheet.create({
   
     },
     modal:{
-        flex:1,
-        justifyContent:'flex-end',
+        flex:0.35,
+        marginHorizontal:-10,
     },
+    
     modalInnerContainer:{
         flexDirection:'row',
         justifyContent:'space-between',
@@ -142,7 +145,6 @@ const styles = StyleSheet.create({
         backgroundColor:COLORS.primary,
         width:'100%',
         justifyContent:'center',
-        alignSelf:'flex-end',
         borderRadius:10,
         marginVertical:10,
     },
@@ -150,11 +152,10 @@ const styles = StyleSheet.create({
         color:COLORS.white,
         fontSize:20,
         textAlign:'center',
-        paddingVertical:10,    
+        paddingVertical:5,    
     },
     ButtonContainer:{
-        justifyContent:'flex-end',
-        flex:1
+        
     },
 
 

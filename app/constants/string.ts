@@ -105,7 +105,7 @@ const screens = {
     main_layout: "MainLayout",
     home: "Home",
     search: "Search",
-    cart: "Cart",
+    Mycart: "Cart",
     favourite: "Favourite",
     notification: "Notification",
     my_wallet: "My Wallet",
@@ -162,7 +162,12 @@ const keywords={
     total:'Total:',
     shippingfeevalue:'$0.00',
     subtotalvalue:'$37.97',
-    placeyourorder:'Place your Order'
+    placeyourorder:'Place your Order',
+    home:'Home',
+    search:'Search',
+    cart:"Cart",
+    favourite:'Favourite',
+    notification:'Notification'
 }
 
 const bottom_tabs = [
@@ -176,7 +181,7 @@ const bottom_tabs = [
     },
     {
         id: 2,
-        label: screens.cart,
+        label: screens.Mycart,
     },
     {
         id: 3,
@@ -331,7 +336,28 @@ const mycart_data =[
         quanity:1,
         price:'$10.99',
         icon:require('../assets/dummyData/veg_biryani.png')
-    }
+    },
+    {
+        id:4,
+        name:'Hamburger',
+        quanity:3,
+        price:'$15.99',
+        icon:require('../assets/dummyData/hamburger.png')
+    },
+    {
+        id:5,
+        name:'Hamburger',
+        quanity:3,
+        price:'$15.99',
+        icon:require('../assets/dummyData/hamburger.png')
+    },
+    {
+        id:6,
+        name:'Hamburger',
+        quanity:3,
+        price:'$15.99',
+        icon:require('../assets/dummyData/hamburger.png')
+    },
 ]
 
 export default {

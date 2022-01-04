@@ -19,10 +19,10 @@ const eye_off=require('../assets/icons/eye_off.png')
 // const rice = require("../assets/icons/rice.png")
 const love = require("../assets/icons/love.png")
 const calories = require("../assets/icons/calories.png")
-// const home = require("../assets/icons/home.png")
+const home = require("../assets/icons/home.png")
 // const location = require("../assets/icons/location.png")
 // const logout = require("../assets/icons/logout.png")
-// const notification = require("../assets/icons/notification.png")
+const notification = require("../assets/icons/notification.png")
 // const profile = require("../assets/icons/profile.png")
 // const setting = require("../assets/icons/setting.png")
 const star = require("../assets/icons/star.png")
@@ -47,7 +47,7 @@ export default {
     left_arrow,
     eye_on,
     eye_off,
-    // favourite,
+    favourite,
     // // fb,
     // // google,
     // burger,
@@ -56,10 +56,10 @@ export default {
     // rice,
     love,
     calories,
-    // home,
+    home,
     // location,
     // logout,
-    // notification,
+    notification,
     // profile,
     // setting,
     star,
