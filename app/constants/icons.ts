@@ -21,6 +21,7 @@ const three_dots=require('../assets/icons/three-dots.png')
 const love = require("../assets/icons/love.png")
 const calories = require("../assets/icons/calories.png")
 const home = require("../assets/icons/home.png")
+const dot=require('../assets/icons/dot.png')
 // const location = require("../assets/icons/location.png")
 // const logout = require("../assets/icons/logout.png")
 const notification = require("../assets/icons/notification.png")
@@ -50,6 +51,7 @@ export default {
     eye_off,
     favourite,
     three_dots,
+    dot,
     // // fb,
     // // google,
     // burger,

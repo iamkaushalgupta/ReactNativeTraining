@@ -152,11 +152,25 @@ const screens = {
     my_wallet: "My Wallet",
     settings:'Settings',
     changepassword:'Change Password',
-    details:'Details'
+    details:'Details',
+    riderReview:'Rider Review'
 
 }
 
+const RiderReview=
+    {
+        icon:require("../assets/images/kaushal.jpeg"),
+        name:"Kaushal Gupta",
+        deliveryPerson:'Deliver Man',
+        orderStatus:'Order Delivered',
+        tips:['No Tips',"$5","$10","$15","$20"]
+    
+    }
+
+
+
 const keywords={
+    addTips:'Add Tips',
     congratulations:'Congratulations',
     paymentSuccesfullyMade:'Payment was Successfully Made!', 
     done:'Done',
@@ -208,7 +222,8 @@ const keywords={
     search:'Search',
     cart:"Cart",
     favourite:'Favourite',
-    notification:'Notification'
+    notification:'Notification',
+    pleaseratedeliveryservice:"Please rate the Delivery Service"
 }
 
 const bottom_tabs = [
@@ -414,5 +429,6 @@ export default {
     Detailhamburger,
     mycart_data,
     notification_tab,
+    RiderReview,
 }
 

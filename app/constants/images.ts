@@ -9,6 +9,7 @@ const profile = require('../assets/images/profile.png')
 const payment_success=require('../assets/images/check.png')
 const transparent=require('../assets/images/transparent.png')
 
+
 export default {
     background_01,
     background_02,
