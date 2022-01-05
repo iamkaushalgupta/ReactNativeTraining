@@ -68,6 +68,121 @@ const notification_tab=[
     }
 ]
 
+const My_orders_history=[
+    {
+        title:'19 Sep 2021',
+        data:[
+            {
+                icon:require("../assets/dummyData/pizza-hut.png"),
+                title:"Pizza Hut",
+                datetime:'19 Sep, 14:30',
+                items:3,
+                orderdelivered:true,
+                price:'$35.50'
+            },
+            {
+                icon:require("../assets/dummyData/mcdonalds.png"),
+                title:"McDonalds",
+                datetime:'19 Sep, 12:30',
+                items:4,
+                orderdelivered:true,
+                price:'$55.50'
+            },
+            {
+                icon:require("../assets/dummyData/dominos.png"),
+                title:"Domino's Pizza",
+                datetime:'19 Sep, 10:30',
+                items:1,
+                orderdelivered:false,
+                price:'$55.50'
+            },
+        ],
+    },
+    {
+        title:'15 Sep, 2021',
+        data:[
+            {
+                icon:require("../assets/dummyData/pizza-hut.png"),
+                title:"Pizza Hut",
+                datetime:'15 Sep, 14:30',
+                items:3,
+                orderdelivered:true,
+                price:'$35.50'
+            },
+            {
+                icon:require("../assets/dummyData/mcdonalds.png"),
+                title:"McDonalds",
+                datetime:'15 Sep, 12:30',
+                items:4,
+                orderdelivered:true,
+                price:'$55.50'
+            },
+            {
+                icon:require("../assets/dummyData/dominos.png"),
+                title:"Domino's Pizza",
+                datetime:'15 Sep, 10:30',
+                items:1,
+                orderdelivered:false,
+                price:'$55.50'
+            },
+        ],
+    }
+]
+
+const My_orders_upcoming=[
+    {
+        title:'',
+        data:[
+            {
+                icon:require("../assets/dummyData/mcdonalds.png"),
+                title:"McDonalds",
+                datetime:'19 Sep, 12:30',
+                items:4,
+                orderdelivered:true,
+                price:'$55.50'
+            },
+            {
+                icon:require("../assets/dummyData/dominos.png"),
+                title:"Domino's Pizza",
+                datetime:'19 Sep, 10:30',
+                items:1,
+                orderdelivered:false,
+                price:'$55.50'
+            },
+        ],
+    },
+    {
+        title:'Latest Order',
+        data:[
+            {
+                icon:require("../assets/dummyData/pizza-hut.png"),
+                title:"Pizza Hut",
+                datetime:'15 Sep, 14:30',
+                items:3,
+                orderdelivered:true,
+                price:'$35.50'
+            },
+            {
+                icon:require("../assets/dummyData/dominos.png"),
+                title:"Domino's Pizza",
+                datetime:'15 Sep, 10:30',
+                items:1,
+                orderdelivered:false,
+                price:'$55.50'
+            },
+            {
+                icon:require("../assets/dummyData/pizza-hut.png"),
+                title:"Pizza Hut",
+                datetime:'15 Sep, 14:30',
+                items:3,
+                orderdelivered:true,
+                price:'$35.50'
+            },
+        ],
+    }
+]
+
+
 const Detailhamburger = {
     id: 1,
     name: "Hamburger",
@@ -153,8 +268,8 @@ const screens = {
     settings:'Settings',
     changepassword:'Change Password',
     details:'Details',
-    riderReview:'Rider Review'
-
+    riderReview:'Rider Review',
+    MyOrder:'MY ORDERS'
 }
 
 const RiderReview=
@@ -223,7 +338,14 @@ const keywords={
     cart:"Cart",
     favourite:'Favourite',
     notification:'Notification',
-    pleaseratedeliveryservice:"Please rate the Delivery Service"
+    pleaseratedeliveryservice:"Please rate the Delivery Service",
+    history:'History',
+    upcoming:'Upcoming',
+    orderDelivered:'Order Delivered',
+    orderCancel:'Order Cancel',
+    reorder:'Re-Order',
+    rate:'Rate',
+    items:'items'
 }
 
 const bottom_tabs = [
@@ -430,5 +552,7 @@ export default {
     mycart_data,
     notification_tab,
     RiderReview,
+    My_orders_history,
+    My_orders_upcoming,
 }
 

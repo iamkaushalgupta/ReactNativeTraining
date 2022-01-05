@@ -16,6 +16,7 @@ import MyCartModel from "./mycartModel";
 import PaymentSuccessModel from "./paymentSuccessModel";
 import NotificationTabModel from "./notificationTabModel";
 import RiderReviewModel from "./riderReviewModel";
+import MyOrderModel from "./MyOrderModel";
 
 export {HomeModel,ContactModel,
      ProfileModel, TestModel,OnboardingModel,SignInModel,SignUpModel,
@@ -25,5 +26,6 @@ export {HomeModel,ContactModel,
      MyCartModel,
      PaymentSuccessModel,
      NotificationTabModel,
-    RiderReviewModel
+    RiderReviewModel,
+    MyOrderModel
     };
