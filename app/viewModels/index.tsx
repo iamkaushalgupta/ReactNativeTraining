@@ -17,6 +17,7 @@ import PaymentSuccessModel from "./paymentSuccessModel";
 import NotificationTabModel from "./notificationTabModel";
 import RiderReviewModel from "./riderReviewModel";
 import MyOrderModel from "./MyOrderModel";
+import MyCouponModel from "./myCoupon";
 
 export {HomeModel,ContactModel,
      ProfileModel, TestModel,OnboardingModel,SignInModel,SignUpModel,
@@ -27,5 +28,6 @@ export {HomeModel,ContactModel,
      PaymentSuccessModel,
      NotificationTabModel,
     RiderReviewModel,
-    MyOrderModel
+    MyOrderModel,
+    MyCouponModel
     };

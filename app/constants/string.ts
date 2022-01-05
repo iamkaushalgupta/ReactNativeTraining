@@ -268,9 +268,65 @@ const screens = {
     settings:'Settings',
     changepassword:'Change Password',
     details:'Details',
-    riderReview:'Rider Review',
-    MyOrder:'MY ORDERS'
+    riderReview:'RIDER REVIEW',
+    MyOrder:'MY ORDERS',
+    MyCoupon:'My COUPON'
 }
+
+const used_coupon=[
+    {
+        icon:require('../assets/dummyData/pizza-hut.png'),
+        name:'Pizza Hut',
+        discount:"30% off",
+        valid:"Used 01 jan 2021 "
+    },
+    {
+        icon:require('../assets/dummyData/burger-king.png'),
+        name:'Burger King',
+        discount:"20% off",
+        valid:"Used 01 jan 2022"
+    },
+ 
+]
+
+const available_coupon=[
+    {
+        icon:require('../assets/dummyData/burger-king.png'),
+        name:'Burger King',
+        discount:"20% off",
+        valid:"Valid until 01 jan 2022"
+    },
+    {
+        icon:require('../assets/dummyData/dominos.png'),
+        name:'Dominos Pizza',
+        discount:"40% off",
+        valid:"Valid until 05 jan 2022"
+    },
+    {
+        icon:require('../assets/dummyData/pizza-hut.png'),
+        name:'Pizza Hut',
+        discount:"30% off",
+        valid:"Valid until 08 jan 2022"
+    },
+    {
+        icon:require('../assets/dummyData/burger-king.png'),
+        name:'Burger King',
+        discount:"20% off",
+        valid:"Valid until 01 jan 2022"
+    },
+    {
+        icon:require('../assets/dummyData/dominos.png'),
+        name:'Dominos Pizza',
+        discount:"40% off",
+        valid:"Valid until 05 jan 2022"
+    },
+    {
+        icon:require('../assets/dummyData/pizza-hut.png'),
+        name:'Pizza Hut',
+        discount:"30% off",
+        valid:"Valid until 08 jan 2022"
+    },
+]
 
 const RiderReview=
     {
@@ -285,6 +341,8 @@ const RiderReview=
 
 
 const keywords={
+    available:'Available',
+    used:'Used',
     addTips:'Add Tips',
     congratulations:'Congratulations',
     paymentSuccesfullyMade:'Payment was Successfully Made!', 
@@ -554,5 +612,7 @@ export default {
     RiderReview,
     My_orders_history,
     My_orders_upcoming,
+    available_coupon,
+    used_coupon,
 }
 

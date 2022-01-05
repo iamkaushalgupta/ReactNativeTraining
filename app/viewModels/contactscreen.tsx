@@ -6,3 +6,4 @@ const ContactModel=()=>
 }
 
 export default ContactModel;
+                        
