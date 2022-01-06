@@ -19,6 +19,7 @@ import RiderReviewModel from "./riderReviewModel";
 import MyOrderModel from "./MyOrderModel";
 import MyCouponModel from "./myCoupon";
 import MyCardModel from "./myCardModel";
+import AddNewCardModel from "./addNewCardModel";
 
 export {HomeModel,ContactModel,
      ProfileModel, TestModel,OnboardingModel,SignInModel,SignUpModel,
@@ -31,5 +32,6 @@ export {HomeModel,ContactModel,
     RiderReviewModel,
     MyOrderModel,
     MyCouponModel,
-    MyCardModel
+    MyCardModel,
+    AddNewCardModel
     };

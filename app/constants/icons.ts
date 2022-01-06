@@ -36,6 +36,9 @@ const dollar=require('../assets/icons/dollar-symbol.png')
 const plus=require('../assets/icons/plus.png')
 const minus=require('../assets/icons/minus.png')
 const trash = require('../assets/icons/trash.png')
+const gpay =require('../assets/dummyData/google-pay.png')
+const phonepe =require('../assets/dummyData/PhonePe.png')
+const apple=require('../assets/dummyData/Apple.png')
 export default {
     plus,
     minus,
@@ -55,6 +58,9 @@ export default {
     three_dots,
     dot,
     simple_dot,
+    gpay,
+    phonepe,
+    apple,
     // // fb,
     // // google,
     // burger,

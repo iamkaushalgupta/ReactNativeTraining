@@ -259,19 +259,20 @@ const settings=[
 
 const screens = {
     main_layout: "MainLayout",
-    home: "Home",
-    search: "Search",
-    Mycart: "Cart",
-    favourite: "Favourite",
-    notification: "Notification",
-    my_wallet: "My Wallet",
-    settings:'Settings',
-    changepassword:'Change Password',
-    details:'Details',
+    home: "HOME",
+    search: "SEARCH",
+    Mycart: "CART",
+    favourite: "FAVOURITE",
+    notification: "NOTIFICATION",
+    my_wallet: "MY WALLET",
+    settings:'SETTINGS',
+    changepassword:'CHANGE PASSWORD',
+    details:'DETAILS',
     riderReview:'RIDER REVIEW',
     MyOrder:'MY ORDERS',
     MyCoupon:'My COUPON',
     MyCards:'MY CARDS',
+    addNewCard:'ADD NEW CARD'
     
 }
 
@@ -392,6 +393,11 @@ const RiderReview=
 
 
 const keywords={
+    addCard:'Add Card',
+    name:'Kaushal Gupta',
+    CardNumber:'1234123412341234',
+    cvv:'876',
+    date:'05/26',
     available:'Available',
     used:'Used',
     addTips:'Add Tips',
