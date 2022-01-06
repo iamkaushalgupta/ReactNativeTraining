@@ -45,8 +45,9 @@ const MyCardScreen = ({navigation}:any)=>{
             {string.MyCards.filter(oldcard=>oldcard.oldCard.includes("yes")).map( item=> {
             
             return (
-                    <RenderItem item={item}/>
-               
+                <View  key={item.id.toString()}>
+                    <RenderItem item={item} />
+                </View>
               )})}
            
             
@@ -58,8 +59,9 @@ const MyCardScreen = ({navigation}:any)=>{
             {string.MyCards.filter(oldcard=>oldcard.oldCard.includes("no")).map( item=> {
             
             return (
+                <View key={item.id.toString()}>
                     <RenderItem item={item}/>
-               
+               </View>
               )})}
            
             
