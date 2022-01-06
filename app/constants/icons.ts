@@ -34,6 +34,7 @@ const clock=require('../assets/icons/clock.png')
 const dollar=require('../assets/icons/dollar-symbol.png')
 const plus=require('../assets/icons/plus.png')
 const minus=require('../assets/icons/minus.png')
+const trash = require('../assets/icons/trash.png')
 export default {
     plus,
     minus,
@@ -61,6 +62,7 @@ export default {
     love,
     calories,
     home,
+    trash,
     // location,
     // logout,
     notification,

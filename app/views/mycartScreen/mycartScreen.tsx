@@ -2,15 +2,34 @@ import React, { useState } from "react";
 import { View, Text, TouchableOpacity, Image, FlatList, Modal } from 'react-native';
 import styles from "./style";
 import { icons, string, } from "../../constants";
+import { SwipeListView } from 'react-native-swipe-list-view';
+
 
 const MyCartScreen = ({ navigation }: any) => {
+    const [data,setData]=useState(string.mycart_data)
+    const deleteRow = (data :any, rowKey:any,) => {
+        
+        const newData = [...data];
+        const prevIndex = data.findIndex((item: { key: any; }) => item.key === rowKey);
+        newData.splice(prevIndex, 1);
+        setData(newData);
+    };
+
+    const RenderHiddenItem=({item,data}:any)=>{
+        return(
+            <View style={styles.renderHiddenItem}>
+                <TouchableOpacity onPress={()=>deleteRow(data,item.key)}>
+                    <Image source={icons.trash} style={styles.trashIcon}/>
+                </TouchableOpacity>
+            </View>
+        )
+    }    
+
     const RenderItem = ({ item }: any) => {
         const [number, setNumber] = useState(item.item.quanity)
         return (
 
             <View style={styles.renderContainer}>
-
-
                 <View style={styles.renderInnerContainer}>
                     <Image source={item.item.icon} style={styles.foodIcon} />
                     <View>
@@ -48,14 +67,15 @@ const MyCartScreen = ({ navigation }: any) => {
                 </TouchableOpacity>
             </View>
 
-            <View style={{ flex: 0.63 }}>
-                <FlatList
-                    showsVerticalScrollIndicator={false}
-                    data={string.mycart_data}
-                    extraData={string.mycart_data}
-                    keyExtractor={(item, index) => 'key' + index}
-                    renderItem={(item) => <RenderItem item={item} />}
+            <View style={styles.listContainer}>
+                <SwipeListView
+                data={data}
+                renderItem={(item)=><RenderItem item= {item}/>}
+                renderHiddenItem={(item)=><RenderHiddenItem item={item} data={data}/>}
+                leftOpenValue={0}
+                rightOpenValue={-100}
                 />
+
             </View>
 
             <View style={styles.modal}>

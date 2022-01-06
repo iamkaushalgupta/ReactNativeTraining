@@ -20,7 +20,7 @@ const Tab = createBottomTabNavigator();
 
 const MyTabs=()=> {
   return (
-     <Tab.Navigator screenOptions={{tabBarShowLabel:false,tabBarStyle:styles.tabBarstyle,headerShown:false}}  >
+     <Tab.Navigator screenOptions={{tabBarHideOnKeyboard:true,tabBarShowLabel:false,tabBarStyle:styles.tabBarstyle,headerShown:false}}  >
         <Tab.Screen name="Home" component={HomeModel} options={{
             tabBarIcon: ({focused}) => {
                 return (

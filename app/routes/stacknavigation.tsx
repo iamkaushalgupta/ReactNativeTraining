@@ -45,7 +45,7 @@ const MainStack =()=>
 {
     return(
         <NavigationContainer>
-        <Stack.Navigator initialRouteName="MyCoupon" screenOptions={{headerShown:false}}>
+        <Stack.Navigator initialRouteName="Tab" screenOptions={{headerShown:false}}>
             
         <Stack.Screen name ="RiderReview" component={RiderReviewModel}></Stack.Screen>
             <Stack.Screen name ="Demo" component={TestModel}></Stack.Screen>

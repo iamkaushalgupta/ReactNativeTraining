@@ -158,6 +158,27 @@ const styles = StyleSheet.create({
         
     },
 
+    renderHiddenItem:{
+        backgroundColor:COLORS.primary,
+        flexDirection:'row',
+        justifyContent:'flex-end',
+        alignItems:'center',
+        marginVertical:10,
+        paddingRight:10,
+        borderRadius:10,
+        height:'80%'
+    },
+    trashIcon:{
+        resizeMode:'contain',
+        height:30,
+        width:30,
+        tintColor:COLORS.white,
+        marginRight:5,
+    },
+    listContainer:{
+        flex:0.63
+    }
+
 
 
 })
