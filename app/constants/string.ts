@@ -270,8 +270,59 @@ const screens = {
     details:'Details',
     riderReview:'RIDER REVIEW',
     MyOrder:'MY ORDERS',
-    MyCoupon:'My COUPON'
+    MyCoupon:'My COUPON',
+    MyCards:'MY CARDS',
+    
 }
+
+const MyCards=[
+            {
+                id:1,
+                icon:require('../assets/dummyData/master.png'),
+                text:"Master Card",
+                oldCard:"yes"
+            },
+            {
+                id:2,
+                icon:require('../assets/dummyData/google-pay.png'),
+                text:"Google Pay",
+                oldCard:"yes"
+            },
+            {
+                id:3,
+                icon:require('../assets/dummyData/PhonePe.png'),
+                text:"PhonePe",
+                oldCard:"no"
+            },
+            {
+                id:4,
+                icon:require('../assets/dummyData/paypal.png'),
+                text:"PayPal",
+                oldCard:"no"
+            },
+            {
+                id:5,
+                icon:require('../assets/dummyData/visa.png'),
+                text:"Visa",
+                oldCard:"no"
+            },
+            {
+                id:6,
+                icon:require('../assets/dummyData/paypal.png'),
+                text:"PayPal",
+                oldCard:"no"
+            },
+            {
+                id:7,
+                icon:require('../assets/dummyData/visa.png'),
+                text:"Visa",
+                oldCard:"no"
+            },
+        
+    
+    
+]
+
 
 const used_coupon=[
     {
@@ -359,6 +410,7 @@ const keywords={
     donthaveanaccount:"Don't have an account?",
     alreadyhaveanaccount:"Already have an account",
     forgetpassword:'Forget Password?',
+    add:'Add',
     email:'Email',
     password:'Password',
     passwordrecovery:'Password Recovery',
@@ -614,5 +666,7 @@ export default {
     My_orders_upcoming,
     available_coupon,
     used_coupon,
+    MyCards,
+    
 }
 

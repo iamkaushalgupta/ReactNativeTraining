@@ -22,6 +22,7 @@ const love = require("../assets/icons/love.png")
 const calories = require("../assets/icons/calories.png")
 const home = require("../assets/icons/home.png")
 const dot=require('../assets/icons/dot.png')
+const simple_dot = require('../assets/icons/simple-dot.png')
 // const location = require("../assets/icons/location.png")
 // const logout = require("../assets/icons/logout.png")
 const notification = require("../assets/icons/notification.png")
@@ -53,6 +54,7 @@ export default {
     favourite,
     three_dots,
     dot,
+    simple_dot,
     // // fb,
     // // google,
     // burger,
