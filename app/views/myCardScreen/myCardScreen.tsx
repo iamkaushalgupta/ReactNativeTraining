@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import {View,Text,TouchableOpacity,Image, SectionList, ScrollView, FlatList} from 'react-native';
 import styles from "./style";
-import { icons,string,images } from "../../constants";
+import { icons,string,images,COLORS } from "../../constants";
 
 const MyCardScreen = ({navigation}:any)=>{
     const [select,setSelect]=useState(1)
     const RenderItem=(item:any)=>{
         return(
-            <TouchableOpacity style={styles.renderContainer} onPress={()=>setSelect(item.item.id)} >
+            <TouchableOpacity style={[styles.renderContainer,{borderColor:(item.item.id==select)?COLORS.primary:COLORS.lightGray1}]} onPress={()=>setSelect(item.item.id)} >
                 <View style={styles.innerRenderContainer}>
                 <View style={styles.payIconContainer}>
                     <Image source={item.item.icon} style={styles.payIcon} resizeMode="contain"/>
@@ -15,7 +15,7 @@ const MyCardScreen = ({navigation}:any)=>{
                 <Text style={styles.cardText}>{item.item.text}</Text>
                 
                 </View>
-                <View style={styles.dotContainer}>
+                <View style={[styles.dotContainer,{borderColor:(item.item.id==select)?COLORS.primary:COLORS.lightGray1}]}>
                     {(item.item.id==select)&&
                         <Image source={icons.simple_dot} style={styles.dot}/>
                     }

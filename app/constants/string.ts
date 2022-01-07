@@ -311,7 +311,8 @@ const screens = {
     MyCoupon:'My COUPON',
     MyCards:'MY CARDS',
     addNewCard:'ADD NEW CARD',
-    MyAccount:"MY ACCOUNT"
+    MyAccount:"MY ACCOUNT",
+    Checkout:'CHECKOUT'
 }
 
 const MyCards=[
@@ -431,6 +432,9 @@ const RiderReview=
 
 
 const keywords={
+    deliveryAddress:'Delivery Address',
+    couponCode:'Coupon Code',
+    addCoupon:'Add Coupon',
     save:'Save',
     addCard:'Add Card',
     name:'Kaushal Gupta',

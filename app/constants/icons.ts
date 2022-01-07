@@ -40,6 +40,8 @@ const gpay =require('../assets/dummyData/google-pay.png')
 const phonepe =require('../assets/dummyData/PhonePe.png')
 const apple=require('../assets/dummyData/Apple.png')
 const calender = require('../assets/icons/calendar.png')
+const gps=require('../assets/icons/gps.png')
+const discount =require('../assets/icons/discount.png')
 export default {
     plus,
     minus,
@@ -81,6 +83,6 @@ export default {
     clock,
     dollar,
     calender,
-    // wallet,
-    // help,
+    gps,
+    discount
 }
