@@ -23,6 +23,7 @@ import AddNewCardModel from "./addNewCardModel";
 import MyAccountEditModel from "./myAccountEditModel";
 import MyAccountDetailModel from "./myAccountDetailModel";
 import CheckoutModel from "./checkoutModel";
+import DeliveryStatusModel from "./deliveryStatusModel";
 export {HomeModel,ContactModel,
      ProfileModel, TestModel,OnboardingModel,SignInModel,SignUpModel,
      PasswordRecoveryModel, OTPAuthenticationModel, SettingModel,ChangePasswordModel,
@@ -39,4 +40,5 @@ export {HomeModel,ContactModel,
     MyAccountEditModel,
     MyAccountDetailModel,
     CheckoutModel,
+    DeliveryStatusModel
     };

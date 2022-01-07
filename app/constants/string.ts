@@ -312,7 +312,8 @@ const screens = {
     MyCards:'MY CARDS',
     addNewCard:'ADD NEW CARD',
     MyAccount:"MY ACCOUNT",
-    Checkout:'CHECKOUT'
+    Checkout:'CHECKOUT',
+    DeliverySatus:'Delivery Status'
 }
 
 const MyCards=[
@@ -429,9 +430,46 @@ const RiderReview=
     
     }
 
+const delivery_status=[
+    {
+        id:1,
+        orderStautus:"Order Confirmed",
+        text:"Your order has been recieved",
+        done:true
+    },    
+    {
+        id:2,
+        orderStautus:"Order Prepared",
+        text:"Your order has been prepared",
+        done:true
+    },
+    {
+        id:3,
+        orderStautus:"Delivery in Progress",
+        text:"Hang on! Your food is on the way",
+        done:true
+    },
+    {
+        id:4,
+        orderStautus:"Delivery in Progress",
+        text:"Hang on! Your food is on the way",
+        done:false
+    },
+    {
+        id:5,
+        orderStautus:"Rate Us",
+        text:"Help us to improve our service",
+        done:false
+    },
+]
+
 
 
 const keywords={
+    trackOrder:'Track Order',
+    orderId:'NY021SN5',
+    estimatedDelivery:'Estimated Delivery',
+    estimatedDeliveryValue:'12 Sep 2020 / 12:30PM',
     deliveryAddress:'Delivery Address',
     couponCode:'Coupon Code',
     addCoupon:'Add Coupon',
@@ -718,5 +756,6 @@ export default {
     MyCards,
     primary_details,
     secondary_details,
+    delivery_status
 }
 

@@ -42,7 +42,10 @@ const apple=require('../assets/dummyData/Apple.png')
 const calender = require('../assets/icons/calendar.png')
 const gps=require('../assets/icons/gps.png')
 const discount =require('../assets/icons/discount.png')
+const done=require('../assets/icons/done.png')
+const dotted_line=require('../assets/icons/dotted_line.png')
 export default {
+    dotted_line,
     plus,
     minus,
     coupon,
@@ -53,6 +56,7 @@ export default {
     filter,
     down_arrow,
     check,
+    done,
     close,
     left_arrow,
     eye_on,

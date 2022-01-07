@@ -15,7 +15,8 @@ import {HomeModel, ContactModel, ProfileModel,TestModel,OnboardingModel,SignInMo
     AddNewCardModel,
     MyAccountEditModel,
     MyAccountDetailModel,
-    CheckoutModel
+    CheckoutModel,
+    DeliveryStatusModel,
 } from '../viewModels'
 import {createNativeStackNavigator} from '@react-navigation/native-stack'
 import { NavigationContainer } from '@react-navigation/native';
@@ -46,6 +47,7 @@ type RootStackParamList ={
     MyAccountEdit:undefined;
     MyAccountDetail:undefined;
     Checkout:undefined;
+    DeliveryStatus:undefined;
 }
 
 const Stack = createNativeStackNavigator<RootStackParamList>()
@@ -55,7 +57,7 @@ const MainStack =()=>
 {
     return(
         <NavigationContainer>
-        <Stack.Navigator initialRouteName="Checkout" screenOptions={{headerShown:false}}>
+        <Stack.Navigator initialRouteName="DeliveryStatus" screenOptions={{headerShown:false}}>
             
         <Stack.Screen name ="RiderReview" component={RiderReviewModel}></Stack.Screen>
             <Stack.Screen name ="Demo" component={TestModel}></Stack.Screen>
@@ -79,6 +81,7 @@ const MainStack =()=>
             <Stack.Screen name = "AddNewCard" component ={AddNewCardModel}></Stack.Screen>
             <Stack.Screen name = "MyAccountEdit" component ={MyAccountEditModel}></Stack.Screen>
             <Stack.Screen name = "MyAccountDetail" component ={MyAccountDetailModel}></Stack.Screen>
+            <Stack.Screen name = "DeliveryStatus" component ={DeliveryStatusModel}></Stack.Screen>
             
         </Stack.Navigator>
         </NavigationContainer>

@@ -8,9 +8,9 @@ const styles = StyleSheet.create({
         paddingVertical:10,
     },
     
-    backButton:{
+    firstButton:{
         borderColor:COLORS.gray2,
-        borderWidth:2,
+    
         borderRadius:10,
     },
     heading:{
@@ -24,7 +24,7 @@ const styles = StyleSheet.create({
             width:35,
             height:35,
     },
-    iconProfile:{
+    secondImage:{
         resizeMode:'contain',
             width:40,
             height:40,
