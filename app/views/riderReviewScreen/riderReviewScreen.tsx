@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import styles from "./style";
 import {View,Text,TouchableOpacity,Image,FlatList, TextInput,KeyboardAvoidingView, Platform, ScrollView} from 'react-native';
 import { icons,string,images,COLORS } from "../../constants";
+import { HeaderComponent } from "../../common";
 
 const RiderReviewScreen=({navigation}:any)=>{
     const[tipSelected,setTipSelected]=useState(1)
@@ -9,15 +10,13 @@ const RiderReviewScreen=({navigation}:any)=>{
         <KeyboardAvoidingView style={styles.container} 
         behavior={Platform.OS === "ios" ? "padding" : "height"}
         >
-             <View style={styles.upperContainer}>
-                <TouchableOpacity style={styles.backButton} onPress={() => navigation.goBack()}>
-                    <Image source={icons.left_arrow} style={styles.icon} />
-                </TouchableOpacity>
-                <Text style={styles.heading}> {string.screens.riderReview}</Text>
-                <TouchableOpacity onPress={()=>navigation.navigate("Setting")}>
-                <Image source={images.profile} style={styles.iconProfile}/>
-                </TouchableOpacity>
-            </View>
+             <HeaderComponent 
+            firstImage={icons.left_arrow}
+            secondImage={images.profile}
+            navigation={navigation}
+            heading={string.screens.riderReview}
+            secondImageNavigate={"MyAccountDetail"}
+            firstImageNavigate="back" />
             <ScrollView>
             <View style={styles.midContainer}>
                     <Image style={styles.riderImage} source={string.RiderReview.icon} resizeMode="contain"/> 
@@ -63,7 +62,7 @@ const RiderReviewScreen=({navigation}:any)=>{
             style={styles.textInput} placeholder="Add a comment"></TextInput>    
             <View style={styles.ButtonContainer}>
             <TouchableOpacity style={styles.Button}  onPress={()=>navigation.navigate('Home')}>
-                        <Text style={styles.ButtonText}>{string.keywords.sendemail}</Text>
+                        <Text style={styles.ButtonText}>{string.keywords.submitReview}</Text>
                     </TouchableOpacity>
                     </View> 
                      

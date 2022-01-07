@@ -10,8 +10,9 @@ const styles = StyleSheet.create({
     
     firstButton:{
         borderColor:COLORS.gray2,
-    
+        padding:5,
         borderRadius:10,
+      
     },
     heading:{
         fontSize:22 ,
@@ -21,8 +22,8 @@ const styles = StyleSheet.create({
     icon:{
         tintColor:COLORS.gray2,
         resizeMode:'contain',
-            width:35,
-            height:35,
+            width:30,
+            height:30,
     },
     secondImage:{
         resizeMode:'contain',

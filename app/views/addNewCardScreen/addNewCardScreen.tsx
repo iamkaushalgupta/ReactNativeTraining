@@ -3,19 +3,17 @@ import { View, Text, TouchableOpacity, Image, KeyboardAvoidingView, ScrollView }
 import styles from './style';
 import { icons, string, images } from '../../constants';
 import { TextAndInputField } from '../../common';
+import { HeaderComponent } from '../../common';
 const AddNewCardScreen = ({ navigation }: any) => {
     return (
         <KeyboardAvoidingView style={styles.container}>
-            <View style={styles.upperContainer}>
-                <TouchableOpacity style={styles.backButton} onPress={() => navigation.goBack()}>
-                    <Image source={icons.left_arrow} style={styles.icon} />
-                </TouchableOpacity>
-                <Text style={styles.heading}> {string.screens.addNewCard}</Text>
-                <TouchableOpacity>
-                    <Image source={images.transparent} style={styles.iconProfile} />
-                </TouchableOpacity>
-        
-            </View>
+             <HeaderComponent 
+            firstImage={icons.left_arrow}
+            secondImage={images.transparent}
+            navigation={navigation}
+            heading={string.screens.addNewCard}
+            secondImageNavigate={""}
+            firstImageNavigate="back" />
 
             <View style={styles.cardStyleContainer}>
                 <Image source={icons.apple} style={styles.cardIcon} />
@@ -43,7 +41,7 @@ const AddNewCardScreen = ({ navigation }: any) => {
             </View>
 
 
-        <TouchableOpacity style={styles.addButton} >
+        <TouchableOpacity style={styles.addButton} onPress={()=>navigation.navigate('Checkout')} >
             <Text style={styles.addText}>{string.keywords.addCard}</Text>
         </TouchableOpacity>
         </ScrollView>

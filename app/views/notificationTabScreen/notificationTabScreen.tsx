@@ -2,7 +2,7 @@ import React from "react";
 import styles from './styles';
 import { icons,string,images } from "../../constants";
 import { View,Text,TouchableOpacity,Image, SectionList } from "react-native";
-
+import { HeaderComponent } from "../../common";
 const NotificationTabScreen=(props:any)=>{
     const RenderItem=({item}:any)=>{
         
@@ -30,17 +30,13 @@ const NotificationTabScreen=(props:any)=>{
 
     return(
         <View style={styles.container}>
-            <View style={styles.upperContainer}>
-                <TouchableOpacity style={styles.backButton} onPress={() => props.navigation.goBack()}>
-                    <Image source={icons.left_arrow} style={styles.icon} />
-                </TouchableOpacity>
-
-                <Text style={styles.heading}> {string.screens.notification}</Text>
-                <TouchableOpacity onPress={()=>props.navigation.navigate("Setting")}>
-                <Image source={images.profile} style={styles.iconProfile} />
-                </TouchableOpacity>
-            </View>
-
+       <HeaderComponent 
+            firstImage={icons.left_arrow}
+            secondImage={images.profile}
+            navigation={props.navigation}
+            heading={string.screens.notification}
+            secondImageNavigate={"Setting"}
+            firstImageNavigate="back" />
             <View>
                 
                 <SectionList

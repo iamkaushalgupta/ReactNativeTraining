@@ -2,7 +2,6 @@ import React from "react";
 import styles from "./style";
 import { icons,images,  string } from "../../constants";
 import { Text, View ,TouchableOpacity,Image, SectionList, FlatList} from "react-native";
-import { HeaderComponent } from "../../common";
 
 const MyAccountDetailScreen=({navigation}:any)=>{
     const RenderItem=({item}:any)=>{

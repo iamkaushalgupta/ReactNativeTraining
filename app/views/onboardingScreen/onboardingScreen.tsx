@@ -3,16 +3,12 @@ import styles from "./styles";
 import {
     Text, View, Image
     , ImageBackground,
-    SafeAreaView,
     FlatList,
     TouchableOpacity
 
 } from "react-native";
 import {
-    images,
-    icons,
     string,
-    COLORS,
 } from '../../constants/index'
 import UseOrientation from "../../config/useOrientation";
 import { HeaderLogo } from "../../common";
@@ -65,7 +61,7 @@ const OnboardingScreen = (props:any) => {
                         
                         <View style={styles(o).buttonContainer}>
                     
-                    <TouchableOpacity style={styles(o).nextButton} onPress={()=>props.navigation.navigate('Tab')}>
+                    <TouchableOpacity style={styles(o).nextButton} onPress={()=>props.navigation.navigate('Signin')}>
                         <Text style={styles(o).nextButtonText}>{string.keywords.letgetstarted}</Text>
                     </TouchableOpacity>
                     </View>}

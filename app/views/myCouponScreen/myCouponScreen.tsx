@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { View, Text, TouchableOpacity, Image, FlatList } from "react-native";
 import styles from "./style";
 import { icons, images, string, COLORS } from "../../constants";
-
+import { HeaderComponent } from "../../common";
 const MyOrderScreen = ({ navigation }: any) => {
     const [available, setAvailable] = useState(true)
 
@@ -25,18 +25,13 @@ const MyOrderScreen = ({ navigation }: any) => {
 
     return (
         <View style={styles.container}>
-            <View style={styles.upperContainer}>
-                <TouchableOpacity style={styles.backButton} onPress={() => navigation.goBack()}>
-                    <Image source={icons.left_arrow} style={styles.icon} />
-                </TouchableOpacity>
-                <Text style={styles.heading}> {string.screens.MyCoupon}</Text>
-                <TouchableOpacity onPress={() => navigation.navigate("Setting")}>
-                    <Image source={images.profile} style={styles.iconProfile} />
-                </TouchableOpacity>
-
-
-
-            </View>
+           <HeaderComponent 
+            firstImage={icons.left_arrow}
+            secondImage={images.profile}
+            navigation={navigation}
+            heading={string.screens.MyCoupon}
+            secondImageNavigate={"MyAccountDetail"}
+            firstImageNavigate="back" />
 
             <View style={styles.switchButtonContainer}>
                 <TouchableOpacity style={[styles.switchButton, { backgroundColor: (available) ? COLORS.primary : COLORS.lightOrange2 }]} onPress={() => setAvailable(true)}

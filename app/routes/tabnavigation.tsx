@@ -4,7 +4,7 @@ import React from 'react';
 import { Image, Text,View } from 'react-native';
 import { COLORS, icons, string } from '../constants';
 import styles from './tabnavigationstyle'
-import {HomeModel, ContactModel, ProfileModel,TestModel,OnboardingModel,SignInModel, SignUpModel, 
+import {HomeModel,TestModel,OnboardingModel,SignInModel, SignUpModel, 
     PasswordRecoveryModel,
     OTPAuthenticationModel,
     SettingModel,
@@ -13,7 +13,8 @@ import {HomeModel, ContactModel, ProfileModel,TestModel,OnboardingModel,SignInMo
     DetailModel,
     MyCartModel,
     PaymentSuccessModel,
-    NotificationTabModel
+    NotificationTabModel,
+    MyOrderModel
 } from '../viewModels'
 
 const Tab = createBottomTabNavigator();
@@ -59,7 +60,7 @@ const MyTabs=()=> {
               }
 
         }} />
-        <Tab.Screen name="Favourite" component={HomeModel} options={{
+        <Tab.Screen name="Favourite" component={MyOrderModel} options={{
             tabBarIcon: ({focused}) => {
                 return (
                     <View style={[{backgroundColor:(focused)?COLORS.primary:COLORS.white,width:(focused)?"160%":'40%'},styles.tabBarContainer]}>

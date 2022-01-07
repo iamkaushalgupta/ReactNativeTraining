@@ -11,26 +11,14 @@ const check=require('../assets/icons/check.png')
 const close=require('../assets/icons/close.png')
 const eye_on=require('../assets/icons/eye_on.png')
 const eye_off=require('../assets/icons/eye_off.png')
-// const fb = require("../assets/icons/fb.png")
-// const google = require("../assets/icons/google.png")
-// const burger = require("../assets/icons/burger.png")
-// const cherry = require("../assets/icons/cherry.png")
-// const correct = require("../assets/icons/correct.png")
-// const rice = require("../assets/icons/rice.png")
 const three_dots=require('../assets/icons/three-dots.png')
 const love = require("../assets/icons/love.png")
 const calories = require("../assets/icons/calories.png")
 const home = require("../assets/icons/home.png")
 const dot=require('../assets/icons/dot.png')
 const simple_dot = require('../assets/icons/simple-dot.png')
-// const location = require("../assets/icons/location.png")
-// const logout = require("../assets/icons/logout.png")
 const notification = require("../assets/icons/notification.png")
-// const profile = require("../assets/icons/profile.png")
-// const setting = require("../assets/icons/setting.png")
 const star = require("../assets/icons/star.png")
-// const wallet = require("../assets/icons/wallet.png")
-// const help = require("../assets/icons/help.png")
 const clock=require('../assets/icons/clock.png')
 const dollar=require('../assets/icons/dollar-symbol.png')
 const plus=require('../assets/icons/plus.png')
@@ -68,21 +56,11 @@ export default {
     gpay,
     phonepe,
     apple,
-    // // fb,
-    // // google,
-    // burger,
-    // cherry,
-    // correct,
-    // rice,
     love,
     calories,
     home,
     trash,
-    // location,
-    // logout,
     notification,
-    // profile,
-    // setting,
     star,
     clock,
     dollar,

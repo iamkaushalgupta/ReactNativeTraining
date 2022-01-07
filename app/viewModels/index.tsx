@@ -1,7 +1,5 @@
 import React from "react";
 import HomeModel from "./homeModel";
-import ContactModel from "./contactscreen";
-import ProfileModel from "./profilescreen";
 import TestModel from './testModel';
 import OnboardingModel from "./onboardingModel";
 import SignInModel from "./signinmodel";
@@ -24,8 +22,8 @@ import MyAccountEditModel from "./myAccountEditModel";
 import MyAccountDetailModel from "./myAccountDetailModel";
 import CheckoutModel from "./checkoutModel";
 import DeliveryStatusModel from "./deliveryStatusModel";
-export {HomeModel,ContactModel,
-     ProfileModel, TestModel,OnboardingModel,SignInModel,SignUpModel,
+export {HomeModel,
+      TestModel,OnboardingModel,SignInModel,SignUpModel,
      PasswordRecoveryModel, OTPAuthenticationModel, SettingModel,ChangePasswordModel,
      NotificationSettingModel,
      DetailModel,

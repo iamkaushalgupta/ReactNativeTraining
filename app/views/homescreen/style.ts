@@ -9,26 +9,7 @@ const styles=(o:any)=>StyleSheet.create(
             paddingHorizontal:10,
             flex:1,
             marginVertical:o.height*0.007,
-            backgroundColor:COLORS.white
-        },
-        upperContainer:{
-            flexDirection:'row',
-            alignItems:'center',
-            justifyContent: 'space-between',
-            paddingVertical:10,
-        },
-        
-        icon:{
-            tintColor:COLORS.gray2,
-            resizeMode:'contain',
-                width:35,
-                height:35,
-        },
-        iconProfile:{
-            
-            resizeMode:'contain',
-                width:40,
-                height:40,
+      
         },
         searchContainerIcon:{
             tintColor:COLORS.black,
@@ -42,12 +23,6 @@ const styles=(o:any)=>StyleSheet.create(
             borderWidth:2,
             borderRadius:10,
         },
-        heading:{
-            fontSize:25 ,
-            fontWeight:'900',
-            color:COLORS.black    
-        },
-
         searchContainer:{
             backgroundColor:COLORS.lightGray1,
             borderRadius:10,

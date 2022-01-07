@@ -12,7 +12,7 @@ const PaymentSuccess=({navigation}:any)=>{
                 <Text style={styles.labelText}>{string.keywords.paymentSuccesfullyMade}</Text>
             </View>
              <View style={styles.ButtonContainer}>
-            <TouchableOpacity style={styles.Button} onPress={()=>navigation.navigate("Home")}>
+            <TouchableOpacity style={styles.Button} onPress={()=>navigation.navigate("DeliveryStatus")}>
                         <Text style={styles.ButtonText}>{string.keywords.done}</Text>
                     </TouchableOpacity>
                     </View> 

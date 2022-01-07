@@ -3,7 +3,7 @@ import { View, Text, TouchableOpacity, Image, FlatList, Modal } from 'react-nati
 import styles from "./style";
 import { icons, string, } from "../../constants";
 import { SwipeListView } from 'react-native-swipe-list-view';
-
+import { HeaderComponent } from "../../common";
 
 const MyCartScreen = ({ navigation }: any) => {
     const [data,setData]=useState(string.mycart_data)
@@ -61,7 +61,7 @@ const MyCartScreen = ({ navigation }: any) => {
                     <Image source={icons.left_arrow} style={styles.icon} />
                 </TouchableOpacity>
 
-                <Text style={styles.heading}> {string.screens.details}</Text>
+                <Text style={styles.heading}> {string.screens.Mycart}</Text>
                 <TouchableOpacity style={styles.cartButton}>
                     <Image source={icons.cart} style={styles.cartIcon} />
                 </TouchableOpacity>
@@ -95,7 +95,7 @@ const MyCartScreen = ({ navigation }: any) => {
                         <Text style={styles.totalValueText}>{string.keywords.subtotalvalue}</Text>
                     </View>
                     <View style={styles.ButtonContainer}>
-                        <TouchableOpacity style={styles.Button} onPress={() => navigation.navigate("Paymentsuccess")}>
+                        <TouchableOpacity style={styles.Button} onPress={() => navigation.navigate("MyCard")}>
                             <Text style={styles.ButtonText}>{string.keywords.placeyourorder}</Text>
                         </TouchableOpacity>
                     </View>

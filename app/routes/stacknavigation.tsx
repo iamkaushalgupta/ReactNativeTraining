@@ -1,5 +1,6 @@
 import React from "react";
-import {HomeModel, ContactModel, ProfileModel,TestModel,OnboardingModel,SignInModel, SignUpModel, 
+import {HomeModel,TestModel,OnboardingModel,SignInModel, SignUpModel, 
+    NotificationTabModel,
     PasswordRecoveryModel,
     OTPAuthenticationModel,
     SettingModel,
@@ -48,6 +49,7 @@ type RootStackParamList ={
     MyAccountDetail:undefined;
     Checkout:undefined;
     DeliveryStatus:undefined;
+    NotificationTab:undefined;
 }
 
 const Stack = createNativeStackNavigator<RootStackParamList>()
@@ -57,12 +59,11 @@ const MainStack =()=>
 {
     return(
         <NavigationContainer>
-        <Stack.Navigator initialRouteName="DeliveryStatus" screenOptions={{headerShown:false}}>
+        <Stack.Navigator initialRouteName="Onboarding" screenOptions={{headerShown:false}}>
             
+        <Stack.Screen name ="NotificationTab" component={NotificationTabModel}></Stack.Screen>    
         <Stack.Screen name ="RiderReview" component={RiderReviewModel}></Stack.Screen>
             <Stack.Screen name ="Demo" component={TestModel}></Stack.Screen>
-            <Stack.Screen name= "Profile" component={ProfileModel}></Stack.Screen>
-            <Stack.Screen name = "Contact" component ={ContactModel}></Stack.Screen>
             <Stack.Screen name = "Onboarding" component ={OnboardingModel}></Stack.Screen>
             <Stack.Screen name = "Signin" component ={SignInModel}></Stack.Screen>
             <Stack.Screen name = "Signup" component ={SignUpModel}></Stack.Screen>

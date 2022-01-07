@@ -1,10 +1,10 @@
 import React from "react";
 import NotificationTabScreen from "../views/notificationTabScreen/notificationTabScreen";
 
-const NotificationTabModel=()=>
+const NotificationTabModel=({navigation}:any)=>
 {
     return(
-        <NotificationTabScreen/>
+        <NotificationTabScreen navigation={navigation}/>
     )
 }
 

@@ -9,7 +9,7 @@ const MyAccountEditScreen=({navigation}:any)=>{
 
     return(
         <View style={styles.container}>
-            <HeaderComponent firstImage={icons.left_arrow} secondImage={images.transparent} navigation={navigation} heading={string.screens.MyAccount} secondImageNavigate={""} />
+            <HeaderComponent firstImage={icons.left_arrow} secondImage={images.transparent} navigation={navigation} heading={string.screens.MyAccount} secondImageNavigate={""} firstImageNavigate="back" />
 
         <ScrollView showsVerticalScrollIndicator={false}>
             <View style={styles.contentContainer}>

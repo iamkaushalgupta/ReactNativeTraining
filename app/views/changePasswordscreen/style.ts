@@ -6,28 +6,6 @@ const styles=(o:any)=>StyleSheet.create({
         flex:1,
         marginVertical:o.height*0.007
     },
-    upperContainer:{
-        flexDirection:'row',
-        alignItems:'center',
-        justifyContent: 'space-between',
-    },
-    
-    icon:{
-        tintColor:COLORS.gray2,
-        resizeMode:'contain',
-            width:40,
-            height:40,
-    },
-    backButton:{
-        borderColor:COLORS.gray2,
-        borderWidth:2,
-        borderRadius:10,
-    },
-    heading:{
-        fontSize:25 ,
-        fontWeight:'900',
-        color:COLORS.black    
-    },
     sendButton:{
         backgroundColor:COLORS.primary,
         width:'100%',

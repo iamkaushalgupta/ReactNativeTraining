@@ -26,7 +26,7 @@ const DeliveryStatusScreen=({navigation}:any)=>{
 
     return(
         <View style={styles.container}>
-            <HeaderComponent firstImage={images.transparent} secondImage={images.transparent} navigation={navigation} heading={string.screens.DeliverySatus} secondImageNavigate={""} firstImageNavigate="" />
+            <HeaderComponent firstImage={icons.left_arrow} secondImage={images.transparent} navigation={navigation} heading={string.screens.DeliverySatus} secondImageNavigate={""} firstImageNavigate="back" />
 
             <Text style={styles.firstTitleText}>{string.keywords.estimatedDelivery}</Text>
             <Text style={styles.secondTitleText}>{string.keywords.estimatedDeliveryValue}</Text>
@@ -49,7 +49,7 @@ const DeliveryStatusScreen=({navigation}:any)=>{
                 </View>
             </View>
 
-            <TouchableOpacity style={styles.buttonContainer}>
+            <TouchableOpacity style={styles.buttonContainer} onPress={()=>navigation.navigate("RiderReview")}>
                 <Text style={styles.doneText}>{string.keywords.done}</Text>
             </TouchableOpacity>
         </View>

@@ -6,21 +6,18 @@ import styles from './style'
 import { icons, string,images } from '../../constants'
 import UseOrientation from "../../config/useOrientation";
 import { TextAndPasswordInput } from "../../common";
-
+import { HeaderComponent } from "../../common";
 const ChangePassword = (props: any) => {
     const o = UseOrientation()
     return (
         <View style={styles(o).container}>
-            <View style={styles(o).upperContainer}>
-                <TouchableOpacity style={styles(o).backButton} onPress={() => props.navigation.goBack()}>
-                    <Image source={icons.left_arrow} style={styles(o).icon} />
-                </TouchableOpacity>
-
-                <Text style={styles(o).heading}> {string.screens.changepassword}</Text>
-                <TouchableOpacity>
-                        <Image source={images.transparent} style={styles(o).icon}/>
-                        </TouchableOpacity>
-            </View>
+           <HeaderComponent 
+            firstImage={icons.left_arrow}
+            secondImage={images.transparent}
+            navigation={props.navigation}
+            heading={string.screens.changepassword}
+            secondImageNavigate={""}
+            firstImageNavigate="back" />
 
             
             <TextAndPasswordInput name="Current Password"/>

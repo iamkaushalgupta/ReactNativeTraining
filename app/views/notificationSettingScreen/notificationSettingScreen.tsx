@@ -3,7 +3,7 @@ import {View, Text, TouchableOpacity,Image, FlatList,Switch} from 'react-native'
 import styles from "./style";
 import { COLORS, icons,string,images } from "../../constants";
 import UseOrientation from "../../config/useOrientation";
-
+import { HeaderComponent } from "../../common";
 const NotificationSettingScreen=(props:any)=>{
    const o=UseOrientation()
     const RenderItem=(data:any)=>{
@@ -35,16 +35,13 @@ const NotificationSettingScreen=(props:any)=>{
     } 
    return(    
         <View style={styles(o).container}>
-            <View style={styles(o).upperContainer}>
-                    <TouchableOpacity style={styles(o).backButton} onPress={()=>props.navigation.goBack()}>
-                        <Image source={icons.left_arrow} style={styles(o).icon}/>
-                        </TouchableOpacity>
-                      
-                    <Text style={styles(o).heading}> {string.screens.notification}</Text>
-                    <TouchableOpacity>
-                        <Image source={images.transparent} style={styles(o).icon}/>
-                        </TouchableOpacity>
-         </View>
+            <HeaderComponent 
+            firstImage={icons.left_arrow}
+            secondImage={images.transparent}
+            navigation={props.navigation}
+            heading={string.screens.notification}
+            secondImageNavigate={""}
+            firstImageNavigate="back" />
         
         <FlatList
          style={styles(o).flatList}   

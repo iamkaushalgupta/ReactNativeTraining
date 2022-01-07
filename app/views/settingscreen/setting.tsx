@@ -3,7 +3,7 @@ import styles from './style';
 import { View,Text, Image, TouchableOpacity, FlatList } from "react-native";
 import UseOrientation from "../../config/useOrientation";
 import { icons, images, string } from "../../constants";
-
+import { HeaderComponent } from "../../common";
 const SettingScreen=(props:any)=>{
     const o =UseOrientation()
     const RenderItem=(data:any)=>{
@@ -19,21 +19,16 @@ const SettingScreen=(props:any)=>{
     }
     return(
         <View style={styles(o).container}>
-            <View style={styles(o).upperContainer}>
-                    <TouchableOpacity style={styles(o).backButton} onPress={()=>props.navigation.goBack()}>
-                        <Image source={icons.left_arrow} style={styles(o).icon}/>
-                        </TouchableOpacity>
-                      
-                    <Text style={styles(o).heading}> {string.screens.settings}</Text>
-                    <TouchableOpacity>
-                        <Image source={images.transparent} style={styles(o).icon}/>
-                        </TouchableOpacity>
-          
-
-            </View>
-
+           <HeaderComponent 
+            firstImage={icons.left_arrow}
+            secondImage={images.transparent}
+            navigation={props.navigation}
+            heading={string.screens.settings}
+            secondImageNavigate={""}
+            firstImageNavigate="back" />
         <FlatList
         style={styles(o).flatList}
+        showsVerticalScrollIndicator={false}
         data={string.settings}
         extraData={string.settings}
         keyExtractor={(item,index)=>'Key'+index}

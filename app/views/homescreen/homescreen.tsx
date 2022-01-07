@@ -4,6 +4,7 @@ import { Text, View,
      TextInput, FlatList, ScrollView, Modal, 
      TouchableWithoutFeedback } from 'react-native';
 import styles from './style'
+import { HeaderComponent } from "../../common";
 import { COLORS, icons, images, string } from '../../constants'
 import UseOrientation from "../../config/useOrientation";
 import MultiSlider from '@ptomasroos/react-native-multi-slider'
@@ -171,17 +172,14 @@ const HomeScreen = (props: homeProp) => {
 
             </Modal>
 
-            <View style={styles(o).upperContainer}>
-                <TouchableOpacity style={styles(o).backButton} onPress={() => props.navigation.goBack()}>
-                    <Image source={icons.left_arrow} style={styles(o).icon} />
-                </TouchableOpacity>
-
-                <Text style={styles(o).heading}> {string.screens.home}</Text>
-                <TouchableOpacity onPress={()=>props.navigation.navigate("Setting")}>
-                <Image source={images.profile} style={styles(o).iconProfile} />
-                </TouchableOpacity>
-            </View>
-
+            
+            <HeaderComponent 
+            firstImage={icons.menu}
+            secondImage={images.profile}
+            navigation={props.navigation}
+            heading={string.screens.home}
+            secondImageNavigate={"MyAccountDetail"}
+            firstImageNavigate="" />
 
             <View style={styles(o).searchContainer}>
                 <View style={styles(o).innerSearchContainer}>

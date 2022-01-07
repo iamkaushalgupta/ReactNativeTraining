@@ -17,23 +17,26 @@ const styles=StyleSheet.create({
         icon:{
             tintColor:COLORS.gray2,
             resizeMode:'contain',
-                width:35,
-                height:35,
+                width:30,
+                height:30,
         },
         
         backButton:{
             borderColor:COLORS.gray2,
             borderWidth:2,
+            padding:5,
             borderRadius:10,
-        },heading:{
-            fontSize:25 ,
-            fontWeight:'900',
+        },
+        
+        heading:{
+            fontSize:22 ,
+            fontWeight:'700',
             color:COLORS.black    
         },
         cartIcon:{
             resizeMode:'contain',
-            height:25,
-            width:25,
+            height:30,
+            width:30,
             tintColor:COLORS.black
         },
         cartButton:{

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import {View,Text,TouchableOpacity,Image, SectionList, ScrollView, FlatList} from 'react-native';
 import styles from "./style";
 import { icons,string,images,COLORS } from "../../constants";
-
+import { HeaderComponent } from "../../common";
 const MyCardScreen = ({navigation}:any)=>{
     const [select,setSelect]=useState(1)
     const RenderItem=(item:any)=>{
@@ -29,16 +29,13 @@ const MyCardScreen = ({navigation}:any)=>{
 
     return(
         <View style={styles.container}>
-              <View style={styles.upperContainer}>
-                <TouchableOpacity style={styles.backButton} onPress={() => navigation.goBack()}>
-                    <Image source={icons.left_arrow} style={styles.icon} />
-                </TouchableOpacity>
-                <Text style={styles.heading}> {string.screens.MyCards}</Text>
-                <TouchableOpacity>
-                    <Image source={images.transparent} style={styles.iconProfile} />
-                </TouchableOpacity>
-
-            </View>
+              <HeaderComponent 
+            firstImage={icons.left_arrow}
+            secondImage={images.transparent}
+            navigation={navigation}
+            heading={string.screens.MyCards}
+            secondImageNavigate={""}
+            firstImageNavigate="back" />
             
             <ScrollView showsVerticalScrollIndicator={false}>
             <View>
@@ -68,7 +65,7 @@ const MyCardScreen = ({navigation}:any)=>{
            </View> 
             
            </ScrollView>
-                <TouchableOpacity style={styles.addButton}>
+                <TouchableOpacity style={styles.addButton} onPress={()=>navigation.navigate('AddNewCard')}>
                     <Text style={styles.addText}>{string.keywords.add}</Text>
                 </TouchableOpacity>
 

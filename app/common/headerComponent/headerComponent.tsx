@@ -6,7 +6,7 @@ import styles from "./style";
 const HeaderComponent=({firstImage,heading,secondImage,secondImageNavigate,navigation, firstImageNavigate}:any)=>{
     return(
     <View style={styles.container}>
-                <TouchableOpacity disabled={(firstImageNavigate!="")?false:true} style={[styles.firstButton,{borderWidth:(firstImageNavigate!="")?2:0}]} onPress={() => navigation.goBack()}>
+                <TouchableOpacity disabled={(firstImageNavigate!="")?false:true} style={[styles.firstButton,{borderWidth:(firstImage!="")?2:0}]} onPress={() => navigation.goBack()}>
                     <Image source={firstImage} style={styles.icon} />
                 </TouchableOpacity>
                 <Text style={styles.heading}>{heading}</Text>

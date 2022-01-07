@@ -30,7 +30,7 @@ const CheckoutScreen=({navigation}:any)=>{
 
     return(
         <View style={styles.container}>
-              <HeaderComponent firstImage={icons.left_arrow} secondImage={images.transparent} navigation={navigation} heading={string.screens.Checkout} secondImageNavigate={""} />
+              <HeaderComponent firstImage={icons.left_arrow} secondImage={images.transparent} navigation={navigation} heading={string.screens.Checkout} secondImageNavigate={""} firstImageNavigate="back" />
 
             <ScrollView showsVerticalScrollIndicator={false}>
               <View>
@@ -59,7 +59,7 @@ const CheckoutScreen=({navigation}:any)=>{
                <Text style={styles.titleText}>{string.keywords.addCoupon}</Text>
                 <View style={styles.couponContainer}>
                     <TextInput placeholder={string.keywords.couponCode} style={styles.textInput}></TextInput>
-                    <TouchableOpacity style={styles.discountIconContainer}>
+                    <TouchableOpacity style={styles.discountIconContainer} onPress={()=>navigation.navigate("MyCoupon")}>
                             <Image source={icons.discount} style={styles.discountIcon}/>
                         </TouchableOpacity>    
                 </View>     
