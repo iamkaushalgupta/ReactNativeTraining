@@ -5,9 +5,9 @@ import { icons } from "../../constants";
 import DatePicker from 'react-native-date-picker'
 
 const TextAndInputField=(props:any)=>{
-    const [date, setDate] = useState(new Date('1970-12-01'))
+  const [date, setDate] = useState(new Date('1970-12-01'))
   const [open, setOpen] = useState(false)
-  console.log(date)
+  
     return(
         <View>
              <DatePicker

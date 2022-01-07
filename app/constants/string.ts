@@ -256,6 +256,44 @@ const settings=[
     
 ]
 
+const secondary_details=[
+    {
+        "ID Card":'Not Updated'
+    },
+    {
+        "Date of Birth":'05/12/1998'
+    },
+    {
+        "Gender":'Male'
+    },
+    {
+        "Joined":"March 2020"
+    },
+    {
+        "Email":'kaushalgupta198@gmail.com'
+    },
+    {
+        "Address":'A-532, Shastri Nagar\nDelhi-110052'
+    }
+    
+]
+
+const primary_details=[
+    {
+        "Full Name":'Kaushal Gupta'
+    },
+    {
+        "Phone Number":'8851798050'
+    },
+    {
+        "User Id":'112233'
+    },
+    
+    
+]
+
+
+
 
 const screens = {
     main_layout: "MainLayout",
@@ -674,6 +712,7 @@ export default {
     available_coupon,
     used_coupon,
     MyCards,
-    
+    primary_details,
+    secondary_details,
 }
 

@@ -21,7 +21,7 @@ import MyCouponModel from "./myCoupon";
 import MyCardModel from "./myCardModel";
 import AddNewCardModel from "./addNewCardModel";
 import MyAccountEditModel from "./myAccountEditModel";
-
+import MyAccountDetailModel from "./myAccountDetailModel";
 export {HomeModel,ContactModel,
      ProfileModel, TestModel,OnboardingModel,SignInModel,SignUpModel,
      PasswordRecoveryModel, OTPAuthenticationModel, SettingModel,ChangePasswordModel,
@@ -36,4 +36,5 @@ export {HomeModel,ContactModel,
     MyCardModel,
     AddNewCardModel,
     MyAccountEditModel,
+    MyAccountDetailModel
     };
