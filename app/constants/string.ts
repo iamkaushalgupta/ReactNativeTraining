@@ -272,8 +272,8 @@ const screens = {
     MyOrder:'MY ORDERS',
     MyCoupon:'My COUPON',
     MyCards:'MY CARDS',
-    addNewCard:'ADD NEW CARD'
-    
+    addNewCard:'ADD NEW CARD',
+    MyAccount:"MY ACCOUNT"
 }
 
 const MyCards=[
@@ -393,6 +393,7 @@ const RiderReview=
 
 
 const keywords={
+    save:'Save',
     addCard:'Add Card',
     name:'Kaushal Gupta',
     CardNumber:'1234123412341234',

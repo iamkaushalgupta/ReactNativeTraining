@@ -24,7 +24,7 @@ const TextAndInputField=(props:any)=>{
     }
 
     return(
-        <View   >
+        <View>
                 <View style={styles().labelContainer}>
                 <Text style={styles().labelText}>{props.name}</Text>
                 {
@@ -34,7 +34,9 @@ const TextAndInputField=(props:any)=>{
                 </View>  
 
                 <View style={styles().inputContainer}>
-                <TextInput numberOfLines={1} style={styles().inputText} onChangeText={(text)=>(validation(props.name,text))}>
+                <TextInput numberOfLines={1} style={styles().inputText} onChangeText={(text)=>(validation(props.name,text))} keyboardType={props.type} >
+                           
+                           
                             </TextInput>
 
                     {!onoff&& <Image  source={icons.check} style={styles().icon}/>}

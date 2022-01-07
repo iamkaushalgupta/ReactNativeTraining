@@ -20,6 +20,7 @@ import MyOrderModel from "./MyOrderModel";
 import MyCouponModel from "./myCoupon";
 import MyCardModel from "./myCardModel";
 import AddNewCardModel from "./addNewCardModel";
+import MyAccountEditModel from "./myAccountEditModel";
 
 export {HomeModel,ContactModel,
      ProfileModel, TestModel,OnboardingModel,SignInModel,SignUpModel,
@@ -33,5 +34,6 @@ export {HomeModel,ContactModel,
     MyOrderModel,
     MyCouponModel,
     MyCardModel,
-    AddNewCardModel
+    AddNewCardModel,
+    MyAccountEditModel,
     };

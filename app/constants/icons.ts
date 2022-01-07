@@ -39,6 +39,7 @@ const trash = require('../assets/icons/trash.png')
 const gpay =require('../assets/dummyData/google-pay.png')
 const phonepe =require('../assets/dummyData/PhonePe.png')
 const apple=require('../assets/dummyData/Apple.png')
+const calender = require('../assets/icons/calendar.png')
 export default {
     plus,
     minus,
@@ -79,6 +80,7 @@ export default {
     star,
     clock,
     dollar,
+    calender,
     // wallet,
     // help,
 }

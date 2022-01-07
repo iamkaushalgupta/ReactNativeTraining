@@ -3,9 +3,9 @@ import { COLORS } from "../../constants";
 
 const styles=()=>StyleSheet.create({
     inputText:{
-        width:'95%',        
-        paddingHorizontal:10,
+        width:'95%',
         color:COLORS.black,
+        paddingHorizontal:10,
         fontSize:18,
     },
     labelText:{
@@ -14,8 +14,6 @@ const styles=()=>StyleSheet.create({
         
     },
     labelContainer:{
-        flexDirection:'row',
-        justifyContent:'space-between',
         paddingVertical:10,
     },
     invalidText:{
@@ -33,8 +31,18 @@ const styles=()=>StyleSheet.create({
      justifyContent:'space-between',
      backgroundColor:COLORS.lightGray1,
      borderRadius:10,
-    paddingRight:10
-    }
+    paddingRight:10,
+    alignItems:'center'
+    },
+    datePicker:{
+        backgroundColor:COLORS.lightGray1,
+     borderRadius:10,
+        paddingRight:10,
+        width:'100%'
+    },
+    dateIcon: {
+        position: 'absolute',
+      },
 
 })
 
