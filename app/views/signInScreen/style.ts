@@ -2,55 +2,58 @@ import { StyleSheet } from "react-native";
 import { COLORS } from "../../constants";
 
 
-const styles=(o:any)=>StyleSheet.create({
-    container:{
-        flex:1,
-        marginHorizontal:o.width*0.05
+const styles = (o: any) => StyleSheet.create({
+    container: {
+        flex: 1,
+        marginHorizontal: o.width * 0.05
     },
-    mainheading:{
-        color:COLORS.black,
-        fontSize:25,
-        fontWeight:'900',
-        textAlign:'center'
+    mainheading: {
+        color: COLORS.black,
+        fontSize: 25,
+        fontWeight: '900',
+        textAlign: 'center'
     }
     ,
-    labelText:{
-        textAlign:'center',
-        fontSize:18,
-        paddingVertical:5,
+
+    signinButton: {
+        backgroundColor: COLORS.primary,
+        width: '100%',
+        padding: 5,
+        justifyContent: 'center',
+        borderRadius: 10,
+        marginVertical: 10,
     },
-    signinButton:{
-        backgroundColor:COLORS.primary,
-        width:'100%',
-        
-        justifyContent:'center',
-        borderRadius:10,
-        marginVertical:10,
+    signinButtonText: {
+        color: COLORS.white,
+        fontSize: 20,
+        textAlign: 'center',
+
     },
-    signinButtonText:{
-        color:COLORS.white,
-        fontSize:20,
-        textAlign:'center',
-        paddingVertical:10,    
+    labelForgetText: {
+        alignSelf: 'flex-end',
+        fontSize: 15,
+        color: COLORS.gray,
+        marginVertical: 5,
     },
-    labelForgetText:{
-        alignSelf:'flex-end',
-        fontSize:15,
-        color:COLORS.gray,
-        marginVertical:5,
+    colorText: {
+        color: COLORS.primary,
+        fontSize: 18,
+        fontWeight: '600',
+        paddingVertical: 5,
     },
-    colorText:{
-        color:COLORS.primary,
-        fontSize:18,
-        fontWeight:'600',
-        padding:5,
+    labelText: {
+        textAlign: 'center',
+        fontSize: 18,
+        paddingVertical: 5,
+        color: COLORS.gray,
+        fontWeight: '600',
     },
-    bottomContainer:{
-        justifyContent:'flex-end'
+    bottomContainer: {
+        justifyContent: 'flex-end'
     },
-    textContainer:{
-        flexDirection:'row',
-        justifyContent:'center'
+    textContainer: {
+        flexDirection: 'row',
+        justifyContent: 'center'
     }
 })
 export default styles

@@ -1,9 +1,9 @@
 import React from "react";
 import MyCoupon from "../views/myCouponScreen/myCouponScreen";
 
-const MyCouponModel=({navigation}:any)=>{
-    return(
-        <MyCoupon navigation={navigation}/>
+const MyCouponModel = ({ navigation }: any) => {
+    return (
+        <MyCoupon navigation={navigation} />
     )
 }
 

@@ -1,13 +1,13 @@
 import HomeScreen from "../views/homescreen/homescreen";
 import React from "react";
 
-interface HomeModleProps{
+interface HomeModleProps {
     navigation: any
 }
-const HomeModel=(props:HomeModleProps)=>{
-const {navigation} = props
+const HomeModel = (props: HomeModleProps) => {
+    const { navigation } = props
 
-    return(<HomeScreen navigation={navigation}/>)
+    return (<HomeScreen navigation={navigation} />)
 }
 
 export default HomeModel;

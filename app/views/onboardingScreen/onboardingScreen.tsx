@@ -1,4 +1,4 @@
-import React,{useRef} from "react";
+import React, { useRef } from "react";
 import styles from "./styles";
 import {
     Text, View, Image
@@ -14,17 +14,16 @@ import UseOrientation from "../../config/useOrientation";
 import { HeaderLogo } from "../../common";
 
 
-const OnboardingScreen = (props:any) => {
+const OnboardingScreen = (props: any) => {
     const o = UseOrientation()
-    const flatref=useRef<any|null>(null)
-   
+    const flatref = useRef<any | null>(null)
 
-    const scrollTo = (data:any) => 
-    {
-        flatref.current.scrollToIndex({animated: true, index: data});
+
+    const scrollTo = (data: any) => {
+        flatref.current.scrollToIndex({ animated: true, index: data });
     }
     const RenderItem = (input: any) => {
-        
+
         return (
             <View style={styles(o).renderContainer}>
 
@@ -43,28 +42,28 @@ const OnboardingScreen = (props:any) => {
 
                 {/* Footer */}
                 <View style={styles(o).renderfooterContainer}>
-                        <Text style={styles(o).titleText}>{input.data.item.title}</Text>
-                        <Text style={styles(o).descriptionText}>{input.data.item.description}</Text>
-               
-                    {!input.data.item.finalButton&&
-                        
-                        <View style={styles(o).buttonContainer}>
-                    <TouchableOpacity style={styles(o).skipButton} onPress={()=>scrollTo(2)}>
-                        <Text style={styles(o).skipButtonText}>{string.keywords.skip}</Text>
-                    </TouchableOpacity>
-                    <TouchableOpacity style={styles(o).nextButton} onPress={()=>scrollTo(input.data.index+1)}>
-                        <Text style={styles(o).nextButtonText}>{string.keywords.next}</Text>
-                    </TouchableOpacity>
-                    </View>}
+                    <Text style={styles(o).titleText}>{input.data.item.title}</Text>
+                    <Text style={styles(o).descriptionText}>{input.data.item.description}</Text>
 
-                    {input.data.item.finalButton&&
-                        
+                    {!input.data.item.finalButton &&
+
                         <View style={styles(o).buttonContainer}>
-                    
-                    <TouchableOpacity style={styles(o).nextButton} onPress={()=>props.navigation.navigate('Signin')}>
-                        <Text style={styles(o).nextButtonText}>{string.keywords.letgetstarted}</Text>
-                    </TouchableOpacity>
-                    </View>}
+                            <TouchableOpacity style={styles(o).skipButton} onPress={() => scrollTo(2)}>
+                                <Text style={styles(o).skipButtonText}>{string.keywords.skip}</Text>
+                            </TouchableOpacity>
+                            <TouchableOpacity style={styles(o).nextButton} onPress={() => scrollTo(input.data.index + 1)}>
+                                <Text style={styles(o).nextButtonText}>{string.keywords.next}</Text>
+                            </TouchableOpacity>
+                        </View>}
+
+                    {input.data.item.finalButton &&
+
+                        <View style={styles(o).buttonContainer}>
+
+                            <TouchableOpacity style={styles(o).nextButton} onPress={() => props.navigation.navigate('Drawer')}>
+                                <Text style={styles(o).nextButtonText}>{string.keywords.letgetstarted}</Text>
+                            </TouchableOpacity>
+                        </View>}
                 </View>
 
             </View>
@@ -86,7 +85,7 @@ const OnboardingScreen = (props:any) => {
                 keyExtractor={(item) => `${item.id}`}
                 renderItem={(item) => <RenderItem data={item} />}
                 ref={flatref}
-            
+
             />
 
         </View>

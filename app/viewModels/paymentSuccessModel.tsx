@@ -1,9 +1,9 @@
 import React from "react";
 import PaymentSuccess from "../views/paymentSuccessScreen/PaymentSuccessScreen";
 
-const PaymentSuccessModel=({navigation}:any)=>{
-    return(
-        <PaymentSuccess navigation={navigation}/>
+const PaymentSuccessModel = ({ navigation }: any) => {
+    return (
+        <PaymentSuccess navigation={navigation} />
     )
 }
 

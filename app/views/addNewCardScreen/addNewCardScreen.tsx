@@ -7,13 +7,13 @@ import { HeaderComponent } from '../../common';
 const AddNewCardScreen = ({ navigation }: any) => {
     return (
         <KeyboardAvoidingView style={styles.container}>
-             <HeaderComponent 
-            firstImage={icons.left_arrow}
-            secondImage={images.transparent}
-            navigation={navigation}
-            heading={string.screens.addNewCard}
-            secondImageNavigate={""}
-            firstImageNavigate="back" />
+            <HeaderComponent
+                firstImage={icons.left_arrow}
+                secondImage={images.transparent}
+                navigation={navigation}
+                heading={string.screens.addNewCard}
+                secondImageNavigate={""}
+                firstImageNavigate={navigation.goBack} />
 
             <View style={styles.cardStyleContainer}>
                 <Image source={icons.apple} style={styles.cardIcon} />
@@ -25,26 +25,26 @@ const AddNewCardScreen = ({ navigation }: any) => {
                     </View>
                 </View>
             </View>
-            <ScrollView showsVerticalScrollIndicator={false}>        
-            <View style={styles.cardInputContainer}>
-                <TextAndInputField name="Card Number" />
-                <TextAndInputField name="Card Holder Name" />
-                <View style={styles.innerCardInputContainer}>
-                    <View style={styles.smallContainer}>
-                        <TextAndInputField name="Expiry Date" />
-                    </View>
+            <ScrollView showsVerticalScrollIndicator={false}>
+                <View style={styles.cardInputContainer}>
+                    <TextAndInputField name="Card Number" />
+                    <TextAndInputField name="Card Holder Name" />
+                    <View style={styles.innerCardInputContainer}>
+                        <View style={styles.smallContainer}>
+                            <TextAndInputField name="Expiry Date" />
+                        </View>
 
-                    <View style={styles.smallContainer}>
-                        <TextAndInputField name="CVV" />
+                        <View style={styles.smallContainer}>
+                            <TextAndInputField name="CVV" />
+                        </View>
                     </View>
                 </View>
-            </View>
 
 
-        <TouchableOpacity style={styles.addButton} onPress={()=>navigation.navigate('Checkout')} >
-            <Text style={styles.addText}>{string.keywords.addCard}</Text>
-        </TouchableOpacity>
-        </ScrollView>
+                <TouchableOpacity style={styles.addButton} onPress={() => navigation.navigate('Checkout')} >
+                    <Text style={styles.addText}>{string.keywords.addCard}</Text>
+                </TouchableOpacity>
+            </ScrollView>
         </KeyboardAvoidingView>
     )
 }

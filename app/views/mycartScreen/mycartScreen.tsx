@@ -3,27 +3,26 @@ import { View, Text, TouchableOpacity, Image, FlatList, Modal } from 'react-nati
 import styles from "./style";
 import { icons, string, } from "../../constants";
 import { SwipeListView } from 'react-native-swipe-list-view';
-import { HeaderComponent } from "../../common";
 
 const MyCartScreen = ({ navigation }: any) => {
-    const [data,setData]=useState(string.mycart_data)
-    const deleteRow = (data :any, rowKey:any,) => {
-        
+    const [data, setData] = useState(string.mycart_data)
+    const deleteRow = (data: any, rowKey: any,) => {
+
         const newData = [...data];
         const prevIndex = data.findIndex((item: { key: any; }) => item.key === rowKey);
         newData.splice(prevIndex, 1);
         setData(newData);
     };
 
-    const RenderHiddenItem=({item,data}:any)=>{
-        return(
+    const RenderHiddenItem = ({ item, data }: any) => {
+        return (
             <View style={styles.renderHiddenItem}>
-                <TouchableOpacity onPress={()=>deleteRow(data,item.key)}>
-                    <Image source={icons.trash} style={styles.trashIcon}/>
+                <TouchableOpacity onPress={() => deleteRow(data, item.key)}>
+                    <Image source={icons.trash} style={styles.trashIcon} />
                 </TouchableOpacity>
             </View>
         )
-    }    
+    }
 
     const RenderItem = ({ item }: any) => {
         const [number, setNumber] = useState(item.item.quanity)
@@ -56,6 +55,7 @@ const MyCartScreen = ({ navigation }: any) => {
 
     return (
         <View style={styles.container}>
+
             <View style={styles.upperContainer}>
                 <TouchableOpacity style={styles.backButton} onPress={() => navigation.goBack()}>
                     <Image source={icons.left_arrow} style={styles.icon} />
@@ -67,16 +67,14 @@ const MyCartScreen = ({ navigation }: any) => {
                 </TouchableOpacity>
             </View>
 
-            <View style={styles.listContainer}>
-                <SwipeListView
+
+            <SwipeListView
                 data={data}
-                renderItem={(item)=><RenderItem item= {item}/>}
-                renderHiddenItem={(item)=><RenderHiddenItem item={item} data={data}/>}
+                renderItem={(item) => <RenderItem item={item} />}
+                renderHiddenItem={(item) => <RenderHiddenItem item={item} data={data} />}
                 leftOpenValue={0}
                 rightOpenValue={-100}
-                />
-
-            </View>
+            />
 
             <View style={styles.modal}>
                 <View style={styles.modalContainer}>
@@ -94,11 +92,10 @@ const MyCartScreen = ({ navigation }: any) => {
                         <Text style={styles.totalText}>{string.keywords.total}</Text>
                         <Text style={styles.totalValueText}>{string.keywords.subtotalvalue}</Text>
                     </View>
-                    <View style={styles.ButtonContainer}>
-                        <TouchableOpacity style={styles.Button} onPress={() => navigation.navigate("MyCard")}>
-                            <Text style={styles.ButtonText}>{string.keywords.placeyourorder}</Text>
-                        </TouchableOpacity>
-                    </View>
+                    <TouchableOpacity style={styles.Button} onPress={() => navigation.navigate("MyCard")}>
+                        <Text style={styles.ButtonText}>{string.keywords.placeyourorder}</Text>
+                    </TouchableOpacity>
+
                 </View>
             </View>
 

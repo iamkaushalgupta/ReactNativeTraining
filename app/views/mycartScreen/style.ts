@@ -11,7 +11,7 @@ const styles = StyleSheet.create({
         alignItems:'center',
         justifyContent: 'space-between',
         paddingVertical:10,
-        flex:0.07,
+        // flex:0.07,
         // backgroundColor:'red'
     },
     
@@ -27,8 +27,8 @@ const styles = StyleSheet.create({
         borderWidth:2,
         borderRadius:10,
     },heading:{
-        fontSize:25 ,
-        fontWeight:'900',
+        fontSize:22 ,
+        fontWeight:'700',
         color:COLORS.black    
     },
     cartIcon:{
@@ -93,7 +93,7 @@ const styles = StyleSheet.create({
         fontSize:18,
     },
     modalContainer:{
-        flex:1,
+    
         backgroundColor:COLORS.white,
         borderTopLeftRadius:10,
         borderTopRightRadius:10,
@@ -102,8 +102,8 @@ const styles = StyleSheet.create({
   
     },
     modal:{
-        flex:0.35,
         marginHorizontal:-10,
+        
     },
     
     modalInnerContainer:{
@@ -154,9 +154,6 @@ const styles = StyleSheet.create({
         textAlign:'center',
         paddingVertical:5,    
     },
-    ButtonContainer:{
-        
-    },
 
     renderHiddenItem:{
         backgroundColor:COLORS.primary,
@@ -175,9 +172,7 @@ const styles = StyleSheet.create({
         tintColor:COLORS.white,
         marginRight:5,
     },
-    listContainer:{
-        flex:0.63
-    }
+
 
 
 

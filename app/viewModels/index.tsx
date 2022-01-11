@@ -22,21 +22,22 @@ import MyAccountEditModel from "./myAccountEditModel";
 import MyAccountDetailModel from "./myAccountDetailModel";
 import CheckoutModel from "./checkoutModel";
 import DeliveryStatusModel from "./deliveryStatusModel";
-export {HomeModel,
-      TestModel,OnboardingModel,SignInModel,SignUpModel,
-     PasswordRecoveryModel, OTPAuthenticationModel, SettingModel,ChangePasswordModel,
-     NotificationSettingModel,
-     DetailModel,
-     MyCartModel,
-     PaymentSuccessModel,
-     NotificationTabModel,
-    RiderReviewModel,
-    MyOrderModel,
-    MyCouponModel,
-    MyCardModel,
-    AddNewCardModel,
-    MyAccountEditModel,
-    MyAccountDetailModel,
-    CheckoutModel,
-    DeliveryStatusModel
-    };
+export {
+      HomeModel,
+      TestModel, OnboardingModel, SignInModel, SignUpModel,
+      PasswordRecoveryModel, OTPAuthenticationModel, SettingModel, ChangePasswordModel,
+      NotificationSettingModel,
+      DetailModel,
+      MyCartModel,
+      PaymentSuccessModel,
+      NotificationTabModel,
+      RiderReviewModel,
+      MyOrderModel,
+      MyCouponModel,
+      MyCardModel,
+      AddNewCardModel,
+      MyAccountEditModel,
+      MyAccountDetailModel,
+      CheckoutModel,
+      DeliveryStatusModel
+};

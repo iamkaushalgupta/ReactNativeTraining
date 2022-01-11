@@ -19,9 +19,9 @@ const styles = (o: any) => StyleSheet.create({
     },
     renderfooterContainer: {
         flex: 0.4,
-        alignItems:'center',
-        justifyContent:'center',
-        paddingHorizontal:o.width*0.05
+        alignItems: 'center',
+        justifyContent: 'center',
+        paddingHorizontal: o.width * 0.05
 
     },
 
@@ -33,8 +33,8 @@ const styles = (o: any) => StyleSheet.create({
 
 
     bannerContainer: {
-
-        flex: 1, justifyContent: 'flex-end'
+        flex: 1, 
+        justifyContent: 'flex-end'
 
     },
 
@@ -45,52 +45,52 @@ const styles = (o: any) => StyleSheet.create({
         height: o.height * 0.4,
         alignSelf: 'center',
     },
-    titleText:{
-        color:'black',
-        fontSize:30,
-        fontWeight:'900'
+    titleText: {
+        color: 'black',
+        fontSize: 30,
+        fontWeight: '900'
     },
-    descriptionText:{
-        width:o.width*0.8,
-        textAlign:'center',
-        color:COLORS.gray
+    descriptionText: {
+        width: o.width * 0.8,
+        textAlign: 'center',
+        color: COLORS.gray
     },
 
-    buttonContainer:{
-        flexDirection:'row'
+    buttonContainer: {
+        flexDirection: 'row'
     },
-    nextButton:{
-        backgroundColor:COLORS.primary,
-        width:'30%',
-       
-        flex:1,
-        alignItems:'center',
-        justifyContent:'center',
-        paddingVertical:10,
-        borderRadius:10,
-        margin:10,
-    
+    nextButton: {
+        backgroundColor: COLORS.primary,
+        width: '30%',
+
+        flex: 1,
+        alignItems: 'center',
+        justifyContent: 'center',
+        paddingVertical: 10,
+        borderRadius: 10,
+        margin: 10,
+
     },
-    nextButtonText:{
-        color:COLORS.white,
-        fontSize:20,
-        
+    nextButtonText: {
+        color: COLORS.white,
+        fontSize: 20,
+
     },
-    skipButton:{
-        
-        width:'30%',
-       
-        flex:1,
-        alignItems:'center',
-        justifyContent:'center',
-        paddingVertical:10,
-        borderRadius:10
-    
+    skipButton: {
+
+        width: '30%',
+
+        flex: 1,
+        alignItems: 'center',
+        justifyContent: 'center',
+        paddingVertical: 10,
+        borderRadius: 10
+
     },
-    skipButtonText:{
-        color:COLORS.gray,
-        fontSize:20,
-        
+    skipButtonText: {
+        color: COLORS.gray,
+        fontSize: 20,
+
     }
 
 

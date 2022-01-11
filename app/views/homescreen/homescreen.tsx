@@ -1,8 +1,10 @@
 import React, { useState } from "react";
-import { Text, View, 
+import {
+    Text, View,
     TouchableOpacity, Image,
-     TextInput, FlatList, ScrollView, Modal, 
-     TouchableWithoutFeedback } from 'react-native';
+    TextInput, FlatList, ScrollView, Modal,
+    TouchableWithoutFeedback
+} from 'react-native';
 import styles from './style'
 import { HeaderComponent } from "../../common";
 import { COLORS, icons, images, string } from '../../constants'
@@ -33,11 +35,11 @@ const HomeScreen = (props: homeProp) => {
     }
     const FoodRenderItem = ({ item, index }: any) => {
         return (
-            <TouchableOpacity style={styles(o).FoodContainer} onPress={()=>props.navigation.navigate("Detail")}>
+            <TouchableOpacity style={styles(o).FoodContainer} onPress={() => props.navigation.navigate("Detail")}>
                 <View style={styles(o).foodRenderUpperContainer}>
                     <View style={styles(o).caloriesContainer}>
                         <Image source={icons.calories} style={styles(o).caloriesIcon} />
-                        <Text>{item.calories} {string.keywords.calories}</Text>
+                        <Text style={styles(o).simpleText}>{item.calories} {string.keywords.calories}</Text>
                     </View>
                     <Image source={icons.love} style={styles(o).loveIcon} />
                 </View>
@@ -57,7 +59,7 @@ const HomeScreen = (props: homeProp) => {
                 transparent={true}
                 visible={filterOpen}
                 style={{ backgroundColor: COLORS.transparentBlack7 }}>
-                
+
                 <View style={styles(o).modalContainer}>
                     <TouchableWithoutFeedback onPress={() => setFilterOpen(false)} >
                         <View style={styles(o).modalUpper}></View>
@@ -88,26 +90,28 @@ const HomeScreen = (props: homeProp) => {
                                     </View>
                                 )
                             }}
-                            
+
                         >
                         </MultiSlider>
                         <Text style={styles(o).modalText}>{string.keywords.deliverytime}</Text>
-                           <View>
+                        <View>
                             <FlatList
-                            horizontal
-                            showsHorizontalScrollIndicator={false}
-                            data={string.delivery_time}
-                            extraData={string.delivery_time}
-                            keyExtractor={(item,index)=>'key'+index}
-                            renderItem={({item,index})=>{return(
-                                <TouchableOpacity style={styles(o).deliveryFlatList}>
-                                    <Text style={styles(o).iconText}>{item.label}</Text>
-                                </TouchableOpacity>
-                            )}}
-                                />
-                                </View>
-                            <Text style={styles(o).modalText}>{string.keywords.pricerange}</Text>
-                            <MultiSlider
+                                horizontal
+                                showsHorizontalScrollIndicator={false}
+                                data={string.delivery_time}
+                                extraData={string.delivery_time}
+                                keyExtractor={(item, index) => 'key' + index}
+                                renderItem={({ item, index }) => {
+                                    return (
+                                        <TouchableOpacity style={styles(o).deliveryFlatList}>
+                                            <Text style={styles(o).iconText}>{item.label}</Text>
+                                        </TouchableOpacity>
+                                    )
+                                }}
+                            />
+                        </View>
+                        <Text style={styles(o).modalText}>{string.keywords.pricerange}</Text>
+                        <MultiSlider
                             values={[10, 50]}
                             min={1}
                             max={100}
@@ -127,59 +131,63 @@ const HomeScreen = (props: homeProp) => {
                             }}
                         >
                         </MultiSlider>
-                            <Text style={styles(o).modalText}>{string.keywords.ratings}</Text>
-                            <View>
+                        <Text style={styles(o).modalText}>{string.keywords.ratings}</Text>
+                        <View>
                             <FlatList
-                            horizontal
-                            showsHorizontalScrollIndicator={false}
-                            data={string.ratings}
-                            extraData={string.ratings}
-                            keyExtractor={(item,index)=>'key'+index}
-                            renderItem={({item,index})=>{return(
-                                <TouchableOpacity style={styles(o).ratingFlatList}>
-                                    <Text style={styles(o).iconText}>{item.label}</Text>
-                                    <Image source={icons.star} style={styles(o).iconStar}/>
-                                </TouchableOpacity>
-                            )}}
-                               />
-                                </View>
-                            
-                                
-                            <Text style={styles(o).modalText}>{string.keywords.tags}</Text>
-                            <View>
+                                horizontal
+                                showsHorizontalScrollIndicator={false}
+                                data={string.ratings}
+                                extraData={string.ratings}
+                                keyExtractor={(item, index) => 'key' + index}
+                                renderItem={({ item, index }) => {
+                                    return (
+                                        <TouchableOpacity style={styles(o).ratingFlatList}>
+                                            <Text style={styles(o).iconText}>{item.label}</Text>
+                                            <Image source={icons.star} style={styles(o).iconStar} />
+                                        </TouchableOpacity>
+                                    )
+                                }}
+                            />
+                        </View>
+
+
+                        <Text style={styles(o).modalText}>{string.keywords.tags}</Text>
+                        <View>
                             <FlatList
-                            horizontal
-                            showsHorizontalScrollIndicator={false}
-                            data={string.tags}
-                            extraData={string.tags}
-                            keyExtractor={(item,index)=>'key'+index}
-                            renderItem={({item,index})=>{return(
-                                <TouchableOpacity style={styles(o).tagsFlatList}>
-                                    <Text style={styles(o).iconText}>{item.label}</Text>
-                                </TouchableOpacity>
-                            )}}
-                                />
-                                </View>
-                              
-                              
-                    
-                    <TouchableOpacity style={styles(o).nextButton}>
-                        <Text style={styles(o).nextButtonText}>{string.keywords.applyfilter}</Text>
-                    </TouchableOpacity>
-                   
+                                horizontal
+                                showsHorizontalScrollIndicator={false}
+                                data={string.tags}
+                                extraData={string.tags}
+                                keyExtractor={(item, index) => 'key' + index}
+                                renderItem={({ item, index }) => {
+                                    return (
+                                        <TouchableOpacity style={styles(o).tagsFlatList}>
+                                            <Text style={styles(o).iconText}>{item.label}</Text>
+                                        </TouchableOpacity>
+                                    )
+                                }}
+                            />
+                        </View>
+
+
+
+                        <TouchableOpacity style={styles(o).nextButton}>
+                            <Text style={styles(o).nextButtonText}>{string.keywords.applyfilter}</Text>
+                        </TouchableOpacity>
+
                     </ScrollView>
                 </View>
 
             </Modal>
 
-            
-            <HeaderComponent 
-            firstImage={icons.menu}
-            secondImage={images.profile}
-            navigation={props.navigation}
-            heading={string.screens.home}
-            secondImageNavigate={"MyAccountDetail"}
-            firstImageNavigate="" />
+
+            <HeaderComponent
+                firstImage={icons.menu}
+                secondImage={images.profile}
+                navigation={props.navigation}
+                heading={string.screens.home}
+                secondImageNavigate={"MyAccountDetail"}
+                firstImageNavigate={props.navigation.openDrawer} />
 
             <View style={styles(o).searchContainer}>
                 <View style={styles(o).innerSearchContainer}>

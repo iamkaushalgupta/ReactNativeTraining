@@ -6,8 +6,8 @@ const hot_delivery = require("../assets/images/hot_delivery.png")
 const logo_01 = require("../assets/images/logo_01.png")
 const logo_02 = require("../assets/images/logo_02.png")
 const profile = require('../assets/images/profile.png')
-const payment_success=require('../assets/images/check.png')
-const transparent=require('../assets/images/transparent.png')
+const payment_success = require('../assets/images/check.png')
+const transparent = require('../assets/images/transparent.png')
 
 
 export default {
