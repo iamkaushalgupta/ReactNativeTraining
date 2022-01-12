@@ -6,7 +6,7 @@ import {
 import styles from "./style";
 import UseOrientation from "../../config/useOrientation";
 import {
-    HeaderLogo, TextAndInputField,
+    HeaderLogo, TextAndInputField,TextAndPasswordInput
 } from "../../common";
 import { string } from "../../constants";
 
@@ -17,9 +17,9 @@ const SignUpScreen = (props: any) => {
             <HeaderLogo />
             <Text style={styles(o).mainheading}>{string.keywords.gettingstarted}</Text>
             <Text style={styles(o).labelText}>{string.keywords.createanaccounttocontinue}</Text>
-            <TextAndInputField name="Email" />
-            <TextAndInputField name="Username" />
-            <TextAndInputField name="Password" />
+            <TextAndInputField name="Email"  check="email"/>
+            <TextAndInputField name="Username"  check="username"/>
+            <TextAndPasswordInput name="Password" />
 
 
             <TouchableOpacity style={styles(o).signinButton}>

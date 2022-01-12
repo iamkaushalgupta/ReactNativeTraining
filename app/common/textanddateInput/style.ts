@@ -31,7 +31,7 @@ const styles=()=>StyleSheet.create({
      justifyContent:'space-between',
      backgroundColor:COLORS.lightGray1,
      borderRadius:10,
-    paddingRight:10,
+    paddingRight:20,
     alignItems:'center'
     },
     datePicker:{

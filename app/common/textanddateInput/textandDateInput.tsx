@@ -5,7 +5,7 @@ import { icons } from "../../constants";
 import DatePicker from 'react-native-date-picker'
 
 const TextAndInputField = (props: any) => {
-  const [date, setDate] = useState(new Date('1970-12-01'))
+  const [date, setDate] = useState(new Date(props.mindate))
   const [open, setOpen] = useState(false)
 
   return (
@@ -22,7 +22,7 @@ const TextAndInputField = (props: any) => {
         onCancel={() => {
           setOpen(false)
         }}
-        maximumDate={new Date()}
+        maximumDate={props.maxdate}
       />
       <View style={styles().labelContainer}>
         <Text style={styles().labelText}>{props.name}</Text>

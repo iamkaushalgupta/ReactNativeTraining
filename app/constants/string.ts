@@ -1,3 +1,4 @@
+import icons from "./icons"
 const onboarding_screens = [
     {
         id: 1,
@@ -364,6 +365,24 @@ const MyCards = [
 
 ]
 
+const categories = [
+    {
+        id: 1,
+        name: "Fast Food",
+        icon: icons.burger
+    },
+    {
+        id: 2,
+        name: "Fruit Item",
+        icon: icons.cherry
+    },
+    {
+        id: 3,
+        name: "Rice Item",
+        icon: icons.rice
+    }
+]
+
 
 const used_coupon = [
     {
@@ -514,6 +533,7 @@ const keywords = {
     deliveryto: 'DELIVERY TO',
     address: 'No. 88, JIn Padungan, Kuching',
     populatnearyou: 'Popular Near You',
+    specialFood:'Speical Food',
     showall: 'Show All',
     calories: 'Calories',
     filteryoursearch: 'Filter Your Search',
@@ -616,15 +636,19 @@ const tags = [
         icon: require('../assets/dummyData/hamburger.png'),
         text: 'Chicken Party Hamburger',
         cost: '$15.11',
-        calories: '78'
+        calories: '78',
+        category:1,
+        isFavourite:true,
     },
     {
         id: 2,
-        label: "Fast Food",
+        label: "HotTacos",
         icon: require('../assets/dummyData/hot_tacos.png'),
         text: 'Mexican Party Hot Tacos',
         cost: '$11.13',
-        calories: '66'
+        calories: '66',
+        category:1,
+        isFavourite:false,
     },
     {
         id: 3,
@@ -632,7 +656,9 @@ const tags = [
         icon: require('../assets/dummyData/veg_biryani.png'),
         text: 'Mexican Party Hot Tacos',
         cost: '$11.13',
-        calories: '86'
+        calories: '86',
+        category:1,
+        isFavourite:true,
     },
     {
         id: 4,
@@ -640,7 +666,9 @@ const tags = [
         icon: require('../assets/dummyData/wrap_sandwich.png'),
         text: 'Chicken Party Hamburger',
         cost: '$15.11',
-        calories: '88'
+        calories: '88',
+        category:1,
+        isFavourite:false,
     },
     {
         id: 5,
@@ -648,7 +676,9 @@ const tags = [
         icon: require('../assets/dummyData/hamburger.png'),
         text: 'Mexican Party Hot Tacos',
         cost: '$11.13',
-        calories: '98'
+        calories: '98',
+        category:2,
+        isFavourite:true,
 
     },
     {
@@ -657,15 +687,19 @@ const tags = [
         icon: require('../assets/dummyData/hot_tacos.png'),
         text: 'Chicken Party Hamburger',
         cost: '$15.11',
-        calories: '78'
+        calories: '78',
+        category:2,
+        isFavourite:true,
     },
     {
         id: 7,
-        label: "Vegetable",
+        label: "VegBiryani",
         icon: require('../assets/dummyData/veg_biryani.png'),
         text: 'Mexican Party Hot Tacos',
         cost: '$11.13',
-        calories: '76'
+        calories: '76',
+        category:3,
+        isFavourite:true,
 
     },
     {
@@ -674,7 +708,9 @@ const tags = [
         icon: require('../assets/dummyData/wrap_sandwich.png'),
         text: 'Chicken Party Hamburger',
         cost: '$15.11',
-        calories: '78'
+        calories: '78',
+        category:1,
+        isFavourite:false,
     }
 ]
 
@@ -698,44 +734,24 @@ const mycart_data = [
         id: 1,
         name: 'Hamburger',
         quanity: 3,
-        price: '$15.99',
+        price: '15.99',
         icon: require('../assets/dummyData/hamburger.png')
     },
     {
         id: 2,
         name: 'Hot Tacos',
         quanity: 2,
-        price: '$10.99',
+        price: '10.99',
         icon: require('../assets/dummyData/hot_tacos.png')
     },
     {
         id: 3,
         name: 'Veg Biryani',
         quanity: 1,
-        price: '$10.99',
+        price: '10.99',
         icon: require('../assets/dummyData/veg_biryani.png')
     },
-    {
-        id: 4,
-        name: 'Hamburger',
-        quanity: 3,
-        price: '$15.99',
-        icon: require('../assets/dummyData/hamburger.png')
-    },
-    {
-        id: 5,
-        name: 'Hamburger',
-        quanity: 3,
-        price: '$15.99',
-        icon: require('../assets/dummyData/hamburger.png')
-    },
-    {
-        id: 6,
-        name: 'Hamburger',
-        quanity: 3,
-        price: '$15.99',
-        icon: require('../assets/dummyData/hamburger.png')
-    },
+    
 ]
 
 const drawer_content = [
@@ -814,6 +830,7 @@ export default {
     primary_details,
     secondary_details,
     delivery_status,
-    drawer_content
+    drawer_content,
+    categories
 }
 

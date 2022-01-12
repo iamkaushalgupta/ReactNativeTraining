@@ -29,7 +29,6 @@ const SettingScreen = (props: any) => {
      
         <View style={styles(o).flatList}>
             <FlatList
-                
                 showsVerticalScrollIndicator={false}
                 data={string.settings}
                 extraData={string.settings}

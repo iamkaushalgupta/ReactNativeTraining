@@ -13,12 +13,12 @@ const MyAccountEditScreen = ({ navigation }: any) => {
 
             <ScrollView showsVerticalScrollIndicator={false}>
                 <View style={styles.contentContainer}>
-                    <TextAndInputField name="Full Name" type="default" />
-                    <TextAndInputField name="Phone Number" type="phone-pad" />
-                    <TextAndInputField name="ID Card" type="default" />
-                    <TextAndDateInputField name="Date of Birth" />
-                    <TextAndInputField name="Gender" type="default" />
-                    <TextAndInputField name="Email" type="email-address" />
+                    <TextAndInputField name="Full Name" type="default" check="name"/>
+                    <TextAndInputField name="Phone Number" type="phone-pad"  check="contact"/>
+                    <TextAndInputField name="ID Card" type="default" check = "idCard"/>
+                    <TextAndDateInputField name="Date of Birth" mindate={new Date(new Date().setFullYear(new Date().getFullYear() -10))} maxdate={new Date()}/>
+                    <TextAndInputField name="Gender" type="default" check="gender" />
+                    <TextAndInputField name="Email" type="email-address" check="email" />
                     <TextAndInputField name="Address" type="default" />
                 </View>
             </ScrollView>

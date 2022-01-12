@@ -42,7 +42,8 @@ const styles = StyleSheet.create({
     innerCardInputContainer: {
         flexDirection: 'row',
         flex: 1,
-        justifyContent: 'space-between'
+        justifyContent: 'space-between',
+        
     },
     addButton: {
         backgroundColor: COLORS.primary,

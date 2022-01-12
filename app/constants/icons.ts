@@ -32,7 +32,13 @@ const gps = require('../assets/icons/gps.png')
 const discount = require('../assets/icons/discount.png')
 const done = require('../assets/icons/done.png')
 const dotted_line = require('../assets/icons/dotted_line.png')
+const burger=require('../assets/icons/burger.png')
+const cherry=require('../assets/icons/cherry.png')
+const rice=require('../assets/icons/rice.png')
 export default {
+    rice,
+    cherry,
+    burger,
     dotted_line,
     plus,
     minus,

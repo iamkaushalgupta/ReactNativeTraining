@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import {
     Text, View,
     TouchableOpacity, Image,
@@ -17,8 +17,16 @@ interface homeProp {
 const HomeScreen = (props: homeProp) => {
     const o = UseOrientation()
     const [selectedCategory, setSelectedCategory] = useState(1)
+    const [selectedData,SetSelectedData]=useState(string.tags)
     const [filterOpen, setFilterOpen] = useState(false)
+ 
+    useEffect(() => {
+        let data= string.tags.filter(data=>data.category==selectedCategory)
+        SetSelectedData(data);
+      },[selectedCategory]);
+ 
     const FoodCategoryRenderItem = ({ item, index }: any) => {
+       
         return (
             <TouchableOpacity
                 onPressIn={() => setSelectedCategory(index + 1)}
@@ -28,7 +36,7 @@ const HomeScreen = (props: homeProp) => {
             >
 
                 <Image source={item.icon} style={styles(o).smallFoodIcon} />
-                <Text style={[styles(o).whiteLabelText, { color: (selectedCategory == item.id) ? COLORS.white : COLORS.gray }]}>{item.label}</Text>
+                <Text style={[styles(o).whiteLabelText, { color: (selectedCategory == item.id) ? COLORS.white : COLORS.gray }]}>{item.name}</Text>
             </TouchableOpacity>)
 
 
@@ -41,7 +49,7 @@ const HomeScreen = (props: homeProp) => {
                         <Image source={icons.calories} style={styles(o).caloriesIcon} />
                         <Text style={styles(o).simpleText}>{item.calories} {string.keywords.calories}</Text>
                     </View>
-                    <Image source={icons.love} style={styles(o).loveIcon} />
+                          <Image source={icons.love} style={[styles(o).loveIcon,{tintColor:(item.isFavourite)?COLORS.red:COLORS.gray}]} />
                 </View>
 
                 <Image source={item.icon} style={styles(o).FoodIcon} />
@@ -213,8 +221,8 @@ const HomeScreen = (props: homeProp) => {
                     horizontal
                     showsHorizontalScrollIndicator={false}
 
-                    data={string.tags}
-                    extraData={string.tags}
+                    data={string.categories}
+                    extraData={string.categories}
                     keyExtractor={(item, index) => 'Key' + index}
                     renderItem={({ item, index }) => <FoodCategoryRenderItem item={item} index={index} />}
                 />
@@ -228,15 +236,15 @@ const HomeScreen = (props: homeProp) => {
                 <FlatList
                     horizontal
                     showsHorizontalScrollIndicator={false}
-                    data={string.tags}
-                    extraData={string.tags}
+                    data={selectedData}
+                    extraData={selectedData}
                     keyExtractor={(item, index) => 'Key' + index}
 
                     renderItem={({ item, index }) => <FoodRenderItem item={item} index={index} />}
                 />
             </View>
             <View style={styles(o).midContainer}>
-                <Text style={styles(o).labelText}>{string.keywords.populatnearyou}</Text>
+                <Text style={styles(o).labelText}>{string.keywords.specialFood}</Text>
                 <TouchableOpacity><Text style={styles(o).colorText}>{string.keywords.showall}</Text></TouchableOpacity>
             </View>
 

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { View, Text, TouchableOpacity, Image, FlatList, Modal } from 'react-native';
 import styles from "./style";
 import { icons, string, } from "../../constants";
@@ -7,7 +7,7 @@ import { SwipeListView } from 'react-native-swipe-list-view';
 const MyCartScreen = ({ navigation }: any) => {
     const [data, setData] = useState(string.mycart_data)
     const deleteRow = (data: any, rowKey: any,) => {
-
+        console.log(data)
         const newData = [...data];
         const prevIndex = data.findIndex((item: { key: any; }) => item.key === rowKey);
         newData.splice(prevIndex, 1);
@@ -24,8 +24,9 @@ const MyCartScreen = ({ navigation }: any) => {
         )
     }
 
-    const RenderItem = ({ item }: any) => {
+    const RenderItem = ( {item} : any) => {
         const [number, setNumber] = useState(item.item.quanity)
+        const [itemPrice,setItemPrice]=useState(item.item.price*number)
         return (
 
             <View style={styles.renderContainer}>
@@ -33,15 +34,15 @@ const MyCartScreen = ({ navigation }: any) => {
                     <Image source={item.item.icon} style={styles.foodIcon} />
                     <View>
                         <Text style={styles.nameText}>{item.item.name}</Text>
-                        <Text style={styles.priceText}>{item.item.price}</Text>
+                        <Text style={styles.priceText}>${itemPrice}</Text>
                     </View>
                 </View>
                 <View style={styles.increasedecreaseContainer}>
-                    <TouchableOpacity onPress={() => setNumber(number - 1)}>
+                    <TouchableOpacity onPress={() => {setNumber(number - 1),setItemPrice(item.item.price*(number-1))}}>
                         <Image source={icons.minus} style={styles.increasedecreaseIcon} />
                     </TouchableOpacity>
                     <Text style={styles.numberText}>{number}</Text>
-                    <TouchableOpacity onPress={() => setNumber(number + 1)}>
+                    <TouchableOpacity onPress={() => {setNumber(number + 1),setItemPrice(item.item.price*(number+1))}}>
                         <Image source={icons.plus} style={styles.increasedecreaseIcon} />
                     </TouchableOpacity>
                 </View>
@@ -69,6 +70,7 @@ const MyCartScreen = ({ navigation }: any) => {
 
 
             <SwipeListView
+                showsVerticalScrollIndicator={false}
                 data={data}
                 renderItem={(item) => <RenderItem item={item} />}
                 renderHiddenItem={(item) => <RenderHiddenItem item={item} data={data} />}

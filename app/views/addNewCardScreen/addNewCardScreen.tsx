@@ -2,7 +2,7 @@ import React from 'react'
 import { View, Text, TouchableOpacity, Image, KeyboardAvoidingView, ScrollView } from 'react-native';
 import styles from './style';
 import { icons, string, images } from '../../constants';
-import { TextAndInputField } from '../../common';
+import { TextAndInputField,TextAndDateInputField } from '../../common';
 import { HeaderComponent } from '../../common';
 const AddNewCardScreen = ({ navigation }: any) => {
     return (
@@ -27,15 +27,15 @@ const AddNewCardScreen = ({ navigation }: any) => {
             </View>
             <ScrollView showsVerticalScrollIndicator={false}>
                 <View style={styles.cardInputContainer}>
-                    <TextAndInputField name="Card Number" />
-                    <TextAndInputField name="Card Holder Name" />
+                    <TextAndInputField name="Card Number" check="cardnumber" />
+                    <TextAndInputField name="Card Holder Name" check="name" />
                     <View style={styles.innerCardInputContainer}>
                         <View style={styles.smallContainer}>
-                            <TextAndInputField name="Expiry Date" />
+                            <TextAndDateInputField name="Expiry Date" mindate={(new Date())} maxdate={new Date(new Date().setFullYear(new Date().getFullYear() + 20))}/>
                         </View>
 
                         <View style={styles.smallContainer}>
-                            <TextAndInputField name="CVV" />
+                            <TextAndInputField name="CVV" check="cvv"/>
                         </View>
                     </View>
                 </View>

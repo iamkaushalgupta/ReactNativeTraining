@@ -25,7 +25,7 @@ const styles=()=>StyleSheet.create({
     inputContainer:{
      flexDirection:'row',
      justifyContent:'space-between',
-        backgroundColor:'white',
+        backgroundColor:COLORS.lightGray1,
     
         borderRadius:10,
     paddingRight:20

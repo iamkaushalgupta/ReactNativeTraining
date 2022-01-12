@@ -60,7 +60,7 @@ const OnboardingScreen = (props: any) => {
 
                         <View style={styles(o).buttonContainer}>
 
-                            <TouchableOpacity style={styles(o).nextButton} onPress={() => props.navigation.navigate('Drawer')}>
+                            <TouchableOpacity style={styles(o).nextButton} onPress={() => props.navigation.navigate('Signin')}>
                                 <Text style={styles(o).nextButtonText}>{string.keywords.letgetstarted}</Text>
                             </TouchableOpacity>
                         </View>}

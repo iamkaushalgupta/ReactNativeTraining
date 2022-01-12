@@ -127,7 +127,7 @@ const styles = (o: any) => StyleSheet.create(
             width: 25,
             height: 25,
             alignSelf: 'center',
-            tintColor: COLORS.red,
+        
             marginRight: 5,
         },
         priceText: {
