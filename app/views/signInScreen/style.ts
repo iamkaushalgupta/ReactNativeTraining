@@ -54,6 +54,9 @@ const styles = (o: any) => StyleSheet.create({
     textContainer: {
         flexDirection: 'row',
         justifyContent: 'center'
+    },
+    googleButton:{
+        width:'100%'
     }
 })
 export default styles
