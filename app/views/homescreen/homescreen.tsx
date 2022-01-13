@@ -19,6 +19,7 @@ const HomeScreen = (props: homeProp) => {
     const [selectedCategory, setSelectedCategory] = useState(1)
     const [selectedData,SetSelectedData]=useState(string.tags)
     const [filterOpen, setFilterOpen] = useState(false)
+    const [addressArrow,setAddressArrow]=useState(false)
  
     useEffect(() => {
         let data= string.tags.filter(data=>data.category==selectedCategory)
@@ -53,7 +54,7 @@ const HomeScreen = (props: homeProp) => {
                 </View>
 
                 <Image source={item.icon} style={styles(o).FoodIcon} />
-                <Text style={styles(o).labelText}>{item.label}</Text>
+                <Text style={styles(o).foodText}>{item.label}</Text>
                 <Text style={styles(o).simpleText}>{item.text}</Text>
                 <Text style={styles(o).priceText}>{item.cost}</Text>
             </TouchableOpacity>)
@@ -210,12 +211,14 @@ const HomeScreen = (props: homeProp) => {
 
             <Text style={styles(o).colorText}>{string.keywords.deliveryto}</Text>
             <View style={styles(o).addressContainer}>
-                <Text style={styles(o).labelText}>{string.keywords.address}</Text>
-                <TouchableOpacity>
-                    <Image source={icons.down_arrow} style={styles(o).primaryColorIcon} />
+                <Text style={styles(o).labelText}>{string.keywords.address1}</Text>
+                <TouchableOpacity onPress={()=>setAddressArrow(!addressArrow)}>
+                   {!addressArrow&& <Image source={icons.down_arrow} style={styles(o).primaryColorIcon} />}
+                    {addressArrow&&<Image source={icons.left_arrow} style={styles(o).primaryColorIcon} />}
                 </TouchableOpacity>
+                
             </View>
-
+            {addressArrow&&<Text style={styles(o).labelText}>{string.keywords.address2}</Text>}
             <View style={styles(o).flatListContainer}>
                 <FlatList
                     horizontal

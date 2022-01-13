@@ -531,7 +531,8 @@ const keywords = {
     bysigningupyouagreetoour: 'By signing up, you agree to our.',
     termsandcondition: 'Terms and Conditions',
     deliveryto: 'DELIVERY TO',
-    address: 'No. 88, JIn Padungan, Kuching',
+    address1: 'No. 88, JIn Padungan, Kuching',
+    address2:'Los Angles, America',
     populatnearyou: 'Popular Near You',
     specialFood:'Speical Food',
     showall: 'Show All',
@@ -734,21 +735,21 @@ const mycart_data = [
         id: 1,
         name: 'Hamburger',
         quanity: 3,
-        price: '15.99',
+        price: 15.99,
         icon: require('../assets/dummyData/hamburger.png')
     },
     {
         id: 2,
         name: 'Hot Tacos',
         quanity: 2,
-        price: '10.99',
+        price: 10.99,
         icon: require('../assets/dummyData/hot_tacos.png')
     },
     {
         id: 3,
         name: 'Veg Biryani',
         quanity: 1,
-        price: '10.99',
+        price: 10.99,
         icon: require('../assets/dummyData/veg_biryani.png')
     },
     

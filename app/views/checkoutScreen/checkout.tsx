@@ -51,7 +51,7 @@ const CheckoutScreen = ({ navigation }: any) => {
                     <Text style={styles.titleText}>{string.keywords.deliveryAddress}</Text>
                     <View style={styles.deliveryAddressContainer}>
                         <Image source={icons.gps} style={styles.gpsIcon} />
-                        <Text style={styles.addressText}>{string.keywords.address}</Text>
+                        <Text style={styles.addressText}>{string.keywords.address1}</Text>
                     </View>
                 </View>
 

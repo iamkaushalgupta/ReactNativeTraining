@@ -9,7 +9,9 @@ const CustomDrawer = (props: any) => {
         return (
 
             <View>
-                <TouchableOpacity style={styles.renderContainer} onPress={() => props.navigation.navigate(item.item.navigation)}>
+                <TouchableOpacity style={styles.renderContainer} onPress={() => props.navigation.navigate(item.item.navigation)}
+                disabled={(item.item.navigation!='')?false:true}
+                >
                     <Image source={item.item.icon} style={styles.icon} />
                     <Text style={styles.iconText}>{item.item.screenName}</Text>
 

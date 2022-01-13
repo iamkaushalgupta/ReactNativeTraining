@@ -59,9 +59,17 @@ const styles = (o: any) => StyleSheet.create(
             width: 20,
             height: 18,
             alignSelf: 'flex-end',
-            marginTop: 5
+            marginTop: 5,
+            tintColor:COLORS.primary
         },
         labelText: {
+            fontSize: 18,
+            color: COLORS.black,
+            fontWeight: '700',
+            marginVertical: 5,
+
+        },
+        foodText: {
             fontSize: 18,
             color: COLORS.black,
             fontWeight: '700',

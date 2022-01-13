@@ -6,8 +6,15 @@ import { SwipeListView } from 'react-native-swipe-list-view';
 
 const MyCartScreen = ({ navigation }: any) => {
     const [data, setData] = useState(string.mycart_data)
+
+    const TotalPrice=()=>{
+        let total=0;
+        data.forEach((item)=>{
+            total=total+item.price *item.quanity
+        })
+        return(total)
+    }
     const deleteRow = (data: any, rowKey: any,) => {
-        console.log(data)
         const newData = [...data];
         const prevIndex = data.findIndex((item: { key: any; }) => item.key === rowKey);
         newData.splice(prevIndex, 1);
@@ -82,7 +89,7 @@ const MyCartScreen = ({ navigation }: any) => {
                 <View style={styles.modalContainer}>
                     <View style={styles.modalInnerContainer}>
                         <Text style={styles.priceLabelText}>{string.keywords.subtotal}</Text>
-                        <Text style={styles.priceValueText}>{string.keywords.subtotalvalue}</Text>
+                        <Text style={styles.priceValueText}>${TotalPrice()}</Text>
 
                     </View>
                     <View style={styles.modalInnerContainer}>
@@ -92,7 +99,7 @@ const MyCartScreen = ({ navigation }: any) => {
 
                     <View style={styles.modalSecondInnerContainer}>
                         <Text style={styles.totalText}>{string.keywords.total}</Text>
-                        <Text style={styles.totalValueText}>{string.keywords.subtotalvalue}</Text>
+                        <Text style={styles.totalValueText}>${TotalPrice()}</Text>
                     </View>
                     <TouchableOpacity style={styles.Button} onPress={() => navigation.navigate("MyCard")}>
                         <Text style={styles.ButtonText}>{string.keywords.placeyourorder}</Text>
