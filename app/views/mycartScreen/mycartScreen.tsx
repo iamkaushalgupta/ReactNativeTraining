@@ -16,9 +16,7 @@ const MyCartScreen = ({ navigation }: any) => {
     
 
     const updateQuanity=(index:number, number:any)=>{
-        
         data[index].quanity=number
-        console.log(data)
     }
     const deleteRow = (data: any, rowKey: any,) => {
         const newData = [...data];

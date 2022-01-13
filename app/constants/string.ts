@@ -516,6 +516,8 @@ const keywords = {
     createanaccounttocontinue: 'Create an account to continue!',
     signin: 'Sign In',
     signup: 'Sign Up',
+    signinwithfacebook:'Sign In with FaceBook',
+    signinwithgoogle:'Sign In with Google',
     donthaveanaccount: "Don't have an account?",
     alreadyhaveanaccount: "Already have an account?",
     forgetpassword: 'Forget Password?',

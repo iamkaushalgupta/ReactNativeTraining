@@ -55,8 +55,28 @@ const styles = (o: any) => StyleSheet.create({
         flexDirection: 'row',
         justifyContent: 'center'
     },
-    googleButton:{
-        width:'100%'
+    
+
+    socialLoginButton:{
+        width:'100%',
+        backgroundColor:COLORS.blue,
+        marginVertical:10,
+        padding:8,
+        flexDirection:'row',
+        alignItems:'center',
+        justifyContent:'center',
+        borderRadius:10,
+      
+    },
+    socialIcon:{
+        height:25,
+        width:25,
+        resizeMode:'contain'
+    },
+    loginTextColor:{
+        color:COLORS.white,
+        fontSize:16,
+        paddingLeft:15,
     }
 })
 export default styles

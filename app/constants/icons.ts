@@ -35,6 +35,8 @@ const dotted_line = require('../assets/icons/dotted_line.png')
 const burger=require('../assets/icons/burger.png')
 const cherry=require('../assets/icons/cherry.png')
 const rice=require('../assets/icons/rice.png')
+const facebook=require('../assets/icons/facebook.png')
+const google = require('../assets/icons/google.png')
 export default {
     rice,
     cherry,
@@ -72,5 +74,7 @@ export default {
     dollar,
     calender,
     gps,
-    discount
+    discount,
+    facebook,
+    google,
 }
