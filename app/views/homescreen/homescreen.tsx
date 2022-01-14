@@ -17,20 +17,13 @@ interface homeProp {
 const HomeScreen = (props: homeProp) => {
     const o = UseOrientation()
     const [selectedCategory, setSelectedCategory] = useState(1)
-    const [selectedData,SetSelectedData]=useState(string.tags)
     const [filterOpen, setFilterOpen] = useState(false)
     const [addressArrow,setAddressArrow]=useState(false)
- 
-    useEffect(() => {
-        let data= string.tags.filter(data=>data.category==selectedCategory)
-        SetSelectedData(data);
-      },[selectedCategory]);
- 
-    const FoodCategoryRenderItem = ({ item, index }: any) => {
-       
+    const selectedData= string.tags.filter(data=>data.category==selectedCategory)
+    const FoodCategoryRenderItem = ({ item, index }: any) => {   
         return (
             <TouchableOpacity
-                onPressIn={() => setSelectedCategory(index + 1)}
+                onPress={() => setSelectedCategory(index+1)}
                 style={[{
                     backgroundColor: (selectedCategory == item.id) ? COLORS.primary : COLORS.lightGray1
                 }, styles(o).smallFoodContainer]}
@@ -39,8 +32,6 @@ const HomeScreen = (props: homeProp) => {
                 <Image source={item.icon} style={styles(o).smallFoodIcon} />
                 <Text style={[styles(o).whiteLabelText, { color: (selectedCategory == item.id) ? COLORS.white : COLORS.gray }]}>{item.name}</Text>
             </TouchableOpacity>)
-
-
     }
     const FoodRenderItem = ({ item, index }: any) => {
         return (
@@ -62,7 +53,7 @@ const HomeScreen = (props: homeProp) => {
 
 
     return (
-        <ScrollView style={styles(o).container} showsVerticalScrollIndicator={false}>
+        <View style={styles(o).container}>
             <Modal
                 animationType="slide"
                 transparent={true}
@@ -208,8 +199,8 @@ const HomeScreen = (props: homeProp) => {
                     <Image source={icons.filter} style={styles(o).searchContainerIcon} />
                 </TouchableOpacity>
             </View>
-
-            <Text style={styles(o).colorText}>{string.keywords.deliveryto}</Text>
+            <ScrollView showsVerticalScrollIndicator={false}>
+                          <Text style={styles(o).colorText}>{string.keywords.deliveryto}</Text>
             <View style={styles(o).addressContainer}>
                 <Text style={styles(o).labelText}>{string.keywords.address1}</Text>
                 <TouchableOpacity onPress={()=>setAddressArrow(!addressArrow)}>
@@ -261,8 +252,10 @@ const HomeScreen = (props: homeProp) => {
                     renderItem={({ item, index }) => <FoodRenderItem item={item} index={index} />}
                 />
             </View>
+            </ScrollView>
+  
 
-        </ScrollView>
+        </View>
     );
 }
 export default HomeScreen;

@@ -9,7 +9,7 @@ const SettingScreen = (props: any) => {
     const RenderItem = (data: any) => {
 
         return (
-            <TouchableOpacity style={styles(o).renderContainer} onPress={() => props.navigation.navigate(data.data.item.navigate)}>
+            <TouchableOpacity style={styles(o).renderContainer} disabled={(data.data.item.navigate!='')?false:true} onPress={() =>props.navigation.navigate(data.data.item.navigate)}>
 
                 <Image style={styles(o).settingIcon} source={data.data.item.icon} />
                 <Text style={styles(o).settingNameText}>{data.data.item.name}</Text>

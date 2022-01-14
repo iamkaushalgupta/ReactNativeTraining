@@ -209,7 +209,7 @@ const settings = [
     {
         id: 2,
         name: 'Preferences',
-        navigate: 'Preferences',
+        navigate: '',
         icon: require('../assets/icons/filter.png')
     },
     {
@@ -221,37 +221,37 @@ const settings = [
     {
         id: 4,
         name: 'Data use',
-        navigate: 'Datause',
+        navigate: '',
         icon: require('../assets/icons/datauseage.png')
     },
     {
         id: 5,
         name: 'Check Update',
-        navigate: 'Checkupdate',
+        navigate: '',
         icon: require('../assets/icons/checkupdate.png')
     },
     {
         id: 6,
         name: 'Contact Us',
-        navigate: 'Contactus',
+        navigate: '',
         icon: require('../assets/icons/phone.png')
     },
     {
         id: 7,
         name: 'Privacy Policy',
-        navigate: 'Privacypolicy',
+        navigate: '',
         icon: require('../assets/icons/privacy.png')
     },
     {
         id: 8,
         name: 'Terms & Conditions',
-        navigate: 'TermsandConditons',
+        navigate: '',
         icon: require('../assets/icons/terms.png')
     },
     {
         id: 9,
         name: 'Logout',
-        navigate: 'Logout',
+        navigate: '',
         icon: require('../assets/icons/logout.png')
     },
 
