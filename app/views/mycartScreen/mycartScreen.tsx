@@ -39,7 +39,6 @@ const MyCartScreen = ({ navigation }: any) => {
         const [number, setNumber] = useState(item.item.quanity)
         const [itemPrice,setItemPrice]=useState(item.item.price*number)
         return (
-
             <View style={styles.renderContainer}>
                 <View style={styles.renderInnerContainer}>
                     <Image source={item.item.icon} style={styles.foodIcon} />
