@@ -8,7 +8,7 @@ const DetailScreen = ({ navigation }: any) => {
     const [number, setNumber] = useState(1)
     return (
 
-        <ScrollView style={styles.container}>
+        <View style={styles.container}>
             <View style={styles.upperContainer}>
                 <TouchableOpacity style={styles.backButton} onPress={() => navigation.goBack()}>
                     <Image source={icons.left_arrow} style={styles.icon} />
@@ -19,6 +19,7 @@ const DetailScreen = ({ navigation }: any) => {
                     <Image source={icons.cart} style={styles.cartIcon} />
                 </TouchableOpacity>
             </View>
+            <ScrollView showsVerticalScrollIndicator={false}>
 
 
             <View style={styles.FoodContainer}>
@@ -86,6 +87,7 @@ const DetailScreen = ({ navigation }: any) => {
                 <Image source={icons.star} style={styles.goldenStarIcon} />
 
             </View>
+            </ScrollView>
             <View style={styles.buyContainer}>
                 <View style={styles.increasedecreaseContainer}>
                     <TouchableOpacity onPress={() => setNumber(number - 1)}>
@@ -103,8 +105,8 @@ const DetailScreen = ({ navigation }: any) => {
                 </TouchableOpacity>
 
             </View>
-
-        </ScrollView>)
+        </View>
+        )
 }
 
 export default DetailScreen
