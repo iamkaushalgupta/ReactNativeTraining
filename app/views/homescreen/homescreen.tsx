@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState} from "react";
 import {
     Text, View,
     TouchableOpacity, Image,
@@ -199,7 +199,7 @@ const HomeScreen = (props: homeProp) => {
                 navigation={props.navigation}
                 heading={string.screens.home}
                 secondImageNavigate={"MyAccountDetail"}
-                firstImageNavigate={props.navigation.openDrawer} />
+                firstImageNavigate={props.navigation.openDrawer}/>
 
             <View style={styles(o).searchContainer}>
                 <View style={styles(o).innerSearchContainer}>
@@ -270,8 +270,6 @@ const HomeScreen = (props: homeProp) => {
                     />
                 </View>
             </ScrollView>
-
-
         </View>
     );
 }

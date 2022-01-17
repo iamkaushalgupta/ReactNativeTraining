@@ -9,12 +9,30 @@ import {
     NotificationTabModel,
     MyOrderModel
 } from '../viewModels'
-
+import Animated from 'react-native-reanimated';
+import { useDrawerProgress } from '@react-navigation/drawer';
 const Tab = createBottomTabNavigator();
-
 const TabNav = () => {
+    const isprogressdata=useDrawerProgress()
+
+  
+    const scale = Animated.interpolateNode(isprogressdata, {
+      inputRange: [0, 1],
+      outputRange: [1, 0.9],
+    });
+    const borderRadius = Animated.interpolateNode(isprogressdata, {
+      inputRange: [0, 1],
+      outputRange: [0, 25],
+    });
+    const animatedStyle = {
+      borderRadius,
+      transform: [{ scale }],
+      overflow: 'hidden',
+    };
     return (
-        <Tab.Navigator screenOptions={{ tabBarHideOnKeyboard: true, tabBarShowLabel: false, tabBarStyle: styles.tabBarstyle, headerShown: false }}  >
+        <View style={{flex:1,backgroundColor:COLORS.primary}}>
+    <Animated.View style={[{flex:1,...animatedStyle,backgroundColor:COLORS.primary}]}>
+    <Tab.Navigator screenOptions={{ tabBarHideOnKeyboard: true, tabBarShowLabel: false, tabBarStyle: styles.tabBarstyle, headerShown: false }}  >
             <Tab.Screen name="Home" component={HomeModel} options={{
                 tabBarIcon: ({ focused }) => {
                     return (
@@ -79,6 +97,8 @@ const TabNav = () => {
 
             }} />
         </Tab.Navigator>
+       </Animated.View>
+        </View>
     );
 }
 

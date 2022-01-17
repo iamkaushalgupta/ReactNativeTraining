@@ -66,9 +66,6 @@ const MyCartScreen = ({ navigation }: any) => {
                         <Image source={icons.plus} style={styles.increasedecreaseIcon} />
                     </TouchableOpacity>
                 </View>
-
-
-
             </View>
         )
     }
@@ -81,7 +78,6 @@ const MyCartScreen = ({ navigation }: any) => {
                 <TouchableOpacity style={styles.backButton} onPress={() => navigation.goBack()}>
                     <Image source={icons.left_arrow} style={styles.icon} />
                 </TouchableOpacity>
-
                 <Text style={styles.heading}> {string.screens.Mycart}</Text>
                 <TouchableOpacity style={styles.cartButton}>
                     <Image source={icons.cart} style={styles.cartIcon} />

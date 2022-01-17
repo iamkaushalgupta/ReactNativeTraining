@@ -9,17 +9,17 @@ const TextAndInputField = (props: any) => {
         <View>
             <View style={styles().labelContainer}>
                 <Text style={styles().labelText}>{props.name}</Text>
-                {
-                    onoff &&
-                    <Text style={styles().invalidText}>Invalid {props.name}</Text>
-                }
+                 <Text style={styles().invalidText}>{props.error}</Text>
+      
             </View>
 
             <View style={styles().inputContainer}>
-                <TextInput numberOfLines={1} style={styles().inputText} onChangeText={(text) => (setOnOff(validation(props.check, text)))} keyboardType={props.type} >
+                <TextInput numberOfLines={1} style={styles().inputText}
+                 onChangeText={(text) => props.onChangeText(text)}
+                 keyboardType={props.type} >
                 </TextInput>
-                {!onoff && <Image source={icons.check} style={styles().icon} />}
-                {onoff && <Image source={icons.close} style={styles().icon} />}
+                {/* {(props.error=='') && <Image source={icons.check} style={styles().icon} />}
+                {(props.error!='') && <Image source={icons.close} style={styles().icon} />} */}
 
             </View>
         </View>

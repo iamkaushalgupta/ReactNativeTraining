@@ -8,7 +8,7 @@ const DrawerNavigation = ({ navigation }: any) => {
         <Drawer.Navigator
             drawerContent={props => <CustomDrawer {...props} />}
             initialRouteName="Tab"
-            screenOptions={{ headerShown: false }}
+            screenOptions={{ headerShown: false,drawerType:'slide',overlayColor:'none'}}
         >
             <Drawer.Screen name="Tab" component={TabNav} />
         </Drawer.Navigator>
