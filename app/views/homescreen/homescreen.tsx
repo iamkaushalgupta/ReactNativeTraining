@@ -18,12 +18,41 @@ const HomeScreen = (props: homeProp) => {
     const o = UseOrientation()
     const [selectedCategory, setSelectedCategory] = useState(1)
     const [filterOpen, setFilterOpen] = useState(false)
-    const [addressArrow,setAddressArrow]=useState(false)
-    const selectedData= string.tags.filter(data=>data.category==selectedCategory)
-    const FoodCategoryRenderItem = ({ item, index }: any) => {   
+    const [addressArrow, setAddressArrow] = useState(false)
+    const selectedData = string.tags.filter(data => data.category == selectedCategory)
+    const [applyFilter, setApplyFilter] = useState(false)
+    const [ratingFilter, setRatingFilter] = useState(0)
+    const [deliveryTimeFilter, setDeliveryTimeFilter] = useState('')
+    const [distanceFilter, setDistanceFilter] = useState([])
+    const [priceFilter, setPriceFilter] = useState([])
+    let filterData = string.tags
+    if (ratingFilter != 0) {
+        filterData = filterData.filter(a => a.rating == ratingFilter)
+    }
+    if (deliveryTimeFilter != '') {
+        filterData = filterData.filter(a => a.delivery_time == deliveryTimeFilter)
+    }
+    if (distanceFilter.length != 0) {
+        filterData = filterData.filter(a => a.distance > distanceFilter[0] && a.distance < distanceFilter[1])
+    }
+    if (priceFilter.length != 0) {
+        filterData = filterData.filter(a => a.price > priceFilter[0] && a.price < priceFilter[1])
+    }
+
+
+    const ClearFilter = () => {
+        setApplyFilter(false)
+        setRatingFilter(0)
+        setDeliveryTimeFilter('')
+        setDistanceFilter([])
+        setPriceFilter([])
+    }
+
+
+    const FoodCategoryRenderItem = ({ item, index }: any) => {
         return (
             <TouchableOpacity
-                onPress={() => setSelectedCategory(index+1)}
+                onPress={() => setSelectedCategory(index + 1)}
                 style={[{
                     backgroundColor: (selectedCategory == item.id) ? COLORS.primary : COLORS.lightGray1
                 }, styles(o).smallFoodContainer]}
@@ -41,7 +70,7 @@ const HomeScreen = (props: homeProp) => {
                         <Image source={icons.calories} style={styles(o).caloriesIcon} />
                         <Text style={styles(o).simpleText}>{item.calories} {string.keywords.calories}</Text>
                     </View>
-                          <Image source={icons.love} style={[styles(o).loveIcon,{tintColor:(item.isFavourite)?COLORS.red:COLORS.gray}]} />
+                    <Image source={icons.love} style={[styles(o).loveIcon, { tintColor: (item.isFavourite) ? COLORS.red : COLORS.gray }]} />
                 </View>
 
                 <Image source={item.icon} style={styles(o).FoodIcon} />
@@ -82,7 +111,9 @@ const HomeScreen = (props: homeProp) => {
                             selectedStyle={{ backgroundColor: COLORS.primary }}
                             trackStyle={{ height: 10, borderRadius: 10, backgroundColor: COLORS.lightGray1 }}
                             minMarkerOverlapDistance={50}
+                            onValuesChange={(item: any) => setDistanceFilter(item)}
                             customMarker={(e) => {
+
                                 return (
                                     <View style={styles(o).customMarkerContainer}>
                                         <View style={styles(o).customMarkerCircle}></View>
@@ -90,7 +121,6 @@ const HomeScreen = (props: homeProp) => {
                                     </View>
                                 )
                             }}
-
                         >
                         </MultiSlider>
                         <Text style={styles(o).modalText}>{string.keywords.deliverytime}</Text>
@@ -103,8 +133,9 @@ const HomeScreen = (props: homeProp) => {
                                 keyExtractor={(item, index) => 'key' + index}
                                 renderItem={({ item, index }) => {
                                     return (
-                                        <TouchableOpacity style={styles(o).deliveryFlatList}>
-                                            <Text style={styles(o).iconText}>{item.label}</Text>
+                                        <TouchableOpacity style={[styles(o).deliveryFlatList,{backgroundColor:(deliveryTimeFilter == item.label)?COLORS.primary:COLORS.lightGray1}]} onPress={() => setDeliveryTimeFilter(item.label)}>
+                                            <Text style={[styles(o).iconText, { color: (deliveryTimeFilter == item.label) ? COLORS.golden : COLORS.gray,}
+                                            ]}>{item.label}</Text>
                                         </TouchableOpacity>
                                     )
                                 }}
@@ -121,6 +152,7 @@ const HomeScreen = (props: homeProp) => {
                             selectedStyle={{ backgroundColor: COLORS.primary }}
                             trackStyle={{ height: 10, borderRadius: 10, backgroundColor: COLORS.lightGray1 }}
                             minMarkerOverlapDistance={50}
+                            onValuesChange={(item: any) => setPriceFilter(item)}
                             customMarker={(e) => {
                                 return (
                                     <View style={styles(o).customMarkerContainer}>
@@ -140,38 +172,18 @@ const HomeScreen = (props: homeProp) => {
                                 extraData={string.ratings}
                                 keyExtractor={(item, index) => 'key' + index}
                                 renderItem={({ item, index }) => {
+
                                     return (
-                                        <TouchableOpacity style={styles(o).ratingFlatList}>
-                                            <Text style={styles(o).iconText}>{item.label}</Text>
-                                            <Image source={icons.star} style={styles(o).iconStar} />
+                                        <TouchableOpacity style={[styles(o).ratingFlatList,{backgroundColor:(ratingFilter > index)?COLORS.primary:COLORS.lightGray1}]} onPress={() => setRatingFilter(index + 1)}>
+                                            <Text style={[styles(o).iconText]}>{item.label}</Text>
+                                            <Image source={icons.star} style={[styles(o).iconStar, { tintColor: (ratingFilter > index) ? COLORS.golden : COLORS.gray2 }]} />
                                         </TouchableOpacity>
                                     )
                                 }}
                             />
                         </View>
 
-
-                        <Text style={styles(o).modalText}>{string.keywords.tags}</Text>
-                        <View>
-                            <FlatList
-                                horizontal
-                                showsHorizontalScrollIndicator={false}
-                                data={string.tags}
-                                extraData={string.tags}
-                                keyExtractor={(item, index) => 'key' + index}
-                                renderItem={({ item, index }) => {
-                                    return (
-                                        <TouchableOpacity style={styles(o).tagsFlatList}>
-                                            <Text style={styles(o).iconText}>{item.label}</Text>
-                                        </TouchableOpacity>
-                                    )
-                                }}
-                            />
-                        </View>
-
-
-
-                        <TouchableOpacity style={styles(o).nextButton}>
+                        <TouchableOpacity style={styles(o).nextButton} onPress={() => { setApplyFilter(true), setFilterOpen(false) }}>
                             <Text style={styles(o).nextButtonText}>{string.keywords.applyfilter}</Text>
                         </TouchableOpacity>
 
@@ -200,60 +212,65 @@ const HomeScreen = (props: homeProp) => {
                 </TouchableOpacity>
             </View>
             <ScrollView showsVerticalScrollIndicator={false}>
-                          <Text style={styles(o).colorText}>{string.keywords.deliveryto}</Text>
-            <View style={styles(o).addressContainer}>
-                <Text style={styles(o).labelText}>{string.keywords.address1}</Text>
-                <TouchableOpacity onPress={()=>setAddressArrow(!addressArrow)}>
-                   {!addressArrow&& <Image source={icons.down_arrow} style={styles(o).primaryColorIcon} />}
-                    {addressArrow&&<Image source={icons.left_arrow} style={styles(o).primaryColorIcon} />}
-                </TouchableOpacity>
-                
-            </View>
-            {addressArrow&&<Text style={styles(o).labelText}>{string.keywords.address2}</Text>}
-            <View style={styles(o).flatListContainer}>
-                <FlatList
-                    horizontal
-                    showsHorizontalScrollIndicator={false}
+                <Text style={styles(o).colorText}>{string.keywords.deliveryto}</Text>
+                <View style={styles(o).addressContainer}>
+                    <Text style={styles(o).labelText}>{string.keywords.address1}</Text>
+                    <TouchableOpacity onPress={() => setAddressArrow(!addressArrow)}>
+                        {!addressArrow && <Image source={icons.down_arrow} style={styles(o).primaryColorIcon} />}
+                        {addressArrow && <Image source={icons.left_arrow} style={styles(o).primaryColorIcon} />}
+                    </TouchableOpacity>
 
-                    data={string.categories}
-                    extraData={string.categories}
-                    keyExtractor={(item, index) => 'Key' + index}
-                    renderItem={({ item, index }) => <FoodCategoryRenderItem item={item} index={index} />}
-                />
-            </View>
-            <View style={styles(o).midContainer}>
-                <Text style={styles(o).labelText}>{string.keywords.populatnearyou}</Text>
-                <TouchableOpacity><Text style={styles(o).colorText}>{string.keywords.showall}</Text></TouchableOpacity>
-            </View>
+                </View>
+                {addressArrow && <Text style={styles(o).labelText}>{string.keywords.address2}</Text>}
 
-            <View style={styles(o).flatListContainer}>
-                <FlatList
-                    horizontal
-                    showsHorizontalScrollIndicator={false}
-                    data={selectedData}
-                    extraData={selectedData}
-                    keyExtractor={(item, index) => 'Key' + index}
+                {!applyFilter && <View style={styles(o).flatListContainer}>
+                    <FlatList
+                        horizontal
+                        showsHorizontalScrollIndicator={false}
+                        data={string.categories}
+                        extraData={string.categories}
+                        keyExtractor={(item, index) => 'Key' + index}
+                        renderItem={({ item, index }) => <FoodCategoryRenderItem item={item} index={index} />}
+                    />
+                </View>}
+                {!applyFilter && <View style={styles(o).midContainer}>
+                    <Text style={styles(o).labelText}>{string.keywords.populatnearyou}</Text>
+                    <TouchableOpacity><Text style={styles(o).colorText}>{string.keywords.showall}</Text></TouchableOpacity>
+                </View>}
 
-                    renderItem={({ item, index }) => <FoodRenderItem item={item} index={index} />}
-                />
-            </View>
-            <View style={styles(o).midContainer}>
-                <Text style={styles(o).labelText}>{string.keywords.specialFood}</Text>
-                <TouchableOpacity><Text style={styles(o).colorText}>{string.keywords.showall}</Text></TouchableOpacity>
-            </View>
+                {!applyFilter && <View style={styles(o).flatListContainer}>
+                    <FlatList
+                        horizontal
+                        showsHorizontalScrollIndicator={false}
+                        data={selectedData}
+                        extraData={selectedData}
+                        keyExtractor={(item, index) => 'Key' + index}
+                        renderItem={({ item, index }) => <FoodRenderItem item={item} index={index} />}
+                    />
+                </View>}
+                {!applyFilter && <View style={styles(o).midContainer}>
+                    <Text style={styles(o).labelText}>{string.keywords.specialFood}</Text>
+                    <TouchableOpacity><Text style={styles(o).colorText}>{string.keywords.showall}</Text></TouchableOpacity>
+                </View>}
 
-            <View style={styles(o).flatListContainer}>
-                <FlatList
-                    horizontal
-                    showsHorizontalScrollIndicator={false}
-                    data={string.tags}
-                    extraData={string.tags}
-                    keyExtractor={(item, index) => 'Key' + index}
-                    renderItem={({ item, index }) => <FoodRenderItem item={item} index={index} />}
-                />
-            </View>
+                {applyFilter &&
+                    <TouchableOpacity style={styles(o).clearFilterButton} onPress={() => ClearFilter()}>
+                        <Text style={styles(o).clearButtonText}>{string.keywords.clearFilter}</Text>
+                    </TouchableOpacity>
+                }
+
+                <View style={styles(o).flatListContainer}>
+                    <FlatList
+                        horizontal
+                        showsHorizontalScrollIndicator={false}
+                        data={filterData}
+                        extraData={filterData}
+                        keyExtractor={(item, index) => 'Key' + index}
+                        renderItem={({ item, index }) => <FoodRenderItem item={item} index={index} />}
+                    />
+                </View>
             </ScrollView>
-  
+
 
         </View>
     );

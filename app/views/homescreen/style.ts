@@ -222,12 +222,11 @@ const styles = (o: any) => StyleSheet.create(
             marginTop: 5,
         },
         iconText: {
-            color: COLORS.gray,
+        
             fontSize: 16,
             fontWeight: '800'
         },
         iconStar: {
-            tintColor: COLORS.gray2,
             resizeMode: 'contain',
             width: 20,
             height: 20,
@@ -236,13 +235,12 @@ const styles = (o: any) => StyleSheet.create(
         nextButton: {
             backgroundColor: COLORS.primary,
             width: '100%',
-
-            flex: 1,
             alignItems: 'center',
             justifyContent: 'center',
             paddingVertical: 10,
             borderRadius: 10,
-            margin: 10,
+            marginVertical: 20,
+            alignSelf:'center'
 
         },
         nextButtonText: {
@@ -251,19 +249,19 @@ const styles = (o: any) => StyleSheet.create(
 
         },
         deliveryFlatList: {
-            backgroundColor: COLORS.lightGray1,
             justifyContent: 'center',
             alignItems: 'center',
-            paddingHorizontal: 30,
+            paddingHorizontal: 25,
             paddingVertical: 10,
             marginRight: 10,
             marginTop: 10,
+            borderRadius:10,
         },
         ratingFlatList: {
-            backgroundColor: COLORS.lightGray1,
+            borderRadius:10,
             justifyContent: 'center',
             alignItems: 'center',
-            paddingHorizontal: 10,
+            paddingHorizontal: 13,
             paddingVertical: 10,
             marginRight: 10,
             marginTop: 10,
@@ -277,6 +275,21 @@ const styles = (o: any) => StyleSheet.create(
             paddingVertical: 10,
             marginRight: 10,
             marginTop: 10,
+        },
+        clearFilterButton:{
+            padding:5,
+            paddingHorizontal:10,
+            borderWidth:2,
+            borderRadius:10,
+            borderColor:COLORS.primary,
+            alignItems:'center',
+            justifyContent:'center',
+            alignSelf:'flex-end',
+        },
+        clearButtonText:{
+            color:COLORS.primary,
+            fontSize:16,
+            fontWeight:'600'
         }
 
     })

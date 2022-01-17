@@ -485,6 +485,7 @@ const delivery_status = [
 
 
 const keywords = {
+    clearFilter:'Clear Filter',
     checkout:'Checkout',
     submitReview: 'Submit Review',
     trackOrder: 'Track Order',
@@ -642,6 +643,10 @@ const tags = [
         calories: '78',
         category:1,
         isFavourite:true,
+        rating:1,
+        delivery_time:'10 Mins',
+        distance:4,
+        price:10,
     },
     {
         id: 2,
@@ -652,6 +657,10 @@ const tags = [
         calories: '66',
         category:1,
         isFavourite:false,
+        rating:2,
+        delivery_time:'10 Mins',
+        distance:4,
+        price:15,
     },
     {
         id: 3,
@@ -662,6 +671,10 @@ const tags = [
         calories: '86',
         category:1,
         isFavourite:true,
+        rating:2,
+        delivery_time:'20 Mins',
+        distance:5,
+        price:20,
     },
     {
         id: 4,
@@ -672,6 +685,10 @@ const tags = [
         calories: '88',
         category:1,
         isFavourite:false,
+        rating:3,
+        delivery_time:'20 Mins',
+        distance:5,
+        price:20,
     },
     {
         id: 5,
@@ -682,7 +699,10 @@ const tags = [
         calories: '98',
         category:2,
         isFavourite:true,
-
+        rating:3,
+        delivery_time:'20 Mins',
+        distance:10,
+        price:30,
     },
     {
         id: 6,
@@ -693,6 +713,10 @@ const tags = [
         calories: '78',
         category:2,
         isFavourite:true,
+        rating:4,
+        delivery_time:'30 Mins',
+        distance:10,
+        price:18,
     },
     {
         id: 7,
@@ -703,7 +727,10 @@ const tags = [
         calories: '76',
         category:3,
         isFavourite:true,
-
+        rating:4,
+        delivery_time:'30 Mins',
+        distance:7,
+        price:17,
     },
     {
         id: 8,
@@ -714,6 +741,10 @@ const tags = [
         calories: '78',
         category:1,
         isFavourite:false,
+        rating:5,
+        delivery_time:'30 Mins',
+        distance:10,
+        price:16,
     }
 ]
 
