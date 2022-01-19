@@ -26,6 +26,9 @@ const HomeScreen = (props: homeProp) => {
     const [distanceFilter, setDistanceFilter] = useState([])
     const [priceFilter, setPriceFilter] = useState([])
     let filterData = string.tags
+    
+    const [search,setSearch]=useState({text:' ',state:false})
+    const SearchData = string.tags.filter(a =>a.text.toLowerCase().match(search.text.toLowerCase())).map(a=>a);
     if (ratingFilter != 0) {
         filterData = filterData.filter(a => a.rating == ratingFilter)
     }
@@ -191,9 +194,7 @@ const HomeScreen = (props: homeProp) => {
                 </View>
 
             </Modal>
-
-
-            <HeaderComponent
+           <HeaderComponent
                 firstImage={icons.menu}
                 secondImage={images.profile}
                 navigation={props.navigation}
@@ -204,13 +205,43 @@ const HomeScreen = (props: homeProp) => {
             <View style={styles(o).searchContainer}>
                 <View style={styles(o).innerSearchContainer}>
                     <Image source={icons.search} style={styles(o).searchContainerIcon} />
-
-                    <TextInput style={styles(o).searchInput}> </TextInput>
+                    <TextInput style={styles(o).searchInput}
+                    value={search.text}
+                    onChangeText={(item:string)=>setSearch({text:item,state:true})}> 
+                    </TextInput>
+               
                 </View>
+                <View style={styles(o).crossIconContainer}>
+                {search.state&&
+                    <TouchableOpacity onPress={()=>setSearch({text:'',state:false})}>
+                        <Image source={icons.close} style={styles(o).crossIcon}/>
+                        </TouchableOpacity>
+                    
+                }
                 <TouchableOpacity onPress={() => setFilterOpen(true)}>
                     <Image source={icons.filter} style={styles(o).searchContainerIcon} />
                 </TouchableOpacity>
+                </View>
             </View>
+            {
+                search.state&&
+                
+                <View>
+                    {SearchData.length==0?
+                    <Text>Search Not Found</Text>
+                    :
+                    
+                    <FlatList
+                    horizontal
+                    showsHorizontalScrollIndicator={false}
+                    data={SearchData}
+                    extraData={SearchData}
+                    keyExtractor={(item,index)=>'key'+index}
+                    renderItem={({ item, index }) => <FoodRenderItem item={item} index={index} />}
+                    />
+                    }
+                    </View>
+            }
             <ScrollView showsVerticalScrollIndicator={false}>
                 <Text style={styles(o).colorText}>{string.keywords.deliveryto}</Text>
                 <View style={styles(o).addressContainer}>
@@ -222,7 +253,6 @@ const HomeScreen = (props: homeProp) => {
 
                 </View>
                 {addressArrow && <Text style={styles(o).labelText}>{string.keywords.address2}</Text>}
-
                 {!applyFilter && <View style={styles(o).flatListContainer}>
                     <FlatList
                         horizontal

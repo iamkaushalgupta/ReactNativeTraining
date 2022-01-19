@@ -290,6 +290,17 @@ const styles = (o: any) => StyleSheet.create(
             color:COLORS.primary,
             fontSize:16,
             fontWeight:'600'
+        },
+        crossIconContainer:{
+            flexDirection:'row',
+            alignItems:'center'
+        },
+        crossIcon:{
+            tintColor:COLORS.black,
+            resizeMode:'contain',
+            width: 20,
+            height: 20,
+            marginHorizontal:10
         }
 
     })
