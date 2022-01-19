@@ -1,6 +1,4 @@
-import React from "react";
 import {
-    LoginButton,
      AccessToken,
      LoginManager
    } from 'react-native-fbsdk-next';

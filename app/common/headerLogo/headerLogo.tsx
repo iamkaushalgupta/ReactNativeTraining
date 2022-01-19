@@ -8,7 +8,6 @@ const HeaderLogo = () => {
     return (
         <View style={styles(o).container}>
             <Image source={images.logo_02} style={styles(o).logo} />
-
         </View>
     );
 }

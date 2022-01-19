@@ -14,8 +14,6 @@ import { useDrawerProgress } from '@react-navigation/drawer';
 const Tab = createBottomTabNavigator();
 const TabNav = () => {
     const isprogressdata=useDrawerProgress()
-
-  
     const scale = Animated.interpolateNode(isprogressdata, {
       inputRange: [0, 1],
       outputRange: [1, 0.9],

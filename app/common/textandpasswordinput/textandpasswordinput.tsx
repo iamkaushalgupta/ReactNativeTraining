@@ -13,6 +13,8 @@ const TextAndPasswordInput = (props: any) => {
             <View style={styles().inputContainer}>
                 <TextInput numberOfLines={1} style={styles().inputText}
                 secureTextEntry={onoff}
+
+                onChangeText={(item)=>props.onChangeText(item)}
                 >
                 </TextInput>
 

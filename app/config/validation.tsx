@@ -48,7 +48,39 @@ const validation = (type:any, value: any) => {
         else
             return false
     }
+
+    else if(type=='password'){
+        if(!RegEx.password.test(value))
+            return true
+        else
+            return false
+    }
+
     return(false)
 }
+
+const emailValidation=(value:string)=>{
+    if (RegEx.email.test(value))
+        return true
+    else
+        return false
+}
+
+const usernameValidation=(value:string)=>{
+    if (RegEx.username.test(value))
+        return true
+    else
+        return false
+
+}
+
+const passwordValidation=(value:string)=>{
+    if(RegEx.password.test(value))
+            return true
+        else
+            return false
+}
+
+export {emailValidation, usernameValidation, passwordValidation };
 
 export default validation;

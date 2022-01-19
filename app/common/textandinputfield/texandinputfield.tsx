@@ -4,7 +4,7 @@ import styles from "./style";
 import { icons } from "../../constants";
 import validation from "../../config/validation";
 const TextAndInputField = (props: any) => {
-    const [onoff, setOnOff] = useState(false)
+   
     return (
         <View>
             <View style={styles().labelContainer}>
@@ -15,11 +15,11 @@ const TextAndInputField = (props: any) => {
 
             <View style={styles().inputContainer}>
                 <TextInput numberOfLines={1} style={styles().inputText}
-                 onChangeText={(text) => props.onChangeText(text)}
+                 onChangeText={(text) => {props.onChangeText(text)}}
                  keyboardType={props.type} >
                 </TextInput>
-                {/* {(props.error=='') && <Image source={icons.check} style={styles().icon} />}
-                {(props.error!='') && <Image source={icons.close} style={styles().icon} />} */}
+                {/* {(!props.icon)  && <Image source={icons.check} style={styles().icon} />}
+                {(!props.icon) && <Image source={icons.close} style={styles().icon} />} */}
 
             </View>
         </View>
