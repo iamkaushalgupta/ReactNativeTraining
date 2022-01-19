@@ -12,45 +12,39 @@ import {
 } from "../../common";
 import { string,icons } from "../../constants";
 import { SigninWithFacebook,SigninWithGoogle  } from "../../config/helper";
-import validation from '../../config/validation'
-const SignInScreen = (props: any) => {
-    const o = UseOrientation()
-    const [pass,setPass]=useState(false)
-    const [emailerror,setEmailError] =useState('')
-    const handleSubmit=()=>{
-        if(pass)
-        {
-            setEmailError('')
-        }
+import ErrorMessage from "../../config/errorMessages";
 
-        else{
-            setEmailError("Invalid Email")
-        }
-    }
-    const handleText = async (type: any, item: any) => {
-        let res
-        switch (type) {
-          case 'email':
-           await setPass(!validation('email',item)),setEmailError('')
-            break;    
-              default:
-            break;
-        }
-      };
+interface InputProps{
+    navigation:any,
+    onChangeEmail:(item: string) => void,
+    emailFlag: boolean,
+    onChangePassword:(item: string)=> void,
+    passwordFlag:boolean,
+    onSubmit: () => void
+}
+const SignInScreen = (props:InputProps) => {
+    const o = UseOrientation()
     return (
         <View style={styles(o).container}>
             <HeaderLogo />
             <ScrollView showsVerticalScrollIndicator={false}>
             <Text style={styles(o).mainheading}>{string.keywords.letssignyouin}</Text>
             <Text style={styles(o).labelText}>{string.keywords.welcomebackyouvebeenmissed}</Text>
-            <TextAndInputField name="Email" check="email" onChangeText={(item: any)=>{handleText("email",item)}} error={emailerror}/>
-            <TextAndPasswordInput name = "Password"/>
+            <TextAndInputField name="Email" 
+            onChangeText={(item: string)=>{props.onChangeEmail(item)}}
+            error={props.emailFlag}
+            errorText={''}
+            />
+            <TextAndPasswordInput name = "Password"
+             onChangeText={(item:string)=>{props.onChangePassword(item)}}
+             errorText={(!props.passwordFlag)?ErrorMessage.password:''}
+             />
             <TouchableOpacity onPress={() => props.navigation.navigate('PasswordRecovery')}>
                 <Text style={styles(o).labelForgetText}>{string.keywords.forgetpassword}</Text>
             </TouchableOpacity>
 
             <TouchableOpacity style={styles(o).signinButton} 
-            onPress={()=>{handleSubmit(),(pass)?props.navigation.navigate("Drawer"):undefined}}
+            onPress={()=>{props.onSubmit()}}
             >
             <Text style={styles(o).signinButtonText}>{string.keywords.signin}</Text>
             </TouchableOpacity>

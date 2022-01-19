@@ -10,9 +10,8 @@ import {
     HeaderLogo, TextAndInputField,TextAndPasswordInput
 } from "../../common";
 import { string } from "../../constants";
-import validation from "../../config/validation";
 import { ScrollView } from "react-native-gesture-handler";
-
+import ErrorMessage from '../../config/errorMessages'
 interface InputProps{
     navigation:any,
     onChangeEmail:(item: string) => void,
@@ -31,22 +30,23 @@ const SignUpScreen = (props: InputProps) => {
             <HeaderLogo />
             <ScrollView showsVerticalScrollIndicator={false}>
             <Text style={styles(o).mainheading}>{string.keywords.gettingstarted}</Text>
-            <Text style={styles(o).labelText}>{string.keywords.createanaccounttocontinue}</Text>
-    
+            <Text style={styles(o).labelText}>{string.keywords.createanaccounttocontinue}</Text>    
             <TextAndInputField name="Email"  
              onChangeText={(item:any)=>props.onChangeEmail(item)}
+             error={props.emailFlag}
+          
             />
             
             <TextAndInputField 
             name="Username"
             onChangeText={(item:any)=>props.onChangeUserName(item)} 
-            
+            error={props.emailFlag}
             />
             
             <TextAndPasswordInput
             name="Password"
             onChangeText={(item:any)=>props.onChangePassword(item)} 
-            
+            errorText={(!props.passwordFlag)?ErrorMessage.password:''}
             />
 
     

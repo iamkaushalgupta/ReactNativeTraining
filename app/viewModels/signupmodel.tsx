@@ -4,19 +4,20 @@ import { emailValidation, usernameValidation, passwordValidation } from "../conf
 const SignUpModel = ({ navigation }: any) => {
     const [email,setEmail] =useState('')
     const [emailFlag,setEmailFlag] =useState(false)
-    const [usernameFlag,setusernameFlag]=useState(false)
+    const [usernameFlag,setusernameFlag]=useState(true)
     const [username,setUserName]=useState('')
-    const [passwordFlag,setpasswordFlag]=useState(false)
+    const [passwordFlag,setpasswordFlag]=useState(true)
     const [password,setPassword]=useState('')
 
     useEffect(()=>{
-        if(usernameFlag&&passwordFlag &&usernameFlag)
-        navigation.navigate('Drawer')   
-    },[usernameFlag,passwordFlag,usernameFlag])
+        if(emailFlag&&passwordFlag &&usernameFlag)
+           navigation.navigate('Drawer')   
+    },[emailFlag,passwordFlag,usernameFlag])
 
     const onSubmit=async()=>{
-           await setusernameFlag(usernameValidation(username)),setEmailFlag(emailValidation(email)),  setpasswordFlag(passwordValidation(password))
- 
+           await setusernameFlag(usernameValidation(username)),
+           setEmailFlag(emailValidation(email)),  
+           setpasswordFlag(passwordValidation(password))
     }
     return (
         <SignUpScreen navigation={navigation}

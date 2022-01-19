@@ -12,9 +12,12 @@ const styles=()=>StyleSheet.create({
     labelText:{
         color:COLORS.gray,
         fontSize:16,
-        paddingVertical:10,     
+      
     },
-   
+    invalidText: {
+        color: 'red',
+        fontSize: 16,
+    },
     icon:{
         resizeMode:'contain',
         alignSelf:'center',
@@ -34,7 +37,13 @@ const styles=()=>StyleSheet.create({
     onoffButton:{
         justifyContent:'center',
         
-    }
+    },
+    labelContainer: {
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        paddingVertical:10,
+     
+    },
 
 })
 
