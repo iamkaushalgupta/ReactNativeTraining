@@ -37,7 +37,13 @@ const cherry=require('../assets/icons/cherry.png')
 const rice=require('../assets/icons/rice.png')
 const facebook=require('../assets/icons/facebook.png')
 const google = require('../assets/icons/google.png')
+const camera = require('../assets/icons/camera.png')
+const gallery = require('../assets/icons/gallery.png')
+
+
 export default {
+    camera,
+    gallery,
     rice,
     cherry,
     burger,

@@ -57,6 +57,37 @@ const styles= StyleSheet.create({
         fontSize:16,
         paddingHorizontal:10,
         
-    }
+    },
+    modalContainer2:{
+        flex:1
+    },
+
+    modalHeader2:{
+        backgroundColor:COLORS.transparentBlack7,
+        flex:0.8
+    },
+    modalFooter2:{
+        alignItems:'center',
+        flex:0.2,
+        flexDirection:'row',
+        backgroundColor:COLORS.white,
+        justifyContent:'space-between',
+        paddingHorizontal:20,
+    },
+    modalText2:{
+        color:COLORS.primary    ,
+        fontSize:16,
+        fontWeight:'600'
+    },
+    modalIconText2:{
+        justifyContent:'center',
+        alignItems:'center'
+    },
+    modalIcon2:{
+        height:30,
+        width:30,
+        resizeMode:"contain",
+        tintColor:COLORS.primary
+    },
 })
 export default styles;

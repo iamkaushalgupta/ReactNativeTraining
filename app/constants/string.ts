@@ -485,6 +485,9 @@ const delivery_status = [
 
 
 const keywords = {
+    gallery:'Gallery',
+    camera:'Camera',
+    cancel:'Cancel',
     searchnotfound:'Search Not Found',
     clearFilter:'Clear Filter',
     checkout:'Checkout',
