@@ -301,6 +301,12 @@ const styles = (o: any) => StyleSheet.create(
             width: 20,
             height: 20,
             marginHorizontal:10
+        },
+        searchText:{
+            fontSize:18,
+            color:COLORS.black,
+            textAlign:'center',
+            
         }
 
     })

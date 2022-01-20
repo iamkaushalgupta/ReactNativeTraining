@@ -228,7 +228,7 @@ const HomeScreen = (props: homeProp) => {
                 
                 <View>
                     {SearchData.length==0?
-                    <Text>Search Not Found</Text>
+                    <Text style={styles(o).searchText}>{string.keywords.searchnotfound}</Text>
                     :
                     
                     <FlatList
