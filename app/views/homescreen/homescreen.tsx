@@ -7,7 +7,6 @@ interface homeProp{
 }
 const HomeScreen = (props:homeProp) => {
  const {navigation} = props;
- console.log()
     return (
         <View style={styles.container}>
             <Text>

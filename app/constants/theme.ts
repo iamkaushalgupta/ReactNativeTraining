@@ -111,7 +111,7 @@ export const lightTheme = {
     textColor3: COLORS.gray80,
     textColor4: COLORS.white,
     textColor5: COLORS.black,
-    textColor6: COLORS.gray,
+    // textColor6: COLORS.gray,
     textColor7: COLORS.black,
     tintColor: COLORS.black,
     dotColor1: COLORS.gray20,

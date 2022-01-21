@@ -1,4 +1,3 @@
-
 const all = require("../assets/icons/all.png")
 const animation = require("../assets/icons/animation.png")
 const back = require("../assets/icons/back.png")
