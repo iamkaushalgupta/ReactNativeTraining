@@ -81,7 +81,9 @@ const categories = [
 const screens = {
     home: "Home",
     search: "Search",
-    profile: "Profile"
+    profile: "Profile",
+    login:'Login',
+    Register:'Register',
 }
 
 const bottom_tabs = [
@@ -177,6 +179,26 @@ const course_details_tabs = [
     }
 ]
 
+const keywords ={
+    username:'Username',
+    email:'Email',
+    userNameorEmail:'Username or Email',
+    password:'Password',
+    LOGIN:'LOGIN',
+    Login:'Login',
+    createAccount:'CREATE ACCOUNT',
+    orloginwith:'or login with',
+    orSignUpWith:'or sign up with',
+    google:'Google',
+    facebook:'Facebook',
+    newUser:'New User?',
+    alreadyUser:'Already a User?',
+    signUpNow:'Sign Up Now',
+    iama:'I am a',
+    student:'STUDENT',
+    teacher:'TEACHER'
+}
+
 export default {
     register_options,
     walkthrough,
@@ -186,5 +208,6 @@ export default {
     class_types,
     class_levels,
     created_within,
-    course_details_tabs
+    course_details_tabs,
+    keywords
 }
