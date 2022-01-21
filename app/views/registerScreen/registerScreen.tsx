@@ -35,6 +35,7 @@ const LoginScreen = (props: InputProps) => {
     return (
         <View style={styles.container}>
             <Text style={styles.heading}>{constants.screens.Register}</Text>
+            <ScrollView>
             <View style={styles.upperContainer}>
                 <TouchableOpacity 
                 style={[styles.toggleButton,
@@ -114,7 +115,7 @@ const LoginScreen = (props: InputProps) => {
                     </TouchableOpacity>
                 </View>
             </View>
-
+            </ScrollView>
 
         </View>
     );
