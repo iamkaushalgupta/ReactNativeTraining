@@ -5,10 +5,13 @@ import { View, Text, FlatList, TouchableOpacity, Image, Alert,Modal,TouchableWit
 import styles from "./styles";
 import { string, icons, images } from '../../constants'
 import { launchCamera, launchImageLibrary } from "react-native-image-picker";
+import { useSelector,useDispatch  } from "react-redux";
 
 const CustomDrawer = (props) => {
-    const [image,setImage]=useState(images.profile)
     const [modalVisible, setModalVisible] = useState(false);
+    const dispatch =useDispatch()
+    const profileImage = useSelector(state=>state.profile)
+    console.log(profileImage)
     const openCamara = () => {
         const options = {
         storageOptions: {
@@ -21,7 +24,7 @@ const CustomDrawer = (props) => {
         launchCamera(options, response => {
         console.log( response);
         if (response.didCancel) {
-        console.log('‘User cancelled image picker’');
+        console.log('User cancelled image picker');
         } else if (response.error) {
         console.log('ImagePicker Error: ', response.error);
         } else if (response.customButton) {
@@ -36,7 +39,8 @@ const CustomDrawer = (props) => {
         const source = { uri: response.assets[0].uri};
         console.log('response', JSON.stringify(response.assets[0].uri));
         console.log(source)
-        setImage(source.uri)
+        dispatch({type:'Add_Profile',payload:source.uri})
+       
         setModalVisible(false)
         }
         });
@@ -71,7 +75,7 @@ const CustomDrawer = (props) => {
                 
             console.log('response', JSON.stringify(response.assets[0].uri));
             console.log(source)
-            setImage(source.uri)
+            dispatch({type:'Add_Profile',payload:source.uri})
             setModalVisible(false)
           }
         });
@@ -137,7 +141,7 @@ const CustomDrawer = (props) => {
 
             <View style={styles.upperContainer}>
                 <TouchableOpacity onPress={()=>setModalVisible(true)}>
-                <Image source={{uri:image}} style={styles.profileIcon} />
+                <Image source={{uri:profileImage}} style={styles.profileIcon} />
                 </TouchableOpacity>
                 <View>
                     <Text style={styles.nameText}>{string.keywords.name}</Text>

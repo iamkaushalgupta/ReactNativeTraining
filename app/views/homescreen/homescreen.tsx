@@ -10,6 +10,7 @@ import { HeaderComponent } from "../../common";
 import { COLORS, icons, images, string } from '../../constants'
 import UseOrientation from "../../config/useOrientation";
 import MultiSlider from '@ptomasroos/react-native-multi-slider'
+import { useSelector } from "react-redux";
 
 interface homeProp {
     navigation: any
@@ -26,7 +27,10 @@ const HomeScreen = (props: homeProp) => {
     const [distanceFilter, setDistanceFilter] = useState([])
     const [priceFilter, setPriceFilter] = useState([])
     let filterData = string.tags
-    
+    type state={
+        profile:string
+    }
+    const profileImage = useSelector<state>(state=>state.profile)
     const [search,setSearch]=useState({text:' ',state:false})
     const SearchData = string.tags.filter(a =>a.text.toLowerCase().match(search.text.toLowerCase())).map(a=>a);
     if (ratingFilter != 0) {
@@ -196,7 +200,7 @@ const HomeScreen = (props: homeProp) => {
             </Modal>
            <HeaderComponent
                 firstImage={icons.menu}
-                secondImage={images.profile}
+                secondImage={profileImage}
                 navigation={props.navigation}
                 heading={string.screens.home}
                 secondImageNavigate={"MyAccountDetail"}

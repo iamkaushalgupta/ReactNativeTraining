@@ -11,7 +11,7 @@ const HeaderComponent = ({ firstImage, heading, secondImage, secondImageNavigate
             </TouchableOpacity>
             <Text style={styles.heading}>{heading}</Text>
             <TouchableOpacity disabled={(secondImageNavigate != "") ? false : true} onPress={() => (secondImageNavigate != "") ? navigation.navigate(secondImageNavigate) : ""}>
-                <Image source={secondImage} style={styles.secondImage} />
+                <Image source={{uri:secondImage}} style={styles.secondImage} />
             </TouchableOpacity>
 
         </View>

@@ -26,9 +26,9 @@ const styles = StyleSheet.create({
         height: 30,
     },
     secondImage: {
-        resizeMode: 'contain',
         width: 40,
         height: 40,
+        borderRadius:10,
     },
 
 })
