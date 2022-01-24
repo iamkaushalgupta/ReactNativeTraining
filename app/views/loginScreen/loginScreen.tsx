@@ -5,7 +5,8 @@ import {View,Text,
     Image,
     TextInput,
     TouchableOpacity,
-    ScrollView
+    ScrollView,
+    StatusBar
 
 } from 'react-native';
 import {
@@ -28,6 +29,11 @@ const LoginScreen = (props:InputProps)=>{
     const {navigation} =props
     return(
         <View  style ={styles.container}>
+        <StatusBar animated={true} 
+        backgroundColor={(selectedTheme.name=='light')?COLORS.additionalColor9:COLORS.gray80 }  
+        barStyle={"dark-content"}
+        />
+    
         
            <ImageBackground 
            source={(selectedTheme.name=='dark')?images.bg_dark:images.bg} 

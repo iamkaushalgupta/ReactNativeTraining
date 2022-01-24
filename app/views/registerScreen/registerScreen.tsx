@@ -6,7 +6,8 @@ import {
     Image,
     TextInput,
     TouchableOpacity,
-    ScrollView
+    ScrollView,
+    StatusBar
 
 } from 'react-native';
 import {
@@ -19,6 +20,7 @@ import {
     images,
     icons,
     dummyData,
+
 } from '../../constants'
 
 interface InputProps {
@@ -34,6 +36,10 @@ const LoginScreen = (props: InputProps) => {
     } = props
     return (
         <View style={styles.container}>
+            <StatusBar animated={true} 
+        backgroundColor={(selectedTheme.name=='light')?COLORS.additionalColor9:COLORS.gray80 }  
+        barStyle={"dark-content"}
+        />            
             <Text style={styles.heading}>{constants.screens.Register}</Text>
             <ScrollView>
             <View style={styles.upperContainer}>
@@ -42,7 +48,9 @@ const LoginScreen = (props: InputProps) => {
                 {backgroundColor:(student)?selectedTheme.backgroundColor2:selectedTheme.backgroundColor5}]} 
                 onPress={()=>setStudent(true)}
                 >
-                    <View style={styles.circleContainer}>
+                    <View style={[styles.circleContainer,{
+                        backgroundColor:(student)?selectedTheme.textColor4:selectedTheme.backgroundColor1
+                    }]}>
                         {
                             student&&<Image source={icons.checked} style={styles.tickIcon} resizeMode="contain"/>
                         }
@@ -62,7 +70,9 @@ const LoginScreen = (props: InputProps) => {
                 style={[styles.toggleButton,
                     {backgroundColor:(!student)?selectedTheme.backgroundColor2:selectedTheme.backgroundColor5}]}
                 onPress={()=>setStudent(false)}>
-                    <View style={styles.circleContainer}>
+                    <View style={[styles.circleContainer,{
+                         backgroundColor:(student)?selectedTheme.textColor4:selectedTheme.backgroundColor1
+                    }]}>
                         {
                             !student&&<Image source={icons.checked} style={styles.tickIcon} resizeMode="contain" />
                         }

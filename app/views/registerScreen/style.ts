@@ -45,8 +45,8 @@ const styles=StyleSheet.create({
     },
     tickIcon:{
     resizeMode:'contain',
-    height:30,
-    width:30,
+    height:25,
+    width:25,
 
 },
     heading:{
