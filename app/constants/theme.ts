@@ -111,14 +111,14 @@ export const lightTheme = {
     textColor3: COLORS.gray80,
     textColor4: COLORS.white,
     textColor5: COLORS.black,
-    // textColor6: COLORS.gray,
+    textColor6: COLORS.gray40,
     textColor7: COLORS.black,
     tintColor: COLORS.black,
     dotColor1: COLORS.gray20,
     dotColor2: COLORS.primary3,
 }
 
-export const selectedTheme =lightTheme;
+export const selectedTheme =darkTheme;
 
 const appTheme = { COLORS, SIZES, FONTS, darkTheme, lightTheme };
 

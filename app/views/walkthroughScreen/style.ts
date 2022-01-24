@@ -13,27 +13,34 @@ import {
 import { FONTS,SIZES } from "../../constants/theme";
 
 const styles = StyleSheet.create({
-    container:{
+    container:{ 
         flex:1,
         backgroundColor:selectedTheme.backgroundColor1,
     },
     renderContainer:{
         flex:1,
-  
+        justifyContent:'flex-end'
     },
+    
     renderImage:{
         resizeMode:'contain',
         width:SIZES.width,
-        height:SIZES.height*0.5
+        height:SIZES.height*0.5,
+
+       
+        
     },
     nextButton:{
-
+        alignItems:'center',
+        justifyContent:'center',
+        marginVertical:20,
         alignSelf:'flex-end',
         backgroundColor:COLORS.primary,
-        padding:10,
+        padding:15,
+        paddingRight:25,
         paddingHorizontal:20,
-        borderBottomLeftRadius:20,
-        borderTopLeftRadius:20,
+        borderBottomLeftRadius:30,
+        borderTopLeftRadius:30,
     },
     buttonText:{
         ...FONTS.h2,
@@ -43,13 +50,14 @@ const styles = StyleSheet.create({
         color:selectedTheme.textColor,
         ...FONTS.largeTitle,
         width:SIZES.width*0.9,
-        paddingHorizontal:20,
+        paddingLeft:20,
+        
     },
     subtitleText:{
-        color:selectedTheme.textColor,
+        color:selectedTheme.textColor6,
         ...FONTS.h3,
-        width:SIZES.width*0.9,
-        paddingHorizontal:20,
+        width:SIZES.width*0.95,
+        paddingLeft:20,
     }
    
 })

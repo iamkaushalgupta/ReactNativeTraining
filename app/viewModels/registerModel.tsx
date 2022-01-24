@@ -7,7 +7,9 @@ const RegisterModel=(props:InputProps)=>{
 const {navigation} =props
 const [student,setStudent]=useState(true)
   return(
-      <RegisterScreen navigation={navigation} student={student} setStudent = {(item:boolean)=>setStudent(item)}/>
+      <RegisterScreen navigation={navigation}
+       student={student} 
+       setStudent = {(item:boolean)=>setStudent(item)}/>
   );  
 }
 

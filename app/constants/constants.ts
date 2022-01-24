@@ -198,7 +198,8 @@ const keywords ={
     iama:'I am a',
     student:'STUDENT',
     teacher:'TEACHER',
-    next:'Next'
+    next:'Next',
+    letsgetstarted:"Let's get started",
 }
 
 export default {
