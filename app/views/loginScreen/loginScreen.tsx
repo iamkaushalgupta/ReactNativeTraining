@@ -52,7 +52,7 @@ const LoginScreen = (props:InputProps)=>{
             </TouchableOpacity>
            </View>
            
-           <TouchableOpacity style={styles.button}>
+           <TouchableOpacity style={styles.button} onPress={()=>navigation.navigate('Walkthrough')}>
                <Text style={styles.buttonText}>{constants.keywords.LOGIN}</Text>
            </TouchableOpacity>  
            <Text style={styles.labelText2}>{constants.keywords.orloginwith}</Text>

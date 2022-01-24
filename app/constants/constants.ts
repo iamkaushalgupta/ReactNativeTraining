@@ -84,6 +84,7 @@ const screens = {
     profile: "Profile",
     login:'Login',
     Register:'Register',
+   
 }
 
 const bottom_tabs = [
@@ -196,7 +197,8 @@ const keywords ={
     signUpNow:'Sign Up Now',
     iama:'I am a',
     student:'STUDENT',
-    teacher:'TEACHER'
+    teacher:'TEACHER',
+    next:'Next'
 }
 
 export default {
