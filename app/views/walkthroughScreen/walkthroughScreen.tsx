@@ -39,7 +39,10 @@ const WalkthroughScreen =(props:InputProps)=>{
         data={constants.walkthrough}
         extraData={constants.walkthrough}
         keyExtractor={(item,index)=>'key'+index}
-        renderItem={({item,index})=><RenderItem item={item} index={index} scrollTo={(item:any)=>scrollTo(item)} maxIndex={constants.walkthrough.length-1}/>}
+        renderItem={({item,index})=><RenderItem item={item} index={index} scrollTo={(item:any)=>scrollTo(item)} 
+        maxIndex={constants.walkthrough.length-1}
+        navigation={navigation}
+        />}
         ref={flatref}
         />
 

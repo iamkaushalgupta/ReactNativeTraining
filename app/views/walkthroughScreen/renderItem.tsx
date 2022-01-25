@@ -22,6 +22,7 @@ import {
 } from 'react-native';
 
 interface InputProps{
+    navigation:any,
     item:{
         id:number,
         image:any,
@@ -33,7 +34,11 @@ interface InputProps{
     maxIndex: number
 }
 const RenderItem = (props:InputProps)=>{
-    const {item,index,scrollTo,maxIndex} =props;
+    const {item,
+        index,scrollTo
+        ,maxIndex,
+        navigation
+    } =props;
     return(
         <View style={styles.renderContainer}>
             <Text style={styles.titleText}>{item.title}</Text>
@@ -41,7 +46,7 @@ const RenderItem = (props:InputProps)=>{
             
             <Image source ={item.image} style={styles.renderImage} resizeMode="contain"/>
             
-            <TouchableOpacity style={styles.nextButton}onPress={() => (index!=maxIndex)?scrollTo(index + 1):null}>
+            <TouchableOpacity style={styles.nextButton}onPress={() => (index!=maxIndex)?scrollTo(index + 1):navigation.navigate('Category')}>
                 <Text style={styles.buttonText}>{(index!=maxIndex)?constants.keywords.next:constants.keywords.letsgetstarted}</Text>
             </TouchableOpacity>
         </View>

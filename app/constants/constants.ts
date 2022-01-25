@@ -84,7 +84,7 @@ const screens = {
     profile: "Profile",
     login:'Login',
     Register:'Register',
-   
+    ChooseCategory:'Choose Category',
 }
 
 const bottom_tabs = [
@@ -200,6 +200,7 @@ const keywords ={
     teacher:'TEACHER',
     next:'Next',
     letsgetstarted:"Let's get started",
+    continue:'CONTINUE',
 }
 
 export default {

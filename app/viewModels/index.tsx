@@ -5,5 +5,6 @@ import ProfileModel from "./profilescreen";
 import LoginModel from "./loginModel";
 import RegisterModel from "./registerModel";
 import WalkthroughModel from "./walkthroughModel";
+import CategoryModel from "./categoryModel";
 
-export {HomeModel,ContactModel, ProfileModel,LoginModel,RegisterModel,WalkthroughModel};
+export {HomeModel,ContactModel, ProfileModel,LoginModel,RegisterModel,WalkthroughModel,CategoryModel};

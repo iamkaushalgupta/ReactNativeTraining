@@ -1,5 +1,5 @@
 import React from "react";
-import {HomeModel, ContactModel, ProfileModel,LoginModel,RegisterModel, WalkthroughModel} from '../viewModels'
+import {HomeModel, ContactModel, ProfileModel,LoginModel,RegisterModel, WalkthroughModel, CategoryModel} from '../viewModels'
 import {createNativeStackNavigator} from '@react-navigation/native-stack'
 import { NavigationContainer } from '@react-navigation/native';
 
@@ -11,6 +11,7 @@ type RootStackParamList ={
     Login:undefined;
     Register:undefined;
     Walkthrough:undefined;
+    Category:undefined;
 }
 
 const Stack = createNativeStackNavigator<RootStackParamList>()
@@ -27,6 +28,7 @@ const MainStack =()=>
             <Stack.Screen name= "Login" component={LoginModel}></Stack.Screen>
             <Stack.Screen name = "Register" component ={RegisterModel}></Stack.Screen>
             <Stack.Screen name = "Walkthrough" component ={WalkthroughModel}></Stack.Screen>
+            <Stack.Screen name = "Category" component ={CategoryModel}></Stack.Screen>
         </Stack.Navigator>
         </NavigationContainer>
 
