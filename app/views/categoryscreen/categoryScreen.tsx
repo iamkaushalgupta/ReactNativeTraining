@@ -52,7 +52,7 @@ const CategoryScreen = (props:InputProps)=>{
             contentContainerStyle={{alignItems:'center'}}
             />
 
-            <TouchableOpacity style={styles.button}>
+            <TouchableOpacity style={styles.button} onPress={()=>navigation.navigate('Tab')}>
                 <Text style={styles.buttonText}>{constants.keywords.continue}</Text>
             </TouchableOpacity>
 

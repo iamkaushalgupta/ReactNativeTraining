@@ -28,7 +28,6 @@ const styles = StyleSheet.create({
          height:30,
          width:30,
          resizeMode:'contain',
-        //  tintColor:
      },
      renderContainer:{   
         paddingTop:10,
@@ -37,7 +36,6 @@ const styles = StyleSheet.create({
         width: 94/3+'%',
         alignItems:'center',
         justifyContent:'center',
-        // backgroundColor:,
         borderRadius:20,
         borderWidth:2,
         borderColor:selectedTheme.borderColor1
@@ -45,7 +43,6 @@ const styles = StyleSheet.create({
      labelText:{
          ...FONTS.h3,
         textAlign:'center',
-        // color:selectedTheme.textColor3,
         paddingVertical:10
      },
      button:{
