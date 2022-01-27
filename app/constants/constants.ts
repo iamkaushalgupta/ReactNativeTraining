@@ -1,14 +1,3 @@
-const register_options = [
-    {
-        id: 0,
-        label: "STUDENT"
-    },
-    {
-        id: 1,
-        label: "TUTOR"
-    }
-]
-
 const walkthrough = [
     {
         id: 0,
@@ -201,10 +190,14 @@ const keywords ={
     next:'Next',
     letsgetstarted:"Let's get started",
     continue:'CONTINUE',
+    Hello:'Hello',
+    Categories:'Categories',
+    seeAll:'See All',
+    PopularCourses:'Popular Courses',
+    By:'By'
 }
 
 export default {
-    register_options,
     walkthrough,
     categories,
     screens,

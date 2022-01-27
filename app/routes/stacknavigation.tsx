@@ -20,7 +20,7 @@ const MainStack =()=>
 {
     return(
         <NavigationContainer>
-        <Stack.Navigator initialRouteName="Login" screenOptions={{headerShown:false}}>
+        <Stack.Navigator initialRouteName="Tab" screenOptions={{headerShown:false}}>
             <Stack.Screen name = "Contact" component ={ContactModel}></Stack.Screen>
             <Stack.Screen name= "Login" component={LoginModel}></Stack.Screen>
             <Stack.Screen name = "Register" component ={RegisterModel}></Stack.Screen>

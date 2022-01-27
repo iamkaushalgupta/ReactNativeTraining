@@ -347,6 +347,14 @@ const notificationByDays = [
     },
 ]
 
+const personal_details=[
+    {
+        id:0,
+        label:'name',
+        value:'Kaushal Gupta'
+    },
+]
+
 export default {
     categories,
     courses_list_1,
@@ -354,4 +362,5 @@ export default {
     top_searches,
     course_details,
     notificationByDays,
+    personal_details
 }

@@ -31,12 +31,19 @@ import styles from "./tabBarstyle";
 const Tab = createBottomTabNavigator();
 const Tabnav =({navigation}:any)=>{
     return(
-        <Tab.Navigator screenOptions={{headerShown:false,tabBarHideOnKeyboard: true, tabBarShowLabel: false, tabBarStyle:styles.tabBarStyle}}>
+        <Tab.Navigator screenOptions={{headerShown:false,
+        tabBarHideOnKeyboard: true, 
+        tabBarShowLabel: false, tabBarStyle:styles.tabBarStyle,
+    
+    }}
+    
+        >
             <Tab.Screen name = 'Home' component={HomeModel} 
             options={{
                 tabBarIcon:({focused})=>{
                        return(
-                               <View style={[{ backgroundColor: (focused) ? COLORS.primary : selectedTheme.backgroundColor2}, styles.tabBarContainer]}>
+                               <View style={[{ backgroundColor: (focused) ? COLORS.primary : selectedTheme.backgroundColor2}, 
+                               styles.tabBarContainer]}>
                                   <Image source={constants.bottom_tabs[0].icon} style={styles.tabBarIcon}/>
                                     <Text style={styles.tabBarIconText} >{constants.bottom_tabs[0].label}</Text>        
                                </View>

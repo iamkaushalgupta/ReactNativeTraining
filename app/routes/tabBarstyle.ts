@@ -16,8 +16,6 @@ const styles = StyleSheet.create({
     tabBarStyle:{
         backgroundColor:selectedTheme.backgroundColor2,
         height:'12%',
-        borderRadius:20,
-        margin:10,
     },
     tabBarContainer: {
         justifyContent: 'center',

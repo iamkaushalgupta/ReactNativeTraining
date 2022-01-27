@@ -37,7 +37,7 @@ const LoginScreen = (props: InputProps) => {
     return (
         <View style={styles.container}>
             <StatusBar animated={true} 
-        backgroundColor={(selectedTheme.name=='light')?COLORS.additionalColor9:COLORS.gray80 }  
+        // backgroundColor={(selectedTheme.name=='light')?COLORS.additionalColor9:COLORS.gray80 }  
         barStyle={"dark-content"}
         />            
             <Text style={styles.heading}>{constants.screens.Register}</Text>
