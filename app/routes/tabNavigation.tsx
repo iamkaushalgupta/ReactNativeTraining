@@ -11,7 +11,8 @@ import {HomeModel,
      LoginModel,
      RegisterModel,
       WalkthroughModel, 
-      CategoryModel
+      CategoryModel,
+      SearchModel
     } from '../viewModels'
 
 import {
@@ -36,7 +37,7 @@ const Tabnav =({navigation}:any)=>{
         tabBarShowLabel: false, tabBarStyle:styles.tabBarStyle,
     
     }}
-    
+    initialRouteName="Search"
         >
             <Tab.Screen name = 'Home' component={HomeModel} 
             options={{
@@ -51,7 +52,7 @@ const Tabnav =({navigation}:any)=>{
                 }
             }}              
             />
-            <Tab.Screen name = 'Search' component={HomeModel}
+            <Tab.Screen name = 'Search' component={SearchModel}
             options={{
                 tabBarIcon:({focused})=>{
                        return(

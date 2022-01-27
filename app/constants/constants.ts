@@ -194,7 +194,10 @@ const keywords ={
     Categories:'Categories',
     seeAll:'See All',
     PopularCourses:'Popular Courses',
-    By:'By'
+    By:'By',
+    searchfortopiccoursesandeducators:'Search for Topics, Courses & Educators',
+    TopSearches:'Top Searches',
+    BrowseCategories:'Browse Categories'
 }
 
 export default {
