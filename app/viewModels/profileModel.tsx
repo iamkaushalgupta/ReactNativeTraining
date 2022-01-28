@@ -15,7 +15,7 @@ React.useEffect(() => {
     return unsubscribe;
   }, [navigation,render]);
 
-    return(<ProfileScreen navigation={navigation}/>)
+    return(<ProfileScreen navigation={navigation} setRender={(item:boolean)=>setRender(item)} render={render} />)
 }
 
 export default ProfileModel;

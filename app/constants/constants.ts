@@ -197,7 +197,12 @@ const keywords ={
     By:'By',
     searchfortopiccoursesandeducators:'Search for Topics, Courses & Educators',
     TopSearches:'Top Searches',
-    BrowseCategories:'Browse Categories'
+    BrowseCategories:'Browse Categories',
+    OverallProgress:'Overall Progress',
+    BecomeMember:'+ Become Member',
+    pages:'Pages',
+    newCourseNotification:'New Course Notification',
+    studyeReminder:'Study Reminder'
 }
 
 export default {

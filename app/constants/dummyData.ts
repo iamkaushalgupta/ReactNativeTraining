@@ -353,6 +353,45 @@ const personal_details=[
         label:'name',
         value:'Kaushal Gupta'
     },
+    {
+        id:1,
+        label:'ProfilePic',
+        value:require('../assets/images/profile.png')
+    },
+    {
+        id:2,
+        label:'Post',
+        value:'React Native Developer'
+    },
+
+]
+
+const Profile_details=[
+    {
+        id:0,
+        label:'Name',
+        value:'Kaushal Gupta',
+        icon:require('../assets/icons/profile.png')
+    },
+    {
+        id:1,
+        label:'Email',
+        value:'Kaushalgupta198@gmail.com',
+        icon:require('../assets/icons/email.png')
+    },
+    {
+        id:2,
+        label:'Password',
+        value:'Updated 2 weeks ago',
+        icon:require('../assets/icons/lock.png')
+    },
+    {
+        id:3,
+        label:'Contact',
+        value:'+91 8860393547',
+        icon:require('../assets/icons/call.png')
+    },
+
 ]
 
 export default {
@@ -362,5 +401,6 @@ export default {
     top_searches,
     course_details,
     notificationByDays,
-    personal_details
+    personal_details,
+    Profile_details
 }
