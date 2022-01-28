@@ -7,10 +7,15 @@ import RegisterModel from "./registerModel";
 import WalkthroughModel from "./walkthroughModel";
 import CategoryModel from "./categoryModel";
 import SearchModel from "./searchModel";
+import CourseModel from "./coursesModel";
 export {HomeModel,
     ContactModel,
      ProfileModel,
-     LoginModel,RegisterModel,WalkthroughModel,CategoryModel,
+     LoginModel,
+     RegisterModel,
+     WalkthroughModel,
+     CategoryModel,
     SearchModel,
+    CourseModel
 
 };

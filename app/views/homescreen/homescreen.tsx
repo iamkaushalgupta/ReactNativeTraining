@@ -34,6 +34,10 @@ const HomeScreen = (props: InputProp) => {
     } = props;
     return (
         <View style={styles(selectedTheme).container}>
+             <StatusBar animated={true}
+                backgroundColor={(selectedTheme.name == 'light') ? COLORS.additionalColor9 : COLORS.gray80}
+                barStyle={"dark-content"}
+            />
             <View style={styles(selectedTheme).header}>
                 <View>
                     <Text style={styles(selectedTheme).headerNameText}>{constants.keywords.Hello}, {dummyData.personal_details[0].value}!</Text>

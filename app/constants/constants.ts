@@ -205,7 +205,9 @@ const keywords ={
     studyeReminder:'Study Reminder',
     HOWTO:'HOW TO',
     MakeYourBandVisible:'Make your brand more visible with our checklist',
-    KaushalGupta:'Kaushal Gupta'
+    KaushalGupta:'Kaushal Gupta',
+    MobileDesign:'Mobile Design',
+    numberOfResults:'5763 Results'
 }
 
 export default {
