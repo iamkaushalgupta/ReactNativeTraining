@@ -44,7 +44,7 @@ React.useEffect(() => {
         tabBarShowLabel: false, tabBarStyle:styles(selectedTheme).tabBarStyle,
     
     }}
-    initialRouteName="Profile"
+    initialRouteName="Home"
         >
             <Tab.Screen name = 'Home' component={HomeModel} 
             options={{

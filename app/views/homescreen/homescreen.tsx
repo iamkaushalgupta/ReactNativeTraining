@@ -4,7 +4,8 @@ import {
     View,
     StatusBar,
     ScrollView,
-    FlatList
+    FlatList,
+    ImageBackground
 } from 'react-native';
 import styles from './style'
 import {
@@ -33,10 +34,6 @@ const HomeScreen = (props: InputProp) => {
     } = props;
     return (
         <View style={styles(selectedTheme).container}>
-            <StatusBar animated={true}
-                backgroundColor={(selectedTheme.name == 'light') ? COLORS.additionalColor9 : COLORS.gray80}
-                barStyle={"dark-content"}
-            />
             <View style={styles(selectedTheme).header}>
                 <View>
                     <Text style={styles(selectedTheme).headerNameText}>{constants.keywords.Hello}, {dummyData.personal_details[0].value}!</Text>
@@ -53,6 +50,18 @@ const HomeScreen = (props: InputProp) => {
                     ListHeaderComponent={() => {
                         return (
                             <>
+                                <ImageBackground 
+                                source={images.featured_bg_image}
+                                style={styles(selectedTheme).imageBackground}
+                                imageStyle={{borderRadius:10}}
+                                >
+                                    <Text style={styles(selectedTheme).howToText}>{constants.keywords.HOWTO}</Text>
+                                    <Text style={styles(selectedTheme).brandText}>{constants.keywords.MakeYourBandVisible}</Text>
+                                    <Text style={styles(selectedTheme).bytText}>{constants.keywords.By} {constants.keywords.KaushalGupta}</Text>
+                                    
+                                    <Image source={images.start_learning} style={styles(selectedTheme).startLearningImage}/>
+                                </ImageBackground>
+
                                 <View style={styles(selectedTheme).render1FlatList}>
                                     <FlatList
                                         horizontal

@@ -202,7 +202,10 @@ const keywords ={
     BecomeMember:'+ Become Member',
     pages:'Pages',
     newCourseNotification:'New Course Notification',
-    studyeReminder:'Study Reminder'
+    studyeReminder:'Study Reminder',
+    HOWTO:'HOW TO',
+    MakeYourBandVisible:'Make your brand more visible with our checklist',
+    KaushalGupta:'Kaushal Gupta'
 }
 
 export default {

@@ -27,6 +27,27 @@ const styles=(selectedTheme:any)=>StyleSheet.create({
             justifyContent:'space-between',
             alignItems:'center'
         },
+        imageBackground:{
+            marginVertical:10,
+            padding:10,
+        },
+        howToText:{
+           fontSize:30,
+        color:COLORS.white
+        },
+        brandText:{
+            ...FONTS.h1,
+            color:COLORS.white
+        },
+        bytText:{
+            ...FONTS.h3,
+            color:COLORS.white
+        },
+        startLearningImage:{
+            marginTop:10,
+            alignSelf:'flex-end'
+        },
+
         notificationIcon:{
             height:30,
             width:30,
