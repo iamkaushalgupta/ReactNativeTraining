@@ -1,3 +1,2 @@
-export const INCREASE_COUNTER = 'INCREASE_COUNTER';
-export const DECREASE_COUNTER = 'DECREASE_COUNTER';
-
+export const DARK_THEME ='DARK';
+export const LIGHT_THEME='LIGHT';

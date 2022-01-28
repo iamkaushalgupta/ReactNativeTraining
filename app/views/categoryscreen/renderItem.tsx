@@ -38,11 +38,11 @@ interface InputProps{
 const RenderItem=(props:InputProps)=>{
     const {item,index,category,setCategory}=props
     return(
-        <TouchableOpacity onPress={()=>setCategory(index)} style={[styles.renderContainer,{
+        <TouchableOpacity onPress={()=>setCategory(index)} style={[styles(selectedTheme).renderContainer,{
             backgroundColor:(category==index)?selectedTheme.backgroundColor2:selectedTheme.backgroundColor5
         }]}>
-            <Image source={item.icon} style={[styles.renderIcon,{tintColor:(index==category)?COLORS.white:selectedTheme.tintColor}]} />
-            <Text style={[styles.labelText,{color:(index==category)?COLORS.white:selectedTheme.textColor3}]}>{item.label.replace(' ','\n')}</Text>
+            <Image source={item.icon} style={[styles(selectedTheme).renderIcon,{tintColor:(index==category)?COLORS.white:selectedTheme.tintColor}]} />
+            <Text style={[styles(selectedTheme).labelText,{color:(index==category)?COLORS.white:selectedTheme.textColor3}]}>{item.label.replace(' ','\n')}</Text>
         </TouchableOpacity>
     )
 }

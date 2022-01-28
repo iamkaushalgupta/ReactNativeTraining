@@ -1,18 +1,16 @@
-import { DECREASE_COUNTER, INCREASE_COUNTER } from './type'
-
-
+import { LIGHT_THEME,DARK_THEME } from "./type"
+import { darkTheme,lightTheme } from "../constants"
 
 const initialState = {
-    counter: 0
+    theme :lightTheme
 }
 
 const rootReducer = (state = initialState, action:any) => {
-    console.log(action, "action")
     switch (action.type) {
-        case INCREASE_COUNTER:
-            return { counter: state.counter + action.payload }
-        case DECREASE_COUNTER:
-            return { counter: state.counter - 1 }
+        case LIGHT_THEME:
+            return { ...state,theme:lightTheme }
+        case DARK_THEME:
+            return { ...state,theme: darkTheme }
     }
     return state
 }

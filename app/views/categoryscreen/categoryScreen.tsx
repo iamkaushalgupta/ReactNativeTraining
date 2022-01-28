@@ -33,13 +33,13 @@ const CategoryScreen = (props:InputProps)=>{
     setCategory
     }=props;
     return(
-        <View style={styles.container}>
+        <View style={styles(selectedTheme).container}>
             <StatusBar animated={true} 
         backgroundColor={(selectedTheme.name=='light')?COLORS.white:COLORS.gray80 }  
         barStyle={"dark-content"}
         />
         <BackButton navigation={navigation}/>
-            <Text style={styles.headText}>{constants.screens.ChooseCategory}</Text>
+            <Text style={styles(selectedTheme).headText}>{constants.screens.ChooseCategory}</Text>
 
           
             <FlatList
@@ -52,8 +52,8 @@ const CategoryScreen = (props:InputProps)=>{
             contentContainerStyle={{alignItems:'center'}}
             />
 
-            <TouchableOpacity style={styles.button} onPress={()=>navigation.navigate('Tab')}>
-                <Text style={styles.buttonText}>{constants.keywords.continue}</Text>
+            <TouchableOpacity style={styles(selectedTheme).button} onPress={()=>navigation.navigate('Tab')}>
+                <Text style={styles(selectedTheme).buttonText}>{constants.keywords.continue}</Text>
             </TouchableOpacity>
 
                </View>

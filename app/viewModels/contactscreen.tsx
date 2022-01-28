@@ -1,7 +1,7 @@
 import ContactScreen from "../views/contactscreen/contactscreen";
 import React from "react";
-const ContactModel=()=>
-{
+const ContactModel=()=>{
+    
     return(<ContactScreen/>)
 }
 

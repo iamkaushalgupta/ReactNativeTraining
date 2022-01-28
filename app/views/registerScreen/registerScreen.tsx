@@ -35,93 +35,93 @@ const LoginScreen = (props: InputProps) => {
         student
     } = props
     return (
-        <View style={styles.container}>
+        <View style={styles(selectedTheme).container}>
             <StatusBar animated={true} 
         // backgroundColor={(selectedTheme.name=='light')?COLORS.additionalColor9:COLORS.gray80 }  
         barStyle={"dark-content"}
         />            
-            <Text style={styles.heading}>{constants.screens.Register}</Text>
+            <Text style={styles(selectedTheme).heading}>{constants.screens.Register}</Text>
             <ScrollView>
-            <View style={styles.upperContainer}>
+            <View style={styles(selectedTheme).upperContainer}>
                 <TouchableOpacity 
-                style={[styles.toggleButton,
+                style={[styles(selectedTheme).toggleButton,
                 {backgroundColor:(student)?selectedTheme.backgroundColor2:selectedTheme.backgroundColor5}]} 
                 onPress={()=>setStudent(true)}
                 >
-                    <View style={[styles.circleContainer,{
+                    <View style={[styles(selectedTheme).circleContainer,{
                         backgroundColor:(student)?selectedTheme.textColor4:selectedTheme.backgroundColor1
                     }]}>
                         {
-                            student&&<Image source={icons.checked} style={styles.tickIcon} resizeMode="contain"/>
+                            student&&<Image source={icons.checked} style={styles(selectedTheme).tickIcon} resizeMode="contain"/>
                         }
                         
                     </View>
-                    <View style={styles.textContainer}>
-                        <Text style={[styles.iamText,{
+                    <View style={styles(selectedTheme).textContainer}>
+                        <Text style={[styles(selectedTheme).iamText,{
                             color:(student)?selectedTheme.textColor4:selectedTheme.textColor
                         }]}>{constants.keywords.iama}</Text>
-                        <Text style={[styles.studentTeacherText,{
+                        <Text style={[styles(selectedTheme).studentTeacherText,{
                             color:(student)?selectedTheme.textColor4:selectedTheme.textColor
                         }]}>{constants.keywords.student}</Text>
                     </View>
                 </TouchableOpacity>
                 
                 <TouchableOpacity 
-                style={[styles.toggleButton,
+                style={[styles(selectedTheme).toggleButton,
                     {backgroundColor:(!student)?selectedTheme.backgroundColor2:selectedTheme.backgroundColor5}]}
                 onPress={()=>setStudent(false)}>
-                    <View style={[styles.circleContainer,{
+                    <View style={[styles(selectedTheme).circleContainer,{
                          backgroundColor:(student)?selectedTheme.textColor4:selectedTheme.backgroundColor1
                     }]}>
                         {
-                            !student&&<Image source={icons.checked} style={styles.tickIcon} resizeMode="contain" />
+                            !student&&<Image source={icons.checked} style={styles(selectedTheme).tickIcon} resizeMode="contain" />
                         }
                         
                     </View>
                     <View>
-                        <Text style={[styles.iamText,{
+                        <Text style={[styles(selectedTheme).iamText,{
                             color:(!student)?selectedTheme.textColor4:selectedTheme.textColor
                         }]}>{constants.keywords.iama}</Text>
-                        <Text style={[styles.studentTeacherText,{
+                        <Text style={[styles(selectedTheme).studentTeacherText,{
                              color:(!student)?selectedTheme.textColor4:selectedTheme.textColor
                         }]}>{constants.keywords.teacher}</Text>
                     </View>
                 </TouchableOpacity>        
 
             </View>
-            <View style={styles.wrapperContainer}>
-                <Text style={styles.labelText}>{constants.keywords.username}</Text>
-                <TextInput style={styles.inputField}></TextInput>
-                <Text style={styles.labelText}>{constants.keywords.email}</Text>
-                <TextInput style={styles.inputField}></TextInput>
-                <Text style={styles.labelText}>{constants.keywords.password}</Text>
-                <View style={styles.passwordContainer}>
-                    <TextInput style={styles.passwordField}></TextInput>
+            <View style={styles(selectedTheme).wrapperContainer}>
+                <Text style={styles(selectedTheme).labelText}>{constants.keywords.username}</Text>
+                <TextInput style={styles(selectedTheme).inputField}></TextInput>
+                <Text style={styles(selectedTheme).labelText}>{constants.keywords.email}</Text>
+                <TextInput style={styles(selectedTheme).inputField}></TextInput>
+                <Text style={styles(selectedTheme).labelText}>{constants.keywords.password}</Text>
+                <View style={styles(selectedTheme).passwordContainer}>
+                    <TextInput style={styles(selectedTheme).passwordField}></TextInput>
                     <TouchableOpacity>
-                        <Image source={icons.eye} style={styles.icon} />
+                        <Image source={icons.eye} style={styles(selectedTheme).icon} />
                     </TouchableOpacity>
                 </View>
 
-                <TouchableOpacity style={styles.button}>
-                    <Text style={styles.buttonText}>{constants.keywords.createAccount}</Text>
+                <TouchableOpacity style={styles(selectedTheme).button}>
+                    <Text style={styles(selectedTheme).buttonText}>{constants.keywords.createAccount}</Text>
                 </TouchableOpacity>
-                <Text style={styles.labelText2}>{constants.keywords.orSignUpWith}</Text>
+                <Text style={styles(selectedTheme).labelText2}>{constants.keywords.orSignUpWith}</Text>
 
-                <View style={styles.socialMediaButtonsContainer}>
-                    <TouchableOpacity style={styles.socialMediaButton}>
-                        <Image source={icons.google} style={styles.socialMediaIcon}></Image>
-                        <Text style={styles.socialMediaText}>{constants.keywords.google}</Text>
+                <View style={styles(selectedTheme).socialMediaButtonsContainer}>
+                    <TouchableOpacity style={styles(selectedTheme).socialMediaButton}>
+                        <Image source={icons.google} style={styles(selectedTheme).socialMediaIcon}></Image>
+                        <Text style={styles(selectedTheme).socialMediaText}>{constants.keywords.google}</Text>
                     </TouchableOpacity>
-                    <TouchableOpacity style={styles.socialMediaButton} >
-                        <Image source={icons.facebook} style={styles.socialMediaIcon}></Image>
-                        <Text style={styles.socialMediaText}>{constants.keywords.facebook}</Text>
+                    <TouchableOpacity style={styles(selectedTheme).socialMediaButton} >
+                        <Image source={icons.facebook} style={styles(selectedTheme).socialMediaIcon}></Image>
+                        <Text style={styles(selectedTheme).socialMediaText}>{constants.keywords.facebook}</Text>
                     </TouchableOpacity>
                 </View>
 
-                <View style={styles.innerContainer}>
-                    <Text style={styles.labelText2}>{constants.keywords.alreadyUser}</Text>
+                <View style={styles(selectedTheme).innerContainer}>
+                    <Text style={styles(selectedTheme).labelText2}>{constants.keywords.alreadyUser}</Text>
                     <TouchableOpacity  onPress={()=>navigation.navigate('Login')}>
-                        <Text style={styles.navigateButtonText}>  {constants.keywords.Login}</Text>
+                        <Text style={styles(selectedTheme).navigateButtonText}>  {constants.keywords.Login}</Text>
                     </TouchableOpacity>
                 </View>
             </View>

@@ -1,10 +1,11 @@
+import ProfileScreen from "../views/profilescreen/profilescreen";
 import React, { useState } from "react";
-import SearchScreen from "../views/searchScreen/searchScreen";
 
 interface InputProps{
     navigation:any
 }
-const SearchModel=(props:InputProps)=>{
+
+const ProfileModel=(props:InputProps)=>{
     const {navigation}=props
     const [render,setRender]=useState(false)
 React.useEffect(() => {
@@ -14,9 +15,7 @@ React.useEffect(() => {
     return unsubscribe;
   }, [navigation,render]);
 
-    return(
-        <SearchScreen navigation={navigation}/>
-    )
+    return(<ProfileScreen navigation={navigation}/>)
 }
 
-export default SearchModel;
+export default ProfileModel;

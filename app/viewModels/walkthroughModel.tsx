@@ -1,5 +1,5 @@
 import WalkthroughScreen from "../views/walkthroughScreen/walkthroughScreen";
-import React from 'react'
+import React, { useState } from 'react'
 import { useRef } from "react";
 
 interface InputProps{
@@ -12,6 +12,14 @@ const WalkthroughModel =(props:InputProps)=>{
     const scrollTo = (data: any) => {
         flatref.current.scrollToIndex({ animated: true, index: data });
     }
+    const [render,setRender]=useState(false)
+React.useEffect(() => {
+    const unsubscribe = navigation.addListener('focus', () => {
+      setRender(!render)      
+    });
+    return unsubscribe;
+  }, [navigation,render]);
+
     return(
         <WalkthroughScreen navigation={navigation} flatref={flatref} scrollTo={(item:any)=>scrollTo(item)}/>
     )

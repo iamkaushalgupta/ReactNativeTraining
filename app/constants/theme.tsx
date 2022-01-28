@@ -1,5 +1,7 @@
+import React, { useEffect } from "react";
 import { Dimensions } from "react-native";
 const { width, height } = Dimensions.get("window");
+import { useSelector,useDispatch  } from "react-redux";
 
 export const COLORS = {
     primary: "#42C6A5",     // Green
@@ -118,7 +120,23 @@ export const lightTheme = {
     dotColor2: COLORS.primary3,
 }
 
-export const selectedTheme =lightTheme;
+
+
+export let selectedTheme = darkTheme;
+
+const setSelectedTheme=()=>{
+    if(selectedTheme.name=='dark')
+        selectedTheme=lightTheme
+    else if(selectedTheme.name=='light')
+        selectedTheme=darkTheme
+    
+}
+
+const getSelectedTheme=()=>{
+    return selectedTheme;
+}
+
+export {setSelectedTheme, getSelectedTheme};
 
 const appTheme = { COLORS, SIZES, FONTS, darkTheme, lightTheme };
 

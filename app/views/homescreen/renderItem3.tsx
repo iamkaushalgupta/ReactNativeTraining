@@ -20,7 +20,6 @@ import {
 } from '../../constants';
 interface InputProp{
     navigation: any,
-    
     item:{
         id: number;
         title: string; 
@@ -42,29 +41,29 @@ const RenderItem3 = (props:InputProp)=>{
     } = props
 
     return(
-        <View style={styles.renderContainer3}>
-            <ImageBackground source={item.thumbnail} style={styles.render3MainImage} imageStyle={{borderRadius:10}}>
-                    <TouchableOpacity style={styles.render3FavouriteButton}>
-                        <Image source={icons.heart} style={styles.heartIcon}/>
+        <View style={styles(selectedTheme).renderContainer3}>
+            <ImageBackground source={item.thumbnail} style={styles(selectedTheme).render3MainImage} imageStyle={{borderRadius:10}}>
+                    <TouchableOpacity style={styles(selectedTheme).render3FavouriteButton}>
+                        <Image source={icons.heart} style={styles(selectedTheme).heartIcon}/>
                     </TouchableOpacity>
                     </ImageBackground>
             
 
             <View>
-                <Text  style={styles.render3TitleText}>{item.title}</Text>
-                <View style={styles.render3InnerContainer}>
-                <Text style={styles.render3InstructorText}>{constants.keywords.By} {item.instructor}</Text>    
-                    <View style={styles.render3DurationContainer}>
-                        <Image source={icons.time} style={styles.render3ClockIcon}/>
-                        <Text style={styles.render3DurationText}>{item.duration}</Text>
+                <Text  style={styles(selectedTheme).render3TitleText}>{item.title}</Text>
+                <View style={styles(selectedTheme).render3InnerContainer}>
+                <Text style={styles(selectedTheme).render3InstructorText}>{constants.keywords.By} {item.instructor}</Text>    
+                    <View style={styles(selectedTheme).render3DurationContainer}>
+                        <Image source={icons.time} style={styles(selectedTheme).render3ClockIcon}/>
+                        <Text style={styles(selectedTheme).render3DurationText}>{item.duration}</Text>
                     </View>
                 </View>
 
-                <View style={styles.render3InnerLowerContainer}>
-                    <Text style={styles.render3PriceText}>${item.price}</Text>
-                    <View style={styles.render3RatingContainer}>
-                        <Image source={icons.star} style={styles.render3RatingIcon}/>
-                        <Text  style={styles.render3RatingText}>{item.ratings}</Text>
+                <View style={styles(selectedTheme).render3InnerLowerContainer}>
+                    <Text style={styles(selectedTheme).render3PriceText}>${item.price}</Text>
+                    <View style={styles(selectedTheme).render3RatingContainer}>
+                        <Image source={icons.star} style={styles(selectedTheme).render3RatingIcon}/>
+                        <Text  style={styles(selectedTheme).render3RatingText}>{item.ratings}</Text>
                     </View>
                 </View>
 

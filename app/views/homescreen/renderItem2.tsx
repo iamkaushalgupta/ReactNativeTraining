@@ -37,8 +37,8 @@ const RenderItem2 = (props:InputProp)=>{
         navigation
     } = props
     return(
-        <ImageBackground source={item.thumbnail} style={styles.render2Container}  imageStyle={{borderRadius:10}} >
-            <Text style={styles.render2TitleText}>{item.title}</Text>
+        <ImageBackground source={item.thumbnail} style={styles(selectedTheme).render2Container}  imageStyle={{borderRadius:10}} >
+            <Text style={styles(selectedTheme).render2TitleText}>{item.title}</Text>
         </ImageBackground>
     )
 }

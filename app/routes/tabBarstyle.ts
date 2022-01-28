@@ -5,18 +5,18 @@ import {
     COLORS,
     darkTheme,
     lightTheme,
-    selectedTheme,
     images,
     icons,
     dummyData,
 }from '../constants'
 import { FONTS } from "../constants/theme";
 
-const styles = StyleSheet.create({
+const styles =(selectedTheme:any)=> StyleSheet.create({
     tabBarStyle:{
-        backgroundColor:selectedTheme.backgroundColor2,
+        backgroundColor:selectedTheme.backgroundColor6,
         height:'12%',
-    },
+    
+            },
     tabBarContainer: {
         justifyContent: 'center',
         alignItems: 'center',

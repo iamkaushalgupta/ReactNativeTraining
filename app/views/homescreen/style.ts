@@ -6,7 +6,7 @@ import {
     COLORS,
     darkTheme,
     lightTheme,
-    selectedTheme,
+    // selectedTheme,
     images,
     icons,
     dummyData,
@@ -14,7 +14,9 @@ import {
 } from '../../constants';
 import { FONTS, SIZES } from "../../constants/theme";
 
-const styles=StyleSheet.create({
+
+
+const styles=(selectedTheme:any)=>StyleSheet.create({
         container:{
             flex:1,
             backgroundColor: selectedTheme.backgroundColor1,
@@ -170,7 +172,8 @@ const styles=StyleSheet.create({
         render3ClockIcon:{
             height:18,
             width:18,
-            resizeMode:'contain'
+            resizeMode:'contain',
+            tintColor:COLORS.gray40
         },
         render3DurationText:{
             paddingLeft:5,

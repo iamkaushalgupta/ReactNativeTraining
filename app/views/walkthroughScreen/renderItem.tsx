@@ -40,14 +40,14 @@ const RenderItem = (props:InputProps)=>{
         navigation
     } =props;
     return(
-        <View style={styles.renderContainer}>
-            <Text style={styles.titleText}>{item.title}</Text>
-            <Text style={styles.subtitleText}>{item.sub_title}</Text>
+        <View style={styles(selectedTheme).renderContainer}>
+            <Text style={styles(selectedTheme).titleText}>{item.title}</Text>
+            <Text style={styles(selectedTheme).subtitleText}>{item.sub_title}</Text>
             
-            <Image source ={item.image} style={styles.renderImage} resizeMode="contain"/>
+            <Image source ={item.image} style={styles(selectedTheme).renderImage} resizeMode="contain"/>
             
-            <TouchableOpacity style={styles.nextButton}onPress={() => (index!=maxIndex)?scrollTo(index + 1):navigation.navigate('Category')}>
-                <Text style={styles.buttonText}>{(index!=maxIndex)?constants.keywords.next:constants.keywords.letsgetstarted}</Text>
+            <TouchableOpacity style={styles(selectedTheme).nextButton}onPress={() => (index!=maxIndex)?scrollTo(index + 1):navigation.navigate('Category')}>
+                <Text style={styles(selectedTheme).buttonText}>{(index!=maxIndex)?constants.keywords.next:constants.keywords.letsgetstarted}</Text>
             </TouchableOpacity>
         </View>
     )

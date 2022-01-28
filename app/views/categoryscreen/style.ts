@@ -13,7 +13,7 @@ import {
 
 } from '../../constants';
 
-const styles = StyleSheet.create({
+const styles =(selectedTheme:any)=> StyleSheet.create({
      container:{
         padding:10,
          flex:1,

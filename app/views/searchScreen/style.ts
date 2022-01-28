@@ -15,7 +15,7 @@ import { SIZES } from "../../constants/theme";
 import { FONTS } from "../../constants/theme";
 
 
-const styles= StyleSheet.create({
+const styles=(selectedTheme:any)=> StyleSheet.create({
     container:{
         flex:1,
         padding:10,

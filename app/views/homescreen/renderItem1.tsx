@@ -38,17 +38,17 @@ const RenderItem1 = (props:InputProp)=>{
     } = props
     
     return(
-        <View style={styles.renderContainer1}>
-            <Image source={item.thumbnail} style={styles.render1MainImage}/>
-            <View style={styles.render1InnerContainer}>
+        <View style={styles(selectedTheme).renderContainer1}>
+            <Image source={item.thumbnail} style={styles(selectedTheme).render1MainImage}/>
+            <View style={styles(selectedTheme).render1InnerContainer}>
                 <TouchableOpacity>
-                    <Image source={icons.play_1} style={styles.playIcon}/>
+                    <Image source={icons.play_1} style={styles(selectedTheme).playIcon}/>
                 </TouchableOpacity>
                 <View>
-                <Text style={styles.render1TitleText}>{item.title}</Text>
-                <View style={styles.render1TimeContainer}>
-                    <Image source={icons.time} style ={styles.timeIcon}/>
-                    <Text style={styles.render1DurationText}>{item.duration}</Text>
+                <Text style={styles(selectedTheme).render1TitleText}>{item.title}</Text>
+                <View style={styles(selectedTheme).render1TimeContainer}>
+                    <Image source={icons.time} style ={styles(selectedTheme).timeIcon}/>
+                    <Text style={styles(selectedTheme).render1DurationText}>{item.duration}</Text>
                 </View>
                 </View>
             </View>

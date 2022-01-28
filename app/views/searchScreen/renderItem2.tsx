@@ -34,9 +34,9 @@ interface InputProps{
 const RenderItem2=(props:InputProps)=>{
     const {navigation,item,index}=props 
     return(
-        <TouchableOpacity style={styles.render2Container}>
-        <ImageBackground source={item.thumbnail}  style={styles.render2MainImage} imageStyle={{borderRadius:10}} >
-        <Text style={styles.render2TitleText}>{item.title}</Text>
+        <TouchableOpacity style={styles(selectedTheme).render2Container}>
+        <ImageBackground source={item.thumbnail}  style={styles(selectedTheme).render2MainImage} imageStyle={{borderRadius:10}} >
+        <Text style={styles(selectedTheme).render2TitleText}>{item.title}</Text>
          </ImageBackground>
          </TouchableOpacity>
         

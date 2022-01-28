@@ -28,7 +28,7 @@ interface InputProps{
 const WalkthroughScreen =(props:InputProps)=>{
     const {navigation,flatref,scrollTo}=props;
     return(
-        <View style={styles.container}>
+        <View style={styles(selectedTheme).container}>
         <StatusBar animated={true} 
         backgroundColor={(selectedTheme.name=='light')?COLORS.white:COLORS.gray80 }  
         barStyle={"dark-content"}

@@ -28,12 +28,13 @@ interface InputProps {
 }
 const SearchScreen = (props: InputProps) => {
     const { navigation } = props
+    
     return (
-        <View style={styles.container}>
-            <View style={styles.searchContainer}>
-                <Image source={icons.search} style={styles.searchIcon} />
+        <View style={styles(selectedTheme).container}>
+            <View style={styles(selectedTheme).searchContainer}>
+                <Image source={icons.search} style={styles(selectedTheme).searchIcon} />
                 <TextInput placeholder={constants.keywords.searchfortopiccoursesandeducators}
-                    style={styles.searchInput} placeholderTextColor={COLORS.gray40}></TextInput>
+                    style={styles(selectedTheme).searchInput} placeholderTextColor={COLORS.gray40}></TextInput>
             </View>
 
             <FlatList
@@ -42,14 +43,14 @@ const SearchScreen = (props: InputProps) => {
                 ListHeaderComponent={() => {
                     return (
                         <>
-                            <Text style={styles.titleText}>{constants.keywords.TopSearches}</Text>
+                            <Text style={styles(selectedTheme).titleText}>{constants.keywords.TopSearches}</Text>
                             <View>
                                 <FlatList
                                     horizontal
                                     showsHorizontalScrollIndicator={false}
                                     ItemSeparatorComponent={() => {
                                         return (
-                                            <View style={styles.itemSeprator} />
+                                            <View style={styles(selectedTheme).itemSeprator} />
                                         )
                                     }}
                                     data={dummyData.top_searches}
@@ -58,7 +59,7 @@ const SearchScreen = (props: InputProps) => {
                                     renderItem={({ item, index }) => <RenderItem1 index={index} item={item} navigation={navigation} />}
                                 />
                             </View>
-                            <Text style={styles.titleText}>{constants.keywords.BrowseCategories}</Text>
+                            <Text style={styles(selectedTheme).titleText}>{constants.keywords.BrowseCategories}</Text>
                         </>
                     )
                 }}
