@@ -1,5 +1,4 @@
 import React, { useRef, useState, } from "react";
-import VideoPlayer from 'react-native-video-player';
 import {
     Image, Text, TouchableOpacity,
     View,
@@ -10,6 +9,7 @@ import {
     ImageBackground
 } from 'react-native';
 import styles from './style'
+import VideoPlayer from 'react-native-video-player';
 import {
     constants,
     theme,
@@ -26,19 +26,30 @@ import { BackButton } from "../../components";
 import { SIZES } from "../../constants/theme";
 import VideoList from './videoList'
 import PopularCourses from "./popularCourses";
+import FilesList from "./filesList";
+import DiscussionList from "./discussionList";
 
 
 interface InputProps {
     navigation: any,
     selected: number,
     setSelected: (item: number) => void,
+    allStudents:boolean,
+    setAllStudents:(item:boolean) => void,
+    studentsData: {
+        id: number;
+        name: string;
+        thumbnail: any;
+    }[]
 }
 
 const CourseScreen = (props: InputProps) => {
     const { navigation,
         selected,
-        setSelected
-
+        setSelected,
+        allStudents,
+        setAllStudents,
+        studentsData
     } = props
 
     return (
@@ -127,6 +138,47 @@ const CourseScreen = (props: InputProps) => {
                                 })
                             }
                         </View>
+
+                    }
+                    {selected==1&&
+                        <View style={styles(selectedTheme).selectedContainer}>
+                            <Text style={styles(selectedTheme).headText}>{constants.keywords.Students}</Text>
+                                <View style={styles(selectedTheme).studentsContainer}>
+                                <FlatList
+                                horizontal
+                                data={studentsData}
+                                ItemSeparatorComponent={()=>{return(<View style={styles(selectedTheme).render3ItemSeprator}></View>)}}
+                                extraData={studentsData}
+                                keyExtractor={(item,index)=>'key'+index}
+                                renderItem={({item,index})=>{return(
+                                            <Image source={item.thumbnail}style={styles(selectedTheme).studentImage} />
+                                )}}
+                                    />
+                                {!allStudents&&
+                                <TouchableOpacity onPress={()=>setAllStudents(true)}>
+                                <Text style={styles(selectedTheme).viewAllButton}>{constants.keywords.ViewAll}</Text>
+                                </TouchableOpacity>
+                                }   
+                            </View>
+                          
+                            <Text style={styles(selectedTheme).headText}>{constants.keywords.Files}</Text>
+                        
+                                {dummyData.course_details.files.map(
+                                    (item,index)=><FilesList item={item} key={index}/>)
+
+                                }
+
+                        
+                        </View>
+                    }
+                    {selected==2&&
+                    <View style={styles(selectedTheme).selectedContainer} >
+                        {dummyData.course_details.discussions.map((item,index)=>
+                        <DiscussionList item ={item} key={index} />
+                        )
+                            
+                        }
+                    </View>
 
                     }
 

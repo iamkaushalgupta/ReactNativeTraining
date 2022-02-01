@@ -70,6 +70,7 @@ const styles=(selectedTheme:any)=>StyleSheet.create({
         height:50,
         width:50,
         borderRadius:180,
+        marginRight:10,
     },
     chapterIcon:{
         height:40,
@@ -109,6 +110,10 @@ const styles=(selectedTheme:any)=>StyleSheet.create({
     },
     selectedContainer:{
         padding:10,
+    },
+    studentsContainer:{
+        flexDirection:'row',
+        alignItems:'center'
     },
     studentTimeContainer:{
         flexDirection:'row',
@@ -246,7 +251,7 @@ const styles=(selectedTheme:any)=>StyleSheet.create({
         alignItems:'center'
     },
     render3ItemSeprator:{
-        marginVertical:10
+        margin:10
     },
     render3PriceText:{
         ...FONTS.h2,
@@ -272,7 +277,107 @@ const styles=(selectedTheme:any)=>StyleSheet.create({
     seeAllText:{
         ...FONTS.h3,
         color:COLORS.white
-    }
+    },
+    studentImage:{
+        height:SIZES.height*0.12,
+        width:SIZES.width*0.2,
+        borderRadius:15,
+    },
+    viewAllButton:{
+        ...FONTS.h3,
+        color:COLORS.primary,
+        paddingRight:20,
+    },
+    fileListContainer:{
+        marginVertical:10,
+        flexDirection:'row',
+        alignItems:'center',
+        justifyContent:'space-between'
+    },
+    fileListLeftContainer:{
+        flexDirection:'row',
+        alignItems:'center'
+    },
+    filesIcon:{
+        height:SIZES.height*0.12,
+        width:SIZES.width*0.2,
+        resizeMode:'contain',
+        marginRight:10,
+    },
+    menuIcon:{
+        height:30,
+        width:30,
+        resizeMode:'contain',
+        tintColor:selectedTheme.tintColor
+    },
+    filesNameText:{
+        ...FONTS.h3,
+        color:selectedTheme.textColor,
+    },
+    fileAuthorText:{
+        ...FONTS.h4,
+        color:selectedTheme.textColor3,
+    },
+    fileUploadedText:{
+        ...FONTS.h4,
+        color:selectedTheme.textColor,
+    },
+    discussionContainer:{
+        flexDirection:'row',
+       flex:1
+    },
+    discussionLeftContainer:{
+        flex:1
+    },
+    discussionLeftBottomContainer:{
+        flexDirection:'row',
+        alignItems:'flex-end',
+        justifyContent:'space-between',
+        borderBottomWidth:1,
+        borderTopWidth:1,
+        borderColor:selectedTheme.lineDivider,
+        paddingVertical:5
+    },
+    discussionCommentIcon:{
+        height:20,
+        width:20,
+        resizeMode:'contain',
+        marginRight:5,
+        tintColor:selectedTheme.tintColor
+    },
+    discussionLikesIcon:{
+        height:20,
+        width:20,
+        resizeMode:'contain',
+        marginRight:5,
+    },
+    smallIconContainer:{
+        flexDirection:'row'
+    },
+    discussionNameText:{
+        ...FONTS.h3,
+        color:selectedTheme.textColor
+    },
+    discussionCommentText:{
+        ...FONTS.h4,
+        color:selectedTheme.textColor3
+    },
+    nestedDiscussionContainer:{
+        flex:1,
+        flexDirection:'row',
+        marginLeft:SIZES.width*0.1,
+        marginVertical:10,
+    },
+    nesteddiscussionLeftBottomContainer:{
+        flexDirection:'row',
+        alignItems:'flex-end',
+        justifyContent:'space-between',
+        marginLeft:SIZES.width*0.2,
+        borderBottomWidth:1,
+        borderTopWidth:1,
+        borderColor:selectedTheme.lineDivider,
+        paddingVertical:5
+    },
 
 })
 export default styles

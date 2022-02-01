@@ -48,9 +48,6 @@ const DetailItem=(props:InputProps)=>{
                 </View>
             </View>
             <Image source={icons.right_arrow} style={styles(selectedTheme).right_arrow}/>
-
-
-
         </View>
     )
 }

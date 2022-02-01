@@ -213,7 +213,11 @@ const keywords ={
     Discussions:"Discussions",
     videoUrl:'http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4',
     thumbnailURL:'https://i.picsum.photos/id/866/1600/900.jpg',
-    follow:'Follow +'
+    follow:'Follow +',
+    Students:'Students',
+    ViewAll:'View All',
+    reply:'Reply',
+    likes:'Likes'
 }
 
 export default {
