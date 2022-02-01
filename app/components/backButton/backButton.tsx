@@ -1,6 +1,6 @@
 import React from "react";
 import { TouchableOpacity, Image} from "react-native";
-import { icons } from "../../constants";
+import { icons, selectedTheme } from "../../constants";
 import styles from './style';
 
 interface InputProps{
@@ -10,8 +10,8 @@ interface InputProps{
 const BackButton=(props:InputProps)=>{
     const {navigation} =props;
     return(
-      <TouchableOpacity onPress={()=>navigation.goBack()} style ={styles.container}>
-          <Image source={icons.back} style={styles.backImage}/>
+      <TouchableOpacity onPress={()=>navigation.goBack()} style ={styles(selectedTheme).container}>
+          <Image source={icons.back} style={styles(selectedTheme).backImage}/>
       </TouchableOpacity>
     )
 }

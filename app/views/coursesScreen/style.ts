@@ -20,7 +20,12 @@ const styles = (selectedTheme:any)=>StyleSheet.create({
     backgroundImage:{
         paddingLeft:10,
         flex:1/3,
+        paddingTop:10,
     
+    },
+    wrapperContainer:{
+        flex:2/3,
+        padding:10
     },
     innerUpperContainer:{
         flexDirection:'row',

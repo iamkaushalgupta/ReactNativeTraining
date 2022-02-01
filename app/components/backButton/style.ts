@@ -1,6 +1,5 @@
 import { StyleSheet } from "react-native";
-import { selectedTheme } from "../../constants";
-const styles =StyleSheet.create({
+const styles =(selectedTheme:any)=>StyleSheet.create({
     container:{
         alignSelf:'flex-start',
         backgroundColor:selectedTheme.backgroundColor8,

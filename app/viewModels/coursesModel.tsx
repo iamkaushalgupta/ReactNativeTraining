@@ -1,15 +1,15 @@
 import React, { useState } from "react";
-import CourseScreen from "../views/coursesScreen/coursesScreen";
+import CoursesScreen from "../views/coursesScreen/coursesScreen";
 
 interface InputProps{
     navigation:any
 }
 
-const CourseModel=(props:InputProps)=>{
+const CoursesModel=(props:InputProps)=>{
     const {navigation}=props;
     return(
-        <CourseScreen navigation={navigation}/>
+        <CoursesScreen navigation={navigation}/>
     )
 }
 
-export default CourseModel;
+export default CoursesModel;

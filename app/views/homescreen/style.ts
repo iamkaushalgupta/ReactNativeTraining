@@ -155,7 +155,7 @@ const styles=(selectedTheme:any)=>StyleSheet.create({
             flexDirection:'row'
         },
         render3MainImage:{
-            width:SIZES.width*0.3,
+            width:SIZES.width*0.35,
             padding:10
             
         },

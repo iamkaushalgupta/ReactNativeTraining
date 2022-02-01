@@ -25,7 +25,7 @@ interface InputProp {
     navigation: any,
 }
 import CourseItem from "./coursesItem";
-const CourseScreen=(props:InputProp)=>{
+const CoursesScreen=(props:InputProp)=>{
     const {navigation}=props;
     return(
         <View style={styles(selectedTheme).container}>
@@ -42,7 +42,7 @@ const CourseScreen=(props:InputProp)=>{
 
             
 
-            <View style={{flex:2/3,padding:10}}>
+            <View style={styles(selectedTheme).wrapperContainer}>
             <View style={styles(selectedTheme).midContainer}>
                 <Text style={styles(selectedTheme).labelText} >{constants.keywords.numberOfResults}</Text>
                 <TouchableOpacity style={styles(selectedTheme).filterButton}>
@@ -67,4 +67,4 @@ const CourseScreen=(props:InputProp)=>{
         </View>
     )
 }
-export default CourseScreen;
+export default CoursesScreen;

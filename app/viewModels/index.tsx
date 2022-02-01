@@ -7,7 +7,8 @@ import RegisterModel from "./registerModel";
 import WalkthroughModel from "./walkthroughModel";
 import CategoryModel from "./categoryModel";
 import SearchModel from "./searchModel";
-import CourseModel from "./coursesModel";
+import CoursesModel from "./coursesModel";
+import CourseModel from "./courseModel";
 export {HomeModel,
     ContactModel,
      ProfileModel,
@@ -16,6 +17,7 @@ export {HomeModel,
      WalkthroughModel,
      CategoryModel,
     SearchModel,
-    CourseModel
+    CoursesModel,
+    CourseModel,
 
 };

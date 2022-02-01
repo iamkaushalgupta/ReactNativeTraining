@@ -207,7 +207,13 @@ const keywords ={
     MakeYourBandVisible:'Make your brand more visible with our checklist',
     KaushalGupta:'Kaushal Gupta',
     MobileDesign:'Mobile Design',
-    numberOfResults:'5763 Results'
+    numberOfResults:'5763 Results',
+    Chapters:"Chapters",
+    Files:"Files",
+    Discussions:"Discussions",
+    videoUrl:'http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4',
+    thumbnailURL:'https://i.picsum.photos/id/866/1600/900.jpg',
+    follow:'Follow +'
 }
 
 export default {

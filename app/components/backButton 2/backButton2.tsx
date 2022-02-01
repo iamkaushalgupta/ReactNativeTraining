@@ -4,7 +4,7 @@ import { icons } from "../../constants";
 import styles from './style';
 
 interface InputProps{
-    navigation:any
+    navigation:any,
 }
 
 const BackButton2=(props:InputProps)=>{

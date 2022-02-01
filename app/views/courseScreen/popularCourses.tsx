@@ -33,7 +33,7 @@ interface InputProp{
     index:number
 }
 
-const CourseItem = (props:InputProp)=>{
+const PopularCourses = (props:InputProp)=>{
     const {
         item,
         index,
@@ -41,7 +41,7 @@ const CourseItem = (props:InputProp)=>{
     } = props
 
     return(
-        <TouchableOpacity style={styles(selectedTheme).renderContainer3} onPress={()=>navigation.navigate("Course")} >
+        <View style={styles(selectedTheme).renderContainer3}>
             <ImageBackground source={item.thumbnail} style={styles(selectedTheme).render3MainImage} imageStyle={{borderRadius:10}}>
                     <TouchableOpacity style={styles(selectedTheme).render3FavouriteButton}>
                         <Image source={icons.heart} style={styles(selectedTheme).heartIcon}/>
@@ -68,8 +68,8 @@ const CourseItem = (props:InputProp)=>{
                 </View>
 
             </View>
-        </TouchableOpacity>
+        </View>
     )
 }
 
-export default CourseItem
+export default PopularCourses
