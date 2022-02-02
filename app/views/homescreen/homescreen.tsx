@@ -43,7 +43,7 @@ const HomeScreen = (props: InputProp) => {
                     <Text style={styles(selectedTheme).headerNameText}>{constants.keywords.Hello}, {dummyData.personal_details[0].value}!</Text>
                     <Text style={styles(selectedTheme).headerDateText}>{date}</Text>
                 </View>
-                <TouchableOpacity>
+                <TouchableOpacity onPress={()=>navigation.navigate("Notification")}>
                     <Image source={icons.notification} style={styles(selectedTheme).notificationIcon} />
                 </TouchableOpacity>
             </View>

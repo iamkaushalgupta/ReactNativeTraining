@@ -9,6 +9,7 @@ import CategoryModel from "./categoryModel";
 import SearchModel from "./searchModel";
 import CoursesModel from "./coursesModel";
 import CourseModel from "./courseModel";
+import NotificationModel from "./notificationModel";
 export {HomeModel,
     ContactModel,
      ProfileModel,
@@ -19,5 +20,5 @@ export {HomeModel,
     SearchModel,
     CoursesModel,
     CourseModel,
-
+    NotificationModel
 };

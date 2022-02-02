@@ -74,6 +74,7 @@ const screens = {
     login:'Login',
     Register:'Register',
     ChooseCategory:'Choose Category',
+    Notification:'Notification'
 }
 
 const bottom_tabs = [
