@@ -101,7 +101,7 @@ const CourseScreen = (props: InputProps) => {
                                 </View>
                             </View>
 
-                            <View style={styles(selectedTheme).instructorContainer}>
+                            <TouchableOpacity style={styles(selectedTheme).instructorContainer} onPress={()=>navigation.navigate("InstructorProfile")} >
                                 <View style={styles(selectedTheme).instructorLeftContainer}>
                                     <Image source={images.profile} style={styles(selectedTheme).instructorProfileImage} />
                                     <View style={styles(selectedTheme).instructorInnerContainer} >
@@ -112,7 +112,7 @@ const CourseScreen = (props: InputProps) => {
                                 <TouchableOpacity style={styles(selectedTheme).followButton}>
                                     <Text style={styles(selectedTheme).followButtonText} >{constants.keywords.follow}</Text>
                                 </TouchableOpacity>
-                            </View>
+                            </TouchableOpacity>
 
                             {dummyData.course_details.videos.map((item, index) => {
                                 return (

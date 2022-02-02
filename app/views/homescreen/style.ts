@@ -1,4 +1,3 @@
-import React from "react";
 import { StyleSheet } from "react-native";
 import {
     constants,
@@ -6,7 +5,6 @@ import {
     COLORS,
     darkTheme,
     lightTheme,
-    // selectedTheme,
     images,
     icons,
     dummyData,

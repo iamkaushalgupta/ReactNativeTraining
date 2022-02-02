@@ -6,7 +6,8 @@ import {
      CategoryModel, 
     CoursesModel,
     CourseModel,
-    NotificationModel
+    NotificationModel,
+    InstructorProfileModel
 } from '../viewModels'
 import {createNativeStackNavigator} from '@react-navigation/native-stack'
 import { NavigationContainer } from '@react-navigation/native';
@@ -21,6 +22,7 @@ type RootStackParamList ={
     Courses:Function;
     Course:Function;
     Notification:Function;
+    InstructorProfile:Function;
 }
 
 const Stack = createNativeStackNavigator<RootStackParamList>()
@@ -30,7 +32,7 @@ const MainStack =()=>
 {
     return(
         <NavigationContainer>
-        <Stack.Navigator initialRouteName="Notification" screenOptions={{headerShown:false}}>
+        <Stack.Navigator initialRouteName="InstructorProfile" screenOptions={{headerShown:false}}>
             <Stack.Screen name= "Login" component={LoginModel}></Stack.Screen>
             <Stack.Screen name = "Register" component ={RegisterModel}></Stack.Screen>
             <Stack.Screen name = "Walkthrough" component ={WalkthroughModel}></Stack.Screen>
@@ -39,6 +41,8 @@ const MainStack =()=>
             <Stack.Screen name = "Courses" component ={CoursesModel}></Stack.Screen>
             <Stack.Screen name = "Course" component ={CourseModel}></Stack.Screen>
             <Stack.Screen name = "Notification" component ={NotificationModel}></Stack.Screen>
+            <Stack.Screen name = "InstructorProfile" component ={InstructorProfileModel}></Stack.Screen>
+
         </Stack.Navigator>
         </NavigationContainer>
 

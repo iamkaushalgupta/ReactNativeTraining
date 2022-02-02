@@ -393,8 +393,114 @@ const Profile_details=[
     },
 
 ]
+const instructor_profile = {
+    id: 0,
+    name: "Kaushal Gupta",
+    post: "React Native Developer",
+    followers: "8.8M",
+    reviews:'1.8k',
+    totalstudents:'180M',
+    about:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua',   
+    courses: [
+        {
+            id: 0,
+            title: "The Ultimate Ui/Ux Course Beginner to Advanced",
+            duration: "2h 30m",
+            instructor: "James Morris",
+            ratings: 4.9,
+            price: 75,
+            is_favourite: true,
+            thumbnail: require("../assets/images/thumbnail_1.png")
+        },
+        {
+            id: 1,
+            title: "The Ultimate Ui/Ux Course Beginner to Advanced",
+            duration: "2h 30m",
+            instructor: "James Morris",
+            ratings: 4.9,
+            price: 75,
+            is_favourite: false,
+            thumbnail: require("../assets/images/thumbnail_2.png")
+        },
+        {
+            id: 2,
+            title: "The Ultimate Ui/Ux Course Beginner to Advanced",
+            duration: "2h 30m",
+            instructor: "James Morris",
+            ratings: 4.9,
+            price: 75,
+            is_favourite: true,
+            thumbnail: require("../assets/images/thumbnail_3.png")
+        },
+        {
+            id: 3,
+            title: "The Ultimate Ui/Ux Course Beginner to Advanced",
+            duration: "2h 30m",
+            instructor: "James Morris",
+            ratings: 4.9,
+            price: 75,
+            is_favourite: false,
+            thumbnail: require("../assets/images/thumbnail_4.png")
+        },
+    ],
 
-export default {
+    totalrating:'79%',
+    studentRating:[
+        {
+            id:0,
+            label:'Very Satisfied',
+            number:587,
+        },
+        {
+            id:1,
+            label:'Satisfied',
+            number:327,
+        },
+        {
+            id:2,
+            label:'Neutral',
+            number:200,
+        },
+        {
+            id:3,
+            label:'Poor',
+            number:44,
+        },
+    
+    ],
+    studentReviews:[
+        {
+            id: 0,
+            name: "John Wick",
+            ago:'2 days ago',
+            thumbnail: require("../assets/images/student_1.png"),
+            review:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua'
+        },
+        {
+            id: 1,
+            name: "John Wick",
+            ago:'2 days ago',
+            thumbnail: require("../assets/images/student_2.png"),
+            review:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua'
+        },
+        {
+            id: 2,
+            name: "John Wick",
+            ago:'2 days ago',
+            thumbnail: require("../assets/images/student_3.png"),
+            review:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua'
+        },
+        {
+            id: 3,
+            name: "John Wick",
+            ago:'2 days ago',
+            thumbnail: require("../assets/images/student_3.png"),
+            review:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua'
+        }
+    ]
+}
+
+export default {    
     categories,
     courses_list_1,
     courses_list_2,
@@ -402,5 +508,6 @@ export default {
     course_details,
     notificationByDays,
     personal_details,
-    Profile_details
+    Profile_details,
+    instructor_profile
 }

@@ -155,21 +155,6 @@ const created_within = [
     }
 ]
 
-const course_details_tabs = [
-    {
-        id: 0,
-        label: "Chapters",
-    },
-    {
-        id: 1,
-        label: "Files",
-    },
-    {
-        id: 2,
-        label: "Discussions",
-    }
-]
-
 const keywords ={
     username:'Username',
     email:'Email',
@@ -218,7 +203,16 @@ const keywords ={
     Students:'Students',
     ViewAll:'View All',
     reply:'Reply',
-    likes:'Likes'
+    likes:'Likes',
+    Followers:'Followers',
+    Reviews:'Reviews',
+    TotalStudents:'Total Students',
+    Aboutme:'About Me',
+    MyCourses:'My Courses',
+    studentReviews:'Student Reviews',
+    connectHere:'Connect Here',
+    linkedIn:'LinkedIn',
+    twitter:'Twitter'
 }
 
 export default {
@@ -229,6 +223,5 @@ export default {
     class_types,
     class_levels,
     created_within,
-    course_details_tabs,
     keywords
 }

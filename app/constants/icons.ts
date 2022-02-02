@@ -42,16 +42,25 @@ const profile = require("../assets/icons/profile.png")
 const reminder = require("../assets/icons/reminder.png")
 const reply = require("../assets/icons/reply.png")
 const right_arrow = require("../assets/icons/right_arrow.png")
+const left_arrow = require("../assets/icons/left-arrow.png")
 const search = require("../assets/icons/search.png")
 const send = require("../assets/icons/send.png")
 const staff_pick = require("../assets/icons/staff_pick.png")
 const star = require("../assets/icons/star.png")
 const star_1 = require("../assets/icons/star_1.png")
+const share = require("../assets/icons/share.png")
 const sun = require("../assets/icons/sun.png")
 const time = require("../assets/icons/time.png")
 const web_design = require("../assets/icons/web_design.png")
+const blue_tick = require("../assets/icons/blue-tick.png")
+const linkedin = require("../assets/icons/linkedin.png")
+const twitter = require("../assets/icons/twitter.png")
+const smile_face = require("../assets/icons/smile-face.png")
 
 export default {
+    linkedin,
+    twitter,
+    smile_face,
     all,
     animation,
     back,
@@ -102,6 +111,9 @@ export default {
     star,
     star_1,
     sun,
+    share,
     time,
-    web_design
+    web_design,
+    left_arrow,
+    blue_tick
 }
