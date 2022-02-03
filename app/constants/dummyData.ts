@@ -500,6 +500,34 @@ const instructor_profile = {
     ]
 }
 
+const memberShipPlans=[
+    {
+        price:'$99',
+        month:'Month',
+        label:'Get 7 days free trail',
+        bestOffer:true
+    },
+    {
+        price:'$39',
+        month:'3months',
+        label:'$13/month Billed quaterly',
+        bestOffer:false
+    },
+    {
+        price:'$68',
+        month:'6months',
+        label:'$11.33/month Billed half-yearly',
+        bestOffer:false
+    },
+    {
+        price:'$115',
+        month:'Year',
+        label:"Pay once and don't worry for one year",
+        bestOffer:false
+    },
+
+]
+
 export default {    
     categories,
     courses_list_1,
@@ -509,5 +537,6 @@ export default {
     notificationByDays,
     personal_details,
     Profile_details,
-    instructor_profile
+    instructor_profile,
+    memberShipPlans
 }

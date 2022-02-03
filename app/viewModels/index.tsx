@@ -11,6 +11,7 @@ import CoursesModel from "./coursesModel";
 import CourseModel from "./courseModel";
 import NotificationModel from "./notificationModel";
 import InstructorProfileModel from "./instructorProfileModel";
+import MemberShipModel from "./memberShipModel";
 export {HomeModel,
     ContactModel,
      ProfileModel,
@@ -22,5 +23,6 @@ export {HomeModel,
     CoursesModel,
     CourseModel,
     NotificationModel,
-    InstructorProfileModel
+    InstructorProfileModel,
+    MemberShipModel
 };

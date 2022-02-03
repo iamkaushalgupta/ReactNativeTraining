@@ -72,7 +72,7 @@ const ProfileScreen = (props: InputProps) => {
                             <Text style={styles(selectedTheme).subTitleText}>{"58%"}</Text>
                         </View>
 
-                        <TouchableOpacity style={styles(selectedTheme).becomeMemberButton}>
+                        <TouchableOpacity style={styles(selectedTheme).becomeMemberButton} onPress={()=>navigation.navigate('MemberShip')} >
                             <Text style={styles(selectedTheme).becomeMemberText}>{constants.keywords.BecomeMember}</Text>
                         </TouchableOpacity>
                     </View>

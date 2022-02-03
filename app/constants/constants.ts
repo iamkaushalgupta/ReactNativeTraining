@@ -156,6 +156,10 @@ const created_within = [
 ]
 
 const keywords ={
+    bestOffer:'Best Offer',
+    unlimitedStudyAnywhereAnytime:'Unlimited Study Anywhere Anytime',
+    chooseaPlan:"Choose a plan",
+    memberShip:"Membership",
     username:'Username',
     email:'Email',
     userNameorEmail:'Username or Email',
