@@ -34,7 +34,6 @@ const styles=(selectedTheme:any)=> StyleSheet.create({
     shadowOpacity: 0.9,
     shadowRadius: 10,
     elevation: 3,
-    
     },
     searchIcon:{
         resizeMode:'contain',
