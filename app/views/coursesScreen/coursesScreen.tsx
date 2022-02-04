@@ -2,10 +2,12 @@ import React, { useState } from "react";
 import {
     Image, Text, TouchableOpacity,
     View,
+    Modal,
     StatusBar,
     ScrollView,
     FlatList,
-    ImageBackground
+    ImageBackground,
+    TouchableWithoutFeedback
 } from 'react-native';
 import styles from './style'
 import {
@@ -21,14 +23,54 @@ import {
 
 } from '../../constants';
 import { BackButton2 } from "../../components";
+import FilterScreen from './filterScreen';
+
 interface InputProp {
     navigation: any,
+    filterOpen: boolean,
+    setFilterOpen: (item: boolean) => void
+    classType: number,
+    setClassType: (item: number) => void
+    classLevel: number,
+    setClassLevel: (item: number) => void
+    created:number,
+    setCreated:(item:number)=>void;
+    reset: () => void
 }
 import CourseItem from "./coursesItem";
 const CoursesScreen=(props:InputProp)=>{
-    const {navigation}=props;
+    const {
+        navigation,
+        filterOpen,
+        setFilterOpen,
+        classType,
+        setClassType,
+        classLevel,
+        setClassLevel,
+        created,
+        setCreated,
+        reset
+    
+    }=props;
     return(
         <View style={styles(selectedTheme).container}>
+          <Modal
+          transparent={true}
+          visible={filterOpen}
+          >
+              <FilterScreen 
+              setFilterOpen={(item:boolean)=>setFilterOpen(item)} 
+              filterOpen={filterOpen}
+              setClassType={(item:number)=>setClassType(item)}
+              classType={classType}
+              classLevel={classLevel}
+            setClassLevel={(item:number)=>setClassLevel(item)} 
+            created={created}
+            setCreated={(item:number)=>setCreated(item)}
+           reset={()=>reset()}
+    />
+
+          </Modal>
             <ImageBackground source={images.bg_1} style={styles(selectedTheme).backgroundImage}
             imageStyle={{borderBottomLeftRadius:50}}
             >
@@ -45,7 +87,7 @@ const CoursesScreen=(props:InputProp)=>{
             <View style={styles(selectedTheme).wrapperContainer}>
             <View style={styles(selectedTheme).midContainer}>
                 <Text style={styles(selectedTheme).labelText} >{constants.keywords.numberOfResults}</Text>
-                <TouchableOpacity style={styles(selectedTheme).filterButton}>
+                <TouchableOpacity style={styles(selectedTheme).filterButton} onPress={()=>setFilterOpen(!filterOpen)} >
                     <Image source={icons.filter} style={styles(selectedTheme).filterImage}/>
                 </TouchableOpacity>
             </View>

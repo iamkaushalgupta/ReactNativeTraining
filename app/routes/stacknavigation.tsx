@@ -34,7 +34,7 @@ const MainStack =()=>
 {
     return(
         <NavigationContainer>
-        <Stack.Navigator initialRouteName="MemberShip" screenOptions={{headerShown:false}}>
+        <Stack.Navigator initialRouteName="Login" screenOptions={{headerShown:false}}>
             <Stack.Screen name= "Login" component={LoginModel}></Stack.Screen>
             <Stack.Screen name = "Register" component ={RegisterModel}></Stack.Screen>
             <Stack.Screen name = "Walkthrough" component ={WalkthroughModel}></Stack.Screen>

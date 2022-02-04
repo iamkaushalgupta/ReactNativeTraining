@@ -122,7 +122,7 @@ export const lightTheme = {
 
 
 
-export let selectedTheme = darkTheme;
+export let selectedTheme = lightTheme;
 
 const setSelectedTheme=()=>{
     if(selectedTheme.name=='dark')
