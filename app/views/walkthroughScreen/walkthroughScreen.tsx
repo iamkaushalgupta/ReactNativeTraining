@@ -1,21 +1,13 @@
 import React from "react";
 import {
     View,
-    Text,
     StatusBar,
     FlatList,
 } from 'react-native';
 import {
     constants,
-    theme,
     COLORS,
-    darkTheme,
-    lightTheme,
     selectedTheme,
-    images,
-    icons,
-    dummyData,
-
 } from '../../constants';
 import styles from './style'
 import RenderItem from './renderItem';

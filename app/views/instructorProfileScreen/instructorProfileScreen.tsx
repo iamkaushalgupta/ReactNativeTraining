@@ -1,8 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 import {
     Image, Text, TouchableOpacity,
     View,
-    StatusBar,
     ScrollView,
     FlatList,
     ImageBackground
@@ -10,10 +9,6 @@ import {
 import styles from './style'
 import {
     constants,
-    theme,
-    COLORS,
-    darkTheme,
-    lightTheme,
     selectedTheme,
     images,
     icons,

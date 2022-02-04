@@ -3,19 +3,12 @@ import {
     Image, Text, TouchableOpacity,
     View,
     Modal,
-    StatusBar,
-    ScrollView,
     FlatList,
     ImageBackground,
-    TouchableWithoutFeedback
 } from 'react-native';
 import styles from './style'
 import {
     constants,
-    theme,
-    COLORS,
-    darkTheme,
-    lightTheme,
     selectedTheme,
     images,
     icons,

@@ -1,26 +1,15 @@
 import React from "react";
 import styles from "./style";
 import {
-    View,
     Text,
-    StatusBar,
-    FlatList,
     TouchableOpacity,
     Image
 } from 'react-native';
 import {
-    constants,
-    theme,
     COLORS,
-    darkTheme,
-    lightTheme,
     selectedTheme,
-    images,
-    icons,
-    dummyData,
 
 } from '../../constants';
-import { BackButton } from "../../components";
 
 interface InputProps{
  item:{

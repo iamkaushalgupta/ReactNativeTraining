@@ -2,14 +2,7 @@ import React from "react";
 import { StyleSheet } from "react-native";
 import { FONTS, SIZES } from "../../constants/theme";
 import {
-    constants,
-    theme,
     COLORS,
-    darkTheme,
-    lightTheme,
-    images,
-    icons,
-    dummyData,
 
 } from '../../constants';
 

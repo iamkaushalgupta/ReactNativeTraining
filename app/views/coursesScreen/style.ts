@@ -1,12 +1,6 @@
 import {
-    constants,
-    theme,
+
     COLORS,
-    darkTheme,
-    lightTheme,
-    images,
-    icons,
-    dummyData,
     
 } from '../../constants';
 import { StyleSheet } from 'react-native';

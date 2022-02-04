@@ -6,25 +6,15 @@ import {
 } from 'react-native'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import {HomeModel, 
-    ContactModel,
      ProfileModel,
-     LoginModel,
-     RegisterModel,
-      WalkthroughModel, 
-      CategoryModel,
       SearchModel
     } from '../viewModels'
 
 import {
     constants,
-    theme,
     COLORS,
-    darkTheme,
-    lightTheme,
     selectedTheme,
-    images,
-    icons,
-    dummyData,
+
 }from '../constants'
 import styles from "./tabBarstyle";
 

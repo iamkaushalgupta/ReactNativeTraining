@@ -9,14 +9,8 @@ import {
 } from 'react-native';
 import {
     constants,
-    theme,
     COLORS,
-    darkTheme,
-    lightTheme,
     selectedTheme,
-    images,
-    icons,
-    dummyData,
 
 } from '../../constants';
 import { BackButton } from "../../components";

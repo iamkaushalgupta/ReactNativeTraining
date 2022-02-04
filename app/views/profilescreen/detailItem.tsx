@@ -1,25 +1,12 @@
 import React, { useEffect, useState } from "react";
 import styles from "./style";
 import {
-    Image, Text, TouchableOpacity,
+    Image, Text, 
     View,
-    StatusBar,
-    ScrollView,
-    FlatList,
-    ImageBackground,
-    TextInput
 } from 'react-native';
-import {ProgressBar} from 'react-native-paper'
 import {
-    constants,
-    theme,
-    COLORS,
-    darkTheme,
-    lightTheme,
     selectedTheme,
-    images,
     icons,
-    dummyData,
 
 } from '../../constants';
 

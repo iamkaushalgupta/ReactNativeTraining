@@ -1,21 +1,9 @@
 import React from "react";
-import {  Image, Text, TouchableOpacity,
-     View,
-    StatusBar, 
-    ScrollView,
-    FlatList,
+import {   Text, 
     ImageBackground} from 'react-native';
 import styles from './style'
 import {
-    constants,
-    theme,
-    COLORS,
-    darkTheme,
-    lightTheme,
     selectedTheme,
-    images,
-    icons,
-    dummyData,
 
 } from '../../constants';
 interface InputProp{

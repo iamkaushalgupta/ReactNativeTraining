@@ -2,20 +2,15 @@ import React, { useRef, useState, } from "react";
 import {
     Image, Text, TouchableOpacity,
     View,
-    StatusBar,
     ScrollView,
     FlatList,
-    Alert,
-    ImageBackground
+
 } from 'react-native';
 import styles from './style'
 import VideoPlayer from 'react-native-video-player';
 import {
     constants,
-    theme,
     COLORS,
-    darkTheme,
-    lightTheme,
     selectedTheme,
     images,
     icons,

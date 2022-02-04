@@ -5,20 +5,15 @@ import {View,Text,
     Image,
     TextInput,
     TouchableOpacity,
-    ScrollView,
     StatusBar
 
 } from 'react-native';
 import {
     constants,
-    theme,
     COLORS,
-    darkTheme,
-    lightTheme,
     selectedTheme,
     images,
     icons,
-    dummyData,
 } from '../../constants'
 
 interface InputProps{

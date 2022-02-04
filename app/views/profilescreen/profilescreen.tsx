@@ -5,19 +5,13 @@ import {
     View,
     StatusBar,
     ScrollView,
-    FlatList,
     ImageBackground,
-    TextInput
 } from 'react-native';
 import { ProgressBar } from 'react-native-paper'
 import {
     constants,
-    theme,
     COLORS,
-    darkTheme,
-    lightTheme,
     selectedTheme,
-    images,
     icons,
     dummyData,
 

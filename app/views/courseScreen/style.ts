@@ -1,13 +1,5 @@
 import {
-    constants,
-    theme,
-    COLORS,
-    darkTheme,
-    lightTheme,
-    images,
-    icons,
-    dummyData,
-    
+    COLORS,    
 } from '../../constants';
 import { StyleSheet } from 'react-native';
 import { FONTS, SIZES } from '../../constants/theme';
@@ -26,7 +18,8 @@ const styles=(selectedTheme:any)=>StyleSheet.create({
         flexDirection:'row',
         paddingHorizontal:10,
         alignItems:'center',
-        justifyContent:'space-between'
+        justifyContent:'space-between',
+        marginBottom:10,
     },
 
     upperHeaderLeftContainer:{

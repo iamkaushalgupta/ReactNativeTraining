@@ -1,20 +1,13 @@
 import { StyleSheet } from "react-native";
 import {
-    constants,
-    theme,
     COLORS,
-    darkTheme,
-    lightTheme,
-    images,
-    icons,
-    dummyData,
 } from '../constants'
 import { FONTS } from "../constants/theme";
 
 const styles = (selectedTheme: any) => StyleSheet.create({
     tabBarStyle: {
         backgroundColor: selectedTheme.backgroundColor6,
-        height: '12%',
+        height: '10%',
 
     },
     tabBarContainer: {
@@ -22,7 +15,7 @@ const styles = (selectedTheme: any) => StyleSheet.create({
         alignItems: 'center',
         paddingHorizontal: 20,
         height: '100%',
-        borderRadius: 20,
+        borderRadius: 15,
         width: '100%'
     },
     tabBarIcon: {

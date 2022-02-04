@@ -1,23 +1,14 @@
 import React from "react";
 import styles from "./style";
 import {View,Text,
-    ImageBackground,
     Image,
-    TextInput,
     TouchableOpacity,
-    ScrollView,
-    StatusBar,
     FlatList
 
 } from 'react-native';
 import {
     constants,
-    theme,
-    COLORS,
-    darkTheme,
-    lightTheme,
     selectedTheme,
-    images,
     icons,
     dummyData,
 } from '../../constants'
