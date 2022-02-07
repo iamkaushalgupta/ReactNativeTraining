@@ -55,18 +55,26 @@ const styles=(selectedTheme:any)=>StyleSheet.create({
     },
 
     inputField:{
-        borderBottomWidth:1,
-        borderColor:COLORS.gray40,
         marginBottom:5,
+        width:"90%",
     },
     passwordField:{
         marginBottom:5,
         width:'92%'
     },
+    labelContainer:{
+        flexDirection:'row',
+        alignItems:'center',
+        justifyContent:'space-between'
+    },
     labelText:{
         ...FONTS.h3,
         color:COLORS.gray40,
         paddingVertical:5,
+    },
+    errorMessage:{
+        ...FONTS.h3,
+        color:COLORS.secondary
     },
     passwordContainer:{
         borderBottomWidth:1,
@@ -134,6 +142,20 @@ const styles=(selectedTheme:any)=>StyleSheet.create({
     navigateButtonText:{
         color:COLORS.primary,
         ...FONTS.h3
+    },
+    fieldContainer:{
+        flexDirection:'row',
+        justifyContent:'space-between',
+        alignItems:'center',
+        borderBottomWidth:1,
+        borderColor:COLORS.gray40,
+    },
+    checkIcon:{
+        height:25,
+        width:25,
+        resizeMode:'contain',
     }
+       
+
 })
 export default styles;

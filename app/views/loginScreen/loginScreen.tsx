@@ -60,7 +60,10 @@ const LoginScreen = (props:InputProps)=>{
            <Text style={styles(selectedTheme).labelText}>{constants.keywords.userNameorEmail}</Text>
            {(emailError==true)&&<Text style={styles(selectedTheme).errorMessage}>{ErrorMessage.email}</Text>}
            </View>
+            <View style={styles(selectedTheme).fieldContainer}>
            <TextInput style ={styles(selectedTheme).inputField} onChangeText={(item)=>email.current=item}></TextInput>
+           {(emailError==false)&&<Image source={icons.checked} style={styles(selectedTheme).checkIcon} />}
+           </View>
            <Text style={styles(selectedTheme).labelText}>{constants.keywords.password}</Text>
            
            <View style={styles(selectedTheme).passwordContainer}>

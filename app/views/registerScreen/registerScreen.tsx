@@ -14,17 +14,41 @@ import {
     icons,
 
 } from '../../constants'
+import ErrorMessage from "../../config/errorMessage";
 
 interface InputProps {
     navigation: any,
     student:boolean,
     setStudent: (item: boolean) => void
+    email: React.MutableRefObject<string>,
+    subMit: () => void,
+    password: React.MutableRefObject<any>
+    emailError: any,
+    passwordError:any,
+    setRefresh: (item: boolean) => void
+    refersh: boolean,
+    hidePassword:boolean,
+    setHidePassword:(item:boolean)=>void,
+    username: React.MutableRefObject<any>,
+    userNameError: any
 }
 
 const LoginScreen = (props: InputProps) => {
     const { navigation,
         setStudent,
-        student
+        student,
+        email,
+    password,
+    username,
+    subMit,
+    emailError,
+    passwordError,
+    userNameError,
+    setRefresh,
+    refersh,
+    hidePassword,
+    setHidePassword,
+
     } = props
     return (
         <View style={styles(selectedTheme).container}>
@@ -78,19 +102,36 @@ const LoginScreen = (props: InputProps) => {
 
             </View>
             <View style={styles(selectedTheme).wrapperContainer}>
+                <View style={styles(selectedTheme).labelContainer}>
                 <Text style={styles(selectedTheme).labelText}>{constants.keywords.username}</Text>
-                <TextInput style={styles(selectedTheme).inputField}></TextInput>
+                {(userNameError==true)&&<Text style={styles(selectedTheme).errorMessage}>{ErrorMessage.userName}</Text>}
+                </View>
+                <View style={styles(selectedTheme).fieldContainer}>
+                <TextInput style={styles(selectedTheme).inputField} onChangeText={(item)=>username.current=item} ></TextInput>
+                {(userNameError==false)&&<Image source={icons.checked} style={styles(selectedTheme).checkIcon} />}
+                </View>
+                <View style={styles(selectedTheme).labelContainer}>
                 <Text style={styles(selectedTheme).labelText}>{constants.keywords.email}</Text>
-                <TextInput style={styles(selectedTheme).inputField}></TextInput>
+                {(emailError==true)&&<Text style={styles(selectedTheme).errorMessage}>{ErrorMessage.email}</Text>}
+                </View>
+                <View style={styles(selectedTheme).fieldContainer}>
+                <TextInput style={styles(selectedTheme).inputField} onChangeText={(item)=>email.current=item}></TextInput>
+                {(emailError==false)&&<Image source={icons.checked} style={styles(selectedTheme).checkIcon}/>}
+                </View>
                 <Text style={styles(selectedTheme).labelText}>{constants.keywords.password}</Text>
                 <View style={styles(selectedTheme).passwordContainer}>
-                    <TextInput style={styles(selectedTheme).passwordField}></TextInput>
-                    <TouchableOpacity>
-                        <Image source={icons.eye} style={styles(selectedTheme).icon} />
+                    <TextInput style={styles(selectedTheme).passwordField} 
+                      secureTextEntry={hidePassword}
+                    onChangeText={(item)=>password.current=item} ></TextInput>
+                    <TouchableOpacity onPress={()=>setHidePassword(!hidePassword)}>
+                    {(hidePassword)?<Image source={icons.eye_close} style={styles(selectedTheme).icon}/>:
+                <Image source={icons.eye} style={styles(selectedTheme).icon}/>}
                     </TouchableOpacity>
                 </View>
-
-                <TouchableOpacity style={styles(selectedTheme).button}>
+                {(passwordError==true)&&<Text style={styles(selectedTheme).errorMessage}>{ErrorMessage.passWord}</Text>}
+                <TouchableOpacity style={styles(selectedTheme).button}  
+                onPress={()=>{subMit(),setRefresh(refersh)}}
+                >
                     <Text style={styles(selectedTheme).buttonText}>{constants.keywords.createAccount}</Text>
                 </TouchableOpacity>
                 <Text style={styles(selectedTheme).labelText2}>{constants.keywords.orSignUpWith}</Text>

@@ -197,7 +197,7 @@ const FilterScreen=(props:InputProp)=>{
                                <Text style={styles(selectedTheme).buttonText}>{constants.keywords.reset}</Text>
                            </TouchableOpacity>
 
-                           <TouchableOpacity style={styles(selectedTheme).button2}>
+                           <TouchableOpacity style={styles(selectedTheme).button2} onPress={()=>setFilterOpen(false)}>
                                <Text style={styles(selectedTheme).buttonText2} >{constants.keywords.apply}</Text>
                            </TouchableOpacity>
                            </View> 

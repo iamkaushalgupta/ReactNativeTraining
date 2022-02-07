@@ -23,9 +23,9 @@ const styles=(selectedTheme:any)=>StyleSheet.create({
 
 
     inputField:{
-        borderBottomWidth:1,
-        borderColor:COLORS.gray40,
+       
         marginBottom:5,
+        width:'90%'
     },
     passwordField:{
         marginBottom:5,
@@ -111,6 +111,18 @@ const styles=(selectedTheme:any)=>StyleSheet.create({
     errorMessage:{
         ...FONTS.h3,
         color:COLORS.secondary
+    },
+    fieldContainer:{
+        flexDirection:'row',
+        justifyContent:'space-between',
+        alignItems:'center',
+        borderBottomWidth:1,
+        borderColor:COLORS.gray40,
+    },
+    checkIcon:{
+        height:25,
+        width:25,
+        resizeMode:'contain',
     }
 })
 export default styles;
