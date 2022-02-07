@@ -102,6 +102,15 @@ const styles=(selectedTheme:any)=>StyleSheet.create({
     navigateButtonText:{
         color:COLORS.primary,
         ...FONTS.h3
+    },
+    labelContainer:{
+        flexDirection:'row',
+        alignItems:'center',
+        justifyContent:'space-between'
+    },
+    errorMessage:{
+        ...FONTS.h3,
+        color:COLORS.secondary
     }
 })
 export default styles;

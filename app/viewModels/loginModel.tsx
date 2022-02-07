@@ -11,7 +11,8 @@ const LoginModel = (props: InputProps) => {
   const password =useRef<any | null>(null);
   const emailError =useRef<any | null>(null);
   const passwordError =useRef<any | null>(null);
-
+  const [refresh,setRefresh]=useState(false)
+  const [hidePassword,setHidePassword]=useState(true)
   React.useEffect(() => {
     const unsubscribe = navigation.addListener('focus', () => {
       setRender(!render);
@@ -26,6 +27,13 @@ const LoginModel = (props: InputProps) => {
       navigation.navigate('Walkthrough')
   }
 
-  return <LoginScreen navigation={navigation} email={email} password={password} subMit={subMit}/>;
+  return <LoginScreen navigation={navigation} email={email} password={password} subMit={subMit}  
+  emailError={emailError.current}
+  passwordError={passwordError.current}
+  refersh={refresh}
+  setRefresh={(item:boolean)=>setRefresh(!item)}
+  hidePassword={hidePassword}
+  setHidePassword={setHidePassword}
+  />;
 };
 export default LoginModel;

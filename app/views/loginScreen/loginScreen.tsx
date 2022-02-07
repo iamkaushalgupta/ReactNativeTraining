@@ -15,21 +15,33 @@ import {
     images,
     icons,
 } from '../../constants'
+import ErrorMessage from "../../config/errorMessage";
 
 interface InputProps{
     navigation:any,
     email: React.MutableRefObject<string>,
     subMit: () => void,
     password: React.MutableRefObject<any>
+    emailError: any,
+    passwordError:any,
+    setRefresh: (item: boolean) => void
+    refersh: boolean,
+    hidePassword:boolean,
+    setHidePassword:(item:boolean)=>void
 }
 
 const LoginScreen = (props:InputProps)=>{
     const {navigation,
         email,
     password,
-    subMit
+    subMit,
+    emailError,
+    passwordError,
+    setRefresh,
+    refersh,
+    hidePassword,
+    setHidePassword
     } =props
-    const [render,setRender]=useState(false)
     return(
         <View  style ={styles(selectedTheme).container}>
         <StatusBar animated={true} 
@@ -44,23 +56,30 @@ const LoginScreen = (props:InputProps)=>{
             <Text style={styles(selectedTheme).heading}>{constants.screens.login}</Text>
             </ImageBackground>
            <View style={styles(selectedTheme).wrapperContainer}>
+           <View style={styles(selectedTheme).labelContainer}>
            <Text style={styles(selectedTheme).labelText}>{constants.keywords.userNameorEmail}</Text>
+           {(emailError==true)&&<Text style={styles(selectedTheme).errorMessage}>{ErrorMessage.email}</Text>}
+           </View>
            <TextInput style ={styles(selectedTheme).inputField} onChangeText={(item)=>email.current=item}></TextInput>
            <Text style={styles(selectedTheme).labelText}>{constants.keywords.password}</Text>
            
            <View style={styles(selectedTheme).passwordContainer}>
            <TextInput style ={styles(selectedTheme).passwordField}
            onChangeText={(item)=>password.current=item}
+            secureTextEntry={hidePassword}
            ></TextInput>
-            <TouchableOpacity>
-                <Image source={icons.eye} style={styles(selectedTheme).icon}/>
+            <TouchableOpacity onPress={()=>setHidePassword(!hidePassword)}>
+                {(hidePassword)?<Image source={icons.eye_close} style={styles(selectedTheme).icon}/>:
+                <Image source={icons.eye} style={styles(selectedTheme).icon}/>}
             </TouchableOpacity>
            </View>
+         { (passwordError==true)&&<Text style={styles(selectedTheme).errorMessage}>{ErrorMessage.passWord}</Text>}
            
            <TouchableOpacity style={styles(selectedTheme).button} 
            onPress={()=>{
-            subMit()
-            }}
+            subMit(),
+            setRefresh(refersh)
+        }}
                >
                <Text style={styles(selectedTheme).buttonText}>{constants.keywords.LOGIN}</Text>
            </TouchableOpacity>  
