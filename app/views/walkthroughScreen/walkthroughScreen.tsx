@@ -37,8 +37,6 @@ const WalkthroughScreen =(props:InputProps)=>{
         />}
         ref={flatref}
         />
-
-
         </View>
     );
 }

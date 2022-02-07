@@ -204,7 +204,7 @@ const styles = (selectedTheme:any)=>StyleSheet.create({
         justifyContent:'space-between',
         borderBottomWidth:1,
         borderColor:selectedTheme.lineDivider,
-        paddingBottom:5
+        paddingVertical:5
     },
     checkIcon:{
         height:25,
