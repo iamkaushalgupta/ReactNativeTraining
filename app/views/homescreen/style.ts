@@ -36,7 +36,7 @@ const styles=(selectedTheme:any)=>StyleSheet.create({
         },
         startLearningImage:{
             marginTop:10,
-            alignSelf:'flex-end'
+            alignSelf:'center'
         },
 
         notificationIcon:{
@@ -218,6 +218,17 @@ const styles=(selectedTheme:any)=>StyleSheet.create({
             ...FONTS.h4,
             paddingLeft:5,
             color:selectedTheme.textColor
+        },
+        startLearningButton:{
+            paddingHorizontal:15,
+            paddingVertical:5,
+            backgroundColor:COLORS.white,
+            alignSelf:'flex-start',
+            borderRadius:15,
+        },
+        startLearningText:{
+            ...FONTS.h3,
+            color:COLORS.black
         }
     }
 )

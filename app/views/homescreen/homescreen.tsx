@@ -60,6 +60,11 @@ const HomeScreen = (props: InputProp) => {
                                     <Text style={styles(selectedTheme).bytText}>{constants.keywords.By} {constants.keywords.KaushalGupta}</Text>
                                     
                                     <Image source={images.start_learning} style={styles(selectedTheme).startLearningImage}/>
+
+                                    <TouchableOpacity style={styles(selectedTheme).startLearningButton}>
+                                        <Text style={styles(selectedTheme).startLearningText}>{constants.keywords.startLearning}</Text>
+                                    </TouchableOpacity>
+           
                                 </ImageBackground>
 
                                 <View style={styles(selectedTheme).render1FlatList}>
