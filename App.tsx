@@ -10,10 +10,11 @@ import UseFocusEffect from "./app/views/focussEffects/useFocusEffect";
 import UseIsFocused from "./app/views/focussEffects/useisFocusEffect";
 import Focus from "./app/views/focussEffects/focus";
 import NavigationTask from "./app/views/navigationTask/navigationTask";
+import CustomRefreshInFlatList from './app/views/customRefreshInFlatList/customRefersh' 
 const App=()=>
 {
   return(
-    <NavigationTask/>
+    <CustomRefreshInFlatList/>
   );
 }
 
