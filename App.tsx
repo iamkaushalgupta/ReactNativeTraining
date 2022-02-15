@@ -14,11 +14,12 @@ import CustomRefreshInFlatList from './app/views/customRefreshInFlatList/customR
 import AddressPick from "./app/views/addressPick/addressPick";
 // import HeaderComponent from "./app/views/simpleComponent";
 import SimpleComponent from "kaushal_simple_component";
+import Apperance_demo from "./app/views/apperance/apperance";
 import AlertDemo from "./app/views/alerts/alert";
 const App=()=>
 {
   return(
-    <AlertDemo/>
+    <Apperance_demo/>
     );
 }
 
