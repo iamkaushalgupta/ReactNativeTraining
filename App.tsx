@@ -14,10 +14,11 @@ import CustomRefreshInFlatList from './app/views/customRefreshInFlatList/customR
 import AddressPick from "./app/views/addressPick/addressPick";
 // import HeaderComponent from "./app/views/simpleComponent";
 import SimpleComponent from "kaushal_simple_component";
+import AlertDemo from "./app/views/alerts/alert";
 const App=()=>
 {
   return(
-    <AddressPick/>
+    <AlertDemo/>
     );
 }
 
