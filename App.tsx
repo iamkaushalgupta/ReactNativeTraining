@@ -16,10 +16,11 @@ import AddressPick from "./app/views/addressPick/addressPick";
 import SimpleComponent from "kaushal_simple_component";
 import Apperance_demo from "./app/views/apperance/apperance";
 import AlertDemo from "./app/views/alerts/alert";
+import Dimension_Demo from "./app/views/dimensions/dimensions";
 const App=()=>
 {
   return(
-    <Apperance_demo/>
+    <Dimension_Demo/>
     );
 }
 
