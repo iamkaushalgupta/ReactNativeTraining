@@ -48,7 +48,7 @@ const CustomRefreshInFlatList = ()=>{
             style={{marginTop:(isFetching.current==true)?100:0}}
         data={lists}
         refreshControl={<RefreshControl refreshing={isFetching.current} onRefresh={onRefresh} children={()=>{return(<Text>hello</Text>)}} />}
-        //  onRefresh={onRefresh}
+        //  onRefresh={onRefresh}1
         refreshing={isFetching.current}
         renderItem={({item,index})=>{
             return(

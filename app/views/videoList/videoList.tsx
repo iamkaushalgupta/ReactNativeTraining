@@ -34,9 +34,8 @@ const VideoList=()=>{
     })
     // Use viewable items in state or as intended
 })
-console.log( )
 
-const viewConfigRef = React.useRef({ viewAreaCoveragePercentThreshold: 100 })
+const viewConfigRef = React.useRef({ viewAreaCoveragePercentThreshold: 50 })
 
   return(
     <View>
