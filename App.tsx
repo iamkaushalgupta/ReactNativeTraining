@@ -17,10 +17,11 @@ import SimpleComponent from "kaushal_simple_component";
 import Apperance_demo from "./app/views/apperance/apperance";
 import AlertDemo from "./app/views/alerts/alert";
 import Dimension_Demo from "./app/views/dimensions/dimensions";
+import Vibration_demo from "./app/views/vibrations/vibrations";
 const App=()=>
 {
   return(
-    <Dimension_Demo/>
+    <AlertDemo/>
     );
 }
 

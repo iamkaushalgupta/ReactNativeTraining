@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import {View,Text,Appearance} from 'react-native';
+
 const Apperance_demo = ()=>{
     //For Android
     //The color scheme preference will map to the
