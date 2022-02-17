@@ -18,10 +18,11 @@ import Apperance_demo from "./app/views/apperance/apperance";
 import AlertDemo from "./app/views/alerts/alert";
 import Dimension_Demo from "./app/views/dimensions/dimensions";
 import Vibration_demo from "./app/views/vibrations/vibrations";
+import Keyboard_demo from "./app/views/keyboard/keyboard";
 const App=()=>
 {
   return(
-    <AlertDemo/>
+    <Keyboard_demo/>
     );
 }
 
