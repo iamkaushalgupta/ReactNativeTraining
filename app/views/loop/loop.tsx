@@ -8,7 +8,7 @@ const Loop_demo =()=>{
               Animated.timing(animationDemo, {
              toValue: 285,
              duration: 2000,
-            useNativeDriver: true
+            useNativeDriver: false
            }),
             {
               iterations: 10
