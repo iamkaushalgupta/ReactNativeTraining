@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from "react";
-import {View, Text, Animated } from 'react-native';
+import {View, Animated } from 'react-native';
 
 const Interpolation_demo = ()=>{
     const animationDemo = new Animated.Value(0)

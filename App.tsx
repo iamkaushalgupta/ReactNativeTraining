@@ -7,10 +7,11 @@ import FadeInOutOnPress from "./app/views/fadeInOutOnPress/fadeInOutOnPress";
 import Interpolation_demo from "./app/views/interpolation/interpolation";
 import Loop_demo from "./app/views/loop/loop";
 import Sequence_demo from "./app/views/seqence/sequence";
+import Parellel_demo from "./app/views/parallel/parallel";
 const App=()=>
 {
   return(
-    <Sequence_demo/>
+    <Parellel_demo/>
   );
 }
 

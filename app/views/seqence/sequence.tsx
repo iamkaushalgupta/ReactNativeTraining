@@ -14,7 +14,9 @@ const Sequence_demo =()=>{
                 toValue: 10,
                 duration:2000,
                 useNativeDriver: false
-            }), ]
+            }), 
+        
+        ]
           ).start()
     },[])
     return(
