@@ -13,6 +13,13 @@ const Interpolation_demo = ()=>{
 }).start()
     },[])
 
+    let backgroundColorD = () => {
+                 return animationDemo.interpolate({
+                        inputRange:[0,100,180,285,],
+                        outputRange:['red','green','yellow','blue']
+                    })
+                
+    }
     return(
         <View style={{flex:1, justifyContent:'center'}}>
                 <Animated.View 
@@ -20,10 +27,11 @@ const Interpolation_demo = ()=>{
                     height:100,
                     width:100,
                     borderRadius:90,
-                    backgroundColor:animationDemo.interpolate({
-                        inputRange:[0,100,180,285,],
-                        outputRange:['red','green','yellow','blue']
-                    }),
+                    backgroundColor: backgroundColorD(),
+                    // animationDemo.interpolate({
+                    //     inputRange:[0,100,180,285,],
+                    //     outputRange:['red','green','yellow','blue']
+                    // }),
 
                     transform: [
                         { translateX: animationDemo },

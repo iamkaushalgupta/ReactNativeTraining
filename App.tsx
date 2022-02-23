@@ -9,10 +9,12 @@ import Loop_demo from "./app/views/loop/loop";
 import Sequence_demo from "./app/views/seqence/sequence";
 import Parellel_demo from "./app/views/parallel/parallel";
 import Stagger_demo from "./app/views/stagger/stagger";
+import AddListner_demo from "./app/views/addListner/addListner";
+
 const App=()=>
 {
   return(
-    <Stagger_demo/>
+    <Interpolation_demo/>
   );
 }
 

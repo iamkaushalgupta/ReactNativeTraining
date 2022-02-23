@@ -1,15 +1,17 @@
 import React, { useRef } from "react";
 import { Animated, Text, View, StyleSheet, Button, SafeAreaView } from "react-native";
 
-const Parellel_demo = () => {
+const AddListner_demo = () => {
   // fadeAnim will be used as the value for opacity. Initial Value: 0
    const fadeAnim = useRef(new Animated.Value(0)).current; // 0 to 1 and 1 to 0
    const fadeAnim1 = useRef(new Animated.Value(1)).current;
     
    const perform=()=>{
        
-    fadeAnim.setValue(0)
-    fadeAnim1.setValue(1)
+    fadeAnim.addListener((value)=> {
+        console.log(value)
+    })
+
     Animated.parallel([
         Animated.timing(fadeAnim, {
             toValue: 1,
@@ -23,7 +25,6 @@ const Parellel_demo = () => {
         })
     ]).start();
     
-   
    }
    
   return (
@@ -76,4 +77,4 @@ const styles = StyleSheet.create({
   }
 });
 
-export default Parellel_demo;
+export default AddListner_demo;
