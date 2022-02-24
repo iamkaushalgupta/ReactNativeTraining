@@ -19,10 +19,11 @@ import AlertDemo from "./app/views/alerts/alert";
 import Dimension_Demo from "./app/views/dimensions/dimensions";
 import Vibration_demo from "./app/views/vibrations/vibrations";
 import Keyboard_demo from "./app/views/keyboard/keyboard";
-const App=()=>
-{
+import Composition from "./app/views/compositions";
+import CModel from "./app/views/compositions/CModel";
+const App=()=>{
   return(
-    <Keyboard_demo/>
+    <CModel/>
     );
 }
 
