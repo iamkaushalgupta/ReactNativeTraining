@@ -18,7 +18,7 @@ const MainStack =()=>
 {
     return(
         <NavigationContainer>
-        <Stack.Navigator initialRouteName="Demo">
+        <Stack.Navigator initialRouteName="Home">
             <Stack.Screen name ="Home" component={HomeModel}></Stack.Screen>
             <Stack.Screen name ="Demo" component={TestModel}></Stack.Screen>
             <Stack.Screen name= "Profile" component={ProfileModel}></Stack.Screen>

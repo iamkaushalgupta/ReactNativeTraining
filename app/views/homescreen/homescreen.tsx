@@ -1,5 +1,6 @@
 import React from "react";
 import { Button, Text, View } from 'react-native';
+import HomeMapScreen from "../homeMapScreen/homeMapScreen";
 import styles from './style'
 
 interface homeProp{
@@ -10,10 +11,11 @@ const HomeScreen = (props:homeProp) => {
  console.log()
     return (
         <View style={styles.container}>
+            <HomeMapScreen/>
             <Text>
                 Home Screen
             </Text>
-            <Button title="Profile" onPress={() => navigation.navigate("Profile")}></Button>
+
         </View>
     );
 }
