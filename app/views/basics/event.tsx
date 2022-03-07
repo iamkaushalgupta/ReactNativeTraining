@@ -1,9 +1,8 @@
 import React, { useRef } from "react";
-import { Animated, PanResponder, StyleSheet, View } from "react-native";
-
+import { Animated, Dimensions, ImageBackground, PanResponder, StyleSheet, Text, View } from "react-native";
+let {height,width} =Dimensions.get('window')
 const Event_animation = () => {
   const pan = useRef(new Animated.ValueXY()).current;
-
   const panResponder = PanResponder.create({
     onStartShouldSetPanResponder: () => true,
     onPanResponderMove: Animated.event([
@@ -12,26 +11,32 @@ const Event_animation = () => {
         dx: pan.x, // x,y are Animated.Value
         dy: pan.y,
       },
-    ]),
+      
+    ],{useNativeDriver:false}),
     onPanResponderRelease: () => {
       Animated.spring(
         pan, // Auto-multiplexed
         {
-    toValue: { x: 0, y: 0 },
-    useNativeDriver: true
+  toValue: { x: 0, y: 0 },
+  useNativeDriver: false
 } // Back to zero
-         
       ).start();
     },
   });
 
   return (
+    <ImageBackground source={require('../../assets/backgroundImage.jpg')} 
+        style={{flex:1,
+            padding:10,}}
+            imageStyle={{height:height,width:width}}>
     <View style={styles.container}>
+      <Text style={{color:'white',fontSize:24}}> Event Animation</Text>
       <Animated.View
         {...panResponder.panHandlers}
-        style={[ styles.box]}
+        style={[pan.getLayout(), styles.box]}
       />
     </View>
+    </ImageBackground>
   );
 };
 

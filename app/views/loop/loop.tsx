@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
-import {Text,View,Animated} from 'react-native'
-
+import {Text,View,Animated, ImageBackground, Dimensions} from 'react-native'
+let {height,width} = Dimensions.get('window')
 const Loop_demo =()=>{
     const animationDemo = new Animated.Value(0);
     useEffect(()=>{
@@ -16,7 +16,13 @@ const Loop_demo =()=>{
           ).start()
     },[])
     return(
-        <View style={{flex:1, justifyContent:'center'}}>
+        <ImageBackground source={require('../../assets/backgroundImage.jpg')} 
+        style={{flex:1,
+            padding:10,}}
+            imageStyle={{height:height,width:width}}>
+
+        <View style={{flex:1}}>
+        <Text style={{color:'white',fontSize:24,textAlign:'center'}}>Loop In Animation</Text>
         <Animated.View 
         style={{
             height:100,
@@ -56,6 +62,7 @@ const Loop_demo =()=>{
 
         </Animated.View>
 </View>
+</ImageBackground>
     )
 }
 export default Loop_demo;

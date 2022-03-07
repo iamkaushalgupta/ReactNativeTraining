@@ -1,6 +1,7 @@
 import React, {useEffect} from "react";
-import { Text, View,Animated } from "react-native";
+import { Text, View,Animated, ImageBackground,Dimensions } from "react-native";
 
+let {height,width} =Dimensions.get('window')
 const Spring_animation = ()=>{
     const positon = new Animated.ValueXY({x:0,y:0})
 
@@ -11,13 +12,21 @@ const Spring_animation = ()=>{
     Animated.spring(positon,{
     toValue: { x: 300, y: 400 },
     // friction:9,
-    speed:10,
+    // tension:3,
+    speed:1,
     bounciness:20,
     useNativeDriver: false,
 
 }).start()
     return(
-        <View style={{flex:1}}>
+        <ImageBackground source={require('../../assets/backgroundImage.jpg')} 
+    style={        {flex:1,
+    
+        padding:10,}}
+        
+        imageStyle={{height:height,width:width}}>
+        <View style={{flex:1,}}>
+<Text style={{color:'white',fontSize:24,textAlign:'center'}}> Spring Animation</Text>
             <Animated.View style={{
                 height:100,
                 width:100,
@@ -29,10 +38,11 @@ const Spring_animation = ()=>{
                 ],
                 backgroundColor:'red'
             }}>
-                <Text>kaushal</Text>
+                <Text style={{color:'white'}}  >Successive Technologies</Text>
             </Animated.View>
 
         </View>
+        </ImageBackground>
     )
 
 }

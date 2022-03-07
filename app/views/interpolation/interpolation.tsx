@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from "react";
-import {View, Animated } from 'react-native';
+import {View, Animated, Text, ImageBackground, Dimensions } from 'react-native';
 
+let {height,width} =Dimensions.get('window')
 const Interpolation_demo = ()=>{
     const animationDemo = new Animated.Value(0)
     
@@ -21,18 +22,19 @@ const Interpolation_demo = ()=>{
                 
     }
     return(
-        <View style={{flex:1, justifyContent:'center'}}>
-                <Animated.View 
+        <ImageBackground source={require('../../assets/backgroundImage.jpg')} 
+        style={{flex:1,
+            padding:10,}}
+            imageStyle={{height:height,width:width}}>
+
+        <View style={{flex:1,padding:10,}}>
+               <Text style={{color:'white',fontSize:24,textAlign:'center'}}>InterPolation Animation</Text>
+                               <Animated.View 
                 style={{
                     height:100,
                     width:100,
                     borderRadius:90,
                     backgroundColor: backgroundColorD(),
-                    // animationDemo.interpolate({
-                    //     inputRange:[0,100,180,285,],
-                    //     outputRange:['red','green','yellow','blue']
-                    // }),
-
                     transform: [
                         { translateX: animationDemo },
                         { translateY: animationDemo.interpolate({
@@ -62,6 +64,7 @@ const Interpolation_demo = ()=>{
 
                 </Animated.View>
         </View>
+        </ImageBackground>
     )
 
 }

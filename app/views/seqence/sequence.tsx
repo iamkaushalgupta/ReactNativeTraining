@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
-import {Text,View,Animated} from 'react-native'
-
+import {Text,View,Animated, ImageBackground,Dimensions} from 'react-native'
+let {height,width} = Dimensions.get('window')
 const Sequence_demo =()=>{
     const animationDemo = new Animated.Value(0);
     useEffect(()=>{
@@ -20,7 +20,12 @@ const Sequence_demo =()=>{
           ).start()
     },[])
     return(
-        <View style={{flex:1, justifyContent:'center'}}>
+        <ImageBackground source={require('../../assets/backgroundImage.jpg')} 
+        style={{flex:1,
+            padding:10,}}
+            imageStyle={{height:height,width:width}}>
+        <View style={{flex:1}}>
+        <Text style={{color:'white',fontSize:24,textAlign:'center'}}>Sequence Animation</Text>
         <Animated.View 
             style={{
             height:100,
@@ -60,6 +65,7 @@ const Sequence_demo =()=>{
 
         </Animated.View>
     </View>
+    </ImageBackground>
     )
 }
 export default Sequence_demo;

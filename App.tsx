@@ -14,7 +14,7 @@ import AddListner_demo from "./app/views/addListner/addListner";
 const App=()=>
 {
   return(
-    <Interpolation_demo/>
+    <MainStack/>
   );
 }
 
