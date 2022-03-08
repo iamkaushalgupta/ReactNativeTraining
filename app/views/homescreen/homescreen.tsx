@@ -1,20 +1,18 @@
 import React from "react";
-import { Button, Text, View } from 'react-native';
+import { Button, Text, View, SafeAreaView } from 'react-native';
 import styles from './style'
+import ChatBot from '../Chatbot/index';
 
 interface homeProp{
     navigation: any
 }
 const HomeScreen = (props:homeProp) => {
  const {navigation} = props;
- console.log()
     return (
-        <View style={styles.container}>
-            <Text>
-                Home Screen
-            </Text>
-            <Button title="Profile" onPress={() => navigation.navigate("Profile")}></Button>
-        </View>
+
+        <SafeAreaView>
+        <ChatBot />
+      </SafeAreaView>
     );
 }
 export default HomeScreen;
