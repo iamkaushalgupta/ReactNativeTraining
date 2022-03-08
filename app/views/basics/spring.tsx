@@ -1,8 +1,8 @@
 import React, {useEffect} from "react";
-import { Text, View,Animated, ImageBackground,Dimensions } from "react-native";
+import { Text, View,Animated,Image, ImageBackground,Dimensions, TouchableOpacity } from "react-native";
 
 let {height,width} =Dimensions.get('window')
-const Spring_animation = ()=>{
+const Spring_animation = ({navigation}:any)=>{
     const positon = new Animated.ValueXY({x:0,y:0})
 
 //friction: Controls "bounciness"/overshoot. Default 7.
@@ -10,7 +10,7 @@ const Spring_animation = ()=>{
 // speed: Controls speed of the animation. Default 12.
 // bounciness: Controls bounciness. Default 8.
     Animated.spring(positon,{
-    toValue: { x: 300, y: 400 },
+    toValue: { x: 290, y: 400 },
     // friction:9,
     // tension:3,
     speed:1,
@@ -20,13 +20,24 @@ const Spring_animation = ()=>{
 }).start()
     return(
         <ImageBackground source={require('../../assets/backgroundImage.jpg')} 
-    style={        {flex:1,
-    
+    style={{flex:1,
         padding:10,}}
         
         imageStyle={{height:height,width:width}}>
         <View style={{flex:1,}}>
-<Text style={{color:'white',fontSize:24,textAlign:'center'}}> Spring Animation</Text>
+            <View style = {{flexDirection:'row',justifyContent:'space-between',alignItems:'center'}}>
+                <View style={{height:40,width:40}}>
+             <TouchableOpacity onPress={()=>navigation.goBack()}>
+                    <Image source={require('../../assets/back.png')} style={{height:40,width:40,tintColor:'white'}} />
+                 </TouchableOpacity>
+                 </View>
+
+            <Text style={{color:'white',fontSize:24,textAlign:'center'}}> Spring Animation</Text>
+            <View style={{height:40,width:40}}>
+
+            </View>
+            </View>
+
             <Animated.View style={{
                 height:100,
                 width:100,

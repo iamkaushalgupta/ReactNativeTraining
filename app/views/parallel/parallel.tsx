@@ -1,8 +1,8 @@
 import React, { useRef } from "react";
-import { Animated, Text, View, StyleSheet, Button, SafeAreaView, TouchableOpacity, ImageBackground, Dimensions } from "react-native";
+import { Animated, Text, View, StyleSheet, Button, SafeAreaView, TouchableOpacity, ImageBackground, Dimensions, Image } from "react-native";
 
 let {height,width} = Dimensions.get('window')
-const Parellel_demo = () => {
+const Parellel_demo = ({navigation}:any) => {
   // fadeAnim will be used as the value for opacity. Initial Value: 0
    const fadeAnim = useRef(new Animated.Value(0)).current; // 0 to 1 and 1 to 0
    const fadeAnim1 = useRef(new Animated.Value(1)).current;
@@ -33,7 +33,20 @@ const Parellel_demo = () => {
             padding:10,}}
             imageStyle={{height:height,width:width}}>
 
-      <Text style={{color:'white',fontSize:24}}> Parallel Animation</Text>
+<View style = {{flexDirection:'row',justifyContent:'space-between',alignItems:'center'}}>
+                <View style={{height:40,width:40}}>
+             <TouchableOpacity onPress={()=>navigation.goBack()}>
+                    <Image source={require('../../assets/back.png')} style={{height:40,width:40,tintColor:'white'}} />
+                 </TouchableOpacity>
+                 </View>
+
+            <Text style={{color:'white',fontSize:24,textAlign:'center'}}>Parallel Animation</Text>
+            <View style={{height:40,width:40}}>
+
+            </View>
+            </View>
+
+        <View style={{flex:1,alignItems:'center',justifyContent:'center'}}> 
       <Animated.View
         style={[
           styles.fadingContainer,
@@ -57,10 +70,10 @@ const Parellel_demo = () => {
         <Text style={styles.fadingText}>Fading View!</Text>
       </Animated.View>
       <View style={styles.buttonRow}>
-        <TouchableOpacity style={{padding:10,backgroundColor:'lightpink',borderRadius:20,alignItems:'center',justifyContent:'center'}} onPress={()=>perform()} >
-          <Text style={{color:'black',fontSize:18,alignItems:'center',justifyContent:'center'}} >Fade In View</Text>
+        <TouchableOpacity style={{paddingHorizontal:20,paddingVertical:10,backgroundColor:'steelblue',borderRadius:20,alignItems:'center',justifyContent:'center'}} onPress={()=>perform()} >
+          <Text style={{color:'white',fontSize:18,alignItems:'center',justifyContent:'center'}} >Click me</Text>
         </TouchableOpacity>
-        
+        </View>
       </View>
         </ImageBackground>
     );
@@ -75,10 +88,11 @@ const styles = StyleSheet.create({
   },
   fadingContainer: {
     padding: 20,
-    backgroundColor: "powderblue"
+    backgroundColor: "red"
   },
   fadingText: {
-    fontSize: 28
+    fontSize: 28,
+    color:'white'
   },
   buttonRow: {
     flexBasis: 100,

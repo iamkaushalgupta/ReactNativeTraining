@@ -1,8 +1,8 @@
 import React, {useEffect} from "react";
-import { Text, View,Animated, ImageBackground,Dimensions } from "react-native";
+import { Text, View,Animated, ImageBackground,Dimensions, TouchableOpacity, Image } from "react-native";
 
 let {height,width} = Dimensions.get('window')
-const Decay_animation = ()=>{
+const Decay_animation = ({navigation}:any)=>{
     const positon = new Animated.ValueXY({x:0,y:0})
     Animated.decay(positon, {
     velocity: 0.5,
@@ -19,7 +19,18 @@ const Decay_animation = ()=>{
             
             imageStyle={{height:height,width:width}}>
         <View style={{flex:1,padding:10}}>
-            <Text style={{color:'white',fontSize:24,textAlign:'center'}}> Decay Animation</Text>
+        <View style = {{flexDirection:'row',justifyContent:'space-between',alignItems:'center'}}>
+                <View style={{height:40,width:40}}>
+             <TouchableOpacity onPress={()=>navigation.goBack()}>
+                    <Image source={require('../../assets/back.png')} style={{height:40,width:40,tintColor:'white'}} />
+                 </TouchableOpacity>
+                 </View>
+
+            <Text style={{color:'white',fontSize:24,textAlign:'center'}}>Decay Animation</Text>
+            <View style={{height:40,width:40}}>
+
+            </View>
+            </View>
             <Animated.View style={{
                 height:100,
                 width:100,

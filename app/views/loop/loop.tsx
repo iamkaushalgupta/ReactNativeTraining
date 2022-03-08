@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
-import {Text,View,Animated, ImageBackground, Dimensions} from 'react-native'
+import {Text,View,Animated, ImageBackground, Dimensions, TouchableOpacity, Image} from 'react-native'
 let {height,width} = Dimensions.get('window')
-const Loop_demo =()=>{
+const Loop_demo =({navigation}:any)=>{
     const animationDemo = new Animated.Value(0);
     useEffect(()=>{
         Animated.loop(
@@ -22,7 +22,18 @@ const Loop_demo =()=>{
             imageStyle={{height:height,width:width}}>
 
         <View style={{flex:1}}>
-        <Text style={{color:'white',fontSize:24,textAlign:'center'}}>Loop In Animation</Text>
+        <View style = {{flexDirection:'row',justifyContent:'space-between',alignItems:'center'}}>
+                <View style={{height:40,width:40}}>
+             <TouchableOpacity onPress={()=>navigation.goBack()}>
+                    <Image source={require('../../assets/back.png')} style={{height:40,width:40,tintColor:'white'}} />
+                 </TouchableOpacity>
+                 </View>
+
+            <Text style={{color:'white',fontSize:24,textAlign:'center'}}>Loop in Animation</Text>
+            <View style={{height:40,width:40}}>
+
+            </View>
+            </View>
         <Animated.View 
         style={{
             height:100,
@@ -30,7 +41,7 @@ const Loop_demo =()=>{
             borderRadius:90,
             backgroundColor:animationDemo.interpolate({
                 inputRange:[0,100,180,285,],
-                outputRange:['red','green','yellow','blue']
+                outputRange:['red','green','yellow','red']
             }),
 
             transform: [

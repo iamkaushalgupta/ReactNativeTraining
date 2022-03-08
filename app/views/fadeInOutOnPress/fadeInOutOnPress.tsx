@@ -1,7 +1,7 @@
 import React, { useRef } from "react";
-import { Animated, Text, View, StyleSheet, Button, SafeAreaView, TouchableOpacity, ImageBackground,Dimensions } from "react-native";
+import { Animated, Text, View, StyleSheet, Button, SafeAreaView, TouchableOpacity, ImageBackground,Dimensions, Image } from "react-native";
 let {height,width} = Dimensions.get('window')
-const FadeInOutOnPress = () => {
+const FadeInOutOnPress = ({navigation}:any) => {
   // fadeAnim will be used as the value for opacity. Initial Value: 0
   const fadeAnim = useRef(new Animated.Value(0)).current;
 
@@ -28,7 +28,20 @@ const FadeInOutOnPress = () => {
         style={{flex:1,
             padding:10,}}
             imageStyle={{height:height,width:width}}>
+        <View style = {{flexDirection:'row',justifyContent:'space-between',alignItems:'center'}}>
+                <View style={{height:40,width:40}}>
+             <TouchableOpacity onPress={()=>navigation.goBack()}>
+                    <Image source={require('../../assets/back.png')} style={{height:40,width:40,tintColor:'white'}} />
+                 </TouchableOpacity>
+                 </View>
 
+            <Text style={{color:'white',fontSize:24,textAlign:'center'}}>FadeIn FadeOut Animation</Text>
+            <View style={{height:40,width:40}}>
+
+            </View>
+            </View>
+
+          <View style={{flex:1,alignItems:'center',justifyContent:'center'}}>
       <Animated.View
         style={[
           styles.fadingContainer,
@@ -42,12 +55,14 @@ const FadeInOutOnPress = () => {
       </Animated.View>
       <View style={styles.buttonRow}>
 
-        <TouchableOpacity onPress={()=>fadeIn()} style={{padding:10,backgroundColor:'lightpink',alignItems:'center',justifyContent:'center'}} >
-          <Text style={{color:'black',fontSize:18,}} >Fade In View</Text>
+        <TouchableOpacity onPress={()=>fadeIn()} style={
+          {padding:10,borderRadius:10,backgroundColor:'steelblue',alignItems:'center',justifyContent:'center'}} >
+          <Text style={{color:'white',fontSize:18,}} >Fade In View</Text>
         </TouchableOpacity>
-        <TouchableOpacity onPress={()=>fadeOut()} style={{padding:10,backgroundColor:'lightpink',alignItems:'center',justifyContent:'center'}} >
-          <Text style={{color:'black',fontSize:18,}} >Fade Out View</Text>
+        <TouchableOpacity onPress={()=>fadeOut()} style={{padding:10,borderRadius:10,backgroundColor:'steelblue',alignItems:'center',justifyContent:'center'}} >
+          <Text style={{color:'white',fontSize:18,}} >Fade Out View</Text>
         </TouchableOpacity>
+        </View>
       </View>
       </ImageBackground>
   );
@@ -62,9 +77,10 @@ const styles = StyleSheet.create({
   },
   fadingContainer: {
     padding: 20,
-    backgroundColor: "powderblue"
+    backgroundColor: "red"
   },
   fadingText: {
+    color:'white',
     fontSize: 28,
     textAlign:'center'
   },
