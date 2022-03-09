@@ -10,6 +10,11 @@ const styles=StyleSheet.create(
             alignItems:'center',
             alignContent:'center',
             flex:1
+        },
+        headText:{
+            color:'black',
+            textAlign:'center',
+            // fontSize:24,
         }
     }
 )

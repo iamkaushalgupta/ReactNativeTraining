@@ -1,5 +1,5 @@
 import React from "react";
-import { Button, Text, View, SafeAreaView } from 'react-native';
+import { Button, Text, View, SafeAreaView, ImageBackground } from 'react-native';
 import styles from './style'
 import ChatBot from '../Chatbot/index';
 
@@ -11,7 +11,9 @@ const HomeScreen = (props:homeProp) => {
     return (
 
         <SafeAreaView>
+          {/* <Text style={styles.headText}>Chat Bot</Text> */}
         <ChatBot />
+        
       </SafeAreaView>
     );
 }

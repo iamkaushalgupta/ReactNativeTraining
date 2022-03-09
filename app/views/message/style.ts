@@ -18,10 +18,11 @@ const styles  = StyleSheet.create({
       incomingMsgText: {color: Colors.black, fontSize: 16},
     
       sentMsgBox: {
-        backgroundColor: Colors.green,
+        backgroundColor: Colors.blue,
         maxWidth: '70%',
         borderRadius: 10,
         padding: 5,
+        paddingHorizontal:10,
         alignSelf: 'flex-end',
         marginVertical: 5,
         marginHorizontal: 5,

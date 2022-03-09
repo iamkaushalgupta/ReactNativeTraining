@@ -8,15 +8,15 @@ import {
   KeyboardAvoidingView,
   Platform,
 } from 'react-native';
-import styles from './styles';
+import styles from './style';
 import Msg from '../message/message';
 
 import { data } from '../../constants';
 
-let chats: [] ;
+let chats=[{}] ;
 const ChatBot = () => {
   const [msg, setMsg] = useState('');
-  const [chatList, setChatList] = useState([]);
+  const [chatList, setChatList] = useState<any>([{}]);
 
   const getAnswer = (q: string) => {
     for (let i = 0; i < data.length; i++) {
@@ -47,7 +47,7 @@ const ChatBot = () => {
   return (
     <View>
       <FlatList
-        style={{height: '87%', bottom: '3%'}}
+        style={{height: '87%',}}
         inverted={true}
         keyExtractor={(_, index) => index.toString()}
         data={chatList}
@@ -67,10 +67,10 @@ const ChatBot = () => {
           onChangeText={val => setMsg(val)}
         />
         <TouchableOpacity
-          style={[styles.sendBtn, {backgroundColor: msg ? 'orange' : 'grey'}]}
+          style={[styles.sendBtn, {backgroundColor: msg ? '#0047AB' : 'grey'}]}
           disabled={msg ? false : true}
           onPress={() => onSendMsg()}>
-          <Text style={styles.sendTxt}>send</Text>
+          <Text style={styles.sendTxt}>Send</Text>
         </TouchableOpacity>
       </View>
     </View>
