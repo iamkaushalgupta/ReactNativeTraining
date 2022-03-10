@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import {Text,FlatList, View, TouchableOpacity, StatusBar, ImageBackground,Dimensions,Animated} from 'react-native';
 import styles from "./style";
-import {colors, strings} from '../../constants';
+import {colors, images, strings} from '../../constants';
 let {height,width} = Dimensions.get('window')
 
 interface InputProps{
@@ -120,141 +120,140 @@ const HomeScreen = (props: InputProps)=>{
     ]
     
     return(
-        <ImageBackground source={require('../../assets/backgroundImage.jpg')} 
-        style={styles.container}
-        
-        
+        <ImageBackground source={images.background} 
+        style={styles.container}        
         imageStyle={styles.backgroundImage}>
         
-        <View  style={{flexDirection:'row',justifyContent:'space-around'}}>
-        <Animated.View style={{height:15,width:3,backgroundColor:colors.lightGreen,borderRadius:90, transform:[
+        <View  style={styles.rainContainer}>
+        <Animated.View style={[{ transform:[
             {translateY:Rain1}
-        ]}} ></Animated.View>
-        <Animated.View style={{height:30,width:1,backgroundColor:colors.lightBlue,borderRadius:90, transform:[
+        ]}, styles.rainingEffect1]} ></Animated.View>
+        <Animated.View style={[{ transform:[
             {translateY:Rain}
-        ]}} >
+        ]},styles.rainingEffect2]} >
 
         </Animated.View>
-        <Animated.View style={{height:15,width:4,backgroundColor:colors.lightPink,borderRadius:90, transform:[
+        <Animated.View style={[{ transform:[
             {translateY:secondRain1}
-        ]}} ></Animated.View>
-        <Animated.View style={{height:30,width:2,backgroundColor:colors.lightGreen,borderRadius:90, transform:[
+        ]}, styles.rainingEffect3]} ></Animated.View>
+        <Animated.View style={[{ transform:[
             {translateY:secondRain}
-        ]}} ></Animated.View>
-        <Animated.View style={{height:10,width:3,backgroundColor:colors.lightBlue,borderRadius:90, transform:[
+        ]},styles.rainingEffect4]} ></Animated.View>
+        <Animated.View style={[{ transform:[
             {translateY:Rain3}
-        ]}} >
-            <Animated.View style={{height:10,width:3,backgroundColor:colors.lightPink,borderRadius:90, transform:[
+        ]},styles.rainingEffect6]} >
+            <Animated.View style={[{ transform:[
             {translateY:thirdRain3}
-        ]}} ></Animated.View>
+        ]}, styles.rainingEffect7]} ></Animated.View>
 
         </Animated.View>
-        <Animated.View style={{height:15,width:4,backgroundColor:colors.lightGreen,borderRadius:90, transform:[
+        <Animated.View style={[{ transform:[
             {translateY:Rain1}
-        ]}} ></Animated.View>
-        <Animated.View style={{height:10,width:3,backgroundColor:colors.lightPink,borderRadius:90, transform:[
+        ]},styles.rainingEffect8]} ></Animated.View>
+        <Animated.View style={[{ transform:[
             {translateY:thirdRain2}
-        ]}} ></Animated.View>
-        <Animated.View style={{height:30,width:2,backgroundColor:colors.lightGreen,borderRadius:90, transform:[
+        ]}, styles.rainingEffect7]} ></Animated.View>
+        <Animated.View style={[{ transform:[
             {translateY:Rain}
-        ]}} >
+        ]},styles.rainingEffect4]} >
 
         
 
         </Animated.View>
-        <Animated.View style={{height:10,width:3,backgroundColor:colors.lightGreen,borderRadius:90, transform:[
-            {translateY:thirdRain}
-        ]}} ></Animated.View>
-        <Animated.View style={{height:15,width:6,backgroundColor:colors.lightBlue,borderRadius:90, transform:[
+        <Animated.View style={
+          [  { 
+                transform:[
+            {translateY:thirdRain}]}, styles.rainingEffect5]} ></Animated.View>
+        <Animated.View style={[{ transform:[
             {translateY:Rain1}
-        ]}} ></Animated.View>
-        <Animated.View style={{height:20,width:5,backgroundColor:colors.lightPink,borderRadius:90, transform:[
+        ]}, styles.rainingEffect1]} ></Animated.View>
+        <Animated.View style={[{ transform:[
             {translateY:Rain3}
-        ]}} >
+        ]}, styles.rainingEffect9]} >
 
         </Animated.View>
-        <Animated.View style={{height:10,width:3,backgroundColor:colors.lightGreen,borderRadius:90, transform:[
+        <Animated.View style={[{ transform:[
             {translateY:Rain3}
-        ]}} >
+        ]},styles.rainingEffect5]} >
 
         </Animated.View>
-        <Animated.View style={{height:15,width:4,backgroundColor:colors.lightBlue,borderRadius:90, transform:[
+        <Animated.View style={[{ transform:[
             {translateY:Rain1}
-        ]}} ></Animated.View>
-        <Animated.View style={{height:10,width:3,backgroundColor:colors.lightPink,borderRadius:90, transform:[
+        ]}, styles.rainingEffect4]} ></Animated.View>
+        <Animated.View style={[{ transform:[
             {translateY:thirdRain2}
-        ]}} ></Animated.View>
-             <Animated.View style={{height:10,width:3,backgroundColor:colors.lightGreen,borderRadius:90, transform:[
+        ]},styles.rainingEffect7]} ></Animated.View>
+             <Animated.View style={[{ transform:[
             {translateY:Rain3}
-        ]}} >
+        ]},styles.rainingEffect5]} >
 
         </Animated.View>
-        <Animated.View style={{height:15,width:2,backgroundColor:colors.lightPink,borderRadius:90, transform:[
+        <Animated.View style={[{ transform:[
             {translateY:Rain1}
-        ]}} >
+        ]}, styles.rainingEffect10]} >
 
         </Animated.View>
-        <Animated.View style={{height:10,width:6,backgroundColor:colors.lightGreen,borderRadius:90, transform:[
+        <Animated.View style={[{ transform:[
             {translateY:Rain}
-        ]}} >
+        ]},styles.rainingEffect10]} >
 
         </Animated.View>
         
-        <Animated.View style={{height:10,width:3,backgroundColor:colors.lightBlue,borderRadius:90, transform:[
+        <Animated.View style={[{ transform:[
             {translateY:thirdRain1}
-        ]}} ></Animated.View>
+        ]}]} ></Animated.View>
 
-        <Animated.View style={{height:15,width:3,backgroundColor:colors.lightPink,borderRadius:90, transform:[
+        <Animated.View style={[{ transform:[
             {translateY:secondRain1}
-        ]}} ></Animated.View>
-        <Animated.View style={{height:30,width:1,backgroundColor:colors.lightGreen,borderRadius:90, transform:[
+        ]}, styles.rainingEffect2]} ></Animated.View>
+        <Animated.View style={[{ transform:[
             {translateY:secondRain}
-        ]}} >
+        ]}, styles.rainingEffect8]} >
 
         </Animated.View>
-        <Animated.View style={{height:10,width:3,backgroundColor:colors.lightGreen,borderRadius:90, transform:[
+        <Animated.View style={[{ transform:[
             {translateY:Rain2}
-        ]}} >
-<Animated.View style={{height:10,width:3,backgroundColor:colors.lightPink,borderRadius:90, transform:[
+        ]},styles.rainingEffect5]} >
+<Animated.View style={[{ transform:[
             {translateY:thirdRain1}
-        ]}} ></Animated.View>
+        ]},styles.rainingEffect7]} ></Animated.View>
         </Animated.View>
-        <Animated.View style={{height:10,width:3,backgroundColor:colors.lightGreen,borderRadius:90, transform:[
+        <Animated.View style={[{ transform:[
             {translateY:secondRain3}
-        ]}} >
+        ]},styles.rainingEffect5]} >
 
         </Animated.View>
-        <Animated.View style={{height:15,width:4,backgroundColor:colors.lightGreen,borderRadius:90, transform:[
+        <Animated.View style={[{ transform:[
             {translateY:secondRain1}
-        ]}} ></Animated.View>
-             <Animated.View style={{height:10,width:3,backgroundColor:colors.lightPink,borderRadius:90, transform:[
+        ]}, styles.rainingEffect8]} ></Animated.View>
+             <Animated.View style={[{ transform:[
             {translateY:Rain1}
-        ]}} >
+        ]},styles.rainingEffect7]} >
 
         </Animated.View>
-        <Animated.View style={{height:30,width:2,backgroundColor:colors.lightGreen,borderRadius:90, transform:[
+        <Animated.View style={[{transform:[
             {translateY:secondRain}
-        ]}} >
+        ]},styles.rainingEffect4]} >
         </Animated.View>
-        <Animated.View style={{height:15,width:6,backgroundColor:colors.lightGreen,borderRadius:90, transform:[
+        <Animated.View style={[{ transform:[
             {translateY:secondRain1}
-        ]}} ></Animated.View>
-        <Animated.View style={{height:20,width:5,backgroundColor:colors.lightPink,borderRadius:90, transform:[
+        ]}, styles.rainingEffect7]} ></Animated.View>
+        <Animated.View style={[{ transform:[
             {translateY:secondRain3}
-        ]}} >
+        ]}, styles.rainingEffect9]} >
 
         </Animated.View>
-        <Animated.View style={{height:15,width:2,backgroundColor:colors.lightGreen,borderRadius:90, transform:[
+        <Animated.View style={[{ transform:[
             {translateY:secondRain1}
-        ]}} >
+        ]}, styles.rainingEffect6]} >
 
         </Animated.View>
-        <Animated.View style={{height:10,width:6,backgroundColor:colors.lightGreen,borderRadius:90, transform:[
+        <Animated.View style={[{ transform:[
             {translateY:secondRain}
-        ]}} >
-<Animated.View style={{height:10,width:3,backgroundColor:colors.lightPink,borderRadius:90, transform:[
+        ]}, styles.rainingEffect10]} >
+<Animated.View style={[{ transform:[
             {translateY:thirdRain}
-        ]}} ></Animated.View>
+        ]},styles.rainingEffect7]} ></Animated.View>
         </Animated.View>
 
 
