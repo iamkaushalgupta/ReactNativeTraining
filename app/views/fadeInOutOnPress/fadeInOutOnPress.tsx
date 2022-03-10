@@ -1,5 +1,7 @@
 import React, { useRef } from "react";
 import { Animated, Text, View, StyleSheet, Button, SafeAreaView, TouchableOpacity, ImageBackground,Dimensions, Image } from "react-native";
+import { HeaderComponent } from "../../common";
+import { strings } from "../../constants";
 let {height,width} = Dimensions.get('window')
 const FadeInOutOnPress = ({navigation}:any) => {
   // fadeAnim will be used as the value for opacity. Initial Value: 0
@@ -28,19 +30,7 @@ const FadeInOutOnPress = ({navigation}:any) => {
         style={{flex:1,
             padding:10,}}
             imageStyle={{height:height,width:width}}>
-        <View style = {{flexDirection:'row',justifyContent:'space-between',alignItems:'center'}}>
-                <View style={{height:40,width:40}}>
-             <TouchableOpacity onPress={()=>navigation.goBack()}>
-                    <Image source={require('../../assets/back.png')} style={{height:40,width:40,tintColor:'white'}} />
-                 </TouchableOpacity>
-                 </View>
-
-            <Text style={{color:'white',fontSize:24,textAlign:'center'}}>FadeIn FadeOut Animation</Text>
-            <View style={{height:40,width:40}}>
-
-            </View>
-            </View>
-
+       <HeaderComponent  navigation={navigation}  head={strings.fadeInFadeOutAnimation}/>
           <View style={{flex:1,alignItems:'center',justifyContent:'center'}}>
       <Animated.View
         style={[

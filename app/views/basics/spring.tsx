@@ -1,5 +1,8 @@
 import React, {useEffect} from "react";
+import { HeaderComponent } from "../../common";
 import { Text, View,Animated,Image, ImageBackground,Dimensions, TouchableOpacity } from "react-native";
+import { strings } from "../../constants";
+
 
 let {height,width} =Dimensions.get('window')
 const Spring_animation = ({navigation}:any)=>{
@@ -25,18 +28,8 @@ const Spring_animation = ({navigation}:any)=>{
         
         imageStyle={{height:height,width:width}}>
         <View style={{flex:1,}}>
-            <View style = {{flexDirection:'row',justifyContent:'space-between',alignItems:'center'}}>
-                <View style={{height:40,width:40}}>
-             <TouchableOpacity onPress={()=>navigation.goBack()}>
-                    <Image source={require('../../assets/back.png')} style={{height:40,width:40,tintColor:'white'}} />
-                 </TouchableOpacity>
-                 </View>
-
-            <Text style={{color:'white',fontSize:24,textAlign:'center'}}> Spring Animation</Text>
-            <View style={{height:40,width:40}}>
-
-            </View>
-            </View>
+            
+            <HeaderComponent  navigation={navigation}  head={strings.springAnimation}/>
 
             <Animated.View style={{
                 height:100,

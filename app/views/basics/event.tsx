@@ -1,5 +1,7 @@
 import React, { useRef } from "react";
 import { Animated, Dimensions, Image, ImageBackground, PanResponder, StyleSheet, Text, TouchableOpacity, View } from "react-native";
+import { HeaderComponent } from "../../common";
+import { strings } from "../../constants";
 let {height,width} =Dimensions.get('window')
 const Event_animation = ({navigation}:any) => {
   const pan = useRef(new Animated.ValueXY()).current;
@@ -29,18 +31,7 @@ const Event_animation = ({navigation}:any) => {
         style={{flex:1,
             padding:10,}}
             imageStyle={{height:height,width:width}}>
-    <View style = {{flexDirection:'row',justifyContent:'space-between',alignItems:'center'}}>
-                <View style={{height:40,width:40}}>
-             <TouchableOpacity onPress={()=>navigation.goBack()}>
-                    <Image source={require('../../assets/back.png')} style={{height:40,width:40,tintColor:'white'}} />
-                 </TouchableOpacity>
-                 </View>
-
-            <Text style={{color:'white',fontSize:24,textAlign:'center'}}>Event Animation</Text>
-            <View style={{height:40,width:40}}>
-
-            </View>
-            </View>
+    <HeaderComponent  navigation={navigation}  head={strings.eventAnimation}/>
     <View style={styles.container}>
       
       <Animated.View

@@ -1,5 +1,7 @@
 import React, {useEffect} from "react";
 import { Text, View,Animated, ImageBackground,Dimensions, TouchableOpacity, Image } from "react-native";
+import { HeaderComponent } from "../../common";
+import { strings } from "../../constants";
 
 let {height,width} = Dimensions.get('window')
 const Decay_animation = ({navigation}:any)=>{
@@ -13,24 +15,13 @@ const Decay_animation = ({navigation}:any)=>{
 
     return(
         <ImageBackground source={require('../../assets/backgroundImage.jpg')} 
-        style={        {flex:1,
+        style={{flex:1,
         
             padding:10,}}
             
             imageStyle={{height:height,width:width}}>
-        <View style={{flex:1,padding:10}}>
-        <View style = {{flexDirection:'row',justifyContent:'space-between',alignItems:'center'}}>
-                <View style={{height:40,width:40}}>
-             <TouchableOpacity onPress={()=>navigation.goBack()}>
-                    <Image source={require('../../assets/back.png')} style={{height:40,width:40,tintColor:'white'}} />
-                 </TouchableOpacity>
-                 </View>
-
-            <Text style={{color:'white',fontSize:24,textAlign:'center'}}>Decay Animation</Text>
-            <View style={{height:40,width:40}}>
-
-            </View>
-            </View>
+        <View style={{flex:1}}>
+        <HeaderComponent  navigation={navigation}  head={strings.decayAnimation}/>
             <Animated.View style={{
                 height:100,
                 width:100,

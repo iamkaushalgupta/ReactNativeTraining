@@ -1,5 +1,7 @@
 import React, { useRef } from "react";
 import { Animated, Text, View, StyleSheet, Button, SafeAreaView, TouchableOpacity,ImageBackground, Dimensions, Image } from "react-native";
+import { HeaderComponent } from "../../common";
+import { strings } from "../../constants";
 import style from './style'
 
 let {height,width} = Dimensions.get('window')
@@ -32,18 +34,7 @@ let {height,width} = Dimensions.get('window')
       <ImageBackground source={require('../../assets/backgroundImage.jpg')} 
         style={style.container}
             imageStyle={style.containerImage}>
-      <View style = {{flexDirection:'row',justifyContent:'space-between',alignItems:'center'}}>
-                <View style={{height:40,width:40}}>
-             <TouchableOpacity onPress={()=>navigation.goBack()}>
-                    <Image source={require('../../assets/back.png')} style={{height:40,width:40,tintColor:'white'}} />
-                 </TouchableOpacity>
-                 </View>
-
-            <Text style={{color:'white',fontSize:24,textAlign:'center'}}>Stagger Animation</Text>
-            <View style={{height:40,width:40}}>
-
-            </View>
-            </View>
+      <HeaderComponent  navigation={navigation}  head={strings.staggerAnimation}/>
    <View style={{flex:1,justifyContent:'center'}} >
       <Animated.View
         style={[
