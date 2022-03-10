@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import {Text,FlatList, View, TouchableOpacity, StatusBar, ImageBackground,Dimensions,Animated} from 'react-native';
 import styles from "./style";
-
+import {colors, strings} from '../../constants';
 let {height,width} = Dimensions.get('window')
 
 interface InputProps{
@@ -127,132 +127,132 @@ const HomeScreen = (props: InputProps)=>{
         imageStyle={styles.backgroundImage}>
         
         <View  style={{flexDirection:'row',justifyContent:'space-around'}}>
-        <Animated.View style={{height:15,width:3,backgroundColor:"#98FB98",borderRadius:90, transform:[
+        <Animated.View style={{height:15,width:3,backgroundColor:colors.lightGreen,borderRadius:90, transform:[
             {translateY:Rain1}
         ]}} ></Animated.View>
-        <Animated.View style={{height:30,width:1,backgroundColor:"lightblue",borderRadius:90, transform:[
+        <Animated.View style={{height:30,width:1,backgroundColor:colors.lightBlue,borderRadius:90, transform:[
             {translateY:Rain}
         ]}} >
 
         </Animated.View>
-        <Animated.View style={{height:15,width:4,backgroundColor:"lightpink",borderRadius:90, transform:[
+        <Animated.View style={{height:15,width:4,backgroundColor:colors.lightPink,borderRadius:90, transform:[
             {translateY:secondRain1}
         ]}} ></Animated.View>
-        <Animated.View style={{height:30,width:2,backgroundColor:"#98FB98",borderRadius:90, transform:[
+        <Animated.View style={{height:30,width:2,backgroundColor:colors.lightGreen,borderRadius:90, transform:[
             {translateY:secondRain}
         ]}} ></Animated.View>
-        <Animated.View style={{height:10,width:3,backgroundColor:"lightblue",borderRadius:90, transform:[
+        <Animated.View style={{height:10,width:3,backgroundColor:colors.lightBlue,borderRadius:90, transform:[
             {translateY:Rain3}
         ]}} >
-            <Animated.View style={{height:10,width:3,backgroundColor:"lightpink",borderRadius:90, transform:[
+            <Animated.View style={{height:10,width:3,backgroundColor:colors.lightPink,borderRadius:90, transform:[
             {translateY:thirdRain3}
         ]}} ></Animated.View>
 
         </Animated.View>
-        <Animated.View style={{height:15,width:4,backgroundColor:"#98FB98",borderRadius:90, transform:[
+        <Animated.View style={{height:15,width:4,backgroundColor:colors.lightGreen,borderRadius:90, transform:[
             {translateY:Rain1}
         ]}} ></Animated.View>
-        <Animated.View style={{height:10,width:3,backgroundColor:"lightpink",borderRadius:90, transform:[
+        <Animated.View style={{height:10,width:3,backgroundColor:colors.lightPink,borderRadius:90, transform:[
             {translateY:thirdRain2}
         ]}} ></Animated.View>
-        <Animated.View style={{height:30,width:2,backgroundColor:"#98FB98",borderRadius:90, transform:[
+        <Animated.View style={{height:30,width:2,backgroundColor:colors.lightGreen,borderRadius:90, transform:[
             {translateY:Rain}
         ]}} >
 
         
 
         </Animated.View>
-        <Animated.View style={{height:10,width:3,backgroundColor:"#98FB98",borderRadius:90, transform:[
+        <Animated.View style={{height:10,width:3,backgroundColor:colors.lightGreen,borderRadius:90, transform:[
             {translateY:thirdRain}
         ]}} ></Animated.View>
-        <Animated.View style={{height:15,width:6,backgroundColor:"lightblue",borderRadius:90, transform:[
+        <Animated.View style={{height:15,width:6,backgroundColor:colors.lightBlue,borderRadius:90, transform:[
             {translateY:Rain1}
         ]}} ></Animated.View>
-        <Animated.View style={{height:20,width:5,backgroundColor:"lightpink",borderRadius:90, transform:[
+        <Animated.View style={{height:20,width:5,backgroundColor:colors.lightPink,borderRadius:90, transform:[
             {translateY:Rain3}
         ]}} >
 
         </Animated.View>
-        <Animated.View style={{height:10,width:3,backgroundColor:"#98FB98",borderRadius:90, transform:[
+        <Animated.View style={{height:10,width:3,backgroundColor:colors.lightGreen,borderRadius:90, transform:[
             {translateY:Rain3}
         ]}} >
 
         </Animated.View>
-        <Animated.View style={{height:15,width:4,backgroundColor:"lightblue",borderRadius:90, transform:[
+        <Animated.View style={{height:15,width:4,backgroundColor:colors.lightBlue,borderRadius:90, transform:[
             {translateY:Rain1}
         ]}} ></Animated.View>
-        <Animated.View style={{height:10,width:3,backgroundColor:"lightpink",borderRadius:90, transform:[
+        <Animated.View style={{height:10,width:3,backgroundColor:colors.lightPink,borderRadius:90, transform:[
             {translateY:thirdRain2}
         ]}} ></Animated.View>
-             <Animated.View style={{height:10,width:3,backgroundColor:"#98FB98",borderRadius:90, transform:[
+             <Animated.View style={{height:10,width:3,backgroundColor:colors.lightGreen,borderRadius:90, transform:[
             {translateY:Rain3}
         ]}} >
 
         </Animated.View>
-        <Animated.View style={{height:15,width:2,backgroundColor:"lightpink",borderRadius:90, transform:[
+        <Animated.View style={{height:15,width:2,backgroundColor:colors.lightPink,borderRadius:90, transform:[
             {translateY:Rain1}
         ]}} >
 
         </Animated.View>
-        <Animated.View style={{height:10,width:6,backgroundColor:"#98FB98",borderRadius:90, transform:[
+        <Animated.View style={{height:10,width:6,backgroundColor:colors.lightGreen,borderRadius:90, transform:[
             {translateY:Rain}
         ]}} >
 
         </Animated.View>
         
-        <Animated.View style={{height:10,width:3,backgroundColor:"lightblue",borderRadius:90, transform:[
+        <Animated.View style={{height:10,width:3,backgroundColor:colors.lightBlue,borderRadius:90, transform:[
             {translateY:thirdRain1}
         ]}} ></Animated.View>
 
-        <Animated.View style={{height:15,width:3,backgroundColor:"lightpink",borderRadius:90, transform:[
+        <Animated.View style={{height:15,width:3,backgroundColor:colors.lightPink,borderRadius:90, transform:[
             {translateY:secondRain1}
         ]}} ></Animated.View>
-        <Animated.View style={{height:30,width:1,backgroundColor:"#98FB98",borderRadius:90, transform:[
+        <Animated.View style={{height:30,width:1,backgroundColor:colors.lightGreen,borderRadius:90, transform:[
             {translateY:secondRain}
         ]}} >
 
         </Animated.View>
-        <Animated.View style={{height:10,width:3,backgroundColor:"#98FB98",borderRadius:90, transform:[
+        <Animated.View style={{height:10,width:3,backgroundColor:colors.lightGreen,borderRadius:90, transform:[
             {translateY:Rain2}
         ]}} >
-<Animated.View style={{height:10,width:3,backgroundColor:"lightpink",borderRadius:90, transform:[
+<Animated.View style={{height:10,width:3,backgroundColor:colors.lightPink,borderRadius:90, transform:[
             {translateY:thirdRain1}
         ]}} ></Animated.View>
         </Animated.View>
-        <Animated.View style={{height:10,width:3,backgroundColor:"#98FB98",borderRadius:90, transform:[
+        <Animated.View style={{height:10,width:3,backgroundColor:colors.lightGreen,borderRadius:90, transform:[
             {translateY:secondRain3}
         ]}} >
 
         </Animated.View>
-        <Animated.View style={{height:15,width:4,backgroundColor:"#98FB98",borderRadius:90, transform:[
+        <Animated.View style={{height:15,width:4,backgroundColor:colors.lightGreen,borderRadius:90, transform:[
             {translateY:secondRain1}
         ]}} ></Animated.View>
-             <Animated.View style={{height:10,width:3,backgroundColor:"lightpink",borderRadius:90, transform:[
+             <Animated.View style={{height:10,width:3,backgroundColor:colors.lightPink,borderRadius:90, transform:[
             {translateY:Rain1}
         ]}} >
 
         </Animated.View>
-        <Animated.View style={{height:30,width:2,backgroundColor:"#98FB98",borderRadius:90, transform:[
+        <Animated.View style={{height:30,width:2,backgroundColor:colors.lightGreen,borderRadius:90, transform:[
             {translateY:secondRain}
         ]}} >
         </Animated.View>
-        <Animated.View style={{height:15,width:6,backgroundColor:"#98FB98",borderRadius:90, transform:[
+        <Animated.View style={{height:15,width:6,backgroundColor:colors.lightGreen,borderRadius:90, transform:[
             {translateY:secondRain1}
         ]}} ></Animated.View>
-        <Animated.View style={{height:20,width:5,backgroundColor:"lightpink",borderRadius:90, transform:[
+        <Animated.View style={{height:20,width:5,backgroundColor:colors.lightPink,borderRadius:90, transform:[
             {translateY:secondRain3}
         ]}} >
 
         </Animated.View>
-        <Animated.View style={{height:15,width:2,backgroundColor:"#98FB98",borderRadius:90, transform:[
+        <Animated.View style={{height:15,width:2,backgroundColor:colors.lightGreen,borderRadius:90, transform:[
             {translateY:secondRain1}
         ]}} >
 
         </Animated.View>
-        <Animated.View style={{height:10,width:6,backgroundColor:"#98FB98",borderRadius:90, transform:[
+        <Animated.View style={{height:10,width:6,backgroundColor:colors.lightGreen,borderRadius:90, transform:[
             {translateY:secondRain}
         ]}} >
-<Animated.View style={{height:10,width:3,backgroundColor:"lightpink",borderRadius:90, transform:[
+<Animated.View style={{height:10,width:3,backgroundColor:colors.lightPink,borderRadius:90, transform:[
             {translateY:thirdRain}
         ]}} ></Animated.View>
         </Animated.View>
@@ -260,8 +260,8 @@ const HomeScreen = (props: InputProps)=>{
 
         </View>
         <View style={styles.container} >
-            <StatusBar backgroundColor={'black'} />
-            <Text style={styles.headText}>React Animations</Text>
+            <StatusBar backgroundColor={colors.black} />
+            <Text style={styles.headText}>{strings.ReactAnimations}</Text>
             <FlatList
             showsVerticalScrollIndicator={false}
             data={DATA}
